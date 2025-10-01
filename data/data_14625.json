@@ -1,8 +1,0 @@
-{
-    "WORD": "STRAWBERRY",
-    "guessed": ["B", "R"],
-    "errors": 2,
-    "MAX_ERRORS": 6,
-    "game_over": false,
-    "won": false
-}

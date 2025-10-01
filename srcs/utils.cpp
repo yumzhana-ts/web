@@ -113,4 +113,13 @@ std::string buildFullPath(const std::string& pagePath)
 
     return fullPath;
 }
+ // inet_addr
 
+in_addr_t ipStringToHostIP(const std::string &ip_str)
+{
+    if (ip_str.empty())
+        return INADDR_NONE;
+    if (ip_str == "localhost")
+        return inet_addr("127.0.0.1");
+    return inet_addr(ip_str.c_str()); 
+}

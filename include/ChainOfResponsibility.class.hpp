@@ -15,6 +15,7 @@
 #include <vector>
 #include "Socket.class.hpp"
 #include "Client.class.hpp"
+#include <arpa/inet.h>
 
 class RequestDataSet;
 
@@ -48,6 +49,7 @@ std::string trimQuotes(const std::string &s);
 bool saveBinaryFile(const std::string &data, const std::string &filename);
 bool isEmptyLine(const std::string &line);
 std::string buildFullPath(const std::string& pagePath);
+in_addr_t ipStringToHostIP(const std::string &ip_str);
 
 #define DBG 0
 #define RESET_COLOR "\033[0m"
