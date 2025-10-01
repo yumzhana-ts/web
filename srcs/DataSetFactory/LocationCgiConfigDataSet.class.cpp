@@ -1,0 +1,142 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   LocationCgiConfigDataSet.class.cpp                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ytsyrend <ytsyrend@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/05 18:24:16 by ytsyrend          #+#    #+#             */
+/*   Updated: 2025/08/16 21:17:55 by ytsyrend         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "DataSetFactory/LocationCgiConfigDataSet.class.hpp"
+#include "Logger.class.hpp"
+
+/****************************************************/
+/*                    Constructor                   */
+/****************************************************/
+
+LocationCgiConfigDataSet::LocationCgiConfigDataSet(const std::string &text) 
+{
+    this->buffer = text;
+    if (DBG){ std::cout << GREEN << "[LocationCgiConfigDataSet] Default Constructor called" << RESET_COLOR << std::endl;}
+}
+
+LocationCgiConfigDataSet::LocationCgiConfigDataSet(std::vector<std::vector<std::string> > data)
+{
+    this->token_data = data;
+    this->parse();
+}
+
+/****************************************************/
+/*                    Destructor.                   */
+/****************************************************/
+
+LocationCgiConfigDataSet::~LocationCgiConfigDataSet(void) 
+{
+    if (DBG){std::cout << GREEN << "[LocationCgiConfigDataSet] Destructor called" << RESET_COLOR << std::endl;}
+}
+
+/****************************************************
+*                 Memeber Functions                *
+****************************************************/
+
+void LocationCgiConfigDataSet::handle()
+{
+    this->parse();
+    if (this->nextHandler)
+        this->nextHandler->handle();
+}
+
+void LocationCgiConfigDataSet::validate()
+{
+    if(DBG)
+        std::cout << "Request data validation"<< std::endl;
+}
+
+void LocationCgiConfigDataSet::parse()
+{
+    this->printTokens();
+    this->map();
+}
+
+bool LocationCgiConfigDataSet::validateLine(const std::vector<std::string>& token_line, 
+                            const std::vector<std::string>& schema, 
+                            bool &required, std::string &_name)
+{
+    _name = schema[0];
+    size_t _min =  atol(schema[1].c_str());
+    size_t _max =  atol(schema[2].c_str());
+    required = atol(schema[3].c_str());
+    if (_name == "location")
+    {
+        _name = _name + " " + schema[1];
+        _min =  atol(schema[2].c_str());
+        _max =  atol(schema[3].c_str());
+        required = atol(schema[4].c_str());
+    }
+    std::string line_name = token_line[0];
+    if (line_name == "location")
+        line_name = line_name + " " + token_line[1];
+    if (line_name == _name && (token_line.size() >= _min && token_line.size() <= _max))
+        return true;
+    return false;
+}
+
+void LocationCgiConfigDataSet::map()
+{
+    for (size_t i = 0; i < token_data.size(); i++)
+    {
+        const std::vector<std::string>& tokens = token_data[i];
+        if (tokens.empty())
+            continue;
+        if (tokens[0] == "root")
+            this->cgi_root = tokens[1];
+        else if (tokens[0] == "cgi_path")
+        {
+            for(size_t i = 1; i < token_data.size(); i++)
+                this->cgi_path.push_back(tokens[i]);
+        }
+        else if (tokens[0] == "cgi_ext")
+        {
+            for(size_t i = 1; i < token_data.size(); i++)
+                this->cgi_ext.push_back(tokens[i]);
+        }
+    }
+}
+
+void LocationCgiConfigDataSet::printConfig() const
+{
+    std::ofstream logFile("logs/server.log", std::ios::out | std::ios::app);
+
+    if (!logFile)
+    {
+        std::cerr << "❌ Failed to open log file 'server.log'" << std::endl;
+        return;
+    }
+
+    logFile << "==================== CGI CONFIG START ====================" << std::endl;
+
+    logFile << "📂 cgi_root: " << (cgi_root.empty() ? "(not set)" : cgi_root) << std::endl;
+
+    logFile << "➡️ cgi_path: ";
+    if (cgi_path.empty())
+        logFile << "(none)";
+    else
+        for (size_t i = 0; i < cgi_path.size(); ++i)
+            logFile << "[" << cgi_path[i] << "] ";
+    logFile << std::endl;
+
+    logFile << "📜 cgi_ext: ";
+    if (cgi_ext.empty())
+        logFile << "(none)";
+    else
+        for (size_t i = 0; i < cgi_ext.size(); ++i)
+            logFile << "[" << cgi_ext[i] << "] ";
+    logFile << std::endl;
+
+    logFile << "==================== CGI CONFIG END ======================" << std::endl << std::endl;
+
+    logFile.close();
+}

@@ -1,0 +1,148 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   LocationConfigDataSet.class.cpp                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ytsyrend <ytsyrend@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/05 18:24:16 by ytsyrend          #+#    #+#             */
+/*   Updated: 2025/08/16 21:17:55 by ytsyrend         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "DataSetFactory/LocationConfigDataSet.class.hpp"
+#include "Logger.class.hpp"
+
+/****************************************************/
+/*                    Constructor                   */
+/****************************************************/
+
+LocationConfigDataSet::LocationConfigDataSet(const std::string &text) 
+{
+    this->buffer = text;
+    if (DBG){ std::cout << GREEN << "[LocationConfigDataSet] Default Constructor called" << RESET_COLOR << std::endl;}
+}
+
+LocationConfigDataSet::LocationConfigDataSet(std::vector<std::vector<std::string> > data)
+{
+    this->token_data = data;
+    this->parse();
+}
+
+/****************************************************/
+/*                    Destructor.                   */
+/****************************************************/
+
+LocationConfigDataSet::~LocationConfigDataSet(void) 
+{
+    if (DBG){std::cout << GREEN << "[LocationConfigDataSet] Destructor called" << RESET_COLOR << std::endl;}
+}
+
+/****************************************************
+*                 Memeber Functions                *
+****************************************************/
+
+void LocationConfigDataSet::handle()
+{
+    this->parse();
+    if (this->nextHandler)
+        this->nextHandler->handle();
+}
+
+void LocationConfigDataSet::validate()
+{
+    if(DBG)
+        std::cout << "Request data validation"<< std::endl;
+}
+
+void LocationConfigDataSet::parse()
+{
+    this->printTokens();
+    this->map();
+}
+
+bool LocationConfigDataSet::validateLine(const std::vector<std::string>& token_line, 
+                            const std::vector<std::string>& schema, 
+                            bool &required, std::string &_name)
+{
+    _name = schema[0];
+    size_t _min =  atol(schema[1].c_str());
+    size_t _max =  atol(schema[2].c_str());
+    required = atol(schema[3].c_str());
+    if (_name == "location")
+    {
+        _name = _name + " " + schema[1];
+        _min =  atol(schema[2].c_str());
+        _max =  atol(schema[3].c_str());
+        required = atol(schema[4].c_str());
+    }
+    std::string line_name = token_line[0];
+    if (line_name == "location")
+        line_name = line_name + " " + token_line[1];
+    if (line_name == _name && (token_line.size() >= _min && token_line.size() <= _max))
+        return true;
+    return false;
+}
+
+void LocationConfigDataSet::map()
+{
+    for (size_t i = 0; i < token_data.size(); i++)
+    {
+        const std::vector<std::string>& tokens = token_data[i];
+        if (tokens.empty())
+            continue;
+
+        if (tokens[0] == "root")
+            this->root = tokens[1];
+        else if (tokens[0] == "autoindex")
+            this->autoindex = tokens[1];
+        else if (tokens[0] == "allow_methods")
+        {
+            for(size_t i = 1; i < tokens.size(); i++)
+                this->allow_methods.push_back(tokens[i]);
+        }
+        else if (tokens[0] == "index")
+            this->index = tokens[1];
+        else if (tokens[0] == "return")
+        {
+            this->return_info.first = tokens[1];
+            this->return_info.second = tokens[2];
+        }
+        /*else if (tokens[0] == "return")
+            this->return_path = tokens[1];*/
+        else if (tokens[0] == "alias")
+            this->alias = tokens[1];
+    }
+}
+
+void LocationConfigDataSet::printConfig() const
+{
+    std::ofstream logFile("logs/server.log", std::ios::out | std::ios::app);
+
+    if (!logFile)
+    {
+        std::cerr << "❌ Failed to open log file 'server.log'" << std::endl;
+        return;
+    }
+
+    logFile << "==================== LOCATION CONFIG START ====================" << std::endl;
+
+    logFile << "📂 root: " << (root.empty() ? "(not set)" : root) << std::endl;
+    logFile << "📄 autoindex: " << (autoindex.empty() ? "(not set)" : autoindex) << std::endl;
+
+    logFile << "✅ allow_methods: ";
+    if (allow_methods.empty())
+        logFile << "(none)";
+    else
+        for (size_t i = 0; i < allow_methods.size(); ++i)
+            logFile << "[" << allow_methods[i] << "] ";
+    logFile << std::endl;
+
+    logFile << "📑 index: " << (index.empty() ? "(not set)" : index) << std::endl;
+    logFile << "🔀 return: " << (return_path.empty() ? "(not set)" : return_path) << std::endl;
+    logFile << "📌 alias: " << (alias.empty() ? "(not set)" : alias) << std::endl;
+
+    logFile << "==================== LOCATION CONFIG END ======================" << std::endl << std::endl;
+
+    logFile.close();
+}
