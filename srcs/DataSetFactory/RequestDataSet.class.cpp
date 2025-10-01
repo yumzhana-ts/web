@@ -569,11 +569,15 @@ void RequestDataSet::cookieFinder()
     }
     for (size_t i = 0; i < it->second.size(); ++i)
     {
-        std::string cookies = it->second[i];
-        addKeyValuePairs(cookies, this->cookie_map);
-        break;
+        const std::string &keyv = it->second[i];
+        const std::string prefixMessage = "session_id";
+        if (keyv.compare(0, prefixMessage.size(), prefixMessage) == 0)
+        {
+            std::string cookies = it->second[i];
+            addKeyValuePairs(cookies, this->cookie_map);
+            break;            
+        }
     }
-
     std::map<std::string, std::string>::iterator cit = cookie_map.find("session_id");
     if (cit != cookie_map.end())
     {
