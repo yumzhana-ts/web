@@ -4,7 +4,7 @@
 IMAGE_PATH="./image.jpg"
 
 # URL сервера
-URL="http://localhost:8081/database/"
+URL="http://localhost:8083/test/"
 
 # Получаем размер файла
 FILE_SIZE=$(stat -c%s "$IMAGE_PATH")

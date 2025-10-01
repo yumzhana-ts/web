@@ -52,7 +52,6 @@ void GetResponse::handle()
 
 void GetResponse::build()
 {
-    
     if (request.path == "/favicon.ico" || request.method == "HEAD") 
     {
         this->status_code = 204;

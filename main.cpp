@@ -16,8 +16,7 @@
 
 
 //TODO: handle validation schema + {}
-//TODO: localhost name support
-//TODO: /database выводит пустую страницу
+//TODO: hostname
 //TODO: still dont know how cgi is tested
 
 int main(int argc, char **argv) 

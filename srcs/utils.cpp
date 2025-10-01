@@ -82,7 +82,7 @@ bool saveBinaryFile(const std::string &data, const std::string &filename)
 #include <cstdlib>
 #include <string>
 
-#define PROJECT_ROOT "shared"
+#define PROJECT_ROOT "Desktop/Core/web"
 
 #include <cstdlib>
 #include <string>
@@ -114,6 +114,7 @@ std::string buildFullPath(const std::string& pagePath)
     return fullPath;
 }
  // inet_addr
+#include <arpa/inet.h>
 
 in_addr_t ipStringToHostIP(const std::string &ip_str)
 {

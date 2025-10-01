@@ -31,7 +31,7 @@ CgiHandler::CgiHandler(RequestDataSet &req, std::string path, int session_number
     else if (path.find(".pl") != std::string::npos)
         interpreter_path = "/usr/bin/perl";
     else if (path.find(".sh") != std::string::npos || path.find(".bash") != std::string::npos)
-        interpreter_path = "/bin/bash";
+        interpreter_path = "/usr/bin/bash";
     else
         interpreter_path = "";
     session_id = session_number;
@@ -149,7 +149,11 @@ int CgiHandler::launch(std::string input)
         {
             int exitCode = WEXITSTATUS(status);
             if (exitCode == 1)
+            {
+                Logger::debug("i am not executed");
                 this->setError(INTERNALERROR);
+            }
+                
         }
     }
     return 0;

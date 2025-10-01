@@ -16,9 +16,8 @@ if [ ! -d "$TARGET_DIR" ]; then
     exit 1
 fi
 
-# Collect files
-files=$(find "$TARGET_DIR" -maxdepth 1 -type f)
-count=$(echo "$files" | wc -l)
+# Collect files safely
+mapfile -t files < <(find "$TARGET_DIR" -maxdepth 1 -type f)
 
 # HTML output
 cat <<EOF
@@ -32,24 +31,18 @@ cat <<EOF
     h1 { color:#45a29e; }
     ul { text-align:left; margin:auto; width:400px; background:#1f2833; padding:20px; border-radius:10px; }
     li { color:#f8c291; }
-    a { color:#66fcf1; text-decoration:none; }
-    a:hover { text-decoration:underline; }
 </style>
 </head>
 <body>
     <h1>📂 File Report</h1>
     <h2>Directory: $TARGET_DIR</h2>
-    <p>Total files: <strong>$count</strong></p>
+    <p>Total files: <strong>${#files[@]}</strong></p>
     <ul>
 EOF
 
-for f in $files; do
+for f in "${files[@]}"; do
     filename=$(basename "$f")
-    # Strip everything up to 'www/' to get web-accessible path
-    relpath="${f#$WEB_ROOT/}"
-    # URL-encode relative path
-    urlpath=$(python3 -c "import urllib.parse; print(urllib.parse.quote('''$relpath'''))")
-    echo "      <li><a href=\"/$urlpath\">$filename</a></li>"
+    echo "      <li>$filename</li>"
 done
 
 cat <<EOF

@@ -14,7 +14,8 @@
 #include "FileManager.class.hpp"
 #include "Logger.class.hpp"
 #include "ResponseBuilder/CgiHandler.class.hpp"
-#include "ResponseBuilder/CgiEnvBuilder.class.hpp"
+#include "ResponseBuilder/CGIEnvBuilder.class.hpp"
+
 
 /****************************************************/
 /*                    Constructor                   */
@@ -121,7 +122,8 @@ void LocationDecorator::handleCustomLocations(const ServerConfigDataSet &config)
 {
     for (std::map<std::string, ADataSet *>::const_iterator it = config.locationDataSets.begin(); it != config.locationDataSets.end(); ++it)
     {
-        if (response->request.path.compare(0, it->first.size(), it->first) == 0) {
+		std::string dir = it->first + "/";
+        if (response->request.path.compare(0, dir.size(), dir) == 0) {
             if (LocationConfigDataSet* loc = dynamic_cast<LocationConfigDataSet*>(it->second)) 
 			{
 				directory = loc->root;
@@ -145,7 +147,7 @@ void LocationDecorator::applyLocationRules(const LocationConfigDataSet *dataset)
 		page = dataset->return_info.second;
 		return;
 	}
-	if (response->request.method == "GET" && (page == "/"))
+	else if (response->request.method == "GET" && (page == "/"))
 	{
 		if (dataset->autoindex == "on")
 		{
@@ -181,7 +183,7 @@ void LocationDecorator::finalizePage()
 		full_path = directory + page;
 
 	std::ifstream file(full_path.c_str());
-	if (!file.is_open())
+	if (!file.is_open() && response->request.path != "/favicon.ico")
 	{
 		response->setError(PAGENOTFOUND);
 		return;
