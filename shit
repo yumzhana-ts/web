@@ -1,0 +1,294 @@
+/*std::string RequestDataSet::cutPartStart(const std::string &buf)
+{
+    size_t pos = buf.find(boundaryStart);
+    if (pos != std::string::npos)
+    {
+        size_t line_end = buf.find("\r\n", pos);
+        size_t skipLen = 0;
+
+        if (line_end != std::string::npos)
+        {
+            skipLen = 2;
+        }
+        else
+        {
+            line_end = buf.find("\n", pos);
+            if (line_end != std::string::npos)
+                skipLen = 1;
+        }
+
+        if (line_end != std::string::npos)
+        {
+            if (line_end + skipLen > buf.size()) // avoid overflow
+                return std::string();
+
+            return buf.substr(line_end + skipLen);
+        }
+        else
+        {
+            // boundary at end without newline
+            if (pos + boundaryStart.size() >= buf.size())
+                return std::string();
+            return buf.substr(pos + boundaryStart.size());
+        }
+    }
+
+    return buf; // boundary not found, return full buffer
+}
+
+
+std::string RequestDataSet::cutPart(const std::string &buf)
+{
+    std::size_t pos = buf.find("\r\n\r\n");
+    if (pos == std::string::npos)
+        pos = buf.find("\n\n");
+
+    if (pos != std::string::npos)
+        return buf.substr(pos + ((buf[pos] == '\r') ? 4 : 2));
+
+    return "";
+}
+
+std::string RequestDataSet::cutUntilBoundary(const std::string &buf) 
+{
+    //size_t boundary_with_crlf_len = boundaryStart.size() + 2
+    std::string boundary_with_crlf = "\r\n" + boundaryStart;
+
+    size_t pos = 0;
+    while ((pos = buf.find(boundary_with_crlf, pos)) != std::string::npos)
+        return buf.substr(0, pos);
+    std::string final_boundary = "\r\n" + boundaryStart + "--";
+    pos = buf.find(final_boundary);
+    if (pos != std::string::npos)
+        return buf.substr(0, pos);
+    return buf;
+}
+
+bool isEmptyLine(const std::string &line)
+{
+    // В заголовках пустая строка — это строка только с \r и \n
+    for (size_t i = 0; i < line.size(); ++i) {
+        unsigned char c = static_cast<unsigned char>(line[i]);
+        if (c != '\r' && c != '\n')
+            return false; // не пустая строка
+    }
+    return true;
+}*/
+
+/*
+void RequestDataSet::mapParts()
+{
+    for (size_t i = 0; i < parts.size(); i++)
+    {
+        for (size_t j = 0; j < parts[i].token_headers.size(); j++)
+        {
+            std::vector<std::string>& headerLine = parts[i].token_headers[j];
+            if (!headerLine.empty())
+            {
+                std::vector<std::string> values;
+                for (size_t k = 1; k < headerLine.size(); k++)
+                {
+                    values.push_back(headerLine[k]);
+                }
+                parts[i].headers[headerLine[0]] = values;
+            }
+        }
+        findPartHeaders(parts[i]);
+    }
+}
+
+void RequestDataSet::findPartHeaders(Part &part)
+{
+    std::map<std::string, std::vector<std::string> >::const_iterator it = part.headers.find("Content-Disposition:");
+
+    if (it == part.headers.end())
+        return;
+
+    const std::vector<std::string> &headermap = it->second;
+    if (!headermap.empty())
+    {
+        for (size_t i = 0; i < headermap.size(); i++)
+            addKeyValuePairs(headermap[i], part.headers_map);
+    }
+}
+
+
+bool RequestDataSet::multiFinder()
+{
+    const std::string key = "multipart";
+    std::map<std::string, std::vector<std::string> >::const_iterator it = headers.find("Content-Type:");
+
+    if (it == headers.end())
+        return false;
+
+    const std::vector<std::string> &multiheader = it->second;
+    if (!multiheader.empty() && multiheader[0].find(key) != std::string::npos)
+    {
+        for (size_t i = 0; i < multiheader.size(); i++)
+            addKeyValuePairs(multiheader[i], this->multipart_map);
+        return true;
+    }
+    return false;
+}*/
+
+/*
+
+void RequestDataSet::bodyHandle()
+{
+    this->multipart = multiFinder();
+    if (multipart)
+        mapParts();
+    else
+        handleBodyData();
+}
+
+void RequestDataSet::handleBodyData()
+{
+    const std::string &key = this->bodyrawline;
+    const std::string prefixMessage = "message=";
+    if (key.compare(0, prefixMessage.size(), prefixMessage) == 0)
+        body = urlDecode(key.substr(prefixMessage.size()));
+    const std::string prefixMethod = "_method=";
+    if (key.compare(0, prefixMethod.size(), prefixMethod) == 0)
+        this->addKeyValuePairs(key, this->method_map);
+    if(!this->method_map.empty())
+    {
+        method = method_map["_method"];
+        int id = atoi(method_map["resource_id"].c_str());
+        if (!FileManager::getInstance()->deleteFile(id))
+        {
+            error = INTERNALERROR;
+            return;
+        }
+    }
+        
+}
+
+void RequestDataSet::tokenize_with_binary(const std::string &buf)
+{
+    size_t pos = 0; 
+    size_t line_no = 0;
+    recursion_count++;
+    std::vector< std::vector<std::string> > storeData;
+
+    while (pos < buf.size())
+    {
+        size_t lineEnd = buf.find("\n", pos);
+        if (lineEnd == std::string::npos)
+            lineEnd = buf.size();
+
+        std::string line = buf.substr(pos, lineEnd - pos);
+        if (!line.empty() && line[line.size() - 1] == '\r')
+            line.erase(line.size() - 1);
+
+        ++line_no;
+        pos = lineEnd + 1;
+
+        std::vector<std::string> line_tokens;
+
+        if (isEmptyLine(line))
+        {
+            // end of headers → handle body as raw bytes
+            std::string cutbuffer = cutPart(buf);           // skip headers
+            std::string body = cutUntilBoundary(cutbuffer); // raw body until boundary
+
+            if (boundary.empty())
+                this->bodyrawline = cutbuffer;  // fallback for non-multipart
+
+            cutbuffer = cutPartStart(cutbuffer); 
+
+            if (recursion_count > 1) 
+            {
+                Part part;
+                part.body = body;             // raw binary body
+                part.token_headers = storeData;
+                parts.push_back(part);
+            }
+
+            // recurse on remainder (next part)
+            tokenize_with_binary(cutbuffer);
+            break; // stop line-by-line parsing for this part
+        }
+        else
+        {
+            // still in headers → tokenize as before
+            line_tokens = saveLineandBound(line);
+            storeData.push_back(line_tokens);
+        }
+    }
+
+    token_data = storeData;
+}
+
+
+
+
+/*void RequestDataSet::tokenize_with_binary(std::string buf)
+{
+    std::stringstream text_stream(buf);
+    std::string line;
+    size_t line_no = 0;
+    recursion_count++;
+    std::vector<std::vector<std::string> > storeData;
+    std::string body;
+    while (std::getline(text_stream, line)) 
+    {
+        ++line_no;
+        std::vector<std::string> line_tokens;
+        if (isEmptyLine(line))
+        {
+            std::string cutbuffer = cutPart(buf);
+            std::string body = cutUntilBoundary(cutbuffer);
+            cutbuffer = cutPartStart(cutbuffer);
+            if(recursion_count > 1) 
+            {
+                Part part;
+                part.body = body;
+                part.token_headers = storeData;
+
+                parts.push_back(part);
+            }
+            tokenize_with_binary(cutbuffer);
+            break;
+        }
+        else
+        {
+            line_tokens = saveLineandBound(line);
+            storeData.push_back(line_tokens);
+            //debugPrint(line_no, line, line_tokens);
+        }
+    }
+    token_data = storeData;
+}*/
+
+/*
+
+    /*std::string name = "upload_" + getTimestampForFilename();
+    std::string filename = "www/database/" + name;
+    if (request.body.size() > ServerConfigDataSet::getInstance().client_max_body_size) 
+    {
+            this->setError(PAYLOADTOOLARGE);
+            return;
+    }
+    if (request.text == false) 
+    {
+        if (!saveBinaryFile(request.body, filename)) 
+        {
+            this->setError(INTERNALERROR);
+            return;
+        }
+        FileManager::getInstance()->uploadFile(name);
+    } 
+    else 
+    {
+        std::ofstream file(filename.c_str());
+        if (!file.is_open()) {
+            this->setError(INTERNALERROR);
+            return;
+        }
+        file << request.body;
+        file.close();
+        FileManager::getInstance()->uploadFile(name);
+    }*/
+    
+    */
