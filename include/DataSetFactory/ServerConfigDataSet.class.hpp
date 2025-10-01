@@ -30,6 +30,7 @@ class ServerConfigDataSet: public ADataSet, public IHandler
         ~ServerConfigDataSet(void);
         static void destroyInstance();
         uint32_t                    host;
+        in_addr_t                   new_host;
         std::vector<unsigned int>   ports;
         unsigned int                client_max_body_size;
         unsigned int                max_uri_length;

@@ -6,7 +6,7 @@
 /*   By: ytsyrend <ytsyrend@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 18:41:01 by ytsyrend          #+#    #+#             */
-/*   Updated: 2025/09/30 18:02:24 by ytsyrend         ###   ########.fr       */
+/*   Updated: 2025/10/01 12:47:47 by ytsyrend         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,8 @@
 #include "Logger.class.hpp"
 #include "lib.hpp"
 
-//TODO: stupid cookies are not working again as it should
-//TODO: handle validation schema + {}
-//TODO: test cgi with game
 
-//TODO: create folder for location if none
+//TODO: handle validation schema + {}
 //TODO: localhost name support
 //TODO: /database выводит пустую страницу
 //TODO: still dont know how cgi is tested

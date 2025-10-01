@@ -50,15 +50,14 @@ bool Socket::setup()
 	_address.sin_family = AF_INET;
 	//_address.sin_addr.s_addr = INADDR_ANY;
 	_address.sin_addr.s_addr = htonl(ServerConfigDataSet::getInstance().host);
+	/*_address.sin_addr.s_addr = ServerConfigDataSet::getInstance().new_host;
+	if (_address.sin_addr.s_addr == INADDR_NONE)
+		throw std::runtime_error("Invalid ip address");*/
 	_address.sin_port = htons(_port);
 	if (bind(_server_fd, (sockaddr *)&_address, sizeof(_address)) == -1)
-	{
 		throw std::runtime_error("Bind failed");
-	}
 	if (listen(_server_fd, 10) == -1)
-	{
 		throw std::runtime_error("Listen failed");
-	}
 	Logger::info("✅ Server listening on port " + toString(_port) + " — setup complete");
 	return true;
 }

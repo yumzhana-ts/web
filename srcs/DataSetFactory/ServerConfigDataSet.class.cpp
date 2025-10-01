@@ -76,6 +76,7 @@ void ServerConfigDataSet::map()
                 this->host = 0x7F000001;
             else
                 throw std::logic_error("⚠️ Only localhost support");
+            this->new_host = ipStringToHostIP(token_data[i][1]);
         }
         else if(token_data[i][0] == "listen")
             this->ports.push_back(atol(token_data[i][1].c_str()));
