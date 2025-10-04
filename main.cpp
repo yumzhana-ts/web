@@ -6,7 +6,7 @@
 /*   By: ytsyrend <ytsyrend@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 18:41:01 by ytsyrend          #+#    #+#             */
-/*   Updated: 2025/10/01 12:47:47 by ytsyrend         ###   ########.fr       */
+/*   Updated: 2025/10/01 21:39:56 by ytsyrend         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,9 @@
 //TODO: hostname
 //TODO: still dont know how cgi is tested
 
+//TODO: PUT + locationhandler: logic for saving and checking directory
+//TODO: POST + script: cgi runner
+//TODO: POST + 
 int main(int argc, char **argv) 
 {
     if(argc == 2)

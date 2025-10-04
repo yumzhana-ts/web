@@ -112,6 +112,8 @@ void ChainBuilder::buildResponse()
         handlePost();
     else if (request.method == "DELETE")
         handleDelete();
+    else if (request.method == "DELETE")
+        handlePut();
     else handleUnsupportedMethod();
 }
 
@@ -128,6 +130,13 @@ void ChainBuilder::handlePost()
     PostResponse *post = new PostResponse(request);
     response = post;
     this->setNext(post);
+}
+
+void ChainBuilder::handlePut()
+{
+    PutResponse *put = new PutResponse(request);
+    response = put;
+    this->setNext(put);
 }
 
 void ChainBuilder::handleDelete()

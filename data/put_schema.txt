@@ -1,0 +1,6 @@
+void ChainBuilder::handlePut()
+{
+    PutResponse *put = new putResponse(request);
+    response = put;
+    this->setNext(put);
+}
