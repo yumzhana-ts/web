@@ -112,7 +112,7 @@ void ChainBuilder::buildResponse()
         handlePost();
     else if (request.method == "DELETE")
         handleDelete();
-    else if (request.method == "DELETE")
+    else if (request.method == "PUT")
         handlePut();
     else handleUnsupportedMethod();
 }

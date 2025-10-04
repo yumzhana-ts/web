@@ -26,6 +26,7 @@ private:
 	AResponse *response;
 	std::string location;
 	std::string page;
+	std::string put_page;
 	std::string directory;
 	std::vector<std::string> method;
 public:
@@ -47,6 +48,7 @@ public:
 	void deleteFiles();
 	bool isCgi(const std::string& path);
 	void setLocations();
+	void locationPut();
 };
 
 

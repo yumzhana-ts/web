@@ -18064,3 +18064,2270 @@ Line 12: [Sec-Fetch-User:] [?1]
 Line 13: [Priority:] [u=0,] [i] 
 ==================== PARSING END ======================
 
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/test/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/default/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [cgi_ext] [.php] [.py] [.sh] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 index: index.html
+📍 locations: 
+   [/]
+==================== LOCATION CONFIG START ====================
+📂 root: www/default/
+📄 autoindex: off
+✅ allow_methods: [GET] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/cgi-bin]
+==================== CGI CONFIG START ====================
+📂 cgi_root: www/scripts/
+➡️ cgi_path: [/usr/bin/python3] [/bin/bash] 
+📜 cgi_ext: [.php] [.py] 
+==================== CGI CONFIG END ======================
+
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/test]
+==================== LOCATION CONFIG START ====================
+📂 root: www/test/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [PUT] [/test/image.jpg] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [curl/7.81.0] 
+Line 3: [Accept:] [*/*] 
+Line 4: [Content-Type:] [image/jpeg] 
+Line 5: [Content-Length:] [15152] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/test/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/default/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [cgi_ext] [.php] [.py] [.sh] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 index: index.html
+📍 locations: 
+   [/]
+==================== LOCATION CONFIG START ====================
+📂 root: www/default/
+📄 autoindex: off
+✅ allow_methods: [GET] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/cgi-bin]
+==================== CGI CONFIG START ====================
+📂 cgi_root: www/scripts/
+➡️ cgi_path: [/usr/bin/python3] [/bin/bash] 
+📜 cgi_ext: [.php] [.py] 
+==================== CGI CONFIG END ======================
+
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/test]
+==================== LOCATION CONFIG START ====================
+📂 root: www/test/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [PUT] [/test/image.jpg] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [curl/7.81.0] 
+Line 3: [Accept:] [*/*] 
+Line 4: [Content-Type:] [image/jpeg] 
+Line 5: [Content-Length:] [15152] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/test/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/default/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [cgi_ext] [.php] [.py] [.sh] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 index: index.html
+📍 locations: 
+   [/]
+==================== LOCATION CONFIG START ====================
+📂 root: www/default/
+📄 autoindex: off
+✅ allow_methods: [GET] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/cgi-bin]
+==================== CGI CONFIG START ====================
+📂 cgi_root: www/scripts/
+➡️ cgi_path: [/usr/bin/python3] [/bin/bash] 
+📜 cgi_ext: [.php] [.py] 
+==================== CGI CONFIG END ======================
+
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/test]
+==================== LOCATION CONFIG START ====================
+📂 root: www/test/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [PUT] [/test/image.jpg] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [curl/7.81.0] 
+Line 3: [Accept:] [*/*] 
+Line 4: [Content-Type:] [image/jpeg] 
+Line 5: [Content-Length:] [15152] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/test/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/default/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [cgi_ext] [.php] [.py] [.sh] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 index: index.html
+📍 locations: 
+   [/]
+==================== LOCATION CONFIG START ====================
+📂 root: www/default/
+📄 autoindex: off
+✅ allow_methods: [GET] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/cgi-bin]
+==================== CGI CONFIG START ====================
+📂 cgi_root: www/scripts/
+➡️ cgi_path: [/usr/bin/python3] [/bin/bash] 
+📜 cgi_ext: [.php] [.py] 
+==================== CGI CONFIG END ======================
+
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/test]
+==================== LOCATION CONFIG START ====================
+📂 root: www/test/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [PUT] [/test/image.jpg] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [curl/7.81.0] 
+Line 3: [Accept:] [*/*] 
+Line 4: [Content-Type:] [image/jpeg] 
+Line 5: [Content-Length:] [15152] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/test/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/default/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [cgi_ext] [.php] [.py] [.sh] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 index: index.html
+📍 locations: 
+   [/]
+==================== LOCATION CONFIG START ====================
+📂 root: www/default/
+📄 autoindex: off
+✅ allow_methods: [GET] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/cgi-bin]
+==================== CGI CONFIG START ====================
+📂 cgi_root: www/scripts/
+➡️ cgi_path: [/usr/bin/python3] [/bin/bash] 
+📜 cgi_ext: [.php] [.py] 
+==================== CGI CONFIG END ======================
+
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/test]
+==================== LOCATION CONFIG START ====================
+📂 root: www/test/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [PUT] [/test/image.jpg] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [curl/7.81.0] 
+Line 3: [Accept:] [*/*] 
+Line 4: [Content-Type:] [image/jpeg] 
+Line 5: [Content-Length:] [15152] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/test/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/default/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [cgi_ext] [.php] [.py] [.sh] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 index: index.html
+📍 locations: 
+   [/]
+==================== LOCATION CONFIG START ====================
+📂 root: www/default/
+📄 autoindex: off
+✅ allow_methods: [GET] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/cgi-bin]
+==================== CGI CONFIG START ====================
+📂 cgi_root: www/scripts/
+➡️ cgi_path: [/usr/bin/python3] [/bin/bash] 
+📜 cgi_ext: [.php] [.py] 
+==================== CGI CONFIG END ======================
+
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/test]
+==================== LOCATION CONFIG START ====================
+📂 root: www/test/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [PUT] [/test/image.jpg] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [curl/7.81.0] 
+Line 3: [Accept:] [*/*] 
+Line 4: [Content-Type:] [image/jpeg] 
+Line 5: [Content-Length:] [15152] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [PUT] [/www/test/image.jpg] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [curl/7.81.0] 
+Line 3: [Accept:] [*/*] 
+Line 4: [Content-Type:] [image/jpeg] 
+Line 5: [Content-Length:] [15152] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [PUT] [/www/test/image.jpg] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [curl/7.81.0] 
+Line 3: [Accept:] [*/*] 
+Line 4: [Content-Type:] [image/jpeg] 
+Line 5: [Content-Length:] [15152] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/test/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/default/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [cgi_ext] [.php] [.py] [.sh] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 index: index.html
+📍 locations: 
+   [/]
+==================== LOCATION CONFIG START ====================
+📂 root: www/default/
+📄 autoindex: off
+✅ allow_methods: [GET] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/cgi-bin]
+==================== CGI CONFIG START ====================
+📂 cgi_root: www/scripts/
+➡️ cgi_path: [/usr/bin/python3] [/bin/bash] 
+📜 cgi_ext: [.php] [.py] 
+==================== CGI CONFIG END ======================
+
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/test]
+==================== LOCATION CONFIG START ====================
+📂 root: www/test/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [PUT] [/www/test/image.jpg] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [curl/7.81.0] 
+Line 3: [Accept:] [*/*] 
+Line 4: [Content-Type:] [image/jpeg] 
+Line 5: [Content-Length:] [15152] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/test/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/default/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [cgi_ext] [.php] [.py] [.sh] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 index: index.html
+📍 locations: 
+   [/]
+==================== LOCATION CONFIG START ====================
+📂 root: www/default/
+📄 autoindex: off
+✅ allow_methods: [GET] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/cgi-bin]
+==================== CGI CONFIG START ====================
+📂 cgi_root: www/scripts/
+➡️ cgi_path: [/usr/bin/python3] [/bin/bash] 
+📜 cgi_ext: [.php] [.py] 
+==================== CGI CONFIG END ======================
+
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/test]
+==================== LOCATION CONFIG START ====================
+📂 root: www/test/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [PUT] [/www/test/image.jpg] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [curl/7.81.0] 
+Line 3: [Accept:] [*/*] 
+Line 4: [Content-Type:] [image/jpeg] 
+Line 5: [Content-Length:] [15152] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [PUT] [/www/test/image.jpg] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [curl/7.81.0] 
+Line 3: [Accept:] [*/*] 
+Line 4: [Content-Type:] [image/jpeg] 
+Line 5: [Content-Length:] [15152] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/test/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/default/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [cgi_ext] [.php] [.py] [.sh] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 index: index.html
+📍 locations: 
+   [/]
+==================== LOCATION CONFIG START ====================
+📂 root: www/default/
+📄 autoindex: off
+✅ allow_methods: [GET] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/cgi-bin]
+==================== CGI CONFIG START ====================
+📂 cgi_root: www/scripts/
+➡️ cgi_path: [/usr/bin/python3] [/bin/bash] 
+📜 cgi_ext: [.php] [.py] 
+==================== CGI CONFIG END ======================
+
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/test]
+==================== LOCATION CONFIG START ====================
+📂 root: www/test/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [PUT] [/www/test/image.jpg] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [curl/7.81.0] 
+Line 3: [Accept:] [*/*] 
+Line 4: [Content-Type:] [image/jpeg] 
+Line 5: [Content-Length:] [15152] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/test/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/default/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [cgi_ext] [.php] [.py] [.sh] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 index: index.html
+📍 locations: 
+   [/]
+==================== LOCATION CONFIG START ====================
+📂 root: www/default/
+📄 autoindex: off
+✅ allow_methods: [GET] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/cgi-bin]
+==================== CGI CONFIG START ====================
+📂 cgi_root: www/scripts/
+➡️ cgi_path: [/usr/bin/python3] [/bin/bash] 
+📜 cgi_ext: [.php] [.py] 
+==================== CGI CONFIG END ======================
+
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/test]
+==================== LOCATION CONFIG START ====================
+📂 root: www/test/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [PUT] [/www/test/image.jpg] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [curl/7.81.0] 
+Line 3: [Accept:] [*/*] 
+Line 4: [Content-Type:] [image/jpeg] 
+Line 5: [Content-Length:] [15152] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/test/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/default/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [cgi_ext] [.php] [.py] [.sh] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 index: index.html
+📍 locations: 
+   [/]
+==================== LOCATION CONFIG START ====================
+📂 root: www/default/
+📄 autoindex: off
+✅ allow_methods: [GET] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/cgi-bin]
+==================== CGI CONFIG START ====================
+📂 cgi_root: www/scripts/
+➡️ cgi_path: [/usr/bin/python3] [/bin/bash] 
+📜 cgi_ext: [.php] [.py] 
+==================== CGI CONFIG END ======================
+
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/test]
+==================== LOCATION CONFIG START ====================
+📂 root: www/test/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [PUT] [/www/test/image.jpg] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [curl/7.81.0] 
+Line 3: [Accept:] [*/*] 
+Line 4: [Content-Type:] [image/jpeg] 
+Line 5: [Content-Length:] [15152] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/test/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/default/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [cgi_ext] [.php] [.py] [.sh] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 index: index.html
+📍 locations: 
+   [/]
+==================== LOCATION CONFIG START ====================
+📂 root: www/default/
+📄 autoindex: off
+✅ allow_methods: [GET] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/cgi-bin]
+==================== CGI CONFIG START ====================
+📂 cgi_root: www/scripts/
+➡️ cgi_path: [/usr/bin/python3] [/bin/bash] 
+📜 cgi_ext: [.php] [.py] 
+==================== CGI CONFIG END ======================
+
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/test]
+==================== LOCATION CONFIG START ====================
+📂 root: www/test/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [PUT] [/www/test/image.jpg] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [curl/7.81.0] 
+Line 3: [Accept:] [*/*] 
+Line 4: [Content-Type:] [image/jpeg] 
+Line 5: [Content-Length:] [15152] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/test/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/default/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [cgi_ext] [.php] [.py] [.sh] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 index: index.html
+📍 locations: 
+   [/]
+==================== LOCATION CONFIG START ====================
+📂 root: www/default/
+📄 autoindex: off
+✅ allow_methods: [GET] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/cgi-bin]
+==================== CGI CONFIG START ====================
+📂 cgi_root: www/scripts/
+➡️ cgi_path: [/usr/bin/python3] [/bin/bash] 
+📜 cgi_ext: [.php] [.py] 
+==================== CGI CONFIG END ======================
+
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/test]
+==================== LOCATION CONFIG START ====================
+📂 root: www/test/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [PUT] [/www/test/image.jpg] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [curl/7.81.0] 
+Line 3: [Accept:] [*/*] 
+Line 4: [Content-Type:] [image/jpeg] 
+Line 5: [Content-Length:] [15152] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [POST] [/test/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [curl/7.81.0] 
+Line 3: [Accept:] [*/*] 
+Line 4: [Content-Type:] [image/jpeg] 
+Line 5: [Content-Length:] [15152] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/test/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/default/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [cgi_ext] [.php] [.py] [.sh] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 index: index.html
+📍 locations: 
+   [/]
+==================== LOCATION CONFIG START ====================
+📂 root: www/default/
+📄 autoindex: off
+✅ allow_methods: [GET] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/cgi-bin]
+==================== CGI CONFIG START ====================
+📂 cgi_root: www/scripts/
+➡️ cgi_path: [/usr/bin/python3] [/bin/bash] 
+📜 cgi_ext: [.php] [.py] 
+==================== CGI CONFIG END ======================
+
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/test]
+==================== LOCATION CONFIG START ====================
+📂 root: www/test/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [PUT] [/www/test/image.jpg] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [curl/7.81.0] 
+Line 3: [Accept:] [*/*] 
+Line 4: [Content-Type:] [image/jpeg] 
+Line 5: [Content-Length:] [15152] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [PUT] [/www/test/image.jpg] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [curl/7.81.0] 
+Line 3: [Accept:] [*/*] 
+Line 4: [Content-Type:] [image/jpeg] 
+Line 5: [Content-Length:] [15152] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/test/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/default/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [cgi_ext] [.php] [.py] [.sh] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 index: index.html
+📍 locations: 
+   [/]
+==================== LOCATION CONFIG START ====================
+📂 root: www/default/
+📄 autoindex: off
+✅ allow_methods: [GET] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/cgi-bin]
+==================== CGI CONFIG START ====================
+📂 cgi_root: www/scripts/
+➡️ cgi_path: [/usr/bin/python3] [/bin/bash] 
+📜 cgi_ext: [.php] [.py] 
+==================== CGI CONFIG END ======================
+
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/test]
+==================== LOCATION CONFIG START ====================
+📂 root: www/test/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [PUT] [/www/test/image.jpg] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [curl/7.81.0] 
+Line 3: [Accept:] [*/*] 
+Line 4: [Content-Type:] [image/jpeg] 
+Line 5: [Content-Length:] [15152] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [POST] [/test/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [curl/7.81.0] 
+Line 3: [Accept:] [*/*] 
+Line 4: [Content-Type:] [image/jpeg] 
+Line 5: [Content-Length:] [15152] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/test/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/default/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [cgi_ext] [.php] [.py] [.sh] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 index: index.html
+📍 locations: 
+   [/]
+==================== LOCATION CONFIG START ====================
+📂 root: www/default/
+📄 autoindex: off
+✅ allow_methods: [GET] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/cgi-bin]
+==================== CGI CONFIG START ====================
+📂 cgi_root: www/scripts/
+➡️ cgi_path: [/usr/bin/python3] [/bin/bash] 
+📜 cgi_ext: [.php] [.py] 
+==================== CGI CONFIG END ======================
+
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/test]
+==================== LOCATION CONFIG START ====================
+📂 root: www/test/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [POST] [/test/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [curl/7.81.0] 
+Line 3: [Accept:] [*/*] 
+Line 4: [Content-Type:] [image/jpeg] 
+Line 5: [Content-Length:] [15152] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/test/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/default/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [cgi_ext] [.php] [.py] [.sh] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 index: index.html
+📍 locations: 
+   [/]
+==================== LOCATION CONFIG START ====================
+📂 root: www/default/
+📄 autoindex: off
+✅ allow_methods: [GET] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/cgi-bin]
+==================== CGI CONFIG START ====================
+📂 cgi_root: www/scripts/
+➡️ cgi_path: [/usr/bin/python3] [/bin/bash] 
+📜 cgi_ext: [.php] [.py] 
+==================== CGI CONFIG END ======================
+
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/test]
+==================== LOCATION CONFIG START ====================
+📂 root: www/test/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [POST] [/test/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [curl/7.81.0] 
+Line 3: [Accept:] [*/*] 
+Line 4: [Content-Type:] [image/jpeg] 
+Line 5: [Content-Length:] [15152] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/test/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/default/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [cgi_ext] [.php] [.py] [.sh] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 index: index.html
+📍 locations: 
+   [/]
+==================== LOCATION CONFIG START ====================
+📂 root: www/default/
+📄 autoindex: off
+✅ allow_methods: [GET] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/cgi-bin]
+==================== CGI CONFIG START ====================
+📂 cgi_root: www/scripts/
+➡️ cgi_path: [/usr/bin/python3] [/bin/bash] 
+📜 cgi_ext: [.php] [.py] 
+==================== CGI CONFIG END ======================
+
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/test]
+==================== LOCATION CONFIG START ====================
+📂 root: www/test/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [POST] [/test/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [curl/7.81.0] 
+Line 3: [Accept:] [*/*] 
+Line 4: [Content-Type:] [image/jpeg] 
+Line 5: [Content-Length:] [15152] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [PUT] [/www/test/image.jpg] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [curl/7.81.0] 
+Line 3: [Accept:] [*/*] 
+Line 4: [Content-Type:] [image/jpeg] 
+Line 5: [Content-Length:] [15152] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/test/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/default/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [cgi_ext] [.php] [.py] [.sh] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 index: index.html
+📍 locations: 
+   [/]
+==================== LOCATION CONFIG START ====================
+📂 root: www/default/
+📄 autoindex: off
+✅ allow_methods: [GET] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/cgi-bin]
+==================== CGI CONFIG START ====================
+📂 cgi_root: www/scripts/
+➡️ cgi_path: [/usr/bin/python3] [/bin/bash] 
+📜 cgi_ext: [.php] [.py] 
+==================== CGI CONFIG END ======================
+
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/test]
+==================== LOCATION CONFIG START ====================
+📂 root: www/test/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/test/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/default/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [cgi_ext] [.php] [.py] [.sh] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 index: index.html
+📍 locations: 
+   [/]
+==================== LOCATION CONFIG START ====================
+📂 root: www/default/
+📄 autoindex: off
+✅ allow_methods: [GET] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/cgi-bin]
+==================== CGI CONFIG START ====================
+📂 cgi_root: www/scripts/
+➡️ cgi_path: [/usr/bin/python3] [/bin/bash] 
+📜 cgi_ext: [.php] [.py] 
+==================== CGI CONFIG END ======================
+
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/test]
+==================== LOCATION CONFIG START ====================
+📂 root: www/test/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/test/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/default/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [cgi_ext] [.php] [.py] [.sh] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8081
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 index: index.html
+📍 locations: 
+   [/]
+==================== LOCATION CONFIG START ====================
+📂 root: www/default/
+📄 autoindex: off
+✅ allow_methods: [GET] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/cgi-bin]
+==================== CGI CONFIG START ====================
+📂 cgi_root: www/scripts/
+➡️ cgi_path: [/usr/bin/python3] [/bin/bash] 
+📜 cgi_ext: [.php] [.py] 
+==================== CGI CONFIG END ======================
+
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/test]
+==================== LOCATION CONFIG START ====================
+📂 root: www/test/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [PUT] [/www/test/image.jpg] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8081] 
+Line 2: [User-Agent:] [curl/7.81.0] 
+Line 3: [Accept:] [*/*] 
+Line 4: [Content-Type:] [image/jpeg] 
+Line 5: [Content-Length:] [15152] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/test/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/default/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [cgi_ext] [.php] [.py] [.sh] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8081
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 index: index.html
+📍 locations: 
+   [/]
+==================== LOCATION CONFIG START ====================
+📂 root: www/default/
+📄 autoindex: off
+✅ allow_methods: [GET] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/cgi-bin]
+==================== CGI CONFIG START ====================
+📂 cgi_root: www/scripts/
+➡️ cgi_path: [/usr/bin/python3] [/bin/bash] 
+📜 cgi_ext: [.php] [.py] 
+==================== CGI CONFIG END ======================
+
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/test]
+==================== LOCATION CONFIG START ====================
+📂 root: www/test/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/test/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/default/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [cgi_ext] [.php] [.py] [.sh] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8082
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 index: index.html
+📍 locations: 
+   [/]
+==================== LOCATION CONFIG START ====================
+📂 root: www/default/
+📄 autoindex: off
+✅ allow_methods: [GET] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/cgi-bin]
+==================== CGI CONFIG START ====================
+📂 cgi_root: www/scripts/
+➡️ cgi_path: [/usr/bin/python3] [/bin/bash] 
+📜 cgi_ext: [.php] [.py] 
+==================== CGI CONFIG END ======================
+
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/test]
+==================== LOCATION CONFIG START ====================
+📂 root: www/test/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/test/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/default/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [cgi_ext] [.php] [.py] [.sh] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8082
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 index: index.html
+📍 locations: 
+   [/]
+==================== LOCATION CONFIG START ====================
+📂 root: www/default/
+📄 autoindex: off
+✅ allow_methods: [GET] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/cgi-bin]
+==================== CGI CONFIG START ====================
+📂 cgi_root: www/scripts/
+➡️ cgi_path: [/usr/bin/python3] [/bin/bash] 
+📜 cgi_ext: [.php] [.py] 
+==================== CGI CONFIG END ======================
+
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/test]
+==================== LOCATION CONFIG START ====================
+📂 root: www/test/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📑 index: (not set)
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [PUT] [/www/test/image.jpg] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8082] 
+Line 2: [User-Agent:] [curl/7.81.0] 
+Line 3: [Accept:] [*/*] 
+Line 4: [Content-Type:] [image/jpeg] 
+Line 5: [Content-Length:] [15152] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [PUT] [/www/test/image.jpg] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8082] 
+Line 2: [User-Agent:] [curl/7.81.0] 
+Line 3: [Accept:] [*/*] 
+Line 4: [Content-Type:] [image/jpeg] 
+==================== PARSING END ======================
+

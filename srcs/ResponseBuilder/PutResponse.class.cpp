@@ -72,7 +72,7 @@ void PutResponse::upload()
 		this->setError(PAYLOADTOOLARGE);
 		return;
     }
-	std::string filename = "upload_" + getTimestampForFilename();
+	std::string filename = this->page;
 	std::string filefullpath = this->directory + filename;
 	try
 	{
