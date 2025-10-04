@@ -93,22 +93,18 @@ void RequestDataSet::validate()
         return;
     }
     std::string key = token_data[0][0];
-    if (key == "GET" || key == "POST" || key == "DELETE")
+    if (key == "GET" || key == "POST" || key == "DELETE" || key == "PUT")
     {
         std::string data;
         std::string source_name;
         if(key == "GET")
-        {
             data = openFile("data/get_schema.txt");
-        }
         else if(key == "POST")
-        {
             data = openFile("data/post_schema.txt");
-        }
         else if(key == "DELETE")
-        {
             data = openFile("data/delete_schema.txt");
-        }
+        else if(key == "PUT")
+            data = openFile("data/put_schema.txt");
         validateSchema(data);
     }
 }
@@ -120,13 +116,12 @@ void RequestDataSet::map()
     for (size_t i = 0; i < token_data.size(); ++i)
     {
         const std::string &key = token_data[i][0];
-        if (key == "GET" || key == "POST" || key == "HEAD" || key == "DELETE")
+        if (key == "GET" || key == "POST" || key == "HEAD" || key == "DELETE" || key == "PUT")
         {
             method  = key;
             path    = token_data[i][1];
             version = token_data[i][2];
         }
-        
         else if (token_data[i].size() >= 2)
         {
             std::vector<std::string> header;
@@ -253,7 +248,7 @@ bool RequestDataSet::parseHostLineToIP(const std::string &line)
 
 void RequestDataSet::unsupportedRequest()
 {
-    if(method != "GET" && method != "POST" && method != "HEAD" && method != "DELETE")  // must be neither GET nor POST
+    if(method != "GET" && method != "POST" && method != "HEAD" && method != "DELETE" && method != "PUT")  // must be neither GET nor POST
     {
         this->error = METHODNOTALLOWED;
         return;

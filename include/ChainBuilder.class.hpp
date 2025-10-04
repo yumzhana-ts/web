@@ -19,6 +19,7 @@
 #include "ResponseBuilder/DeleteResponse.class.hpp"
 #include "ResponseBuilder/GetResponse.class.hpp"
 #include "ResponseBuilder/PostResponse.class.hpp"
+#include "ResponseBuilder/PutResponse.class.hpp"
 #include "ResponseBuilder/AResponse.class.hpp"
 #include "ErrorFactory/AError.class.hpp"
 #include "ResponseBuilder/CgiHandler.class.hpp"
@@ -46,6 +47,7 @@ class ChainBuilder: public IHandler
         void handleGet();
         void handlePost();
         void handleDelete();
+        void handlePut();
         void handleUnsupportedMethod();
         void logResponse();
         void handleLocation();
