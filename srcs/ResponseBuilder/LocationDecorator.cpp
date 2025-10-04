@@ -31,6 +31,8 @@ LocationDecorator::LocationDecorator(AResponse *resp): response(resp), cgi(false
 	const ServerConfigDataSet &config = ServerConfigDataSet::getInstance();
 	if (isCgi(response->request.path))
 		handleCGILocationsRules(config);
+	else if(response->request.method == "PUT")
+		locationPut();
 	else
 	{
 		if (config.locationDataSets.empty()) 
@@ -40,6 +42,18 @@ LocationDecorator::LocationDecorator(AResponse *resp): response(resp), cgi(false
 	}
 	finalizePage();
     if (DBG) {std::cout << GREEN << "[LocationDecorator] Page resolved: " << directory + page << RESET_COLOR << std::endl;}
+}
+
+void LocationDecorator::locationPut()
+{
+	std::string path = response->request.path;
+	if(!path.empty() && path[0] == '/')
+		path.erase(0,1);
+	std::string::size_type pos = path.find_last_of('/');
+	directory = path.substr(0, pos + 1);
+	put_page = path.substr(pos + 1);
+	//directory = "www/test/";
+	page = "/";
 }
 
 
@@ -72,6 +86,8 @@ void LocationDecorator::setLocations()
 	response->page = page;
 	response->directory = directory;
 	response->full_path = full_path;
+	if(response->request.method == "PUT")
+		response->page = put_page;
     Logger::info("📌 Location resolved | Directory: " + directory + " | Page: " + page + " | Full path: " + full_path + " | CGI: " + (cgi ? "enabled" : "disabled") + " | Target dir: " + target_directory);
 }
 
@@ -179,6 +195,8 @@ void LocationDecorator::checkAllowedMethods(const LocationConfigDataSet *dataset
 
 void LocationDecorator::finalizePage()
 {
+	Logger::debug("Directory: " + directory);
+	Logger::debug("Page: " + page);
 	if(full_path.empty())
 		full_path = directory + page;
 
