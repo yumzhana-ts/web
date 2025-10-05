@@ -73,6 +73,7 @@ int FileManager::uploadFile(const std::string& directory, const std::string& fil
     {
         if (!saveBinaryFile(body, filefullpath))
             throw(std::logic_error(""));
+        
     }
     else
     {

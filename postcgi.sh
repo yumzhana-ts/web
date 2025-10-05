@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # URL of the script
-URL="http://localhost:8081/cgi-bin/script.php"
+URL="http://localhost:8083/name.py"
 
 # Data to send
 DATA="name=Alice&age=25"
