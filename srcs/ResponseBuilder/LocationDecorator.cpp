@@ -78,6 +78,19 @@ bool LocationDecorator::isCgi(const std::string& path)
         page = path.substr(prefix.size());
 		return (true);
     }
+	else if(response->request.method == "POST")
+	{
+		std::string path = response->request.path;
+		std::string::size_type pos = path.find_last_of('/');
+		page = path.substr(pos + 1);
+		if (path.find(".py") != std::string::npos || path.find(".php") != std::string::npos 
+			|| path.find(".pl") != std::string::npos || path.find(".sh") != std::string::npos
+			|| path.find(".bash") != std::string::npos)
+			{
+				Logger::debug("script is there!");
+				return (true);
+			}
+	}
 	return(false);
 }
 

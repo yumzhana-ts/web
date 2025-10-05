@@ -49,8 +49,20 @@ void PostResponse::handle()
         this->raw_response = this->serialize();
 }
 
-
 void PostResponse::build() 
+{
+    this->body = request.body; // используем тело из запроса
+    this->status_code = 200;
+    this->status_text = "OK";
+    this->headers["Content-Type"] = "text/html";
+
+    std::ostringstream len_stream;
+    len_stream << this->body.length();
+    this->headers["Content-Length"] = len_stream.str();
+}
+
+
+/*void PostResponse::build() 
 {
     full_path = "www/error/201.html";
     std::ifstream html_file(full_path.c_str());
@@ -63,7 +75,7 @@ void PostResponse::build()
     this->status_text = "Created";
     this->headers["Content-Type"] = "text/html";
     this->headers["Content-Length"] = len_stream.str();
-}
+}*/
 
 void PostResponse::upload()
 {
@@ -82,4 +94,5 @@ void PostResponse::upload()
 	{
 		this->setError(INTERNALERROR);
 	}
-} 
+    full_path = "www/error/201.html";
+}
