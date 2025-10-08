@@ -37,6 +37,7 @@ class RequestDataSet: public ADataSet, public IHandler
         std::map<std::string, std::string> method_map;
         std::map<std::string, std::string> body_map;
         std::vector<std::string> body_buffers;
+        unsigned int client_max_body_size;
         int content_length_value;
         std::string body;
         int session_id;

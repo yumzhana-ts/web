@@ -20,11 +20,13 @@
 LocationConfigDataSet::LocationConfigDataSet(const std::string &text) 
 {
     this->buffer = text;
+    this->client_max_body_size = 0;
     if (DBG){ std::cout << GREEN << "[LocationConfigDataSet] Default Constructor called" << RESET_COLOR << std::endl;}
 }
 
 LocationConfigDataSet::LocationConfigDataSet(std::vector<std::vector<std::string> > data)
 {
+    this->client_max_body_size = 0;
     this->token_data = data;
     this->parse();
 }
@@ -112,6 +114,8 @@ void LocationConfigDataSet::map()
             this->return_path = tokens[1];*/
         else if (tokens[0] == "alias")
             this->alias = tokens[1];
+        else if(token_data[i][0] == "client_max_body_size")
+            this->client_max_body_size = atol(token_data[i][1].c_str());
     }
 }
 
@@ -136,6 +140,13 @@ void LocationConfigDataSet::printConfig() const
     else
         for (size_t i = 0; i < allow_methods.size(); ++i)
             logFile << "[" << allow_methods[i] << "] ";
+    logFile << std::endl;
+
+    logFile << "📦 client_max_body_size: ";
+    if (client_max_body_size == 0)
+        logFile << "(not set)";
+    else
+        logFile << client_max_body_size;
     logFile << std::endl;
 
     logFile << "📑 index: " << (index.empty() ? "(not set)" : index) << std::endl;

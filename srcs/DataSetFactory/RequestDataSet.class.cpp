@@ -29,6 +29,7 @@ RequestDataSet::RequestDataSet(std::string text, Client& client, Socket& socket)
     this->error = NONE;
     this->text = false;
     this->recursion_count = 0;
+    this->client_max_body_size = ServerConfigDataSet::getInstance().client_max_body_size;
     if (DBG){ std::cout << GREEN << "[RequestDataSet] Default Constructor called" << RESET_COLOR << std::endl;}
 }
 
@@ -598,7 +599,6 @@ void RequestDataSet::printConfig() const
     }
 
     logFile << "==================== REQUEST START ====================" << std::endl;
-
     logFile << "📝 method: " << (method.empty() ? "(not set)" : method) << std::endl;
     logFile << "🌐 path: " << (path.empty() ? "(not set)" : path) << std::endl;
     logFile << "❓ query_string: " << (query_string.empty() ? "(not set)" : query_string) << std::endl;
@@ -725,6 +725,7 @@ void RequestDataSet::printConfig() const
             logFile << "      body: " << (parts[i].body.empty() ? "(empty)" : parts[i].body) << std::endl;
         }
     }
+    logFile << "📦 client_max_body_size: " << client_max_body_size << std::endl;
     logFile << "==================== REQUEST END ======================" << std::endl << std::endl;
 
     logFile.close();

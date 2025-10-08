@@ -22,6 +22,13 @@
 //TODO: PUT + locationhandler: logic for saving and checking directory
 //TODO: POST + script: cgi runner
 //TODO: POST + 
+
+
+//TODO: put has to be passed to location check
+//TODO: make cleint max  body size manadatory
+//TODO: check if there is index in vector of saved indexes
+//
+
 int main(int argc, char **argv) 
 {
     if(argc == 2)

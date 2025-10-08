@@ -22,6 +22,8 @@ class LocationCgiConfigDataSet: public ADataSet, public IHandler
         std::string cgi_root;
         std::vector<std::string> cgi_path;
         std::vector<std::string> cgi_ext;
+        std::vector<std::string> allow_methods;
+        unsigned int client_max_body_size;
         
         LocationCgiConfigDataSet(const std::string &text);
         LocationCgiConfigDataSet(std::vector<std::vector<std::string> > data);
