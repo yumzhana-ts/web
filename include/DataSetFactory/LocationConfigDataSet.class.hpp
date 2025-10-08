@@ -26,6 +26,7 @@ class LocationConfigDataSet: public ADataSet, public IHandler
         std::string return_path;
         std::pair<std::string, std::string> return_info; 
         std::string alias;
+        unsigned int client_max_body_size;
         
         LocationConfigDataSet(const std::string &text);
         LocationConfigDataSet(std::vector<std::vector<std::string> > data);

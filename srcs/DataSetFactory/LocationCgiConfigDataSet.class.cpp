@@ -20,11 +20,13 @@
 LocationCgiConfigDataSet::LocationCgiConfigDataSet(const std::string &text) 
 {
     this->buffer = text;
+    this->client_max_body_size = 0;
     if (DBG){ std::cout << GREEN << "[LocationCgiConfigDataSet] Default Constructor called" << RESET_COLOR << std::endl;}
 }
 
 LocationCgiConfigDataSet::LocationCgiConfigDataSet(std::vector<std::vector<std::string> > data)
 {
+    this->client_max_body_size = 0;
     this->token_data = data;
     this->parse();
 }
@@ -103,6 +105,13 @@ void LocationCgiConfigDataSet::map()
             for(size_t i = 1; i < token_data.size(); i++)
                 this->cgi_ext.push_back(tokens[i]);
         }
+        else if(token_data[i][0] == "client_max_body_size")
+            this->client_max_body_size = atol(token_data[i][1].c_str());
+        else if (tokens[0] == "allow_methods")
+        {
+            for(size_t i = 1; i < tokens.size(); i++)
+                this->allow_methods.push_back(tokens[i]);
+        }
     }
 }
 
@@ -134,6 +143,21 @@ void LocationCgiConfigDataSet::printConfig() const
     else
         for (size_t i = 0; i < cgi_ext.size(); ++i)
             logFile << "[" << cgi_ext[i] << "] ";
+    logFile << std::endl;
+
+    logFile << "🧩 allow_methods: ";
+    if (allow_methods.empty())
+        logFile << "(none)";
+    else
+        for (size_t i = 0; i < allow_methods.size(); ++i)
+            logFile << "[" << allow_methods[i] << "] ";
+    logFile << std::endl;
+
+    logFile << "📦 client_max_body_size: ";
+    if (client_max_body_size == 0)
+        logFile << "(not set)";
+    else
+        logFile << client_max_body_size;
     logFile << std::endl;
 
     logFile << "==================== CGI CONFIG END ======================" << std::endl << std::endl;

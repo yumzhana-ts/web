@@ -45,6 +45,7 @@ class ServerConfigDataSet: public ADataSet, public IHandler
         static ServerConfigDataSet& getInstance();
         void handleLocation(const std::string &location_name, size_t& i);
         void handle();
+        void setMaxBodySize(unsigned int size){this->client_max_body_size = size;}
 };
 
 

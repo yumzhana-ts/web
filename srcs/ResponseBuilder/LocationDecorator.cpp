@@ -46,13 +46,13 @@ LocationDecorator::LocationDecorator(AResponse *resp): response(resp), cgi(false
 
 void LocationDecorator::locationPut()
 {
+	handleCustomLocations(ServerConfigDataSet::getInstance());
 	std::string path = response->request.path;
-	if(!path.empty() && path[0] == '/')
-		path.erase(0,1);
+	/*if(!path.empty() && path[0] == '/' && path.size() != 1)
+		path.erase(0,1);*/
 	std::string::size_type pos = path.find_last_of('/');
-	directory = path.substr(0, pos + 1);
+	//directory = path.substr(0, pos + 1);
 	put_page = path.substr(pos + 1);
-	//directory = "www/test/";
 	page = "/";
 }
 
@@ -129,6 +129,8 @@ void LocationDecorator::handleCGILocationsRules(const ServerConfigDataSet &confi
 		{
 			directory = loc->cgi_root;
 			bool matched = false;
+			if	(loc->client_max_body_size != 0)
+					response->request.client_max_body_size = loc->client_max_body_size;
 			for (size_t i = 0; i < loc->cgi_ext.size(); ++i)
 			{
 				const std::string &ext = loc->cgi_ext[i];
@@ -146,13 +148,43 @@ void LocationDecorator::handleCGILocationsRules(const ServerConfigDataSet &confi
     }
 }
 
-
 void LocationDecorator::handleCustomLocations(const ServerConfigDataSet &config)
+{
+    for (std::map<std::string, ADataSet *>::const_iterator it = config.locationDataSets.begin();
+         it != config.locationDataSets.end(); ++it)
+    {
+		std::string dir = it->first + "/";
+		std::string path = response->request.path;
+		if(path == "/")
+			path = path + "/";
+        if (path.compare(0, dir.size(), dir) == 0) 
+        {
+            Logger::debug("Matched location: " + it->first);
+            if (LocationConfigDataSet* loc = dynamic_cast<LocationConfigDataSet*>(it->second))
+            {
+                directory = loc->root;
+				if	(loc->client_max_body_size != 0)
+					response->request.client_max_body_size = loc->client_max_body_size;
+                page = response->request.path.substr(it->first.size());
+                location = it->first;
+                applyLocationRules(loc);
+                checkAllowedMethods(loc);
+            }
+            return;
+        }
+    }
+    handleDefaultLocation(config);
+}
+
+
+
+/*void LocationDecorator::handleCustomLocations(const ServerConfigDataSet &config)
 {
     for (std::map<std::string, ADataSet *>::const_iterator it = config.locationDataSets.begin(); it != config.locationDataSets.end(); ++it)
     {
 		std::string dir = it->first + "/";
-        if (response->request.path.compare(0, dir.size(), dir) == 0) {
+        if (response->request.path.compare(0, dir.size(), dir) == 0) 
+		{
             if (LocationConfigDataSet* loc = dynamic_cast<LocationConfigDataSet*>(it->second)) 
 			{
 				directory = loc->root;
@@ -165,7 +197,7 @@ void LocationDecorator::handleCustomLocations(const ServerConfigDataSet &config)
         }
     }
     handleDefaultLocation(config);
-}
+}*/
 
 
 void LocationDecorator::applyLocationRules(const LocationConfigDataSet *dataset)
@@ -208,8 +240,8 @@ void LocationDecorator::checkAllowedMethods(const LocationConfigDataSet *dataset
 
 void LocationDecorator::finalizePage()
 {
-	Logger::debug("Directory: " + directory);
-	Logger::debug("Page: " + page);
+	//Logger::debug("Directory: " + directory);
+	//Logger::debug("Page: " + page);
 	if(full_path.empty())
 		full_path = directory + page;
 

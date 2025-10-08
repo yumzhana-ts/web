@@ -79,7 +79,7 @@ void PostResponse::build()
 
 void PostResponse::upload()
 {
-    if (request.body.size() > ServerConfigDataSet::getInstance().client_max_body_size) 
+    if (request.body.size() > request.client_max_body_size) 
     {
 		this->setError(PAYLOADTOOLARGE);
 		return;
