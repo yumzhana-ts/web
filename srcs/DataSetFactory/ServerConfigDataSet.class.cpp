@@ -60,7 +60,7 @@ void ServerConfigDataSet::handle()
 
 void ServerConfigDataSet::validate()
 {
-    std::string data = openFile("data/config_schema.txt");
+    std::string data = openFile("data/config_schema1.txt");
     validateSchema(data);
 }
 
@@ -88,8 +88,13 @@ void ServerConfigDataSet::map()
             this->error_pages.insert(std::make_pair(atol(token_data[i][1].c_str()), token_data[i][2]));
         else if(token_data[i][0] == "client_max_body_size")
             this->client_max_body_size = atol(token_data[i][1].c_str());
+        /*else if(token_data[i][0] == "index")
+            this->index = token_data[i][1];*/
         else if(token_data[i][0] == "index")
-            this->index = token_data[i][1];
+        {
+            for(size_t j = 1; j < token_data[i].size(); j++)
+                this->indexes.push_back(token_data[i][j]);
+        }
         else if(token_data[i][0] == "max_uri_length")
             this->max_uri_length = atol(token_data[i][1].c_str());
         else if(token_data[i][0] == "max_header_length")
@@ -135,7 +140,7 @@ void ServerConfigDataSet::destroyInstance()
 void ServerConfigDataSet::parse()
 {
     this->tokenize(buffer);
-    //this->printTokens();
+    this->printTokens();
     this->validate();
     this->map();
     this->printConfig();
@@ -230,8 +235,21 @@ void ServerConfigDataSet::printConfig() const
 
     logFile << "📦 client_max_body_size: " << client_max_body_size << std::endl;
     logFile << "📦 max uri: " << max_uri_length << std::endl;
-    logFile << "📑 index: " << (index.empty() ? "(not set)" : index) << std::endl;
-
+    logFile << "📑 indexes: ";
+    if (indexes.empty())
+    {
+        logFile << "(not set)" << std::endl;
+    }
+    else
+    {
+        for (size_t i = 0; i < indexes.size(); ++i)
+        {
+            logFile << indexes[i];
+            if (i != indexes.size() - 1)
+                logFile << ", ";
+        }
+        logFile << std::endl;
+    }
     logFile << "📍 locations: ";
     if (locationDataSets.empty())
     {

@@ -103,8 +103,11 @@ void LocationConfigDataSet::map()
             for(size_t i = 1; i < tokens.size(); i++)
                 this->allow_methods.push_back(tokens[i]);
         }
-        else if (tokens[0] == "index")
-            this->index = tokens[1];
+        else if(token_data[i][0] == "index")
+        {
+            for(size_t j = 1; j < token_data[i].size(); j++)
+                this->indexes.push_back(token_data[i][j]);
+        }
         else if (tokens[0] == "return")
         {
             this->return_info.first = tokens[1];
@@ -149,7 +152,21 @@ void LocationConfigDataSet::printConfig() const
         logFile << client_max_body_size;
     logFile << std::endl;
 
-    logFile << "📑 index: " << (index.empty() ? "(not set)" : index) << std::endl;
+    logFile << "📑 indexes: ";
+    if (indexes.empty())
+    {
+        logFile << "(not set)" << std::endl;
+    }
+    else
+    {
+        for (size_t i = 0; i < indexes.size(); ++i)
+        {
+            logFile << indexes[i];
+            if (i != indexes.size() - 1)
+                logFile << ", ";
+        }
+        logFile << std::endl;
+    }
     logFile << "🔀 return: " << (return_path.empty() ? "(not set)" : return_path) << std::endl;
     logFile << "📌 alias: " << (alias.empty() ? "(not set)" : alias) << std::endl;
 

@@ -26,8 +26,7 @@
 
 //TODO: put has to be passed to location check
 //TODO: make cleint max  body size manadatory
-//TODO: check if there is index in vector of saved indexes
-//
+//TODO: fix config verification
 
 int main(int argc, char **argv) 
 {

@@ -16125,3 +16125,2357 @@ o��(�ϑ��;́�U8U���)C���b{�Q�g|礈d|��P.�H�kb>eu��]�V(h�+ss?�������
 📦 client_max_body_size: 100000
 ==================== REQUEST END ======================
 
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /favicon.ico
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=6
+   [Referer:] -> http://localhost:8083/
+   [Sec-Fetch-Dest:] -> image
+   [Sec-Fetch-Mode:] -> no-cors
+   [Sec-Fetch-Site:] -> same-origin
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /favicon.ico
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=6
+   [Referer:] -> http://localhost:8083/
+   [Sec-Fetch-Dest:] -> image
+   [Sec-Fetch-Mode:] -> no-cors
+   [Sec-Fetch-Site:] -> same-origin
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /favicon.ico
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=6
+   [Referer:] -> http://localhost:8083/
+   [Sec-Fetch-Dest:] -> image
+   [Sec-Fetch-Mode:] -> no-cors
+   [Sec-Fetch-Site:] -> same-origin
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /favicon.ico
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=6
+   [Referer:] -> http://localhost:8083/
+   [Sec-Fetch-Dest:] -> image
+   [Sec-Fetch-Mode:] -> no-cors
+   [Sec-Fetch-Site:] -> same-origin
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /favicon.ico
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=6
+   [Referer:] -> http://localhost:8083/
+   [Sec-Fetch-Dest:] -> image
+   [Sec-Fetch-Mode:] -> no-cors
+   [Sec-Fetch-Site:] -> same-origin
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /favicon.ico
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=6
+   [Referer:] -> http://localhost:8083/
+   [Sec-Fetch-Dest:] -> image
+   [Sec-Fetch-Mode:] -> no-cors
+   [Sec-Fetch-Site:] -> same-origin
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /favicon.ico
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=6
+   [Referer:] -> http://localhost:8083/
+   [Sec-Fetch-Dest:] -> image
+   [Sec-Fetch-Mode:] -> no-cors
+   [Sec-Fetch-Site:] -> same-origin
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /favicon.ico
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=6
+   [Referer:] -> http://localhost:8083/
+   [Sec-Fetch-Dest:] -> image
+   [Sec-Fetch-Mode:] -> no-cors
+   [Sec-Fetch-Site:] -> same-origin
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /favicon.ico
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=6
+   [Referer:] -> http://localhost:8083/
+   [Sec-Fetch-Dest:] -> image
+   [Sec-Fetch-Mode:] -> no-cors
+   [Sec-Fetch-Site:] -> same-origin
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /favicon.ico
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=6
+   [Referer:] -> http://localhost:8083/
+   [Sec-Fetch-Dest:] -> image
+   [Sec-Fetch-Mode:] -> no-cors
+   [Sec-Fetch-Site:] -> same-origin
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /favicon.ico
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=6
+   [Referer:] -> http://localhost:8083/
+   [Sec-Fetch-Dest:] -> image
+   [Sec-Fetch-Mode:] -> no-cors
+   [Sec-Fetch-Site:] -> same-origin
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> cross-site
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /favicon.ico
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=6
+   [Referer:] -> http://localhost:8083/
+   [Sec-Fetch-Dest:] -> image
+   [Sec-Fetch-Mode:] -> no-cors
+   [Sec-Fetch-Site:] -> same-origin
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /favicon.ico
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=6
+   [Referer:] -> http://localhost:8083/
+   [Sec-Fetch-Dest:] -> image
+   [Sec-Fetch-Mode:] -> no-cors
+   [Sec-Fetch-Site:] -> same-origin
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /favicon.ico
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=6
+   [Referer:] -> http://localhost:8083/
+   [Sec-Fetch-Dest:] -> image
+   [Sec-Fetch-Mode:] -> no-cors
+   [Sec-Fetch-Site:] -> same-origin
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /favicon.ico
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=6
+   [Referer:] -> http://localhost:8083/
+   [Sec-Fetch-Dest:] -> image
+   [Sec-Fetch-Mode:] -> no-cors
+   [Sec-Fetch-Site:] -> same-origin
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /favicon.ico
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=6
+   [Referer:] -> http://localhost:8083/
+   [Sec-Fetch-Dest:] -> image
+   [Sec-Fetch-Mode:] -> no-cors
+   [Sec-Fetch-Site:] -> same-origin
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /favicon.ico
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=6
+   [Referer:] -> http://localhost:8083/
+   [Sec-Fetch-Dest:] -> image
+   [Sec-Fetch-Mode:] -> no-cors
+   [Sec-Fetch-Site:] -> same-origin
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /favicon.ico
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=6
+   [Referer:] -> http://localhost:8083/
+   [Sec-Fetch-Dest:] -> image
+   [Sec-Fetch-Mode:] -> no-cors
+   [Sec-Fetch-Site:] -> same-origin
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /favicon.ico
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=6
+   [Referer:] -> http://localhost:8083/
+   [Sec-Fetch-Dest:] -> image
+   [Sec-Fetch-Mode:] -> no-cors
+   [Sec-Fetch-Site:] -> same-origin
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /favicon.ico
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=6
+   [Referer:] -> http://localhost:8083/
+   [Sec-Fetch-Dest:] -> image
+   [Sec-Fetch-Mode:] -> no-cors
+   [Sec-Fetch-Site:] -> same-origin
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /favicon.ico
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=6
+   [Referer:] -> http://localhost:8083/
+   [Sec-Fetch-Dest:] -> image
+   [Sec-Fetch-Mode:] -> no-cors
+   [Sec-Fetch-Site:] -> same-origin
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /favicon.ico
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=6
+   [Referer:] -> http://localhost:8083/
+   [Sec-Fetch-Dest:] -> image
+   [Sec-Fetch-Mode:] -> no-cors
+   [Sec-Fetch-Site:] -> same-origin
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /favicon.ico
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=6
+   [Referer:] -> http://localhost:8083/
+   [Sec-Fetch-Dest:] -> image
+   [Sec-Fetch-Mode:] -> no-cors
+   [Sec-Fetch-Site:] -> same-origin
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /favicon.ico
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=6
+   [Referer:] -> http://localhost:8083/
+   [Sec-Fetch-Dest:] -> image
+   [Sec-Fetch-Mode:] -> no-cors
+   [Sec-Fetch-Site:] -> same-origin
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /favicon.ico
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=6
+   [Referer:] -> http://localhost:8083/
+   [Sec-Fetch-Dest:] -> image
+   [Sec-Fetch-Mode:] -> no-cors
+   [Sec-Fetch-Site:] -> same-origin
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /favicon.ico
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=6
+   [Referer:] -> http://localhost:8083/
+   [Sec-Fetch-Dest:] -> image
+   [Sec-Fetch-Mode:] -> no-cors
+   [Sec-Fetch-Site:] -> same-origin
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /database/
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /database/
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /favicon.ico
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=6
+   [Referer:] -> http://localhost:8083/
+   [Sec-Fetch-Dest:] -> image
+   [Sec-Fetch-Mode:] -> no-cors
+   [Sec-Fetch-Site:] -> same-origin
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /favicon.ico
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=6
+   [Referer:] -> http://localhost:8083/
+   [Sec-Fetch-Dest:] -> image
+   [Sec-Fetch-Mode:] -> no-cors
+   [Sec-Fetch-Site:] -> same-origin
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /favicon.ico
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=6
+   [Referer:] -> http://localhost:8083/
+   [Sec-Fetch-Dest:] -> image
+   [Sec-Fetch-Mode:] -> no-cors
+   [Sec-Fetch-Site:] -> same-origin
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /favicon.ico
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=6
+   [Referer:] -> http://localhost:8083/
+   [Sec-Fetch-Dest:] -> image
+   [Sec-Fetch-Mode:] -> no-cors
+   [Sec-Fetch-Site:] -> same-origin
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /favicon.ico
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=6
+   [Referer:] -> http://localhost:8083/
+   [Sec-Fetch-Dest:] -> image
+   [Sec-Fetch-Mode:] -> no-cors
+   [Sec-Fetch-Site:] -> same-origin
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /favicon.ico
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=6
+   [Referer:] -> http://localhost:8083/
+   [Sec-Fetch-Dest:] -> image
+   [Sec-Fetch-Mode:] -> no-cors
+   [Sec-Fetch-Site:] -> same-origin
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> wp-settings-time-1=1749232245;, _pk_id.1.1fff=87328b9d995ae5d5.1753704751.
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
