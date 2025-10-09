@@ -93,27 +93,29 @@ void LocationCgiConfigDataSet::map()
         const std::vector<std::string>& tokens = token_data[i];
         if (tokens.empty())
             continue;
-        if (tokens[0] == "root")
+
+        if (tokens[0] == "root" && tokens.size() > 1)
             this->cgi_root = tokens[1];
         else if (tokens[0] == "cgi_path")
         {
-            for(size_t i = 1; i < token_data.size(); i++)
-                this->cgi_path.push_back(tokens[i]);
+            for(size_t j = 1; j < tokens.size(); j++)
+                this->cgi_path.push_back(tokens[j]);
         }
         else if (tokens[0] == "cgi_ext")
         {
-            for(size_t i = 1; i < token_data.size(); i++)
-                this->cgi_ext.push_back(tokens[i]);
+            for(size_t j = 1; j < tokens.size(); j++)
+                this->cgi_ext.push_back(tokens[j]);
         }
-        else if(token_data[i][0] == "client_max_body_size")
-            this->client_max_body_size = atol(token_data[i][1].c_str());
+        else if(tokens[0] == "client_max_body_size" && tokens.size() > 1)
+            this->client_max_body_size = atol(tokens[1].c_str());
         else if (tokens[0] == "allow_methods")
         {
-            for(size_t i = 1; i < tokens.size(); i++)
-                this->allow_methods.push_back(tokens[i]);
+            for(size_t j = 1; j < tokens.size(); j++)
+                this->allow_methods.push_back(tokens[j]);
         }
     }
 }
+
 
 void LocationCgiConfigDataSet::printConfig() const
 {

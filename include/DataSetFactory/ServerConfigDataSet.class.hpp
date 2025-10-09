@@ -32,6 +32,7 @@ class ServerConfigDataSet: public ADataSet, public IHandler
         uint32_t                    host;
         in_addr_t                   new_host;
         std::vector<unsigned int>   ports;
+        std::vector<std::string>    indexes;
         unsigned int                client_max_body_size;
         unsigned int                max_uri_length;
         unsigned int                max_header_length;

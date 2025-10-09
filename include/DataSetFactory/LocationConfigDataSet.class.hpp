@@ -22,7 +22,7 @@ class LocationConfigDataSet: public ADataSet, public IHandler
         std::string root;
         std::string autoindex;
         std::vector<std::string> allow_methods;
-        std::string index;
+        std::vector<std::string> indexes;
         std::string return_path;
         std::pair<std::string, std::string> return_info; 
         std::string alias;

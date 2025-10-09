@@ -45,6 +45,8 @@ public:
 	std::string script;
 	std::string target_directory;
 	std::string full_path;
+	std::vector<std::string> indexes;
+	int page_index;
 	void deleteFiles();
 	bool isCgi(const std::string& path);
 	void setLocations();

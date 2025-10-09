@@ -111,8 +111,16 @@ void LocationDecorator::handleDefaultLocation(const ServerConfigDataSet &config)
 	directory = config.root;
 	
 	if (response->request.method == "GET" && (page == "/"))
-		page = config.index;
+	{
+		page = config.indexes[0];
+		if(config.indexes.size() > 1)
+		{
+			this->indexes = config.indexes;
+			this->page_index = 0;
+		}
+	}
 }
+
 
 
 void LocationDecorator::handleCGILocationsRules(const ServerConfigDataSet &config)
@@ -217,8 +225,15 @@ void LocationDecorator::applyLocationRules(const LocationConfigDataSet *dataset)
 			directory = "www/scripts/";
 			page = "files.sh";
 		}
-		else if (!dataset->index.empty())
-			page = dataset->index;
+		else if (!dataset->indexes.empty())
+		{
+			page = dataset->indexes[0];
+			if(dataset->indexes.size() > 1)
+			{
+				this->indexes = dataset->indexes;
+				this->page_index = 0;
+			}
+		}
 		return;		
 	}
 }
@@ -242,14 +257,24 @@ void LocationDecorator::finalizePage()
 {
 	//Logger::debug("Directory: " + directory);
 	//Logger::debug("Page: " + page);
-	if(full_path.empty())
-		full_path = directory + page;
+	//if(full_path.empty())
+	full_path = directory + page;
 
 	std::ifstream file(full_path.c_str());
+	Logger::debug("openning " + full_path);
 	if (!file.is_open() && response->request.path != "/favicon.ico")
 	{
-		response->setError(PAGENOTFOUND);
-		return;
+		if(!this->indexes.empty())
+		{
+			this->indexes.erase(this->indexes.begin());
+			page = this->indexes[0];
+			this->finalizePage();
+		}
+		else
+		{
+			response->setError(PAGENOTFOUND);
+			return;
+		}
 	}
 	setLocations();
 }

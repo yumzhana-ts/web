@@ -24301,3 +24301,3835 @@ Line 4: [Content-Type:] [text/plain]
 Line 5: [Content-Length:] [10] 
 ==================== PARSING END ======================
 
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/test/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/default/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] 
+Line 3: [client_max_body_size] [0] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [cgi_ext] [.php] [.py] [.sh] 
+Line 3: [allow_methods] [POST] 
+Line 4: [client_max_body_size] [100000] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/test/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/default/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] 
+Line 3: [client_max_body_size] [0] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [cgi_ext] [.php] [.py] [.sh] 
+Line 3: [allow_methods] [POST] 
+Line 4: [client_max_body_size] [100000] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/test/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/default/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] 
+Line 3: [client_max_body_size] [0] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [cgi_ext] [.php] [.py] [.sh] 
+Line 3: [allow_methods] [POST] 
+Line 4: [client_max_body_size] [100000] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/test/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/default/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] 
+Line 3: [client_max_body_size] [0] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [cgi_ext] [.php] [.py] [.sh] 
+Line 3: [allow_methods] [POST] 
+Line 4: [client_max_body_size] [100000] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/test/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/default/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] 
+Line 3: [client_max_body_size] [0] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [cgi_ext] [.php] [.py] [.sh] 
+Line 3: [allow_methods] [POST] 
+Line 4: [client_max_body_size] [100000] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/test/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/default/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] 
+Line 3: [client_max_body_size] [0] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [cgi_ext] [.php] [.py] [.sh] 
+Line 3: [allow_methods] [POST] 
+Line 4: [client_max_body_size] [100000] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: index.html, index_2.html
+📍 locations: 
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/favicon.ico] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Referer:] [http://localhost:8083/] 
+Line 8: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 9: [Sec-Fetch-Dest:] [image] 
+Line 10: [Sec-Fetch-Mode:] [no-cors] 
+Line 11: [Sec-Fetch-Site:] [same-origin] 
+Line 12: [Priority:] [u=6] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, index_2.html
+📍 locations: 
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, index_2.html
+📍 locations: 
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, index_2.html
+📍 locations: 
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, index_2.html
+📍 locations: 
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, index_2.html
+📍 locations: 
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, index_2.html
+📍 locations: 
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/favicon.ico] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Referer:] [http://localhost:8083/] 
+Line 8: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 9: [Sec-Fetch-Dest:] [image] 
+Line 10: [Sec-Fetch-Mode:] [no-cors] 
+Line 11: [Sec-Fetch-Site:] [same-origin] 
+Line 12: [Priority:] [u=6] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, index_2.html
+📍 locations: 
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, index_2.html
+📍 locations: 
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, index_2.html
+📍 locations: 
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/favicon.ico] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Referer:] [http://localhost:8083/] 
+Line 8: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 9: [Sec-Fetch-Dest:] [image] 
+Line 10: [Sec-Fetch-Mode:] [no-cors] 
+Line 11: [Sec-Fetch-Site:] [same-origin] 
+Line 12: [Priority:] [u=6] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/favicon.ico] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Referer:] [http://localhost:8083/] 
+Line 8: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 9: [Sec-Fetch-Dest:] [image] 
+Line 10: [Sec-Fetch-Mode:] [no-cors] 
+Line 11: [Sec-Fetch-Site:] [same-origin] 
+Line 12: [Priority:] [u=6] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, index_2.html
+📍 locations: 
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/favicon.ico] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Referer:] [http://localhost:8083/] 
+Line 8: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 9: [Sec-Fetch-Dest:] [image] 
+Line 10: [Sec-Fetch-Mode:] [no-cors] 
+Line 11: [Sec-Fetch-Site:] [same-origin] 
+Line 12: [Priority:] [u=6] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, index_2.html
+📍 locations: 
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/favicon.ico] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Referer:] [http://localhost:8083/] 
+Line 8: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 9: [Sec-Fetch-Dest:] [image] 
+Line 10: [Sec-Fetch-Mode:] [no-cors] 
+Line 11: [Sec-Fetch-Site:] [same-origin] 
+Line 12: [Priority:] [u=6] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, index_2.html
+📍 locations: 
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/favicon.ico] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Referer:] [http://localhost:8083/] 
+Line 8: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 9: [Sec-Fetch-Dest:] [image] 
+Line 10: [Sec-Fetch-Mode:] [no-cors] 
+Line 11: [Sec-Fetch-Site:] [same-origin] 
+Line 12: [Priority:] [u=6] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, index_2.html
+📍 locations: 
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/favicon.ico] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Referer:] [http://localhost:8083/] 
+Line 8: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 9: [Sec-Fetch-Dest:] [image] 
+Line 10: [Sec-Fetch-Mode:] [no-cors] 
+Line 11: [Sec-Fetch-Site:] [same-origin] 
+Line 12: [Priority:] [u=6] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, textfile.txt
+📍 locations: 
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/favicon.ico] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Referer:] [http://localhost:8083/] 
+Line 8: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 9: [Sec-Fetch-Dest:] [image] 
+Line 10: [Sec-Fetch-Mode:] [no-cors] 
+Line 11: [Sec-Fetch-Site:] [same-origin] 
+Line 12: [Priority:] [u=6] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, index.html
+📍 locations: 
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/favicon.ico] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Referer:] [http://localhost:8083/] 
+Line 8: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 9: [Sec-Fetch-Dest:] [image] 
+Line 10: [Sec-Fetch-Mode:] [no-cors] 
+Line 11: [Sec-Fetch-Site:] [same-origin] 
+Line 12: [Priority:] [u=6] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/favicon.ico] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Referer:] [http://localhost:8083/] 
+Line 8: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 9: [Sec-Fetch-Dest:] [image] 
+Line 10: [Sec-Fetch-Mode:] [no-cors] 
+Line 11: [Sec-Fetch-Site:] [same-origin] 
+Line 12: [Priority:] [u=6] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, index.html
+📍 locations: 
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [cross-site] 
+Line 12: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/favicon.ico] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Referer:] [http://localhost:8083/] 
+Line 8: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 9: [Sec-Fetch-Dest:] [image] 
+Line 10: [Sec-Fetch-Mode:] [no-cors] 
+Line 11: [Sec-Fetch-Site:] [same-origin] 
+Line 12: [Priority:] [u=6] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/favicon.ico] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Referer:] [http://localhost:8083/] 
+Line 8: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 9: [Sec-Fetch-Dest:] [image] 
+Line 10: [Sec-Fetch-Mode:] [no-cors] 
+Line 11: [Sec-Fetch-Site:] [same-origin] 
+Line 12: [Priority:] [u=6] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, index.html
+📍 locations: 
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/favicon.ico] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Referer:] [http://localhost:8083/] 
+Line 8: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 9: [Sec-Fetch-Dest:] [image] 
+Line 10: [Sec-Fetch-Mode:] [no-cors] 
+Line 11: [Sec-Fetch-Site:] [same-origin] 
+Line 12: [Priority:] [u=6] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, index.html
+📍 locations: 
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/favicon.ico] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Referer:] [http://localhost:8083/] 
+Line 8: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 9: [Sec-Fetch-Dest:] [image] 
+Line 10: [Sec-Fetch-Mode:] [no-cors] 
+Line 11: [Sec-Fetch-Site:] [same-origin] 
+Line 12: [Priority:] [u=6] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, index.html
+📍 locations: 
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/favicon.ico] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Referer:] [http://localhost:8083/] 
+Line 8: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 9: [Sec-Fetch-Dest:] [image] 
+Line 10: [Sec-Fetch-Mode:] [no-cors] 
+Line 11: [Sec-Fetch-Site:] [same-origin] 
+Line 12: [Priority:] [u=6] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, index.html
+📍 locations: 
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/favicon.ico] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Referer:] [http://localhost:8083/] 
+Line 8: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 9: [Sec-Fetch-Dest:] [image] 
+Line 10: [Sec-Fetch-Mode:] [no-cors] 
+Line 11: [Sec-Fetch-Site:] [same-origin] 
+Line 12: [Priority:] [u=6] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, index.html
+📍 locations: 
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 index: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/favicon.ico] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Referer:] [http://localhost:8083/] 
+Line 8: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 9: [Sec-Fetch-Dest:] [image] 
+Line 10: [Sec-Fetch-Mode:] [no-cors] 
+Line 11: [Sec-Fetch-Site:] [same-origin] 
+Line 12: [Priority:] [u=6] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [inde.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, index.html
+📍 locations: 
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 index: inde.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/favicon.ico] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Referer:] [http://localhost:8083/] 
+Line 8: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 9: [Sec-Fetch-Dest:] [image] 
+Line 10: [Sec-Fetch-Mode:] [no-cors] 
+Line 11: [Sec-Fetch-Site:] [same-origin] 
+Line 12: [Priority:] [u=6] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [inde.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, inde.html
+📍 locations: 
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 index: inde.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/favicon.ico] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Referer:] [http://localhost:8083/] 
+Line 8: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 9: [Sec-Fetch-Dest:] [image] 
+Line 10: [Sec-Fetch-Mode:] [no-cors] 
+Line 11: [Sec-Fetch-Site:] [same-origin] 
+Line 12: [Priority:] [u=6] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [inde.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, inde.html
+📍 locations: 
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 index: inde.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/favicon.ico] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Referer:] [http://localhost:8083/] 
+Line 8: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 9: [Sec-Fetch-Dest:] [image] 
+Line 10: [Sec-Fetch-Mode:] [no-cors] 
+Line 11: [Sec-Fetch-Site:] [same-origin] 
+Line 12: [Priority:] [u=6] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [inde.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, index.html
+📍 locations: 
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 index: inde.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/favicon.ico] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Referer:] [http://localhost:8083/] 
+Line 8: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 9: [Sec-Fetch-Dest:] [image] 
+Line 10: [Sec-Fetch-Mode:] [no-cors] 
+Line 11: [Sec-Fetch-Site:] [same-origin] 
+Line 12: [Priority:] [u=6] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [inde.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, index.html
+📍 locations: 
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 index: inde.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/favicon.ico] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Referer:] [http://localhost:8083/] 
+Line 8: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 9: [Sec-Fetch-Dest:] [image] 
+Line 10: [Sec-Fetch-Mode:] [no-cors] 
+Line 11: [Sec-Fetch-Site:] [same-origin] 
+Line 12: [Priority:] [u=6] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [inde.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, index.html
+📍 locations: 
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 index: inde.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [inde.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, inde.html
+📍 locations: 
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 index: inde.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/favicon.ico] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Referer:] [http://localhost:8083/] 
+Line 8: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 9: [Sec-Fetch-Dest:] [image] 
+Line 10: [Sec-Fetch-Mode:] [no-cors] 
+Line 11: [Sec-Fetch-Site:] [same-origin] 
+Line 12: [Priority:] [u=6] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [inde.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: index.html, index_2.html
+📍 locations: 
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 index: inde.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/favicon.ico] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Referer:] [http://localhost:8083/] 
+Line 8: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 9: [Sec-Fetch-Dest:] [image] 
+Line 10: [Sec-Fetch-Mode:] [no-cors] 
+Line 11: [Sec-Fetch-Site:] [same-origin] 
+Line 12: [Priority:] [u=6] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [inde.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, index_2.html
+📍 locations: 
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 index: inde.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/favicon.ico] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Referer:] [http://localhost:8083/] 
+Line 8: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 9: [Sec-Fetch-Dest:] [image] 
+Line 10: [Sec-Fetch-Mode:] [no-cors] 
+Line 11: [Sec-Fetch-Site:] [same-origin] 
+Line 12: [Priority:] [u=6] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [inde.html] [return.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, index_2.html
+📍 locations: 
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: off
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 indexes: inde.html, return.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/database/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [inde.html] [retur.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, index_2.html
+📍 locations: 
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: off
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 indexes: inde.html, retur.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/database/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [inde.html] [retur.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, hello.py
+📍 locations: 
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: off
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 indexes: inde.html, retur.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [inde.html] [retur.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, cgi-bin/hello.py
+📍 locations: 
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: off
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 indexes: inde.html, retur.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [inde.html] [retur.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, /cgi-bin/hello.py
+📍 locations: 
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: off
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 indexes: inde.html, retur.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/favicon.ico] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Referer:] [http://localhost:8083/] 
+Line 8: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 9: [Sec-Fetch-Dest:] [image] 
+Line 10: [Sec-Fetch-Mode:] [no-cors] 
+Line 11: [Sec-Fetch-Site:] [same-origin] 
+Line 12: [Priority:] [u=6] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [inde.html] [retur.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, hello.py
+📍 locations: 
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: off
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 indexes: inde.html, retur.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/favicon.ico] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Referer:] [http://localhost:8083/] 
+Line 8: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 9: [Sec-Fetch-Dest:] [image] 
+Line 10: [Sec-Fetch-Mode:] [no-cors] 
+Line 11: [Sec-Fetch-Site:] [same-origin] 
+Line 12: [Priority:] [u=6] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [cgi_ext] [.php] [.py] [.sh] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [inde.html] [retur.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, hello.py
+📍 locations: 
+   [/cgi-bin]
+==================== CGI CONFIG START ====================
+📂 cgi_root: www/scripts/
+➡️ cgi_path: [/usr/bin/python3] [/bin/bash] 
+📜 cgi_ext: [.php] [.py] 
+🧩 allow_methods: (none)
+📦 client_max_body_size: (not set)
+==================== CGI CONFIG END ======================
+
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: off
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 indexes: inde.html, retur.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/favicon.ico] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Referer:] [http://localhost:8083/] 
+Line 8: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 9: [Sec-Fetch-Dest:] [image] 
+Line 10: [Sec-Fetch-Mode:] [no-cors] 
+Line 11: [Sec-Fetch-Site:] [same-origin] 
+Line 12: [Priority:] [u=6] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [cgi_ext] [.php] [.py] [.sh] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [inde.html] [retur.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, hello.py
+📍 locations: 
+   [/cgi-bin]
+==================== CGI CONFIG START ====================
+📂 cgi_root: www/scripts/
+➡️ cgi_path: [/usr/bin/python3] [/bin/bash] 
+📜 cgi_ext: [.php] [.py] 
+🧩 allow_methods: (none)
+📦 client_max_body_size: (not set)
+==================== CGI CONFIG END ======================
+
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: off
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 indexes: inde.html, retur.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/favicon.ico] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Referer:] [http://localhost:8083/] 
+Line 8: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 9: [Sec-Fetch-Dest:] [image] 
+Line 10: [Sec-Fetch-Mode:] [no-cors] 
+Line 11: [Sec-Fetch-Site:] [same-origin] 
+Line 12: [Priority:] [u=6] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [cgi_ext] [.php] [.py] [.sh] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [inde.html] [retur.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, cgi-bin/hello.py
+📍 locations: 
+   [/cgi-bin]
+==================== CGI CONFIG START ====================
+📂 cgi_root: www/scripts/
+➡️ cgi_path: [/usr/bin/python3] [/bin/bash] 
+📜 cgi_ext: [.php] [.py] 
+🧩 allow_methods: (none)
+📦 client_max_body_size: (not set)
+==================== CGI CONFIG END ======================
+
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: off
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 indexes: inde.html, retur.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/favicon.ico] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Referer:] [http://localhost:8083/] 
+Line 8: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 9: [Sec-Fetch-Dest:] [image] 
+Line 10: [Sec-Fetch-Mode:] [no-cors] 
+Line 11: [Sec-Fetch-Site:] [same-origin] 
+Line 12: [Priority:] [u=6] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [cgi_ext] [.php] [.py] [.sh] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [inde.html] [retur.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, hello.py
+📍 locations: 
+   [/cgi-bin]
+==================== CGI CONFIG START ====================
+📂 cgi_root: www/scripts/
+➡️ cgi_path: [/usr/bin/python3] [/bin/bash] 
+📜 cgi_ext: [.php] [.py] 
+🧩 allow_methods: (none)
+📦 client_max_body_size: (not set)
+==================== CGI CONFIG END ======================
+
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: off
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 indexes: inde.html, retur.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/favicon.ico] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Referer:] [http://localhost:8083/] 
+Line 8: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 9: [Sec-Fetch-Dest:] [image] 
+Line 10: [Sec-Fetch-Mode:] [no-cors] 
+Line 11: [Sec-Fetch-Site:] [same-origin] 
+Line 12: [Priority:] [u=6] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [server] [{] 
+Line 1: [listen] [8083] 
+Line 2: [host] [127.0.0.1] 
+Line 3: [server_name] [test] 
+Line 4: [error_page] [400] [error/400.html] 
+Line 5: [error_page] [403] [error/403.html] 
+Line 6: [error_page] [414] [error/414.html] 
+Line 7: [error_page] [404] [error/404.html] 
+Line 8: [error_page] [405] [error/405.html] 
+Line 9: [error_page] [413] [error/413.html] 
+Line 10: [error_page] [500] [error/500.html] 
+Line 11: [error_page] [502] [error/502.html] 
+Line 12: [error_page] [504] [error/504.html] 
+Line 13: [error_page] [505] [error/505.html] 
+Line 14: [client_max_body_size] [100000] 
+Line 15: [max_uri_length] [10000] 
+Line 16: [max_header_length] [1000] 
+Line 17: [root] [www/default/] 
+Line 18: [index] [inde.html] [hello.py] 
+Line 19: 
+Line 20: [location] [/database] [{] 
+Line 21: [root] [www/database/] 
+Line 22: [autoindex] [off] 
+Line 23: [allow_methods] [GET] [POST] [DELETE] 
+Line 24: [index] [inde.html] [retur.html] 
+Line 25: [}] 
+Line 26: [}] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [server] [{] 
+Line 1: [listen] [8083] 
+Line 2: [host] [127.0.0.1] 
+Line 3: [server_name] [test] 
+Line 4: [error_page] [400] [error/400.html] 
+Line 5: [error_page] [403] [error/403.html] 
+Line 6: [error_page] [414] [error/414.html] 
+Line 7: [error_page] [404] [error/404.html] 
+Line 8: [error_page] [405] [error/405.html] 
+Line 9: [error_page] [413] [error/413.html] 
+Line 10: [error_page] [500] [error/500.html] 
+Line 11: [error_page] [502] [error/502.html] 
+Line 12: [error_page] [504] [error/504.html] 
+Line 13: [error_page] [505] [error/505.html] 
+Line 14: [client_max_body_size] [100000] 
+Line 15: [max_uri_length] [10000] 
+Line 16: [max_header_length] [1000] 
+Line 17: [root] [www/default/] 
+Line 18: [index] [inde.html] [hello.py] 
+Line 19: 
+Line 20: [location] [/database] [{] 
+Line 21: [root] [www/database/] 
+Line 22: [autoindex] [off] 
+Line 23: [allow_methods] [GET] [POST] [DELETE] 
+Line 24: [index] [inde.html] [retur.html] 
+Line 25: [}] 
+Line 26: [}] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [inde.html] [retur.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, hello.py
+📍 locations: 
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: off
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 indexes: inde.html, retur.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [server] [{] 
+Line 1: [listen] [8083] 
+Line 2: [host] [127.0.0.1] 
+Line 3: [server_name] [test] 
+Line 4: [error_page] [400] [error/400.html] 
+Line 5: [error_page] [403] [error/403.html] 
+Line 6: [error_page] [414] [error/414.html] 
+Line 7: [error_page] [404] [error/404.html] 
+Line 8: [error_page] [405] [error/405.html] 
+Line 9: [error_page] [413] [error/413.html] 
+Line 10: [error_page] [500] [error/500.html] 
+Line 11: [error_page] [502] [error/502.html] 
+Line 12: [error_page] [504] [error/504.html] 
+Line 13: [error_page] [505] [error/505.html] 
+Line 14: [client_max_body_size] [100000] 
+Line 15: [max_uri_length] [10000] 
+Line 16: [max_header_length] [1000] 
+Line 17: [root] [www/default/] 
+Line 18: [index] [inde.html] [hello.py] 
+Line 19: 
+Line 20: [location] [/database] [{] 
+Line 21: [root] [www/database/] 
+Line 22: [autoindex] [off] 
+Line 23: [allow_methods] [GET] [POST] [DELETE] 
+Line 24: [index] [inde.html] [retur.html] 
+Line 25: [}] 
+Line 26: [}] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [server] [{] 
+Line 1: [listen] [8083] 
+Line 2: [host] [127.0.0.1] 
+Line 3: [server_name] [test] 
+Line 4: [error_page] [400] [error/400.html] 
+Line 5: [error_page] [403] [error/403.html] 
+Line 6: [error_page] [414] [error/414.html] 
+Line 7: [error_page] [404] [error/404.html] 
+Line 8: [error_page] [405] [error/405.html] 
+Line 9: [error_page] [413] [error/413.html] 
+Line 10: [error_page] [500] [error/500.html] 
+Line 11: [error_page] [502] [error/502.html] 
+Line 12: [error_page] [504] [error/504.html] 
+Line 13: [error_page] [505] [error/505.html] 
+Line 14: [client_max_body_size] [100000] 
+Line 15: [max_uri_length] [10000] 
+Line 16: [max_header_length] [1000] 
+Line 17: [root] [www/default/] 
+Line 18: [index] [inde.html] [hello.py] 
+Line 19: 
+Line 20: [location] [/database] [{] 
+Line 21: [root] [www/database/] 
+Line 22: [autoindex] [off] 
+Line 23: [allow_methods] [GET] [POST] [DELETE] 
+Line 24: [index] [inde.html] [retur.html] 
+Line 25: [}] 
+Line 26: [}] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [server] [{] 
+Line 1: [listen] [8083] 
+Line 2: [host] [127.0.0.1] 
+Line 3: [server_name] [test] 
+Line 4: [error_page] [400] [error/400.html] 
+Line 5: [error_page] [403] [error/403.html] 
+Line 6: [error_page] [414] [error/414.html] 
+Line 7: [error_page] [404] [error/404.html] 
+Line 8: [error_page] [405] [error/405.html] 
+Line 9: [error_page] [413] [error/413.html] 
+Line 10: [error_page] [500] [error/500.html] 
+Line 11: [error_page] [502] [error/502.html] 
+Line 12: [error_page] [504] [error/504.html] 
+Line 13: [error_page] [505] [error/505.html] 
+Line 14: [client_max_body_size] [100000] 
+Line 15: [max_uri_length] [10000] 
+Line 16: [max_header_length] [1000] 
+Line 17: [root] [www/default/] 
+Line 18: [index] [inde.html] [hello.py] 
+Line 19: 
+Line 20: [location] [/database] [{] 
+Line 21: [root] [www/database/] 
+Line 22: [autoindex] [off] 
+Line 23: [allow_methods] [GET] [POST] [DELETE] 
+Line 24: [index] [inde.html] [retur.html] 
+Line 25: [}] 
+Line 26: [}] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [inde.html] [retur.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, hello.py
+📍 locations: 
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: off
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 indexes: inde.html, retur.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [server] [{] 
+Line 1: [listen] [8083] 
+Line 2: [host] [127.0.0.1] 
+Line 3: [server_name] [test] 
+Line 4: [error_page] [400] [error/400.html] 
+Line 5: [error_page] [403] [error/403.html] 
+Line 6: [error_page] [414] [error/414.html] 
+Line 7: [error_page] [404] [error/404.html] 
+Line 8: [error_page] [405] [error/405.html] 
+Line 9: [error_page] [413] [error/413.html] 
+Line 10: [error_page] [500] [error/500.html] 
+Line 11: [error_page] [502] [error/502.html] 
+Line 12: [error_page] [504] [error/504.html] 
+Line 13: [error_page] [505] [error/505.html] 
+Line 14: [client_max_body_size] [100000] 
+Line 15: [max_uri_length] [10000] 
+Line 16: [max_header_length] [1000] 
+Line 17: [root] [www/default/] 
+Line 18: [index] [inde.html] [hello.py] 
+Line 19: [location] [/cgi-bin] [{] 
+Line 20: [root] [www/scripts/] 
+Line 21: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 22: [cgi_ext] [.php] [.py] [.sh] 
+Line 23: [allow_methods] [POST] 
+Line 24: [client_max_body_size] [100000] 
+Line 25: [}] 
+Line 26: 
+Line 27: [location] [/database] [{] 
+Line 28: [root] [www/database/] 
+Line 29: [autoindex] [off] 
+Line 30: [allow_methods] [GET] [POST] [DELETE] 
+Line 31: [index] [inde.html] [retur.html] 
+Line 32: [}] 
+Line 33: [}] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [cgi_ext] [.php] [.py] [.sh] 
+Line 3: [allow_methods] [POST] 
+Line 4: [client_max_body_size] [100000] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [server] [{] 
+Line 1: [listen] [8083] 
+Line 2: [host] [127.0.0.1] 
+Line 3: [server_name] [test] 
+Line 4: [error_page] [400] [error/400.html] 
+Line 5: [error_page] [403] [error/403.html] 
+Line 6: [error_page] [414] [error/414.html] 
+Line 7: [error_page] [404] [error/404.html] 
+Line 8: [error_page] [405] [error/405.html] 
+Line 9: [error_page] [413] [error/413.html] 
+Line 10: [error_page] [500] [error/500.html] 
+Line 11: [error_page] [502] [error/502.html] 
+Line 12: [error_page] [504] [error/504.html] 
+Line 13: [error_page] [505] [error/505.html] 
+Line 14: [client_max_body_size] [100000] 
+Line 15: [max_uri_length] [10000] 
+Line 16: [max_header_length] [1000] 
+Line 17: [root] [www/default/] 
+Line 18: [index] [inde.html] [hello.py] 
+Line 19: [location] [/cgi-bin] [{] 
+Line 20: [root] [www/scripts/] 
+Line 21: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 22: [cgi_ext] [.php] [.py] [.sh] 
+Line 23: [allow_methods] [POST] 
+Line 24: [client_max_body_size] [100000] 
+Line 25: [}] 
+Line 26: 
+Line 27: [location] [/database] [{] 
+Line 28: [root] [www/database/] 
+Line 29: [autoindex] [off] 
+Line 30: [allow_methods] [GET] [POST] [DELETE] 
+Line 31: [index] [inde.html] [retur.html] 
+Line 32: [}] 
+Line 33: [}] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [cgi_ext] [.php] [.py] [.sh] 
+Line 3: [allow_methods] [POST] 
+Line 4: [client_max_body_size] [100000] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [server] [{] 
+Line 1: [listen] [8083] 
+Line 2: [host] [127.0.0.1] 
+Line 3: [server_name] [test] 
+Line 4: [error_page] [400] [error/400.html] 
+Line 5: [error_page] [403] [error/403.html] 
+Line 6: [error_page] [414] [error/414.html] 
+Line 7: [error_page] [404] [error/404.html] 
+Line 8: [error_page] [405] [error/405.html] 
+Line 9: [error_page] [413] [error/413.html] 
+Line 10: [error_page] [500] [error/500.html] 
+Line 11: [error_page] [502] [error/502.html] 
+Line 12: [error_page] [504] [error/504.html] 
+Line 13: [error_page] [505] [error/505.html] 
+Line 14: [client_max_body_size] [100000] 
+Line 15: [max_uri_length] [10000] 
+Line 16: [max_header_length] [1000] 
+Line 17: [root] [www/default/] 
+Line 18: [index] [inde.html] [hello.py] 
+Line 19: [location] [/cgi-bin] [{] 
+Line 20: [root] [www/scripts/] 
+Line 21: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 22: [cgi_ext] [.php] [.py] [.sh] 
+Line 23: [}] 
+Line 24: 
+Line 25: [location] [/database] [{] 
+Line 26: [root] [www/database/] 
+Line 27: [autoindex] [off] 
+Line 28: [allow_methods] [GET] [POST] [DELETE] 
+Line 29: [index] [inde.html] [retur.html] 
+Line 30: [}] 
+Line 31: [}] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [cgi_ext] [.php] [.py] [.sh] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [inde.html] [retur.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, hello.py
+📍 locations: 
+   [/cgi-bin]
+==================== CGI CONFIG START ====================
+📂 cgi_root: www/scripts/
+➡️ cgi_path: [/usr/bin/python3] [/bin/bash] 
+📜 cgi_ext: [.php] [.py] 
+🧩 allow_methods: (none)
+📦 client_max_body_size: (not set)
+==================== CGI CONFIG END ======================
+
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: off
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 indexes: inde.html, retur.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [server] [{] 
+Line 1: [listen] [8083] 
+Line 2: [host] [127.0.0.1] 
+Line 3: [server_name] [test] 
+Line 4: [error_page] [400] [error/400.html] 
+Line 5: [error_page] [403] [error/403.html] 
+Line 6: [error_page] [414] [error/414.html] 
+Line 7: [error_page] [404] [error/404.html] 
+Line 8: [error_page] [405] [error/405.html] 
+Line 9: [error_page] [413] [error/413.html] 
+Line 10: [error_page] [500] [error/500.html] 
+Line 11: [error_page] [502] [error/502.html] 
+Line 12: [error_page] [504] [error/504.html] 
+Line 13: [error_page] [505] [error/505.html] 
+Line 14: [client_max_body_size] [100000] 
+Line 15: [max_uri_length] [10000] 
+Line 16: [max_header_length] [1000] 
+Line 17: [root] [www/default/] 
+Line 18: [index] [inde.html] [hello.py] 
+Line 19: [location] [/cgi-bin] [{] 
+Line 20: [root] [www/scripts/] 
+Line 21: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 22: [cgi_ext] [.php] [.py] [.sh] 
+Line 23: [}] 
+Line 24: 
+Line 25: [location] [/database] [{] 
+Line 26: [root] [www/database/] 
+Line 27: [autoindex] [off] 
+Line 28: [allow_methods] [GET] [POST] [DELETE] 
+Line 29: [index] [inde.html] [retur.html] 
+Line 30: [}] 
+Line 31: [}] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [cgi_ext] [.php] [.py] [.sh] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [inde.html] [retur.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, hello.py
+📍 locations: 
+   [/cgi-bin]
+==================== CGI CONFIG START ====================
+📂 cgi_root: www/scripts/
+➡️ cgi_path: [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+📜 cgi_ext: [.php] [.py] [.sh] 
+🧩 allow_methods: (none)
+📦 client_max_body_size: (not set)
+==================== CGI CONFIG END ======================
+
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: off
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 indexes: inde.html, retur.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [server] [{] 
+Line 1: [listen] [8083] 
+Line 2: [host] [127.0.0.1] 
+Line 3: [server_name] [test] 
+Line 4: [error_page] [400] [error/400.html] 
+Line 5: [error_page] [403] [error/403.html] 
+Line 6: [error_page] [414] [error/414.html] 
+Line 7: [error_page] [404] [error/404.html] 
+Line 8: [error_page] [405] [error/405.html] 
+Line 9: [error_page] [413] [error/413.html] 
+Line 10: [error_page] [500] [error/500.html] 
+Line 11: [error_page] [502] [error/502.html] 
+Line 12: [error_page] [504] [error/504.html] 
+Line 13: [error_page] [505] [error/505.html] 
+Line 14: [client_max_body_size] [100000] 
+Line 15: [max_uri_length] [10000] 
+Line 16: [max_header_length] [1000] 
+Line 17: [root] [www/default/] 
+Line 18: [index] [inde.html] [hello.py] 
+Line 19: [location] [/cgi-bin] [{] 
+Line 20: [root] [www/scripts/] 
+Line 21: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 22: [cgi_ext] [.php] [.py] [.sh] 
+Line 23: [allow_methods] [POST] 
+Line 24: [client_max_body_size] [100000] 
+Line 25: [}] 
+Line 26: 
+Line 27: [location] [/database] [{] 
+Line 28: [root] [www/database/] 
+Line 29: [autoindex] [off] 
+Line 30: [allow_methods] [GET] [POST] [DELETE] 
+Line 31: [index] [inde.html] [retur.html] 
+Line 32: [}] 
+Line 33: [}] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [cgi_ext] [.php] [.py] [.sh] 
+Line 3: [allow_methods] [POST] 
+Line 4: [client_max_body_size] [100000] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [inde.html] [retur.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, hello.py
+📍 locations: 
+   [/cgi-bin]
+==================== CGI CONFIG START ====================
+📂 cgi_root: www/scripts/
+➡️ cgi_path: [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+📜 cgi_ext: [.php] [.py] [.sh] 
+🧩 allow_methods: [POST] 
+📦 client_max_body_size: 100000
+==================== CGI CONFIG END ======================
+
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: off
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 indexes: inde.html, retur.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [server] [{] 
+Line 1: [listen] [8083] 
+Line 2: [host] [127.0.0.1] 
+Line 3: [server_name] [test] 
+Line 4: [error_page] [400] [error/400.html] 
+Line 5: [error_page] [403] [error/403.html] 
+Line 6: [error_page] [414] [error/414.html] 
+Line 7: [error_page] [404] [error/404.html] 
+Line 8: [error_page] [405] [error/405.html] 
+Line 9: [error_page] [413] [error/413.html] 
+Line 10: [error_page] [500] [error/500.html] 
+Line 11: [error_page] [502] [error/502.html] 
+Line 12: [error_page] [504] [error/504.html] 
+Line 13: [error_page] [505] [error/505.html] 
+Line 14: [client_max_body_size] [100000] 
+Line 15: [max_uri_length] [10000] 
+Line 16: [max_header_length] [1000] 
+Line 17: [root] [www/default/] 
+Line 18: [index] [inde.html] [hello.py] 
+Line 19: [location] [/cgi-bin] [{] 
+Line 20: [root] [www/scripts/] 
+Line 21: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 22: [cgi_ext] [.php] [.py] [.sh] 
+Line 23: [allow_methods] [POST] 
+Line 24: [client_max_body_size] [100000] 
+Line 25: [}] 
+Line 26: 
+Line 27: [location] [/database] [{] 
+Line 28: [root] [www/database/] 
+Line 29: [autoindex] [off] 
+Line 30: [allow_methods] [GET] [POST] [DELETE] 
+Line 31: [index] [inde.html] [retur.html] 
+Line 32: [}] 
+Line 33: [}] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [cgi_ext] [.php] [.py] [.sh] 
+Line 3: [allow_methods] [POST] 
+Line 4: [client_max_body_size] [100000] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] [POST] [DELETE] 
+Line 3: [index] [inde.html] [retur.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 100000
+📦 max uri: 10000
+📑 indexes: inde.html, hello.py
+📍 locations: 
+   [/cgi-bin]
+==================== CGI CONFIG START ====================
+📂 cgi_root: www/scripts/
+➡️ cgi_path: [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+📜 cgi_ext: [.php] [.py] [.sh] 
+🧩 allow_methods: [POST] 
+📦 client_max_body_size: 100000
+==================== CGI CONFIG END ======================
+
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: off
+✅ allow_methods: [GET] [POST] [DELETE] 
+📦 client_max_body_size: (not set)
+📑 indexes: inde.html, retur.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8083] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:143.0)] [Gecko/20100101] [Firefox/143.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [wp-settings-time-1=1749232245;] [_pk_id.1.1fff=87328b9d995ae5d5.1753704751.] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
