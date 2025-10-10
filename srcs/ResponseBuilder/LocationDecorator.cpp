@@ -150,6 +150,7 @@ void LocationDecorator::handleCGILocationsRules(const ServerConfigDataSet &confi
 					break;
 				}
 			}
+			checkAllowedMethods(loc);
 			if (!matched)
 				response->setError(INTERNALERROR);
 		}
@@ -208,6 +209,7 @@ void LocationDecorator::handleCustomLocations(const ServerConfigDataSet &config)
 }*/
 
 
+
 void LocationDecorator::applyLocationRules(const LocationConfigDataSet *dataset)
 {
 	if (!dataset->return_info.first.empty() || !dataset->return_info.second.empty())
@@ -238,18 +240,33 @@ void LocationDecorator::applyLocationRules(const LocationConfigDataSet *dataset)
 	}
 }
 
-void LocationDecorator::checkAllowedMethods(const LocationConfigDataSet *dataset) 
+void LocationDecorator::checkAllowedMethods(const ADataSet *dataset) 
 {
-	bool allowed = false; 
-	for (size_t i = 0; i < dataset->allow_methods.size(); i++)
-	{
-		if (response->request.method == dataset->allow_methods[i]) 
-		{
-			allowed = true; 
-			break; 
-		} 
-	} 
-	if (!allowed) response->setError(METHODNOTALLOWED); 
+    bool allowed = false;
+    const LocationConfigDataSet *config = dynamic_cast<const LocationConfigDataSet*>(dataset);
+    const LocationCgiConfigDataSet *cgi = dynamic_cast<const LocationCgiConfigDataSet*>(dataset);
+
+    const std::vector<std::string> *methods = NULL;
+
+    if (config)
+        methods = &config->allow_methods;
+    else if (cgi)
+        methods = &cgi->allow_methods;
+
+    if (methods == NULL || methods->empty())
+        return;
+
+    for (size_t i = 0; i < methods->size(); i++)
+    {
+        if (response->request.method == (*methods)[i]) 
+        {
+            allowed = true;
+            break;
+        }
+    }
+
+    if (!allowed)
+        response->setError(METHODNOTALLOWED);
 }
 
 
@@ -261,7 +278,6 @@ void LocationDecorator::finalizePage()
 	full_path = directory + page;
 
 	std::ifstream file(full_path.c_str());
-	Logger::debug("openning " + full_path);
 	if (!file.is_open() && response->request.path != "/favicon.ico")
 	{
 		if(!this->indexes.empty())

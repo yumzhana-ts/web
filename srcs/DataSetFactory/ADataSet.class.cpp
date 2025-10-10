@@ -14,6 +14,7 @@
 #include "./lib.hpp"
 #include "Logger.class.hpp"
 #include "ErrorFactory/AError.class.hpp"
+#include "DataSetFactory/ServerConfigDataSet.class.hpp"
 
 /****************************************************/
 /*                    Constructor                   */
@@ -160,6 +161,54 @@ void ADataSet::printTokens()
 }
 
 
+/*std::vector<std::vector<std::string> > ADataSet::saveConfig(const std::string &data)
+{
+    std::vector<std::vector<std::string> > config_data;
+    std::stringstream text_stream(data);
+    std::string line;
+
+    while (std::getline(text_stream, line))
+    {
+        if (line.empty())
+            continue;
+
+        std::stringstream line_stream(line);
+        std::string token;
+        std::vector<std::string> line_tokens;
+
+        while (line_stream >> token)
+            line_tokens.push_back(token);
+
+        config_data.push_back(line_tokens);
+    }
+
+    return config_data;
+}
+
+void ADataSet::validateSchema(const std::string &data)
+{
+    std::vector<std::vector<std::string> > config_data = saveConfig(data);
+
+    bool found = false;
+    bool required = false;
+    std::string _name;
+
+    for (size_t i = 0; i < token_data.size(); i++)
+    {
+        found = validateLine(token_data[i], config_data, required, _name);
+        if (found)
+            break;
+    }
+    if (!found && required)
+    {
+        if(dynamic_cast<ServerConfigDataSet*>(this))
+            throw std::logic_error("❌ Validation failed: missing required field or incorrect parameter count in '" + _name + "'");    
+        error = BADREQUEST;
+        return;
+    }
+}*/
+
+
 void ADataSet::validateSchema(const std::string &data)
 {
     if (token_data.empty())
@@ -179,6 +228,8 @@ void ADataSet::validateSchema(const std::string &data)
         bool required;
         while (line_stream >> token) 
             schema.push_back(token);
+
+
         for(size_t i = 0; i < token_data.size(); i++)
         {
             found = validateLine(token_data[i], schema, required, _name);
@@ -187,9 +238,11 @@ void ADataSet::validateSchema(const std::string &data)
         }
         if (!found && required)
         {
+            if(dynamic_cast<ServerConfigDataSet*>(this))
+                throw std::logic_error("❌ Validation failed: missing required field or incorrect parameter count in '" + _name + "'");    
             error = BADREQUEST;
             return;
-            //throw std::logic_error("🤖 Invalid " + type + " schema at [" + _name + "]");
         }
     }
 }
+
