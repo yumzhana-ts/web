@@ -19,6 +19,7 @@
 #include "DataSetFactory/ServerConfigDataSet.class.hpp"
 #include "DataSetFactory/LocationConfigDataSet.class.hpp"
 #include "DataSetFactory/LocationCgiConfigDataSet.class.hpp"
+#include "DataSetFactory/ADataSet.class.hpp"
 
 class LocationDecorator: public IHandler
 {
@@ -37,7 +38,7 @@ public:
 	void handleCustomLocations(const ServerConfigDataSet &config);
 	void handleCGILocationsRules(const ServerConfigDataSet &config);
 	void applyLocationRules(const LocationConfigDataSet *dataset);
-	void checkAllowedMethods(const LocationConfigDataSet *dataset);
+	void checkAllowedMethods(const ADataSet *dataset);
 	void finalizePage();
 	void uploadFiles();
 	void build(){}
@@ -51,6 +52,7 @@ public:
 	bool isCgi(const std::string& path);
 	void setLocations();
 	void locationPut();
+
 };
 
 

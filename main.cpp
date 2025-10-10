@@ -27,6 +27,7 @@
 //TODO: put has to be passed to location check
 //TODO: make cleint max  body size manadatory
 //TODO: fix config verification
+//CGI to take interpereter from config
 
 int main(int argc, char **argv) 
 {

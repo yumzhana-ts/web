@@ -79,7 +79,7 @@ void EventDispatcher::setupConfig(const std::string& configFile)
     } 
     catch (const std::exception& e) 
     {
-        Logger::error("Failed to load config: " + std::string(e.what()));
+        //Logger::error("Failed to load config: " + std::string(e.what()));
         throw;
     }
 }

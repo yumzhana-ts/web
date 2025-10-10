@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Путь к изображению
-IMAGE_PATH="./imag.jpg"
+IMAGE_PATH="./image.jpg"
 
 # URL сервера
-URL="http://localhost:8082/www/test/image.jpg"
+URL="http://localhost:8083/test/image.jpg"
 
 # Получаем размер файла
 FILE_SIZE=$(stat -c%s "$IMAGE_PATH")
