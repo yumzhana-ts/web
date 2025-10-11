@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HTTP Error Pages Tester</title>
+<style>
+body { font-family: monospace; background: #111; color: #eee; padding: 20px; }
+h2 { color: #8be9fd; }
+.card { background: #1a1a1a; border-radius: 8px; padding: 12px; margin: 10px 0; box-shadow: 0 0 8px #000; }
+button { display: inline-block; background: #333; color: #eee; padding: 6px 12px; border-radius: 6px; border: none; cursor: pointer; margin-top: 6px; }
+button:hover { background: #444; }
+pre { background: #222; padding: 8px; border-radius: 6px; overflow-x: auto; color: #ccc; margin-top: 6px; }
+small { color: #999; display: block; margin-top: 4px; }
+</style>
+</head>
+<body>
+<h2>HTTP Error Pages Tester</h2>
+<p>Click a button to trigger a specific HTTP error with any method.</p>
+
+<div class="card">
+  <b>400 Bad Request</b>
+  <button onclick="sendError('/trigger-400','GET')">GET → 400</button>
+  <button onclick="sendError('/trigger-400','POST')">POST → 400</button>
+  <pre id="error-400"></pre>
+</div>
+
+<div class="card">
+  <b>403 Forbidden</b>
+  <button onclick="sendError('/trigger-403','GET')">GET → 403</button>
+  <button onclick="sendError('/trigger-403','PUT')">PUT → 403</button>
+  <pre id="error-403"></pre>
+</div>
+
+<div class="card">
+  <b>404 Not Found</b>
+  <button onclick="sendError('/missing-resource','GET')">GET → 404</button>
+  <button onclick="sendError('/missing-resource','DELETE')">DELETE → 404</button>
+  <pre id="error-404"></pre>
+</div>
+
+<div class="card">
+  <b>405 Method Not Allowed</b>
+  <button onclick="sendError('/upload-endpoint','GET')">GET → 405</button>
+  <button onclick="sendError('/upload-endpoint','PUT')">PUT → 405</button>
+  <pre id="error-405"></pre>
+</div>
+
+<div class="card">
+  <b>413 Payload Too Large</b>
+  <button onclick="sendError('/upload-endpoint','POST')">POST → 413</button>
+  <pre id="error-413"></pre>
+</div>
+
+<div class="card">
+  <b>414 URI Too Long</b>
+  <button onclick="sendError('/' + 'a'.repeat(5000),'GET')">GET → 414</button>
+  <pre id="error-414"></pre>
+</div>
+
+<div class="card">
+  <b>500 Internal Server Error</b>
+  <button onclick="sendError('/trigger-500','PUT')">PUT → 500</button>
+  <pre id="error-500"></pre>
+</div>
+
+<div class="card">
+  <b>502 Bad Gateway</b>
+  <button onclick="sendError('/proxy-error','GET')">GET → 502</button>
+  <pre id="error-502"></pre>
+</div>
+
+<div class="card">
+  <b>504 Gateway Timeout</b>
+  <button onclick="sendError('/upstream-timeout','GET')">GET → 504</button>
+  <pre id="error-504"></pre>
+</div>
+
+<div class="card">
+  <b>505 HTTP Version Not Supported</b>
+  <button onclick="sendError('/unsupported-version','GET')">GET → 505</button>
+  <pre id="error-505"></pre>
+</div>
+
+<hr>
+<p><a href="index.html">Back to Dashboard</a></p>
+
+<script>
+function sendError(url, method='GET') {
+  fetch(url, { method })
+    .then(resp => resp.text().then(body => {
+      const id = 'error-' + resp.status;
+      document.getElementById(id).textContent =
+        `Method: ${method}\nStatus: ${resp.status}\n\nBody:\n${body}`;
+    }))
+    .catch(err => console.error(err));
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mini Swagger API Tester</title>
+<style>
+  body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: #0d1117;
+    color: #c9d1d9;
+    display: flex;
+    height: 100vh;
+  }
+  .sidebar {
+    background: #161b22;
+    width: 250px;
+    padding: 20px;
+    overflow-y: auto;
+    border-right: 1px solid #30363d;
+  }
+  .sidebar h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #58a6ff;
+  }
+  .endpoint {
+    margin-bottom: 8px;
+    padding: 6px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .endpoint:hover {
+    background: #21262d;
+  }
+  .GET    { color: #3fb950; }
+  .POST   { color: #58a6ff; }
+  .PUT    { color: #d29922; }
+  .DELETE { color: #f85149; }
+  .content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  .endpoint-box {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 15px;
+  }
+  .endpoint-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .method-badge {
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 4px;
+    color: #fff;
+  }
+  .GET-badge    { background: #2ea043; }
+  .POST-badge   { background: #1f6feb; }
+  .PUT-badge    { background: #d29922; }
+  .DELETE-badge { background: #da3633; }
+  input, textarea {
+    width: 100%;
+    background: #0d1117;
+    border: 1px solid #30363d;
+    color: #c9d1d9;
+    padding: 6px;
+    margin-top: 6px;
+    border-radius: 6px;
+  }
+  button {
+    background: #238636;
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 8px;
+  }
+  button:hover { background: #2ea043; }
+  pre {
+    background: #0d1117;
+    border: 1px solid #30363d;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 10px;
+    overflow-x: auto;
+  }
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+  <h2>API Endpoints</h2>
+  <div class="endpoint GET"    onclick="showEndpoint('get')">GET /index.html</div>
+  <div class="endpoint POST"   onclick="showEndpoint('post')">POST /submit</div>
+  <div class="endpoint PUT"    onclick="showEndpoint('put')">PUT /update</div>
+  <div class="endpoint DELETE" onclick="showEndpoint('delete')">DELETE /remove</div>
+  <div class="endpoint GET"    onclick="showEndpoint('cgi')">GET /cgi-bin/name.py</div>
+  <div class="endpoint GET"    onclick="showEndpoint('errors')">Errors (404, 500, 414)</div>
+</div>
+
+<div class="content" id="content">
+  <h1>Welcome 👋</h1>
+  <p>Select an endpoint on the left to begin testing your webserver.</p>
+</div>
+
+<script>
+function showEndpoint(type) {
+  const c = document.getElementById('content');
+  const templates = {
+    get: `
+      <div class="endpoint-box">
+        <div class="endpoint-header"><span class="method-badge GET-badge">GET</span> <span>/index.html</span></div>
+        <input id="get-url" value="/index.html">
+        <button onclick="sendRequest('GET','get-url',null,'get-res')">Send</button>
+        <pre id="get-res"></pre>
+      </div>`,
+    post: `
+      <div class="endpoint-box">
+        <div class="endpoint-header"><span class="method-badge POST-badge">POST</span> <span>/submit</span></div>
+        <input id="post-url" value="/submit">
+        <textarea id="post-body" rows="3">name=John</textarea>
+        <button onclick="sendRequest('POST','post-url','post-body','post-res')">Send</button>
+        <pre id="post-res"></pre>
+      </div>`,
+    put: `
+      <div class="endpoint-box">
+        <div class="endpoint-header"><span class="method-badge PUT-badge">PUT</span> <span>/update</span></div>
+        <input id="put-url" value="/update">
+        <textarea id="put-body" rows="3">data=updated</textarea>
+        <button onclick="sendRequest('PUT','put-url','put-body','put-res')">Send</button>
+        <pre id="put-res"></pre>
+      </div>`,
+    delete: `
+      <div class="endpoint-box">
+        <div class="endpoint-header"><span class="method-badge DELETE-badge">DELETE</span> <span>/remove</span></div>
+        <input id="delete-url" value="/remove">
+        <button onclick="sendRequest('DELETE','delete-url',null,'delete-res')">Send</button>
+        <pre id="delete-res"></pre>
+      </div>`,
+    cgi: `
+      <div class="endpoint-box">
+        <div class="endpoint-header"><span class="method-badge GET-badge">GET</span> <span>/cgi-bin/name.py</span></div>
+        <input id="cgi-url" value="/cgi-bin/name.py?name=John">
+        <button onclick="sendRequest('GET','cgi-url',null,'cgi-res')">Send</button>
+        <pre id="cgi-res"></pre>
+      </div>`,
+    errors: `
+      <div class="endpoint-box">
+        <div class="endpoint-header"><span class="method-badge GET-badge">GET</span> <span>Error Tests</span></div>
+        <button onclick="sendRequest('GET','/missing-resource',null,'err404')">Trigger 404</button>
+        <button onclick="sendRequest('GET','/trigger-500',null,'err500')">Trigger 500</button>
+        <button onclick="sendRequest('GET','/'+'a'.repeat(5000),null,'err414')">Trigger 414</button>
+        <pre id="err404"></pre><pre id="err500"></pre><pre id="err414"></pre>
+      </div>`
+  };
+  c.innerHTML = templates[type] || '<p>Unknown endpoint</p>';
+}
+
+function sendRequest(method, urlId, bodyId, resId) {
+  const url = typeof urlId === 'string' ? document.getElementById(urlId).value : urlId;
+  const body = bodyId ? document.getElementById(bodyId).value : null;
+  const start = performance.now();
+
+  fetch(url, { method, body })
+    .then(resp => resp.text().then(text => {
+      const ms = (performance.now() - start).toFixed(1);
+      document.getElementById(resId).textContent =
+        \`[\${method}] \${url}\\nStatus: \${resp.status}\\nTime: \${ms} ms\\n\\n\${text}\`;
+    }))
+    .catch(err => {
+      document.getElementById(resId).textContent = 'Error: ' + err;
+    });
+}
+</script>
+</body>
+</html>

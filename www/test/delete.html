@@ -1,0 +1,74 @@
+ç<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DELETE Tester</title>
+<style>
+body { font-family: monospace; background: #111; color: #eee; padding: 20px; }
+h2 { color: #8be9fd; }
+.card {
+  background: #1a1a1a;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 10px 0;
+  box-shadow: 0 0 8px #000;
+}
+button {
+  background: #333;
+  color: #eee;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  margin-top: 6px;
+}
+button:hover { background: #444; }
+input {
+  width: 50px;
+  padding: 4px;
+  margin-left: 6px;
+  border-radius: 4px;
+  border: 1px solid #555;
+  background: #222;
+  color: #eee;
+}
+small { color: #999; display: block; margin-top: 4px; }
+pre { background: #222; padding: 8px; border-radius: 6px; overflow-x: auto; color: #ccc; margin-top: 6px; }
+</style>
+</head>
+<body>
+<h2>Server DELETE Test Page</h2>
+<p>Enter a resource ID and click "DELETE" to send a DELETE request. Response will appear below.</p>
+
+<div class="card">
+  <b>Scenario:</b> DELETE resource by ID  
+  <small>Expected status: 200 OK or 204 No Content</small>
+  <form onsubmit="sendDelete(event)">
+    Resource ID: <input type="number" name="resource_id" value="1" id="resource_id">
+    <button type="submit">DELETE</button>
+  </form>
+  <pre id="delete-result"></pre>
+</div>
+
+<hr>
+<p><a href="/tester.html">Back to GET tester</a></p>
+<p><small>Generated at <script>document.write(new Date().toLocaleString())</script></small></p>
+
+<script>
+function sendDelete(event) {
+  event.preventDefault();
+  const id = document.getElementById('resource_id').value;
+  const url = `/resource/${id}`;
+  fetch(url, { method: 'DELETE' })
+    .then(resp => resp.text().then(body => {
+      document.getElementById('delete-result').textContent =
+        `Status: ${resp.status}\n\n${body}`;
+    }))
+    .catch(err => {
+      document.getElementById('delete-result').textContent =
+        'Error: ' + err;
+    });
+}
+</script>
+</body>
+</html>

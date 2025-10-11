@@ -20898,3 +20898,657 @@ o��(�ϑ��;́�U8U���)C���b{�Q�g|礈d|��P.�H�kb>eu��]�V(h�+ss?�������
 📦 client_max_body_size: 100000
 ==================== REQUEST END ======================
 
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Ubuntu;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /favicon.ico
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+   [Connection:] -> keep-alive
+   [Host:] -> localhost:8083
+   [Priority:] -> u=6
+   [Referer:] -> http://localhost:8083/
+   [Sec-Fetch-Dest:] -> image
+   [Sec-Fetch-Mode:] -> no-cors
+   [Sec-Fetch-Site:] -> same-origin
+   [User-Agent:] -> Mozilla/5.0, (X11;, Ubuntu;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /cgi-bin/get_test.sh
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Ubuntu;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /cgi-bin/get_tests.sh
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 0
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Ubuntu;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: (none)
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /cgi-bin/get_tests.sh
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 18973
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> session_id=18973
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Ubuntu;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: 
+   [session_id] -> 18973
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /cgi-bin/get_tests.sh
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 18973
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> session_id=18973
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Ubuntu;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: 
+   [session_id] -> 18973
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: POST
+🌐 path: /cgi-bin/tester.sh
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 18973
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Content-Length:] -> 28
+   [Content-Type:] -> application/x-www-form-urlencoded
+   [Cookie:] -> session_id=18973
+   [Host:] -> localhost:8083
+   [Origin:] -> http://localhost:8083
+   [Priority:] -> u=0,, i
+   [Referer:] -> http://localhost:8083/cgi-bin/get_tests.sh
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> same-origin
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Ubuntu;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: %2Findex.html&method=GET
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: 
+   [session_id] -> 18973
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: POST
+🌐 path: /cgi-bin/tester.sh
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 18973
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Content-Length:] -> 28
+   [Content-Type:] -> application/x-www-form-urlencoded
+   [Cookie:] -> session_id=18973
+   [Host:] -> localhost:8083
+   [Origin:] -> http://localhost:8083
+   [Priority:] -> u=0,, i
+   [Referer:] -> http://localhost:8083/cgi-bin/get_tests.sh
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> same-origin
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Ubuntu;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: %2Findex.html&method=GET
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: 
+   [session_id] -> 18973
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: POST
+🌐 path: /cgi-bin/tester.sh
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 18973
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Content-Length:] -> 30
+   [Content-Type:] -> application/x-www-form-urlencoded
+   [Cookie:] -> session_id=18973
+   [Host:] -> localhost:8083
+   [Origin:] -> http://localhost:8083
+   [Priority:] -> u=0,, i
+   [Referer:] -> http://localhost:8083/cgi-bin/get_tests.sh
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> same-origin
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Ubuntu;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: %2Fmissing.html&method=GET
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: 
+   [session_id] -> 18973
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: POST
+🌐 path: /cgi-bin/tester.sh
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 18973
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Content-Length:] -> 28
+   [Content-Type:] -> application/x-www-form-urlencoded
+   [Cookie:] -> session_id=18973
+   [Host:] -> localhost:8083
+   [Origin:] -> http://localhost:8083
+   [Priority:] -> u=0,, i
+   [Referer:] -> http://localhost:8083/cgi-bin/get_tests.sh
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> same-origin
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Ubuntu;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: %2Findex.html&method=GET
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: 
+   [session_id] -> 18973
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /cgi-bin/get_tests.sh
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 18973
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> session_id=18973
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Ubuntu;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: 
+   [session_id] -> 18973
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /cgi-bin/get_tests.sh
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 18973
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> session_id=18973
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Ubuntu;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: 
+   [session_id] -> 18973
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /test/get.html
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 18973
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> session_id=18973
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Ubuntu;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: 
+   [session_id] -> 18973
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /index.html
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 18973
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> session_id=18973
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Referer:] -> http://localhost:8083/test/get.html
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> same-origin
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Ubuntu;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: 
+   [session_id] -> 18973
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /missing.html
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 18973
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> session_id=18973
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Referer:] -> http://localhost:8083/test/get.html
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> same-origin
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Ubuntu;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: 
+   [session_id] -> 18973
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /search
+❓ query_string: query=%ZZ
+⚡ version: HTTP/1.1
+🆔 session_id: 18973
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> session_id=18973
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Referer:] -> http://localhost:8083/test/get.html
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> same-origin
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Ubuntu;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: 
+   [session_id] -> 18973
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: 
+   [query] -> %ZZ
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /secret.txt
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 18973
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> session_id=18973
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Referer:] -> http://localhost:8083/test/get.html
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> same-origin
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Ubuntu;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: 
+   [session_id] -> 18973
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /test/get.html
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 18973
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> session_id=18973
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> none
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Ubuntu;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: 
+   [session_id] -> 18973
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /index.html
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 18973
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> session_id=18973
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Referer:] -> http://localhost:8083/test/get.html
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> same-origin
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Ubuntu;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: 
+   [session_id] -> 18973
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
+==================== REQUEST START ====================
+📝 method: GET
+🌐 path: /missing.html
+❓ query_string: (not set)
+⚡ version: HTTP/1.1
+🆔 session_id: 18973
+📬 headers: 
+   [Accept-Encoding:] -> gzip,, deflate,, br,, zstd
+   [Accept-Language:] -> en-US,en;q=0.5
+   [Accept:] -> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+   [Connection:] -> keep-alive
+   [Cookie:] -> session_id=18973
+   [Host:] -> localhost:8083
+   [Priority:] -> u=0,, i
+   [Referer:] -> http://localhost:8083/test/get.html
+   [Sec-Fetch-Dest:] -> document
+   [Sec-Fetch-Mode:] -> navigate
+   [Sec-Fetch-Site:] -> same-origin
+   [Sec-Fetch-User:] -> ?1
+   [Upgrade-Insecure-Requests:] -> 1
+   [User-Agent:] -> Mozilla/5.0, (X11;, Ubuntu;, Linux, x86_64;, rv:143.0), Gecko/20100101, Firefox/143.0
+📦 body: (empty)
+🗂️ bodyData: (none)
+📌 boundary: (not set)
+🍪 cookie_map: 
+   [session_id] -> 18973
+📦 multipart_map: (none)
+🗺️ method_map: (none)
+🗺️ query params: (none)
+📦 parts: (none)
+📦 client_max_body_size: 100000
+==================== REQUEST END ======================
+
