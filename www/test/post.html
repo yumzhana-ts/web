@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>POST Tester</title>
+<style>
+body { font-family: monospace; background: #111; color: #eee; padding: 20px; }
+h2 { color: #8be9fd; }
+.card {
+  background: #1a1a1a;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 10px 0;
+  box-shadow: 0 0 8px #000;
+}
+button {
+  display: inline-block;
+  background: #333;
+  color: #eee;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  margin-top: 6px;
+}
+button:hover { background: #444; }
+small { color: #999; display: block; margin-top: 4px; }
+form { margin: 0; }
+</style>
+</head>
+<body>
+<h2>Server POST Test Page</h2>
+<p>Click a button below to send a POST request. The response will open in a new tab.</p>
+
+<div class="card">
+  <b>Scenario:</b> POST to /get/ (method not allowed expected)  
+  <small>Expected status: 405 Method Not Allowed</small>
+  <form action="/get/" method="POST" target="_blank">
+    <button type="submit">POST /get/</button>
+  </form>
+</div>
+
+<div class="card">
+  <b>Scenario:</b> POST to /submit-form (example endpoint)  
+  <small>Expected status: 200 OK or 201 Created</small>
+  <form action="/submit-form" method="POST" target="_blank">
+    <button type="submit">POST /submit-form</button>
+  </form>
+</div>
+
+<div class="card">
+  <b>Scenario:</b> POST invalid data  
+  <small>Expected status: 400 Bad Request</small>
+  <form action="/submit-form" method="POST" target="_blank">
+    <input type="hidden" name="data" value="%ZZ">
+    <button type="submit">POST invalid data</button>
+  </form>
+</div>
+
+<hr>
+<p><a href="/get.html">Back to GET tester</a></p>
+<p><small>Generated at <script>document.write(new Date().toLocaleString())</script></small></p>
+</body>
+</html>

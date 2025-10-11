@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PUT Tester with File Upload</title>
+<style>
+body { font-family: monospace; background: #111; color: #eee; padding: 20px; }
+h2 { color: #8be9fd; }
+.card {
+  background: #1a1a1a;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 10px 0;
+  box-shadow: 0 0 8px #000;
+}
+button {
+  display: inline-block;
+  background: #333;
+  color: #eee;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  margin-top: 6px;
+}
+button:hover { background: #444; }
+input {
+  margin-top: 6px;
+  color: #eee;
+}
+small { color: #999; display: block; margin-top: 4px; }
+pre { background: #222; padding: 8px; border-radius: 6px; overflow-x: auto; color: #ccc; margin-top: 6px; }
+</style>
+</head>
+<body>
+<h2>Server PUT Test Page with File Upload</h2>
+<p>Select a file and click the button to send a PUT request. Response will be shown below.</p>
+
+<div class="card">
+  <b>Scenario:</b> PUT /update-resource  
+  <small>Expected status: 200 OK or 204 No Content</small>
+  <input type="file" id="file-update-resource">
+  <button onclick="sendPutFile('/update-resource', 'file-update-resource')">PUT /update-resource</button>
+  <pre id="put-update-resource"></pre>
+</div>
+
+<div class="card">
+  <b>Scenario:</b> PUT /missing-resource  
+  <small>Expected status: 404 Not Found</small>
+  <input type="file" id="file-missing-resource">
+  <button onclick="sendPutFile('/missing-resource', 'file-missing-resource')">PUT /missing-resource</button>
+  <pre id="put-missing-resource"></pre>
+</div>
+
+<hr>
+<p><a href="/get.html">Back to GET tester</a></p>
+<p><small>Generated at <script>document.write(new Date().toLocaleString())</script></small></p>
+
+<script>
+function sendPutFile(url, inputId) {
+  const fileInput = document.getElementById(inputId);
+  if (!fileInput.files.length) {
+    alert('Please select a file to upload.');
+    return;
+  }
+  const file = fileInput.files[0];
+
+  fetch(url, {
+    method: 'PUT',
+    body: file
+  })
+    .then(resp => resp.text().then(body => {
+      document.getElementById('put' + url.replace(/\//g, '-')).textContent =
+        `Status: ${resp.status}\n\n${body}`;
+    }))
+    .catch(err => {
+      document.getElementById('put' + url.replace(/\//g, '-')).textContent =
+        'Error: ' + err;
+    });
+}
+</script>
+</body>
+</html>
