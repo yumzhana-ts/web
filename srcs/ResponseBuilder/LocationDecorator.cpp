@@ -24,6 +24,7 @@
 
 LocationDecorator::LocationDecorator(AResponse *resp): response(resp), cgi(false), target_directory(""), full_path("")
 {
+	Logger::debug("why am i here?" + response->request.path + " " + response->request.method);
 	this->nextHandler = NULL;
     if (!response) {
         throw std::runtime_error("LocationDecorator: response pointer is null");
@@ -109,7 +110,7 @@ void LocationDecorator::handleDefaultLocation(const ServerConfigDataSet &config)
 {
 	page = response->request.path;
 	directory = config.root;
-	
+
 	if (response->request.method == "GET" && (page == "/"))
 	{
 		page = config.indexes[0];
@@ -240,6 +241,38 @@ void LocationDecorator::applyLocationRules(const LocationConfigDataSet *dataset)
 	}
 }
 
+/*void LocationDecorator::checkAllowedMethods(const ADataSet *dataset) 
+{
+    bool allowed = false;
+    const LocationConfigDataSet *config = dynamic_cast<const LocationConfigDataSet*>(dataset);
+    const LocationCgiConfigDataSet *cgi = dynamic_cast<const LocationCgiConfigDataSet*>(dataset);
+
+    const std::vector<std::string> *methods = NULL;
+
+    if (config)
+        methods = &config->allow_methods;
+    else if (cgi)
+        methods = &cgi->allow_methods;
+
+    if (methods == NULL || methods->empty())
+	{}
+        return;
+
+    for (size_t i = 0; i < methods->size(); i++)
+    {
+        if (response->request.method == (*methods)[i]) 
+        {
+            allowed = true;
+            break;
+        }
+    }
+
+    if (!allowed)
+        response->setError(METHODNOTALLOWED);
+}*/
+
+#include <iostream>
+
 void LocationDecorator::checkAllowedMethods(const ADataSet *dataset) 
 {
     bool allowed = false;
@@ -254,20 +287,35 @@ void LocationDecorator::checkAllowedMethods(const ADataSet *dataset)
         methods = &cgi->allow_methods;
 
     if (methods == NULL || methods->empty())
+    {
+        std::cout << "[DEBUG] No allowed methods configured for this location.\n";
         return;
+    }
+
+    std::cout << "[DEBUG] Allowed methods for this location: ";
+    for (size_t i = 0; i < methods->size(); i++)
+        std::cout << (*methods)[i] << " ";
+    std::cout << "\n";
+
+    std::cout << "[DEBUG] Request method: " << response->request.method << "\n";
 
     for (size_t i = 0; i < methods->size(); i++)
     {
         if (response->request.method == (*methods)[i]) 
         {
             allowed = true;
+            std::cout << "[DEBUG] Request method is allowed.\n";
             break;
         }
     }
 
     if (!allowed)
+    {
+        std::cout << "[DEBUG] Request method is NOT allowed. Setting error.\n";
         response->setError(METHODNOTALLOWED);
+    }
 }
+
 
 
 void LocationDecorator::finalizePage()
