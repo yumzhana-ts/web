@@ -30,6 +30,7 @@ RequestDataSet::RequestDataSet(std::string text, Client& client, Socket& socket)
     this->text = false;
     this->recursion_count = 0;
     this->client_max_body_size = ServerConfigDataSet::getInstance().client_max_body_size;
+
     if (DBG){ std::cout << GREEN << "[RequestDataSet] Default Constructor called" << RESET_COLOR << std::endl;}
 }
 
@@ -154,21 +155,34 @@ bool RequestDataSet::validateContentLength()
     std::map<std::string, std::vector<std::string> >::iterator it;
 
     // Проверяем Transfer-Encoding
-    it = headers.find("Transfer-Encoding");
+    it = headers.find("Transfer-Encoding:");
     if (it != headers.end())
     {
         if (!it->second.empty() && it->second[0] == "chunked")
+        {
             is_chunked = true;
+            std::map<std::string, std::vector<std::string> >::iterator ic;
+            ic = headers.find("Content-Length:");
+            if (ic != headers.end())
+            {
+                if(!ic->second[0].empty())
+                    return false;
+            }
+                
+        }  
     }
-
     if (!is_chunked)
     {
-        it = headers.find("Content-Length");
+        it = headers.find("Content-Length:");
         if (it != headers.end())
         {
+
+
             unsigned long first_val = 0;
             bool first = true;
-
+            Logger::debug("content length: " + it->second[0]);
+            if (atol(it->second[0].c_str()) > this->client_max_body_size || atol(it->second[0].c_str()) == 0)
+                return false;
             for (size_t i = 0; i < it->second.size(); ++i)
             {
                 const std::string &val = it->second[i];
@@ -265,6 +279,11 @@ void RequestDataSet::unsupportedRequest()
 
 void RequestDataSet::tokenizeAndExtractBody()
 {
+    if(buffer.empty())
+    {
+        this->error = BADREQUEST;
+        return;
+    }
     token_data.clear();
     size_t pos = 0;
     size_t buffer_len = buffer.size();
@@ -347,15 +366,13 @@ std::vector<std::string> RequestDataSet::saveRequestLine(const std::string &line
         tokens.clear();
         return tokens;
     }
-    if(tokens.size() > 1 && tokens[1].size() > ServerConfigDataSet::getInstance().max_uri_length - 1)
+    if (tokens.size() > 1 && tokens[1].size() > ServerConfigDataSet::getInstance().max_uri_length - 1)
     {
-        //std::cout << tokens[1] << std::endl;
-        error = URI_TOOLONG;
+        this->error = URI_TOOLONG;
         return tokens;
     }
     return tokens;
 }
-
 
 
 std::string RequestDataSet::extractBody(const std::string &buf)
@@ -502,14 +519,14 @@ void RequestDataSet::rfcFormat()
     std::map<std::string, std::vector<std::string> >::iterator it = headers.find("Host");
     if (it != headers.end())
     {
-        Logger::debug("triggered bad request 5");
+        //Logger::debug("triggered bad request 5");
         this->error = BADREQUEST;
         return;
     }
     std::map<std::string, std::vector<std::string> >::iterator it_ac = headers.find("Accept-Language");
     if (it_ac != headers.end())
     {
-        Logger::debug("triggered bad request 6");
+        //Logger::debug("triggered bad request 6");
         this->error = BADREQUEST;
         return;
     }

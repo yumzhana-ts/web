@@ -24,7 +24,7 @@
 
 LocationDecorator::LocationDecorator(AResponse *resp): response(resp), cgi(false), target_directory(""), full_path("")
 {
-	Logger::debug("why am i here?" + response->request.path + " " + response->request.method);
+	Logger::debug("Preparing for you: " + response->request.path + " " + response->request.method);
 	this->nextHandler = NULL;
     if (!response) {
         throw std::runtime_error("LocationDecorator: response pointer is null");
@@ -111,11 +111,12 @@ void LocationDecorator::handleDefaultLocation(const ServerConfigDataSet &config)
 	page = response->request.path;
 	directory = config.root;
 
-	if (response->request.method == "GET" && (page == "/"))
+	if (response->request.method == "GET" && ((page == "/") || (page == "//")))
 	{
 		page = config.indexes[0];
 		if(config.indexes.size() > 1)
 		{
+			Logger::debug("serving indexes");
 			this->indexes = config.indexes;
 			this->page_index = 0;
 		}
@@ -175,7 +176,20 @@ void LocationDecorator::handleCustomLocations(const ServerConfigDataSet &config)
                 directory = loc->root;
 				if	(loc->client_max_body_size != 0)
 					response->request.client_max_body_size = loc->client_max_body_size;
-                page = response->request.path.substr(it->first.size());
+				if (path == "//")
+				{
+					if (response->request.method == "GET")
+					{
+						page = config.indexes[0];
+						if(config.indexes.size() > 1)
+						{
+							this->indexes = config.indexes;
+							this->page_index = 0;
+						}
+					}
+				}
+                else
+					page = response->request.path.substr(it->first.size());
                 location = it->first;
                 applyLocationRules(loc);
                 checkAllowedMethods(loc);
@@ -324,7 +338,7 @@ void LocationDecorator::finalizePage()
 	//Logger::debug("Page: " + page);
 	//if(full_path.empty())
 	full_path = directory + page;
-
+	Logger::debug("full page" + full_path);
 	std::ifstream file(full_path.c_str());
 	if (!file.is_open() && response->request.path != "/favicon.ico")
 	{

@@ -37,7 +37,7 @@ def run():
     # Transfer-Encoding overrides Content-Length
     request_header = 'GET / HTTP/1.1\r\nHost:{}\r\nContent-Length: 10000\r\nTransfer-Encoding: chunked\r\n\r\n0'.format(config.SERVER_ADDR)
     http_response = send_request(request_header)
-    if http_response.status != 200:
+    if http_response.status != 400:
             print('error: {}'.format(__file__))
             print('expected status: {}, actual status: {}'.format('200', str(http_response.status)))
 
