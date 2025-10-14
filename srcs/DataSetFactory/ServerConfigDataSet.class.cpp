@@ -26,8 +26,6 @@ ServerConfigDataSet::ServerConfigDataSet(const std::string &text)
 {
     this->buffer = text;
     this->parse();
-    this->max_uri_length = std::numeric_limits<int>::max();
-    this->max_header_length = std::numeric_limits<int>::max();
     if (DBG){ std::cout << GREEN << "[ServerConfigDataSet] Default Constructor called" << RESET_COLOR << std::endl;}
 }
 
@@ -69,6 +67,8 @@ void ServerConfigDataSet::validate()
 
 void ServerConfigDataSet::map()
 {
+    this->max_uri_length = std::numeric_limits<int>::max();
+    this->max_header_length = std::numeric_limits<int>::max();
     for(size_t i = 0; i < token_data.size(); i++)
     {
         if(token_data[i].empty())
@@ -99,7 +99,11 @@ void ServerConfigDataSet::map()
                 this->indexes.push_back(token_data[i][j]);
         }
         else if(token_data[i][0] == "max_uri_length")
+        {
             this->max_uri_length = atol(token_data[i][1].c_str());
+            Logger::debug("why am i empty?" + token_data[i][1]);
+        }
+            
         else if(token_data[i][0] == "max_header_length")
             this->max_header_length = atol(token_data[i][1].c_str());
         else if(token_data[i][0] == "location")

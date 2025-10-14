@@ -52,7 +52,8 @@ void Client::getRequest()
 
     if (headers_end == 0)
     {
-        throw std::runtime_error("Incomplete request headers");
+        Logger::debug("Incomplete request headers");
+        //throw std::runtime_error("Incomplete request headers");
         return;
     }
 
