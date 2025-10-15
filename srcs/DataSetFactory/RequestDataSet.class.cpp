@@ -15,6 +15,8 @@
 #include "Logger.class.hpp"
 #include "ChainBuilder.class.hpp"
 #include "FileManager.class.hpp"
+#include <limits>
+
 
 
 //TODO: connect max length
@@ -82,7 +84,7 @@ void RequestDataSet::handle()
     }
     ChainBuilder *builder = new ChainBuilder(*this);
     this->setNext(builder);
-    Logger::info("🔹 Request served for PORT: [" + toString(this->_socket.getServerPort()) + "] tokenized, tokens saved to log file, validated, mapped, ready for chain building");
+    Logger::debug(" 🔹 [Request Dataset] The request dataset is ready for the chain");
     if (this->nextHandler != NULL)
         this->nextHandler->handle();        
 }
@@ -91,6 +93,7 @@ void RequestDataSet::validate()
 {
     if(token_data[0].empty())
     {
+        Logger::debug(" 🐾 [Request Dataset] empty tokens");
         error = BADREQUEST;
         return;
     }
@@ -133,6 +136,7 @@ void RequestDataSet::map()
         }
         else if(token_data[i].size() == 1 && !parseHostLineToIP(key))
         {
+            Logger::debug(" 🐾 [Request Dataset] invalid header");
             error = BADREQUEST;
             return;
         }
@@ -166,7 +170,11 @@ bool RequestDataSet::validateContentLength()
             if (ic != headers.end())
             {
                 if(!ic->second[0].empty())
+                {
+                    Logger::debug(" 🐾 [Request Dataset][RFC][Content Length violation] Transfer-Encodign is used with Content-length");
                     return false;
+                }
+                    
             }
                 
         }  
@@ -180,9 +188,20 @@ bool RequestDataSet::validateContentLength()
 
             unsigned long first_val = 0;
             bool first = true;
-            Logger::debug("content length: " + it->second[0]);
-            if (atol(it->second[0].c_str()) > this->client_max_body_size || atol(it->second[0].c_str()) == 0)
+            //Logger::debug("content length: " + it->second[0]);
+            //if (atol(it->second[0].c_str()) > this->client_max_body_size)
+            if (atol(it->second[0].c_str()) > std::numeric_limits<int>::max())
+            {
+                Logger::debug(" 🐾 [Request Dataset][RFC][Content Length violation] More then max client body size");
                 return false;
+            }
+                
+            if (atol(it->second[0].c_str()) == 0)
+            {
+                Logger::debug(" 🐾 [Request Dataset][RFC][Content Length violation] Invalid size");
+                return false;
+            }
+                
             for (size_t i = 0; i < it->second.size(); ++i)
             {
                 const std::string &val = it->second[i];
@@ -192,7 +211,11 @@ bool RequestDataSet::validateContentLength()
                 // проверяем, что все символы цифры
                 for (size_t j = 0; j < val.size(); ++j)
                     if (val[j] < '0' || val[j] > '9')
+                    {
+                        Logger::debug(" 🐾 [Request Dataset][RFC][Content Length violation] Non digit values");
                         return false;
+                    }
+                        
 
                 unsigned long num = strtoul(val.c_str(), NULL, 10);
 
@@ -203,7 +226,7 @@ bool RequestDataSet::validateContentLength()
                 }
                 else if (num != first_val)
                 {
-                    // два Content-Length не совпадают → 400
+                    Logger::debug(" 🐾 [Request Dataset][RFC][Content Length violation] not valid case");
                     return false;
                 }
             }
@@ -281,6 +304,7 @@ void RequestDataSet::tokenizeAndExtractBody()
 {
     if(buffer.empty())
     {
+        Logger::debug(" 🐾 [Request Dataset] empty buffer");
         this->error = BADREQUEST;
         return;
     }
@@ -393,6 +417,7 @@ std::vector<std::string> RequestDataSet::saveLine(const std::string &line)
     std::vector<std::string> tokens;
     if(line.size() > 10000)
     {
+        Logger::debug(" 🐾 [Request Dataset] enot even used");
         error = BADREQUEST;
         return tokens;
     }
@@ -440,7 +465,7 @@ bool RequestDataSet::validateLine(const std::vector<std::string>& token_line,
 {
     if (token_line.empty() || schema.size() < 4)
     {
-        Logger::debug("triggered bad request 4");
+        Logger::debug(" 🐾 [Request Dataset] line avlidation failed");
         error = BADREQUEST;
         return false;
     }
@@ -519,14 +544,14 @@ void RequestDataSet::rfcFormat()
     std::map<std::string, std::vector<std::string> >::iterator it = headers.find("Host");
     if (it != headers.end())
     {
-        //Logger::debug("triggered bad request 5");
+        Logger::debug(" 🐾 [Request Dataset][RFC] invalid host");
         this->error = BADREQUEST;
         return;
     }
     std::map<std::string, std::vector<std::string> >::iterator it_ac = headers.find("Accept-Language");
     if (it_ac != headers.end())
     {
-        //Logger::debug("triggered bad request 6");
+        Logger::debug(" 🐾 [Request Dataset][RFC] invalid Accept-Language");
         this->error = BADREQUEST;
         return;
     }

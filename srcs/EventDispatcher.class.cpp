@@ -42,7 +42,7 @@ void EventDispatcher::shutdown()
 
 void EventDispatcher::signalHandler(int signum)
 {
-    Logger::info("⚠️ Signal received, shutting down...");
+    Logger::info("⚠️ [Event Dispatcher] Signal received, shutting down...");
     g_running = 0;
     if (g_server)
     {
@@ -54,7 +54,7 @@ void EventDispatcher::signalHandler(int signum)
             if (fd != -1)
             {
                 close(fd);
-                Logger::debug("Closed server socket " + toString(fd));
+                Logger::debug("[Event Dispatcher] Closed server socket " + toString(fd));
             }
         }
     }
@@ -75,7 +75,7 @@ void EventDispatcher::setupConfig(const std::string& configFile)
     {
         std::string data = openFile(configFile);
         ServerConfigDataSet::setConfig(data);
-        Logger::info("✅ Configuration loaded from " + configFile);
+        Logger::info("✅ [Serverconfig Dataset] Configuration loaded from " + configFile);
     } 
     catch (const std::exception& e) 
     {
@@ -102,14 +102,14 @@ void EventDispatcher::addServerToEpoll(int server_fd)
     ev.data.fd = server_fd;
 
     if (epoll_ctl(epoll_fd, EPOLL_CTL_ADD, server_fd, &ev) == -1)
-        throw std::runtime_error("Failed to add server socket to epoll");
+        throw std::runtime_error("[Event Dispatcher] Failed to add server socket to epoll");
 }
 
 void EventDispatcher::setupSockets()
 {
     epoll_fd = epoll_create1(0);
     if (epoll_fd == -1)
-        throw std::runtime_error("Failed to create epoll instance");
+        throw std::runtime_error("[Event Dispatcher] Failed to create epoll instance");
     std::vector<unsigned int> socketPorts = ServerConfigDataSet::getInstance().ports;
     for(size_t i = 0; i < socketPorts.size(); i++)
         this->setupSocket(socketPorts[i]);
@@ -150,7 +150,7 @@ void EventDispatcher::addClientToEpoll(int client_fd)
     if (epoll_ctl(epoll_fd, EPOLL_CTL_ADD, client_fd, &ev) == -1)
     {
         close(client_fd);
-        throw std::runtime_error("Failed to add fd " + toString(client_fd) + " to epoll");
+        throw std::runtime_error("[Event Dispatcher] Failed to add fd " + toString(client_fd) + " to epoll");
     }
 }
 
@@ -168,11 +168,11 @@ void EventDispatcher::setupClient(Socket &socket)
         set_non_blocking(client_fd);
         addClientToEpoll(client_fd);
         clients.insert(std::make_pair(client_fd, client));
-        Logger::info("✅ Client setup complete: fd=" + toString(client_fd) + ", non-blocking, epoll added");
+        //Logger::debug(" ✅ [Event Dispatcher] Client setup complete: fd=" + toString(client_fd) + ", non-blocking, epoll added");
     }
     catch (const std::exception& e) 
     {
-        Logger::error(std::string("Failed to create client: ") + e.what());
+        Logger::error(std::string("[Event Dispatcher] Failed to create client: ") + e.what());
     }
 }
 
@@ -193,7 +193,7 @@ void EventDispatcher::handleClient(Client& client)
     }
     catch (const std::exception& e)
     {
-        Logger::error("Client [" + toString(fd) + "] failed: " + e.what());
+        Logger::error("[Event Dispatcher] Client [" + toString(fd) + "] failed: " + e.what());
         std::map<int, Client*>::iterator it = clients.find(fd);
         if (it != clients.end())
         {
@@ -202,10 +202,10 @@ void EventDispatcher::handleClient(Client& client)
             close(fd);
             delete it->second;
             clients.erase(it);
-            Logger::error("Closed and removed client fd " + toString(fd));
+            Logger::error("[Event Dispatcher] Closed and removed client fd " + toString(fd));
         }
         else
-            Logger::error("Client fd " + toString(fd) + " not found in clients map");
+            Logger::error("[Event Dispatcher] Client fd " + toString(fd) + " not found in clients map");
     }
 }
 
@@ -219,13 +219,10 @@ void EventDispatcher::run()
     const int MAX_EVENTS = 64;
     epoll_event events[MAX_EVENTS];
 
-    Logger::info("🚀 Server started, entering main loop...");
+    Logger::info("🚀 [Event Dispatcher] Server started, entering main loop...");
 
     while (g_running)
     {
-        Logger::info("⚡ Server online, standing by for connections");
-        FileManager::getInstance()->printAllFiles();
-        SessionManager::getInstance()->printSessions();
         int n = epoll_wait(epoll_fd, events, MAX_EVENTS, -1);
         if (n == -1) 
         {
@@ -252,13 +249,13 @@ void EventDispatcher::run()
             std::map<int, Client*>::iterator it = clients.find(fd);
             if (it == clients.end()) 
             {
-                Logger::error("Client fd " + toString(fd) + " not found");
+                Logger::error("[Event Dispatcher] Client fd " + toString(fd) + " not found");
                 continue;
             }
 
             if (ev.events & (EPOLLRDHUP | EPOLLHUP | EPOLLERR))
             {
-                Logger::info("Client fd " + toString(fd) + " disconnected or error");
+                //Logger::debug("[Event Dispatcher] Client fd " + toString(fd) + " disconnected or error");
 
                 if (epoll_ctl(epoll_fd, EPOLL_CTL_DEL, fd, NULL) == -1)
                     perror("epoll_ctl DEL");
@@ -272,10 +269,13 @@ void EventDispatcher::run()
             if (ev.events & EPOLLIN)
             {
                 handleClient(*it->second);
+                Logger::info("🤖 [Event Dispatcher] Server online, standing by for connections");
+                FileManager::getInstance()->printAllFiles();
+                SessionManager::getInstance()->printSessions();
             }
         }
     }
-    Logger::debug("Exited from server loop.");
+    Logger::debug("[Event Dispatcher] Exited from server loop.");
 }
 
 

@@ -24,7 +24,7 @@
 
 LocationDecorator::LocationDecorator(AResponse *resp): response(resp), cgi(false), target_directory(""), full_path("")
 {
-	Logger::debug("Preparing for you: " + response->request.path + " " + response->request.method);
+	//Logger::debug("Preparing for you: " + response->request.path + " " + response->request.method);
 	this->nextHandler = NULL;
     if (!response) {
         throw std::runtime_error("LocationDecorator: response pointer is null");
@@ -42,6 +42,7 @@ LocationDecorator::LocationDecorator(AResponse *resp): response(resp), cgi(false
 			handleCustomLocations(config);	
 	}
 	finalizePage();
+	setLocations();
     if (DBG) {std::cout << GREEN << "[LocationDecorator] Page resolved: " << directory + page << RESET_COLOR << std::endl;}
 }
 
@@ -102,7 +103,8 @@ void LocationDecorator::setLocations()
 	response->full_path = full_path;
 	if(response->request.method == "PUT")
 		response->page = put_page;
-    Logger::info("📌 Location resolved | Directory: " + directory + " | Page: " + page + " | Full path: " + full_path + " | CGI: " + (cgi ? "enabled" : "disabled") + " | Target dir: " + target_directory);
+    Logger::info("📌 [Location decorator] Location:" + location + " | Directory: " + directory + " | Page: " + page);
+	Logger::info("📥 [Location decorator] Full path: " + full_path + " | CGI: " + (cgi ? "enabled" : "disabled") + " | Target dir: " + target_directory);
 }
 
 
@@ -168,9 +170,12 @@ void LocationDecorator::handleCustomLocations(const ServerConfigDataSet &config)
 		std::string path = response->request.path;
 		if(path == "/")
 			path = path + "/";
-        if (path.compare(0, dir.size(), dir) == 0) 
-        {
-            Logger::debug("Matched location: " + it->first);
+		Logger::debug("🔍 [Compare] path: \"" + path + "\"");
+		Logger::debug("🔍 [Compare] dir:  \"" + dir + "\"");
+        //if (dir.compare(0, path.size(), path) == 0) 
+		if (path.compare(0, dir.size(), dir) == 0) 
+		{
+			Logger::debug("✅ [Compare] path starts with dir ✅");
             if (LocationConfigDataSet* loc = dynamic_cast<LocationConfigDataSet*>(it->second))
             {
                 directory = loc->root;
@@ -302,30 +307,30 @@ void LocationDecorator::checkAllowedMethods(const ADataSet *dataset)
 
     if (methods == NULL || methods->empty())
     {
-        std::cout << "[DEBUG] No allowed methods configured for this location.\n";
+        //std::cout << "[DEBUG] No allowed methods configured for this location.\n";
         return;
     }
 
-    std::cout << "[DEBUG] Allowed methods for this location: ";
-    for (size_t i = 0; i < methods->size(); i++)
-        std::cout << (*methods)[i] << " ";
-    std::cout << "\n";
+    //std::cout << "[DEBUG] Allowed methods for this location: ";
+    //for (size_t i = 0; i < methods->size(); i++)
+    //    std::cout << (*methods)[i] << " ";
+    //std::cout << "\n";
 
-    std::cout << "[DEBUG] Request method: " << response->request.method << "\n";
+    //std::cout << "[DEBUG] Request method: " << response->request.method << "\n";
 
     for (size_t i = 0; i < methods->size(); i++)
     {
         if (response->request.method == (*methods)[i]) 
         {
             allowed = true;
-            std::cout << "[DEBUG] Request method is allowed.\n";
+            //std::cout << "[DEBUG] Request method is allowed.\n";
             break;
         }
     }
 
     if (!allowed)
     {
-        std::cout << "[DEBUG] Request method is NOT allowed. Setting error.\n";
+        Logger::debug(" ❌ [Location Decorator] Request method is NOT allowed. Setting error");
         response->setError(METHODNOTALLOWED);
     }
 }
@@ -338,7 +343,7 @@ void LocationDecorator::finalizePage()
 	//Logger::debug("Page: " + page);
 	//if(full_path.empty())
 	full_path = directory + page;
-	Logger::debug("full page" + full_path);
+	//Logger::debug("full page" + full_path);
 	std::ifstream file(full_path.c_str());
 	if (!file.is_open() && response->request.path != "/favicon.ico")
 	{
@@ -354,5 +359,4 @@ void LocationDecorator::finalizePage()
 			return;
 		}
 	}
-	setLocations();
 }

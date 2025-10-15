@@ -51,3 +51,18 @@ void Logger::debug(const std::string& message)
     << "[" << "DBG" << "] "
     << message << RESET_COLOR << std::endl;
 }
+
+void Logger::files(const std::map<int, std::string>& files) 
+{
+    if (files.empty())
+        return;
+    std::cout << BLUE
+              << "[" << getTimestamp() << "] [DBG] "
+              << " 📋 [FileManager] ";
+
+    for (std::map<int, std::string>::const_iterator it = files.begin(); it != files.end(); ++it)
+    {
+        std::cout << "[" << it->first << "]->[" << it->second << "] |";
+    }
+    std::cout << std::endl;
+}

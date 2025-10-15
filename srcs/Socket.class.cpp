@@ -58,7 +58,7 @@ bool Socket::setup()
 		throw std::runtime_error("Bind failed");
 	if (listen(_server_fd, 10) == -1)
 		throw std::runtime_error("Listen failed");
-	Logger::info("✅ Server listening on port " + toString(_port) + " — setup complete");
+	Logger::info("✅ [Socket] Server listening on port " + toString(_port) + " — setup complete");
 	return true;
 }
 
@@ -75,7 +75,7 @@ int Socket::response(const Client& client)
     if (bytesSent < 0)
         throw std::runtime_error("❌ Failed to send to FD " + toString(client.getClientFd()) + ": " + std::string(strerror(errno)));
     else 
-		Logger::info("✅ Sent " + toString(bytesSent) + " bytes to FD " + toString(client.getClientFd()));
+		Logger::debug(" ✅ [Socket] [FD " + toString(client.getClientFd()) + "] Sent " + toString(bytesSent) + " bytes");
     return bytesSent;
 }
 
