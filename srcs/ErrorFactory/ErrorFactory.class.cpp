@@ -76,7 +76,7 @@ AError* ErrorFactory::createError(Errors type)
             error = NULL;
             break;
     }
-    Logger::warning("An error occurred (code " + toString(error->error_code) +
+    Logger::warning("[Error Factory] 👮 An error occurred (code " + toString(error->error_code) +
                     ", type: " + error->error_type + ").");
     return error;
 }

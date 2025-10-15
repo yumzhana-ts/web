@@ -26,4 +26,6 @@ public:
 	std::string readContentLength(int fd, std::string &initial, size_t content_length);
 	size_t parseContentLength(const std::string &headers);
 	ssize_t safeRead(int fd, std::string &buffer);
+	void debugPeekFdStream();
+	bool waitForData(int timeout_sec);
 };

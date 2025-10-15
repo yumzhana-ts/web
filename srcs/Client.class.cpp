@@ -30,10 +30,13 @@ int Client::getClientFd() const
 
 std::string Client::getRaw_request()
 {
+    //std::cout << this->raw_request << std::endl;
 	return this->raw_request;
 }
+
 void Client::getRequest() 
 {
+    debugPeekFdStream();
     this->raw_request.clear();
     std::string headers;
     std::string body;
@@ -52,8 +55,7 @@ void Client::getRequest()
 
     if (headers_end == 0)
     {
-        Logger::debug("Incomplete request headers");
-        //throw std::runtime_error("Incomplete request headers");
+        Logger::debug(" 💩 [Client] Incomplete request headers");
         return;
     }
 
@@ -80,11 +82,10 @@ void Client::getRequest()
 
     // 4. Проверка полноты
     bool complete = !partial && (raw_request.size() == expected_length);
-    std::string mark = complete ? "✅" : "❌";
+    std::string mark = complete ? "✉️ " : "❌";
 
-    Logger::debug("Request from fd=" + toString(this->_fd) + 
-                  " received " + toString(raw_request.size()) + 
-                  " / expected " + toString(expected_length) + " bytes " + mark);
+    Logger::info(mark + " [Client][FD "+ toString(this->_fd) +  "][PORT " + toString(this->serverSocket->getServerPort()) + "] Request received " + toString(raw_request.size()) + 
+                  "/" + toString(expected_length) + " bytes ");
 }
 
 
@@ -135,7 +136,7 @@ std::string Client::readChunked(int fd, std::string &body)
         {
             n = safeRead(fd, body);
             if (n <= 0) {
-                Logger::debug("Partial chunked read detected");
+                Logger::debug(" 💩 [Client] Partial chunked read detected");
                 return result;
             }
         }
@@ -152,7 +153,7 @@ std::string Client::readChunked(int fd, std::string &body)
         {
             n = safeRead(fd, body);
             if (n <= 0) {
-                Logger::debug("Partial chunked read detected");
+                Logger::debug(" 💩 [Client] Partial chunked read detected");
                 return result;
             }
         }
@@ -163,3 +164,63 @@ std::string Client::readChunked(int fd, std::string &body)
 
     return result;
 }
+
+
+#include <sys/select.h>
+#include <unistd.h>
+
+bool Client::waitForData(int timeout_sec) {
+    fd_set readfds;
+    FD_ZERO(&readfds);
+    FD_SET(this->_fd, &readfds);
+
+    struct timeval timeout;
+    timeout.tv_sec = timeout_sec;
+    timeout.tv_usec = 0;
+
+    int result = select(this->_fd + 1, &readfds, NULL, NULL, &timeout);
+    return result > 0 && FD_ISSET(this->_fd, &readfds);
+}
+
+
+#include <sys/socket.h> // for recv
+#include <unistd.h>     // for close
+#include <errno.h>      // for errno
+#include <cstring>      // for strerror
+
+void Client::debugPeekFdStream()
+{
+    std::string accumulated;
+    int attempts = 10;
+
+    while (attempts-- > 0)
+    {
+        if (!waitForData(1)) {
+            //Logger::debug("⏳ [Client] No data available after waiting.");
+            continue;
+        }
+
+        char buffer[1025];
+        ssize_t bytes_read = recv(this->_fd, buffer, 1024, MSG_PEEK);
+
+        if (bytes_read < 0) {
+            //Logger::debug("❌ [Client] recv(MSG_PEEK) failed: " + std::string(strerror(errno)));
+            return;
+        }
+
+        buffer[bytes_read] = '\0';
+        accumulated = std::string(buffer);
+
+        // Check for full HTTP headers
+        if (accumulated.find("\r\n\r\n") != std::string::npos) {
+            //Logger::debug("📦 [Client] Full headers peeked:\n" + accumulated);
+            return;
+        }
+
+        // Wait and try again
+        usleep(10000); // 100ms
+    }
+
+    //Logger::debug("⚠️ [Client] Gave up after partial data:\n" + accumulated);
+}
+

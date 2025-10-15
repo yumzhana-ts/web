@@ -152,15 +152,7 @@ std::string FileManager::getFile(int id) const
 
 void FileManager::printAllFiles() const 
 {
-    if (file.empty()) {
-        std::cout << RED << "[FileManager] No files stored." << RESET_COLOR << std::endl;
-        return;
-    }
-
-    std::cout << GREEN << "[FileManager] Current files:" << RESET_COLOR << std::endl;
-    for (std::map<int, std::string>::const_iterator it = file.begin(); it != file.end(); ++it) {
-        std::cout << "  ID: " << it->first << " -> " << it->second << std::endl;
-    }
+    Logger::files(file);
 }
 
 std::vector<std::pair<int, std::string> > FileManager::getAllFiles() const 

@@ -99,11 +99,7 @@ void ServerConfigDataSet::map()
                 this->indexes.push_back(token_data[i][j]);
         }
         else if(token_data[i][0] == "max_uri_length")
-        {
-            this->max_uri_length = atol(token_data[i][1].c_str());
-            Logger::debug("why am i empty?" + token_data[i][1]);
-        }
-            
+            this->max_uri_length = atol(token_data[i][1].c_str());        
         else if(token_data[i][0] == "max_header_length")
             this->max_header_length = atol(token_data[i][1].c_str());
         else if(token_data[i][0] == "location")

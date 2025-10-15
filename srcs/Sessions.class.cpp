@@ -72,7 +72,7 @@ void SessionManager::printSessions() const
 {
     if (sessions.empty())
     {
-        std::cout << RED <<  "[Sessions] No active sessions" << RESET_COLOR << std::endl;
+        //std::cout << RED <<  "[Sessions] No active sessions" << RESET_COLOR << std::endl;
         return;
     }
     std::string output = "Active sessions: ";
@@ -82,5 +82,5 @@ void SessionManager::printSessions() const
         if (i + 1 < sessions.size())
             output += ", ";
     }
-    std::cout << RED <<  "[Sessions] "  << output << RESET_COLOR << std::endl;
+    Logger::debug(" 🍪 [Sessions] "+ output);
 }

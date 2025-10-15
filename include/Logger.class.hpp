@@ -23,6 +23,7 @@ class Logger
         static void warning(const std::string& message);
         static void error(const std::string& message);
         static void debug(const std::string& message);
+        static void files(const std::map<int, std::string>& files);
     private:
         static std::string getTimestamp();
 };

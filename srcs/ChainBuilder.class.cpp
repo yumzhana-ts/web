@@ -171,10 +171,10 @@ void ChainBuilder::validateRequest()
 
 void ChainBuilder::logResponse()
 {
-    std::string emoji = (response->getStatusCode() >= 200 && response->getStatusCode() < 300) ? "✉️ " :
-                        (response->getStatusCode() >= 400 && response->getStatusCode() < 500) ? "🦩 " :
-                        (response->getStatusCode() >= 500) ? "💀" : "ℹ️ ";
+    std::string emoji = (response->getStatusCode() >= 200 && response->getStatusCode() < 300) ? "✅" :
+                        (response->getStatusCode() >= 400 && response->getStatusCode() < 500) ? "🦩" :
+                        (response->getStatusCode() >= 500) ? "💀" : "ℹ️";
 
-    Logger::info(emoji + " Served " + request.method + " response to path: " + request.path +
-                    " with status code: " + toString(response->getStatusCode()));
+    Logger::info(emoji + " [Chain Builder] Served [" + toString(response->getStatusCode()) + "][" + request.method + "][" + request.path +
+                    "]");
 }
