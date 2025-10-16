@@ -30,8 +30,10 @@ CgiHandler::CgiHandler(RequestDataSet &req, std::string path, int session_number
         interpreter_path = "/usr/bin/php-cgi";
     else if (path.find(".pl") != std::string::npos)
         interpreter_path = "/usr/bin/perl";
-    else if (path.find(".sh") != std::string::npos || path.find(".bash") != std::string::npos)
+    else if (path.find(".sh") != std::string::npos || path.find(".bash") != std::string::npos || path.find("ubuntu_cgi_tester") != std::string::npos)
         interpreter_path = "/usr/bin/bash";
+    //else if (path.find(".bla") != std::string::npos)
+    //    interpreter_path = ".sh";
     else
         interpreter_path = "";
     session_id = session_number;
@@ -113,9 +115,11 @@ void CgiHandler::runParent(const char* input)
     {
         // записываем ровно n байт, не полагаясь на '\0'
         cgi_output.write(buffer, n);
+        usleep(1000000); 
     }
 
     this->raw_cgi_response = cgi_output.str();
+    usleep(1000000); 
     close(pipe_out[0]);
 }
 

@@ -218,7 +218,7 @@ void Client::debugPeekFdStream()
         }
 
         // Wait and try again
-        usleep(10000); // 100ms
+        usleep(1000000); // 100ms
     }
 
     //Logger::debug("⚠️ [Client] Gave up after partial data:\n" + accumulated);

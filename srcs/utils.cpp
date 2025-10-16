@@ -124,3 +124,34 @@ in_addr_t ipStringToHostIP(const std::string &ip_str)
         return inet_addr("127.0.0.1");
     return inet_addr(ip_str.c_str()); 
 }
+
+std::string removeDoubleSlashes(const std::string& input) 
+{
+    std::string result;
+    bool lastWasSlash = false;
+
+    for (std::string::const_iterator it = input.begin(); it != input.end(); ++it) {
+        if (*it == '/') {
+            if (!lastWasSlash) {
+                result += *it;
+                lastWasSlash = true;
+            }
+            // else: skip repeated slash
+        } else {
+            result += *it;
+            lastWasSlash = false;
+        }
+    }
+
+    return result;
+}
+
+#include <sys/stat.h>
+#include <iostream>
+
+bool is_regular_file(const char* path) {
+    struct stat path_stat;
+    if (stat(path, &path_stat) != 0)
+        return false;
+    return S_ISREG(path_stat.st_mode);
+}

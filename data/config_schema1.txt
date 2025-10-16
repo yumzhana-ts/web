@@ -16,6 +16,8 @@ cgi_ext                 2   1
 allow_methods           2   0
 client_max_body_size    2   0
 
-locatiom /database      3   0
+location /database      3   0
 
+location /directory/Yeah      3   0
+return                        3   0
 
