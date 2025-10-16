@@ -108,7 +108,7 @@ void LocationConfigDataSet::map()
             for(size_t j = 1; j < token_data[i].size(); j++)
                 this->indexes.push_back(token_data[i][j]);
         }
-        else if (tokens[0] == "return")
+        else if (tokens[0] == "return" && tokens.size() == 3)
         {
             this->return_info.first = tokens[1];
             this->return_info.second = tokens[2];

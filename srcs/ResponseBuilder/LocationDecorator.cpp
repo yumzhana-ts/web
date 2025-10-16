@@ -24,7 +24,7 @@
 
 LocationDecorator::LocationDecorator(AResponse *resp): response(resp), cgi(false), target_directory(""), full_path("")
 {
-	//Logger::debug("Preparing for you: " + response->request.path + " " + response->request.method);
+	Logger::debug("Preparing for you: " + response->request.path + " " + response->request.method);
 	this->nextHandler = NULL;
     if (!response) {
         throw std::runtime_error("LocationDecorator: response pointer is null");
@@ -92,6 +92,11 @@ bool LocationDecorator::isCgi(const std::string& path)
 				Logger::debug("script is there!");
 				return (true);
 			}
+		else if (path.find(".bla") != std::string::npos)
+			{
+				page = "/home/ytsyrend/Desktop/Core/web/ubuntu_cgi_tester";
+				return (true);
+			}
 	}
 	return(false);
 }
@@ -118,7 +123,7 @@ void LocationDecorator::handleDefaultLocation(const ServerConfigDataSet &config)
 		page = config.indexes[0];
 		if(config.indexes.size() > 1)
 		{
-			Logger::debug("serving indexes");
+			//Logger::debug("serving indexes");
 			this->indexes = config.indexes;
 			this->page_index = 0;
 		}
@@ -161,48 +166,90 @@ void LocationDecorator::handleCGILocationsRules(const ServerConfigDataSet &confi
     }
 }
 
-void LocationDecorator::handleCustomLocations(const ServerConfigDataSet &config)
+std::map<std::string, ADataSet*>::const_iterator
+LocationDecorator::findBestMatchIter(const std::map<std::string, ADataSet*>& locationDataSets, const std::string& requestPath)
 {
-    for (std::map<std::string, ADataSet *>::const_iterator it = config.locationDataSets.begin();
-         it != config.locationDataSets.end(); ++it)
+    std::map<std::string, ADataSet*>::const_iterator bestIt = locationDataSets.end();
+    size_t bestLength = 0;
+
+    std::string path = requestPath;
+    if (path.empty() || path[path.size() - 1] != '/') {
+        path += '/';
+    }
+
+    for (std::map<std::string, ADataSet*>::const_iterator it = locationDataSets.begin();
+         it != locationDataSets.end(); ++it)
     {
-		std::string dir = it->first + "/";
-		std::string path = response->request.path;
-		if(path == "/")
-			path = path + "/";
-		Logger::debug("🔍 [Compare] path: \"" + path + "\"");
-		Logger::debug("🔍 [Compare] dir:  \"" + dir + "\"");
-        //if (dir.compare(0, path.size(), path) == 0) 
-		if (path.compare(0, dir.size(), dir) == 0) 
-		{
-			Logger::debug("✅ [Compare] path starts with dir ✅");
-            if (LocationConfigDataSet* loc = dynamic_cast<LocationConfigDataSet*>(it->second))
+        std::string dir = it->first;
+        if (dir.empty()) continue;
+
+        if (dir[dir.size() - 1] != '/')
+            dir += '/';
+
+        if (path.compare(0, dir.size(), dir) == 0)
+        {
+            if (dir.size() > bestLength)
             {
-                directory = loc->root;
-				if	(loc->client_max_body_size != 0)
-					response->request.client_max_body_size = loc->client_max_body_size;
-				if (path == "//")
-				{
-					if (response->request.method == "GET")
-					{
-						page = config.indexes[0];
-						if(config.indexes.size() > 1)
-						{
-							this->indexes = config.indexes;
-							this->page_index = 0;
-						}
-					}
-				}
-                else
-					page = response->request.path.substr(it->first.size());
-                location = it->first;
-                applyLocationRules(loc);
-                checkAllowedMethods(loc);
+                bestLength = dir.size();
+                bestIt = it;
             }
-            return;
         }
     }
-    handleDefaultLocation(config);
+
+    return bestIt;  // end() if no match
+}
+
+void LocationDecorator::handleCustomLocations(const ServerConfigDataSet &config)
+{
+	std::map<std::string, ADataSet*>::const_iterator it = findBestMatchIter(config.locationDataSets, response->request.path);
+
+	if (it != config.locationDataSets.end())
+	{
+		//Logger::debug("🔍 [Compare] path: \"" + path + "\"");
+		//Logger::debug("🔍 [Compare] dir:  \"" + dir + "\"");
+		//Logger::debug("✅ [Compare] path starts with dir ✅");
+		if (LocationConfigDataSet* loc = dynamic_cast<LocationConfigDataSet*>(it->second))
+		{
+			std::string path = response->request.path;
+			if (path.empty() || path[path.size() - 1] != '/')
+        		path += '/';
+			directory = loc->root;
+			if	(loc->client_max_body_size != 0)
+				response->request.client_max_body_size = loc->client_max_body_size;
+			if (path == "//")
+			{
+				if (response->request.method == "GET")
+				{
+					page = config.indexes[0];
+					if(config.indexes.size() > 1)
+					{
+						this->indexes = config.indexes;
+						this->page_index = 0;
+					}
+				}
+			}
+			else
+			{
+				page = response->request.path.substr(it->first.size());
+				Logger::debug("page" + page);
+				/*if (page.empty())
+				{
+					page = config.indexes[0];
+					if(config.indexes.size() > 1)
+					{
+						this->indexes = config.indexes;
+						this->page_index = 0;
+					}
+				}*/
+			}
+				
+			location = it->first;
+			applyLocationRules(loc);
+			checkAllowedMethods(loc);
+		}
+	}
+	else
+    	handleDefaultLocation(config);
 }
 
 
@@ -238,7 +285,7 @@ void LocationDecorator::applyLocationRules(const LocationConfigDataSet *dataset)
 		page = dataset->return_info.second;
 		return;
 	}
-	else if (response->request.method == "GET" && (page == "/"))
+	else if (response->request.method == "GET" && (page.empty() || page == "/"))
 	{
 		if (dataset->autoindex == "on")
 		{
@@ -343,7 +390,8 @@ void LocationDecorator::finalizePage()
 	//Logger::debug("Page: " + page);
 	//if(full_path.empty())
 	full_path = directory + page;
-	//Logger::debug("full page" + full_path);
+	full_path = removeDoubleSlashes(full_path); 
+	Logger::debug("full page" + full_path);
 	std::ifstream file(full_path.c_str());
 	if (!file.is_open() && response->request.path != "/favicon.ico")
 	{
@@ -359,4 +407,9 @@ void LocationDecorator::finalizePage()
 			return;
 		}
 	}
+	/*if(response->request.method == "GET" && !is_regular_file(full_path.c_str()))
+	{
+		response->setError(PAGENOTFOUND);
+		return;
+	}*/
 }
