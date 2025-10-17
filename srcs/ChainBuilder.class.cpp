@@ -56,6 +56,7 @@ void ChainBuilder::handle()
             this->handleLocation();
             this->nextHandler->handle();
             this->validateResponse();
+            
         }
     }
     catch(std::exception &e)
@@ -75,7 +76,10 @@ void ChainBuilder::handleLocation()
         LocationDecorator decorator(resp);
         this->validateResponse();
         if(decorator.cgi == true)
+        {
             this->handleCgi(&decorator);
+        }
+            
     }
 }
 
