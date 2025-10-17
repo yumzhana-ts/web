@@ -24,7 +24,7 @@
 
 LocationDecorator::LocationDecorator(AResponse *resp): response(resp), cgi(false), target_directory(""), full_path("")
 {
-	Logger::debug("Preparing for you: " + response->request.path + " " + response->request.method);
+	//Logger::debug("Preparing for you: " + response->request.path + " " + response->request.method);
 	this->nextHandler = NULL;
     if (!response) {
         throw std::runtime_error("LocationDecorator: response pointer is null");
@@ -94,7 +94,6 @@ bool LocationDecorator::isCgi(const std::string& path)
 			}
 		else if (path.find(".bla") != std::string::npos)
 			{
-				page = "/home/ytsyrend/Desktop/Core/web/ubuntu_cgi_tester";
 				return (true);
 			}
 	}
@@ -231,7 +230,7 @@ void LocationDecorator::handleCustomLocations(const ServerConfigDataSet &config)
 			else
 			{
 				page = response->request.path.substr(it->first.size());
-				Logger::debug("page" + page);
+				//Logger::debug("page" + page);
 				/*if (page.empty())
 				{
 					page = config.indexes[0];
@@ -391,7 +390,7 @@ void LocationDecorator::finalizePage()
 	//if(full_path.empty())
 	full_path = directory + page;
 	full_path = removeDoubleSlashes(full_path); 
-	Logger::debug("full page" + full_path);
+	//Logger::debug("full page" + full_path);
 	std::ifstream file(full_path.c_str());
 	if (!file.is_open() && response->request.path != "/favicon.ico")
 	{
