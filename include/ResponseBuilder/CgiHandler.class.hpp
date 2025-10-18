@@ -6,7 +6,7 @@
 /*   By: ytsyrend <ytsyrend@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 18:24:01 by ytsyrend          #+#    #+#             */
-/*   Updated: 2025/10/01 00:57:06 by ytsyrend         ###   ########.fr       */
+/*   Updated: 2025/10/18 16:22:59 by ytsyrend         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,19 +22,20 @@ private:
     int pipe_in[2];
     int pipe_out[2];
     pid_t pid;
+    int epoll_fd;
     std::string interpreter_path;
     std::string script_path;
     void closePipeEnds(bool child);
     void runChild(const char* scriptPath, char** envp);
     void parseCgiResponse(const std::string &raw);
     void runParent(const char* input);
+    int setNonBlocking(int fd);
+    void setupEpoll();
 public:
     std::vector<std::string> envVars;
     std::vector<char*> envp;
     std::string raw_cgi_response;
-    CgiHandler(RequestDataSet &req, std::string path);
     CgiHandler(RequestDataSet &req, std::string path, int session_number);
-    CgiHandler(RequestDataSet &req, std::string path, int session_number, std::string directory);
     ~CgiHandler();
     int launch(std::string input);
     void handle();
