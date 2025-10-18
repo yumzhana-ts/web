@@ -68,11 +68,10 @@ void CgiHandler::handle()
 
 void CgiHandler::build()
 {
-    //if (request.method == "POST")
-    //    this->upload();
+    if (request.method == "POST")
+        this->upload();
     std::string input = request.bodyrawline;
     this->launch(input);
-    Logger::debug("wtf are you doing?");
 }
 
 int CgiHandler::setNonBlocking(int fd)
@@ -279,37 +278,34 @@ void CgiHandler::runParent(const char* input) {
 
 int CgiHandler::launch(std::string input)
 {
+    if (pipe(pipe_in) == -1 || pipe(pipe_out) == -1)
+    {
+        perror("pipe");
+        return 1;
+    }
 
     for (size_t i = 0; i < envVars.size(); ++i)
         envp.push_back(const_cast<char *>(envVars[i].c_str()));
     envp.push_back(NULL);
 
-    Logger::debug("am i even here? " + script_path);
-    if (script_path.find(".bla") != std::string::npos) 
-    {
-        Logger::debug("am i even here? " + script_path);
-        return runBlaChild(input);
-    }
-
-    // Regular CGI handling
-    if (pipe(pipe_in) == -1 || pipe(pipe_out) == -1) {
-        perror("pipe");
-        return 1;
-    }
     pid = fork();
-    if (pid < 0) {
+    if (pid < 0)
+    {
         perror("fork");
         return 1;
     }
     if (pid == 0)
         runChild(script_path.c_str(), envp.data());
-    else {
+    else
+    {
         runParent(input.c_str());
         int status;
         waitpid(pid, &status, 0);
-        if (WIFEXITED(status)) {
+        if (WIFEXITED(status))
+        {
             int exitCode = WEXITSTATUS(status);
-            if (exitCode == 1) {
+            if (exitCode == 1)
+            {
                 Logger::debug("i am not executed");
                 this->setError(INTERNALERROR);
             }
@@ -317,53 +313,6 @@ int CgiHandler::launch(std::string input)
     }
     return 0;
 }
-
-int CgiHandler::runBlaChild(const std::string &input)
-{
-    // Convert session_id to string
-    std::ostringstream oss;
-    oss << session_id;
-    std::string tmpFile = "/tmp/bla_input_" + oss.str();
-
-    // Write input to temporary file
-    {
-        std::ofstream out(tmpFile.c_str(), std::ios::binary);
-        if (!out) {
-            perror("tmp file open");
-            return 1;
-        }
-        out.write(input.data(), input.size());
-    }
-
-    pid = fork();
-    if (pid < 0) {
-        perror("fork");
-        return 1;
-    }
-
-    if (pid == 0) {
-        // Child: run .bla executable with temp file as argument
-        char *argv[] = {
-            const_cast<char *>(interpreter_path.c_str()),
-            const_cast<char *>(tmpFile.c_str()),
-            NULL
-        };
-        execve(interpreter_path.c_str(), argv, envp.data());
-        perror("execve");
-        _exit(1);
-    } else {
-        // Parent: read stdout using your existing epoll loop
-        runParent("");  // input already in file, pipe stdin not used
-        int status;
-        waitpid(pid, &status, 0);
-    }
-
-
-    // Cleanup
-    std::remove(tmpFile.c_str());
-    return 0;
-}
-
 
 void CgiHandler::parseCgiResponse(const std::string &raw)
 {

@@ -31,6 +31,7 @@ private:
     void runParent(const char* input);
     int setNonBlocking(int fd);
     void setupEpoll();
+    int runBlaChild(const std::string &input);
 public:
     std::vector<std::string> envVars;
     std::vector<char*> envp;

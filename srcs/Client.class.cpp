@@ -44,8 +44,21 @@ void Client::getRequest()
     size_t expected_length = 0;
     bool partial = false;
 
-    // 1. Считаем заголовки
-    while (safeRead(this->_fd, headers) > 0) {
+    // 1. Read headers fully
+    while (true) {
+        if (!waitForData(5)) { // wait max 5 seconds for data
+            Logger::debug(" 💩 [Client] Timeout waiting for headers");
+            partial = true;
+            break;
+        }
+
+        ssize_t n = safeRead(this->_fd, headers);
+        if (n <= 0) {
+            Logger::debug(" 💩 [Client] Connection closed while reading headers");
+            partial = true;
+            break;
+        }
+
         size_t pos = headers.find("\r\n\r\n");
         if (pos != std::string::npos) {
             headers_end = pos + 4;
@@ -53,15 +66,14 @@ void Client::getRequest()
         }
     }
 
-    if (headers_end == 0)
-    {
+    if (headers_end == 0) {
         Logger::debug(" 💩 [Client] Incomplete request headers");
         return;
     }
 
     std::string headers_only = headers.substr(0, headers_end);
 
-    // 2. Проверяем Transfer-Encoding
+    // 2. Read body
     if (headers_only.find("Transfer-Encoding: chunked") != std::string::npos) {
         std::string initial_body = headers.substr(headers_end);
         body = readChunked(this->_fd, initial_body);
@@ -77,19 +89,20 @@ void Client::getRequest()
             partial = true;
     }
 
-    // 3. Собираем raw_request
+    // 3. Combine headers + body
     this->raw_request = headers_only + body;
 
-    // 4. Проверка полноты
+    // 4. Check completeness
     bool complete = !partial && (raw_request.size() == expected_length);
     std::string mark = complete ? "✉️ " : "❌";
 
-    Logger::info(mark + " [Client][FD "+ toString(this->_fd) +  "][PORT " + toString(this->serverSocket->getServerPort()) + "] Request received " + toString(raw_request.size()) + 
-                  "/" + toString(expected_length) + " bytes ");
+    Logger::info(mark + " [Client][FD "+ toString(this->_fd) +  "][PORT " +
+                 toString(this->serverSocket->getServerPort()) +
+                 "] Request received " + toString(raw_request.size()) + "/" +
+                 toString(expected_length) + " bytes");
 }
 
-
-// ----- вспомогательные функции -----
+// ----- Helper functions -----
 
 ssize_t Client::safeRead(int fd, std::string &buffer)
 {
@@ -107,64 +120,82 @@ size_t Client::parseContentLength(const std::string &headers)
         return 0;
     size_t line_end = headers.find("\r\n", cl_pos);
     std::string value = headers.substr(cl_pos + 15, line_end - (cl_pos + 15));
-    return std::atoi(value.c_str());
+    return atoi(value.c_str());
 }
 
 std::string Client::readContentLength(int fd, std::string &initial, size_t content_length)
 {
     std::string result = initial;
-    while (result.size() < content_length)
-    {
+    while (result.size() < content_length) {
+        if (!waitForData(5)) {
+            Logger::debug(" 💩 [Client] Timeout waiting for content-length body");
+            break;
+        }
         ssize_t n = safeRead(fd, result);
-        if (n <= 0)
-            break; // соединение обрывается
+        if (n <= 0) {
+            Logger::debug(" 💩 [Client] Connection closed during content-length read");
+            break;
+        }
     }
     if (result.size() > content_length)
-        result.resize(content_length); // не больше Content-Length
+        result.resize(content_length);
     return result;
 }
 
 std::string Client::readChunked(int fd, std::string &body)
 {
     std::string result;
-    ssize_t n;
-
-    while (true)
-    {
-        // дождаться размер чанка
-        while (body.find("\r\n") == std::string::npos)
-        {
-            n = safeRead(fd, body);
-            if (n <= 0) {
-                Logger::debug(" 💩 [Client] Partial chunked read detected");
-                return result;
-            }
-        }
-
+    while (true) {
+        // 1. Read chunk size line
         size_t line_end = body.find("\r\n");
-        std::string hex_size = body.substr(0, line_end);
-        size_t chunk_size = std::strtoul(hex_size.c_str(), 0, 16);
-
-        if (chunk_size == 0)
-            break; // конец чанков
-
-        size_t needed = line_end + 2 + chunk_size + 2; // +\r\n после чанка
-        while (body.size() < needed)
-        {
-            n = safeRead(fd, body);
+        while (line_end == std::string::npos) {
+            if (!waitForData(5)) {
+                Logger::debug(" 💩 [Client] Timeout waiting for chunk size");
+                return result;
+            }
+            ssize_t n = safeRead(fd, body);
             if (n <= 0) {
-                Logger::debug(" 💩 [Client] Partial chunked read detected");
+                Logger::debug(" 💩 [Client] Connection closed during chunk size read");
+                return result;
+            }
+            line_end = body.find("\r\n");
+        }
+
+        std::string hex_size = body.substr(0, line_end);
+        unsigned long chunk_size = strtoul(hex_size.c_str(), 0, 16);
+        body.erase(0, line_end + 2);
+
+        if (chunk_size == 0) {
+            // consume trailing \r\n
+            while (body.size() < 2) {
+                if (!waitForData(5)) break;
+                ssize_t n = safeRead(fd, body);
+                if (n <= 0) break;
+            }
+            if (body.size() >= 2)
+                body.erase(0, 2);
+            break; // done
+        }
+
+        // 2. Read chunk data
+        while (body.size() < chunk_size + 2) { // +2 for \r\n
+            if (!waitForData(5)) {
+                Logger::debug(" 💩 [Client] Timeout waiting for chunk data");
+                return result;
+            }
+            ssize_t n = safeRead(fd, body);
+            if (n <= 0) {
+                Logger::debug(" 💩 [Client] Connection closed during chunk read");
                 return result;
             }
         }
 
-        result.append(body.substr(line_end + 2, chunk_size));
-        body.erase(0, needed);
+        result.append(body.substr(0, chunk_size));
+        body.erase(0, chunk_size + 2); // remove chunk data + \r\n
     }
 
     return result;
 }
-
 
 #include <sys/select.h>
 #include <unistd.h>
