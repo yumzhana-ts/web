@@ -320,32 +320,19 @@ int CgiHandler::launch(std::string input)
 
 int CgiHandler::runBlaChild(const std::string &input)
 {
-    // Convert session_id to string
-    std::ostringstream oss;
-    oss << session_id;
-    std::string tmpFile = "/tmp/bla_input_" + oss.str();
-
-    // Write input to temporary file
-    {
-        std::ofstream out(tmpFile.c_str(), std::ios::binary);
-        if (!out) {
-            perror("tmp file open");
-            return 1;
-        }
-        out.write(input.data(), input.size());
-    }
-
+    //maybe its too complicated for this test
     pid = fork();
-    if (pid < 0) {
+    if (pid < 0) 
+    {
         perror("fork");
         return 1;
     }
 
-    if (pid == 0) {
-        // Child: run .bla executable with temp file as argument
+    if (pid == 0) 
+    {
         char *argv[] = {
             const_cast<char *>(interpreter_path.c_str()),
-            const_cast<char *>(tmpFile.c_str()),
+            const_cast<char *>(script_path.c_str()),
             NULL
         };
         execve(interpreter_path.c_str(), argv, envp.data());
@@ -353,14 +340,10 @@ int CgiHandler::runBlaChild(const std::string &input)
         _exit(1);
     } else {
         // Parent: read stdout using your existing epoll loop
-        runParent("");  // input already in file, pipe stdin not used
+        runParent(input.c_str());  // input already in file, pipe stdin not used
         int status;
         waitpid(pid, &status, 0);
     }
-
-
-    // Cleanup
-    std::remove(tmpFile.c_str());
     return 0;
 }
 

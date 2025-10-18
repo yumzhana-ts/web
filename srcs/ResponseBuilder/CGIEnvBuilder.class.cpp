@@ -61,6 +61,8 @@ void CGIEnvBuilder::build()
         }
     }
     envVars["TARGET_DIR_OVERRIDE"] = location->target_directory;
+    envVars["SERVER_PROTOCOL"] = "HTTP/1.1";
+    envVars["PATH_INFO"] = "/directory/youpi.bla";
     setGame();
 }
 
