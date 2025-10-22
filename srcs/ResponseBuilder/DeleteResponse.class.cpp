@@ -66,11 +66,14 @@ void DeleteResponse::build()
 void DeleteResponse::deleteFile()
 {
 	std::string name;
-	if (!request.query_params.empty())
+	if (!request.query_params.empty() && !request.query_params.begin()->second.empty())
+	{
 		name = request.query_params.begin()->second;
+	}
 	else
 	{
-		this->setError(INTERNALERROR);
+		this->setError(BADREQUEST);
+		return;
 	}
 	try
 	{
