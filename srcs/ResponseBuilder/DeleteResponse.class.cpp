@@ -65,32 +65,20 @@ void DeleteResponse::build()
 
 void DeleteResponse::deleteFile()
 {
-	int id = 0;
+	std::string name;
 	if (!request.query_params.empty())
-		id = atoi(request.query_params.begin()->second.c_str());
-	try
-	{
-		FileManager::getInstance()->deleteFile(id, this->directory);
-	}
-	catch(const std::exception &e)
+		name = request.query_params.begin()->second;
+	else
 	{
 		this->setError(INTERNALERROR);
 	}
-}
-
-/*
-
-void LocationDecorator::deleteFiles()
-{
-	int id = 0;
-	if (!response->request.query_params.empty())
-		id = atoi(response->request.query_params.begin()->second.c_str());
 	try
 	{
-		FileManager::getInstance()->deleteFile(id, directory);
+		FileManager::getInstance()->deleteFileByName(name, this->directory);
 	}
 	catch(const std::exception &e)
 	{
-		response->setError(INTERNALERROR);
+		this->setError(PAGENOTFOUND);
 	}
-}*/
+}
+

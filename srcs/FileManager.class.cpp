@@ -115,6 +115,39 @@ void FileManager::deleteFile(int id, const std::string& directory)
     file.erase(it);
 }
 
+void FileManager::deleteFileByName(const std::string& filename, const std::string& directory) 
+{
+    std::map<int, std::string>::iterator it;
+    for (it = file.begin(); it != file.end(); ++it) {
+        if (it->second == filename) {
+            break;
+        }
+    }
+
+    if (it == file.end()) {
+        throw std::logic_error("[FileManager] File with given name not found");
+    }
+
+    std::string filepath = directory + it->second;
+
+    // Удаляем файл с диска
+    if (std::remove(filepath.c_str()) != 0) {
+        throw std::logic_error("[FileManager] Failed to delete file from disk");
+    }
+
+    if (DBG) {
+        std::cout << RED << "[FileManager] File deleted: "
+                  << it->second << " with ID " << it->first
+                  << RESET_COLOR << std::endl;
+    }
+
+    // Удаляем запись из map
+    file.erase(it);
+}
+
+
+
+
 /*bool FileManager::deleteFile(int id) 
 {
     std::map<int, std::string>::iterator it = file.find(id);

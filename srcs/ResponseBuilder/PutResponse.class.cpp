@@ -47,10 +47,13 @@ void PutResponse::handle()
     if(FileManager::getInstance()->hasFileName(_page))
     {
         this->upload();
-        this->build();     
+        this->build_found();     
     }
     else
-        this->build_found();
+    {
+        this->upload();
+        this->build();
+    }
     if(error == NONE)
         this->raw_response = this->serialize();     
 }
@@ -69,7 +72,7 @@ void PutResponse::build()
     this->status_text = "Created";
     this->headers["Content-Type"] = "text/html";
     this->headers["Content-Length"] = len_stream.str();
-    this->headers["Location"] = this->directory;
+    this->headers["Location"] = this->directory + this->page;
 }
 
 void PutResponse::build_found() 
@@ -85,7 +88,7 @@ void PutResponse::build_found()
     this->status_text = "OK";
     this->headers["Content-Type"] = "text/html";
     this->headers["Content-Length"] = len_stream.str();
-    this->headers["Location"] = this->directory;
+    this->headers["Location"] = this->directory + this->page;
 }
 
 void PutResponse::upload()
