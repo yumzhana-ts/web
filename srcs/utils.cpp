@@ -146,12 +146,14 @@ std::string removeDoubleSlashes(const std::string& input)
     return result;
 }
 
-#include <sys/stat.h>
-#include <iostream>
 
-bool is_regular_file(const char* path) {
-    struct stat path_stat;
-    if (stat(path, &path_stat) != 0)
-        return false;
-    return S_ISREG(path_stat.st_mode);
+std::string removeSlashes(const std::string& input) 
+{
+    std::string result;
+    for (std::string::const_iterator it = input.begin(); it != input.end(); ++it) {
+        if (*it != '/') {
+            result += *it;
+        }
+    }
+    return result;
 }

@@ -1,0 +1,2658 @@
+==================== HTTP RESPONSE START ====================
+🕒 Timestamp: 2025-10-22 16:32:33
+📡 Status: 200 OK
+📋 Headers:
+   Content-Length: 3667
+   Content-Type: text/html
+📝 Body:
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+   <meta charset="UTF-8">
+   <title>Welcome Intergalactic Traveler</title>
+   <style>
+       body {
+           margin: 0;
+           font-family: 'Courier New', Courier, monospace;
+           background: radial-gradient(circle at top, #0b0c10, #1f2833);
+           color: #66fcf1;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           justify-content: center;
+           padding: 50px;
+           min-height: 100vh;
+           text-align: center;
+           overflow: hidden;
+       }
+   
+       h1 {
+           font-size: 3em;
+           color: #45a29e;
+           margin-bottom: 20px;
+           animation: pulse 2s infinite;
+       }
+   
+       h2 {
+           font-size: 2em;
+           color: #c5c6c7;
+           margin-bottom: 20px;
+       }
+   
+       p {
+           color: #f8c291;
+           font-size: 1.2em;
+           max-width: 600px;
+           margin: 0 auto;
+       }
+   
+       @keyframes pulse {
+           0%, 100% { transform: scale(1); }
+           50% { transform: scale(1.05); }
+       }
+   
+       /* Stars animation */
+       .star {
+           position: absolute;
+           background: #66fcf1;
+           border-radius: 50%;
+           opacity: 0.8;
+           animation: twinkle linear infinite;
+       }
+   
+       @keyframes twinkle {
+           0% { opacity: 0.2; transform: translateY(0) scale(1); }
+           50% { opacity: 1; transform: translateY(-10px) scale(1.2); }
+           100% { opacity: 0.2; transform: translateY(0) scale(1); }
+       }
+   
+       /* Shooting star animation */
+       .shooting-star {
+           position: absolute;
+           width: 2px;
+           height: 100px;
+           background: linear-gradient(45deg, #66fcf1, transparent);
+           opacity: 0.8;
+           transform: rotate(45deg);
+           animation: shoot linear forwards;
+       }
+   
+       @keyframes shoot {
+           0% { transform: translateX(0) translateY(0) rotate(45deg); opacity: 1; }
+           100% { transform: translateX(100vw) translateY(100vh) rotate(45deg); opacity: 0; }
+       }
+   </style>
+   </head>
+   <body>
+       <h1>Welcome, Intergalactic Traveler!</h1>
+       <h2>Explore the Universe of HTTP</h2>
+       <p>
+           Marvin says: "Well… I might not be excited, but at least you’re having fun exploring the universe of HTTP requests! Take your time, enjoy the journey, and see where the web can take you."
+       </p>
+   
+       <script>
+           // Generate random twinkling stars
+           const starCount = 50;
+           for (let i = 0; i < starCount; i++) {
+               const star = document.createElement('div');
+               star.className = 'star';
+               const size = Math.random() * 3 + 1;
+               star.style.width = size + 'px';
+               star.style.height = size + 'px';
+               star.style.top = Math.random() * window.innerHeight + 'px';
+               star.style.left = Math.random() * window.innerWidth + 'px';
+               star.style.animationDuration = (Math.random() * 3 + 2) + 's';
+               document.body.appendChild(star);
+           }
+   
+           // Generate occasional shooting stars
+           function createShootingStar() {
+               const shootingStar = document.createElement('div');
+               shootingStar.className = 'shooting-star';
+               shootingStar.style.top = Math.random() * window.innerHeight / 2 + 'px';
+               shootingStar.style.left = Math.random() * window.innerWidth / 2 + 'px';
+               shootingStar.style.animationDuration = (Math.random() * 1 + 0.5) + 's';
+               document.body.appendChild(shootingStar);
+               setTimeout(() => shootingStar.remove(), 1500); // remove after animation
+           }
+   
+           setInterval(() => {
+               if (Math.random() < 0.3) { // 30% chance each interval
+                   createShootingStar();
+               }
+           }, 1000);
+       </script>
+   </body>
+   </html>
+==================== HTTP RESPONSE END ======================
+
+==================== HTTP RESPONSE START ====================
+🕒 Timestamp: 2025-10-22 16:33:24
+📡 Status: 201 Created
+📋 Headers:
+   Content-Length: 1522
+   Content-Type: text/html
+📝 Body:
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>201 – File Updated!</title>
+   <style>
+       body {
+           margin: 0;
+           font-family: 'Courier New', Courier, monospace;
+           background: radial-gradient(circle at top, #0b0c10, #1f2833);
+           color: #66fcf1;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           height: 100vh;
+           text-align: center;
+       }
+   
+       h1 {
+           font-size: 6em;
+           margin: 0;
+           color: #45a29e;
+           animation: pulse 2s infinite;
+       }
+   
+       h2 {
+           font-size: 2em;
+           margin: 10px 0 20px 0;
+           color: #c5c6c7;
+       }
+   
+       p {
+           font-size: 1.2em;
+           max-width: 600px;
+       }
+   
+       a {
+           color: #f8c291;
+           text-decoration: none;
+           font-weight: bold;
+           margin-top: 20px;
+           display: inline-block;
+           border: 2px solid #f8c291;
+           padding: 10px 20px;
+           border-radius: 5px;
+           transition: 0.3s;
+       }
+   
+       a:hover {
+           background: #f8c291;
+           color: #1f2833;
+       }
+   
+       @keyframes pulse {
+           0%, 100% { transform: scale(1); }
+           50% { transform: scale(1.1); }
+       }
+   </style>
+   </head>
+   <body>
+       <h1>201</h1>
+       <h2>Success!</h2>
+       <p>
+           Your file has been successfully created and updated.  
+           Everything looks shiny, and you're good to go 🚀
+       </p>
+       <a href="/">Return Home</a>
+   </body>
+   </html>
+==================== HTTP RESPONSE END ======================
+
+==================== HTTP RESPONSE START ====================
+🕒 Timestamp: 2025-10-22 16:34:53
+📡 Status: 201 Created
+📋 Headers:
+   Content-Length: 1522
+   Content-Type: text/html
+📝 Body:
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>201 – File Updated!</title>
+   <style>
+       body {
+           margin: 0;
+           font-family: 'Courier New', Courier, monospace;
+           background: radial-gradient(circle at top, #0b0c10, #1f2833);
+           color: #66fcf1;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           height: 100vh;
+           text-align: center;
+       }
+   
+       h1 {
+           font-size: 6em;
+           margin: 0;
+           color: #45a29e;
+           animation: pulse 2s infinite;
+       }
+   
+       h2 {
+           font-size: 2em;
+           margin: 10px 0 20px 0;
+           color: #c5c6c7;
+       }
+   
+       p {
+           font-size: 1.2em;
+           max-width: 600px;
+       }
+   
+       a {
+           color: #f8c291;
+           text-decoration: none;
+           font-weight: bold;
+           margin-top: 20px;
+           display: inline-block;
+           border: 2px solid #f8c291;
+           padding: 10px 20px;
+           border-radius: 5px;
+           transition: 0.3s;
+       }
+   
+       a:hover {
+           background: #f8c291;
+           color: #1f2833;
+       }
+   
+       @keyframes pulse {
+           0%, 100% { transform: scale(1); }
+           50% { transform: scale(1.1); }
+       }
+   </style>
+   </head>
+   <body>
+       <h1>201</h1>
+       <h2>Success!</h2>
+       <p>
+           Your file has been successfully created and updated.  
+           Everything looks shiny, and you're good to go 🚀
+       </p>
+       <a href="/">Return Home</a>
+   </body>
+   </html>
+==================== HTTP RESPONSE END ======================
+
+==================== HTTP RESPONSE START ====================
+🕒 Timestamp: 2025-10-22 16:35:13
+📡 Status: 201 Created
+📋 Headers:
+   Content-Length: 1522
+   Content-Type: text/html
+📝 Body:
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>201 – File Updated!</title>
+   <style>
+       body {
+           margin: 0;
+           font-family: 'Courier New', Courier, monospace;
+           background: radial-gradient(circle at top, #0b0c10, #1f2833);
+           color: #66fcf1;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           height: 100vh;
+           text-align: center;
+       }
+   
+       h1 {
+           font-size: 6em;
+           margin: 0;
+           color: #45a29e;
+           animation: pulse 2s infinite;
+       }
+   
+       h2 {
+           font-size: 2em;
+           margin: 10px 0 20px 0;
+           color: #c5c6c7;
+       }
+   
+       p {
+           font-size: 1.2em;
+           max-width: 600px;
+       }
+   
+       a {
+           color: #f8c291;
+           text-decoration: none;
+           font-weight: bold;
+           margin-top: 20px;
+           display: inline-block;
+           border: 2px solid #f8c291;
+           padding: 10px 20px;
+           border-radius: 5px;
+           transition: 0.3s;
+       }
+   
+       a:hover {
+           background: #f8c291;
+           color: #1f2833;
+       }
+   
+       @keyframes pulse {
+           0%, 100% { transform: scale(1); }
+           50% { transform: scale(1.1); }
+       }
+   </style>
+   </head>
+   <body>
+       <h1>201</h1>
+       <h2>Success!</h2>
+       <p>
+           Your file has been successfully created and updated.  
+           Everything looks shiny, and you're good to go 🚀
+       </p>
+       <a href="/">Return Home</a>
+   </body>
+   </html>
+==================== HTTP RESPONSE END ======================
+
+==================== HTTP RESPONSE START ====================
+🕒 Timestamp: 2025-10-22 16:35:26
+📡 Status: 201 Created
+📋 Headers:
+   Content-Length: 1522
+   Content-Type: text/html
+📝 Body:
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>201 – File Updated!</title>
+   <style>
+       body {
+           margin: 0;
+           font-family: 'Courier New', Courier, monospace;
+           background: radial-gradient(circle at top, #0b0c10, #1f2833);
+           color: #66fcf1;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           height: 100vh;
+           text-align: center;
+       }
+   
+       h1 {
+           font-size: 6em;
+           margin: 0;
+           color: #45a29e;
+           animation: pulse 2s infinite;
+       }
+   
+       h2 {
+           font-size: 2em;
+           margin: 10px 0 20px 0;
+           color: #c5c6c7;
+       }
+   
+       p {
+           font-size: 1.2em;
+           max-width: 600px;
+       }
+   
+       a {
+           color: #f8c291;
+           text-decoration: none;
+           font-weight: bold;
+           margin-top: 20px;
+           display: inline-block;
+           border: 2px solid #f8c291;
+           padding: 10px 20px;
+           border-radius: 5px;
+           transition: 0.3s;
+       }
+   
+       a:hover {
+           background: #f8c291;
+           color: #1f2833;
+       }
+   
+       @keyframes pulse {
+           0%, 100% { transform: scale(1); }
+           50% { transform: scale(1.1); }
+       }
+   </style>
+   </head>
+   <body>
+       <h1>201</h1>
+       <h2>Success!</h2>
+       <p>
+           Your file has been successfully created and updated.  
+           Everything looks shiny, and you're good to go 🚀
+       </p>
+       <a href="/">Return Home</a>
+   </body>
+   </html>
+==================== HTTP RESPONSE END ======================
+
+==================== HTTP RESPONSE START ====================
+🕒 Timestamp: 2025-10-22 16:38:01
+📡 Status: 201 Created
+📋 Headers:
+   Content-Length: 1522
+   Content-Type: text/html
+📝 Body:
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>201 – File Updated!</title>
+   <style>
+       body {
+           margin: 0;
+           font-family: 'Courier New', Courier, monospace;
+           background: radial-gradient(circle at top, #0b0c10, #1f2833);
+           color: #66fcf1;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           height: 100vh;
+           text-align: center;
+       }
+   
+       h1 {
+           font-size: 6em;
+           margin: 0;
+           color: #45a29e;
+           animation: pulse 2s infinite;
+       }
+   
+       h2 {
+           font-size: 2em;
+           margin: 10px 0 20px 0;
+           color: #c5c6c7;
+       }
+   
+       p {
+           font-size: 1.2em;
+           max-width: 600px;
+       }
+   
+       a {
+           color: #f8c291;
+           text-decoration: none;
+           font-weight: bold;
+           margin-top: 20px;
+           display: inline-block;
+           border: 2px solid #f8c291;
+           padding: 10px 20px;
+           border-radius: 5px;
+           transition: 0.3s;
+       }
+   
+       a:hover {
+           background: #f8c291;
+           color: #1f2833;
+       }
+   
+       @keyframes pulse {
+           0%, 100% { transform: scale(1); }
+           50% { transform: scale(1.1); }
+       }
+   </style>
+   </head>
+   <body>
+       <h1>201</h1>
+       <h2>Success!</h2>
+       <p>
+           Your file has been successfully created and updated.  
+           Everything looks shiny, and you're good to go 🚀
+       </p>
+       <a href="/">Return Home</a>
+   </body>
+   </html>
+==================== HTTP RESPONSE END ======================
+
+==================== HTTP RESPONSE START ====================
+🕒 Timestamp: 2025-10-22 16:40:16
+📡 Status: 200 OK
+📋 Headers:
+   Content-Length: 17391
+   Content-Type: text/html
+📝 Body:
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+   <meta charset="UTF-8">
+   <title>Server Request Tester</title>
+   <style>
+   body { font-family: monospace; background: #111; color: #eee; padding: 20px; }
+   h1 { color: #8be9fd; }
+   section {
+     background: #1a1a1a;
+     border-radius: 8px;
+     padding: 12px;
+     margin: 10px 0;
+     box-shadow: 0 0 8px #000;
+   }
+   table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+   td, th { padding: 6px; border-top: 1px solid #333; }
+   th { text-align: left; color: #999; font-weight: normal; }
+   .method { display: inline-block; width: 60px; font-weight: bold; color: #8be9fd; }
+   .status { width: 90px; }
+   .time { width: 80px; }
+   button, a {
+     background: #333;
+     color: #eee;
+     padding: 4px 10px;
+     border-radius: 6px;
+     border: none;
+     cursor: pointer;
+     text-decoration: none;
+   }
+   button:hover, a:hover { background: #444; }
+   input, textarea { background: #222; color: #eee; border: 1px solid #555; border-radius: 6px; padding: 4px; width: 100%; margin-top: 4px; }
+   details { margin-bottom: 10px; }
+   small { color: #777; display: block; margin-top: 6px; }
+   </style>
+   </head>
+   <body>
+   <h1>Server Request Tester by Location</h1>
+   <p>Organized Swagger-style tester for all endpoints.</p>
+   
+   <!-- Default Location -->
+   <details open>
+     <summary>Default</summary>
+     <section>
+       <table>
+         <tr><th>Method</th><th>Status</th><th>Time</th><th>Action</th></tr>
+   
+         <tr>
+           <td><span class="method">GET</span> /</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/')">Test</button>
+             <a href="/" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <tr>
+           <td><span class="method">GET</span> /index.html</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/index.html')">Test</button>
+             <a href="/index.html" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <tr>
+           <td><span class="method">GET</span> /missing.html</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/missing.html')">Test</button>
+             <a href="/missing.html" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <tr>
+           <td><span class="method">GET</span> /secret.txt</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/secret.txt')">TO BE DONE</button>
+             <a href="/secret.txt" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- PUT /image.jpg -->
+         <tr>
+           <td><span class="method">PUT</span> /image.jpg</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <input type="file" id="put-image">
+             <button onclick="sendPutFile('/image.jpg', 'put-image')">Test</button>
+             <a href="/image.jpg" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- GET /image.jpg -->
+         <tr>
+           <td><span class="method">GET</span> /image.jpg</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/image.jpg')">Test</button>
+             <a href="/image.jpg" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- PUT /file.txt -->
+         <tr>
+           <td><span class="method">PUT</span> /file.txt</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <input type="file" id="put-txt">
+             <button onclick="sendPutFile('/file.txt', 'put-txt')">Test</button>
+             <a href="/file.txt" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- GET /file.txt -->
+         <tr>
+           <td><span class="method">GET</span> /file.txt</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/file.txt')">Test</button>
+             <a href="/file.txt" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- PUT /file.pdf -->
+         <tr>
+           <td><span class="method">PUT</span> /file.pdf</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <input type="file" id="put-pdf">
+             <button onclick="sendPutFile('/file.pdf', 'put-pdf')">Test</button>
+             <a href="/file.pdf" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+   
+   
+         <!-- GET /file.pdf -->
+         <tr>
+           <td><span class="method">GET</span> /file.pdf</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/file.pdf')">Test</button>
+             <a href="/file.pdf" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- DELETE default -->
+         <tr>
+             <td><span class="method">DELETE</span> /?image_id=</td>
+             <td class="status">–</td>
+             <td class="time">–</td>
+             <td>
+                 <input type="number" id="delete-image-id" placeholder="ID" style="width:60px">
+                 <button onclick="sendDeleteImage('/', 'delete-image-id', 'delete-image-link')">Test</button>
+                 <a href="/" id="delete-image-link" target="_blank">Open</a>
+             </td>
+         </tr>
+   
+         <!-- GET /hello.py -->
+         <tr>
+           <td><span class="method">GET</span> /hello.py</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/hello.py')">Test</button>
+             <a href="/hello.py" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- POST /file.txt -->
+         <tr>
+           <td><span class="method">POST</span> /file.txt</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <input type="file" id="post-file-txt">
+             <button onclick="sendFile('/file.txt', 'post-file-txt', 'POST')">Test</button>
+             <a href="/file.txt" target="_blank">Open</a>
+           </td>
+         </tr>
+         
+       </table>
+     </section>
+   </details>
+   
+   <!-- Database Location -->
+   <details>
+     <summary>Database</summary>
+     <section>
+       <table>
+         <tr><th>Method</th><th>Status</th><th>Time</th><th>Action</th></tr>
+   
+         <tr>
+           <td><span class="method">GET</span> /database/</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/database/')">Test</button>
+             <a href="/database/" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <tr>
+           <td><span class="method">GET</span> /database/index.html</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/database/index.html')">Test</button>
+             <a href="/database/index.html" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <tr>
+           <td><span class="method">GET</span> /database/missing.html</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/database/missing.html')">Test</button>
+             <a href="/database/missing.html" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <tr>
+           <td><span class="method">GET</span> /database/secret.txt</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/database/secret.txt')">Test</button>
+             <a href="/database/secret.txt" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- PUT /database/image.jpg -->
+         <tr>
+           <td><span class="method">PUT</span> /database/image.jpg</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <input type="file" id="put-db-image">
+             <button onclick="sendPutFile('/database/image.jpg', 'put-db-image')">Test</button>
+             <a href="/database/image.jpg" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- GET /database/image.jpg -->
+         <tr>
+           <td><span class="method">GET</span> /database/image.jpg</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/database/image.jpg')">Test</button>
+             <a href="/database/image.jpg" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- PUT /database/file.txt -->
+         <tr>
+           <td><span class="method">PUT</span> /database/file.txt</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <input type="file" id="put-db-txt">
+             <button onclick="sendPutFile('/database/file.txt', 'put-db-txt')">Test</button>
+             <a href="/database/file.txt" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- GET /database/file.txt -->
+         <tr>
+           <td><span class="method">GET</span> /database/file.txt</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/database/file.txt')">Test</button>
+             <a href="/database/file.txt" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- PUT /database/file.pdf -->
+         <tr>
+           <td><span class="method">PUT</span> /database/file.pdf</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <input type="file" id="put-db-pdf">
+             <button onclick="sendPutFile('/database/file.pdf', 'put-db-pdf')">Test</button>
+             <a href="/database/file.pdf" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- GET /database/file.pdf -->
+         <tr>
+           <td><span class="method">GET</span> /database/file.pdf</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/database/file.pdf')">Test</button>
+             <a href="/database/file.pdf" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- DELETE by database location -->
+         <tr>
+             <td><span class="method">DELETE</span> /database/?image_id=</td>
+             <td class="status">–</td>
+             <td class="time">–</td>
+             <td>
+                 <input type="number" id="delete-db-image-id" placeholder="ID" style="width:60px">
+                 <button onclick="sendDeleteImage('/database/', 'delete-db-image-id', 'delete-db-image-link')">Test</button>
+                 <a href="/database/" id="delete-db-image-link" target="_blank">Open</a>
+             </td>
+         </tr>
+   
+         <!-- GET /database/hello.py -->
+         <tr>
+           <td><span class="method">GET</span> /database/hello.py</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/database/hello.py')">Test</button>
+             <a href="/database/hello.py" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- POST /database/file.txt -->
+         <tr>
+           <td><span class="method">POST</span> /database/file.txt</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <input type="file" id="post-db-file-txt">
+             <button onclick="sendFile('/database/file.txt', 'post-db-file-txt', 'POST')">Test</button>
+             <a href="/database/file.txt" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+       </table>
+     </section>
+   </details>
+   
+   
+   <!-- CGI Scripts -->
+   <details>
+     <summary>CGI Scripts</summary>
+     <section>
+       <table>
+         <tr><th>Script</th><th>Method</th><th>Status</th><th>Time</th><th>Action</th></tr>
+         <tr>
+           <td>/cgi-bin/name.py</td>
+           <td><span class="method">GET</span></td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/cgi-bin/name.py?name=John')">Test</button>
+             <a href="/cgi-bin/name.py?name=John" target="_blank">Open</a>
+           </td>
+         </tr>
+         <tr>
+           <td>/cgi-bin/name.py</td>
+           <td><span class="method">POST</span></td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'POST', '/cgi-bin/name.py', 'John')">Test</button>
+             <a href="/cgi-bin/name.py" target="_blank">Open</a>
+           </td>
+         </tr>
+         <tr>
+           <td>/cgi-bin/hello.py</td>
+           <td><span class="method">GET</span></td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/cgi-bin/hello.py')">Test</button>
+             <a href="/cgi-bin/hello.py" target="_blank">Open</a>
+           </td>
+         </tr>
+       </table>
+     </section>
+   </details>
+   
+   
+   
+   <!-- HTTP Errors -->
+   <details>
+     <summary>HTTP Errors</summary>
+     <section>
+       <table>
+         <tr><th>Method</th><th>Status</th><th>Time</th><th>Action</th></tr>
+         <tr>
+           <td><span class="method">GET</span> /trigger-400</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this,'GET','/trigger-400')">Test</button>
+             <a href="/trigger-400" target="_blank">Open</a>
+           </td>
+         </tr>
+         <tr>
+           <td><span class="method">GET</span> /trigger-403</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this,'GET','/trigger-403')">Test</button>
+             <a href="/trigger-403" target="_blank">Open</a>
+           </td>
+         </tr>
+         <tr>
+           <td><span class="method">GET</span> /missing-resource</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this,'GET','/missing-resource')">Test</button>
+             <a href="/missing-resource" target="_blank">Open</a>
+           </td>
+         </tr>
+       </table>
+     </section>
+   </details>
+   
+   <hr>
+   <small>Generated at <script>document.write(new Date().toLocaleString())</script></small>
+   
+   <script>
+   async function testReq(btn, method, url, body=null) {
+     const row = btn.closest("tr");
+     const statusCell = row.querySelector(".status");
+     const timeCell = row.querySelector(".time");
+   
+     statusCell.textContent = "…";
+     timeCell.textContent = "…";
+   
+     const start = performance.now();
+     const options = { method };
+     if (body && method !== "GET" && method !== "DELETE") options.body = body;
+   
+     try {
+       const resp = await fetch(url, options);
+       const ms = (performance.now() - start).toFixed(1);
+       statusCell.textContent = resp.status;
+       timeCell.textContent = ms + " ms";
+     } catch(e) {
+       statusCell.textContent = "ERR";
+       timeCell.textContent = "-";
+     }
+   }
+   
+   async function sendFile(url, inputId, method='PUT') {
+     const fileInput = document.getElementById(inputId);
+     if (!fileInput.files.length) { alert('Select file'); return; }
+   
+     const file = fileInput.files[0];
+     const row = fileInput.closest("tr");
+     const statusCell = row.querySelector(".status");
+     const timeCell = row.querySelector(".time");
+     statusCell.textContent = "…";
+     timeCell.textContent = "…";
+     const start = performance.now();
+   
+     let options = { method };
+   
+     // Distinguish POST with FormData
+     if (method === 'POST') {
+       const formData = new FormData();
+       formData.append('file', file);
+       options.body = formData;
+     } else {
+       options.body = file;
+     }
+   
+     try {
+       const resp = await fetch(url, options);
+       const ms = (performance.now() - start).toFixed(1);
+       statusCell.textContent = resp.status;
+       timeCell.textContent = ms + " ms";
+     } catch(e) {
+       statusCell.textContent = "ERR";
+       timeCell.textContent = "-";
+     }
+   }
+   
+   
+   async function sendPutFile(url, inputId) {
+     const fileInput = document.getElementById(inputId);
+     if (!fileInput.files.length) { alert('Select file'); return; }
+   
+     const file = fileInput.files[0];
+     const row = fileInput.closest("tr");
+     const statusCell = row.querySelector(".status");
+     const timeCell = row.querySelector(".time");
+     statusCell.textContent = "…";
+     timeCell.textContent = "…";
+     const start = performance.now();
+   
+     try {
+       const resp = await fetch(url, { method:'PUT', body: file });
+       const ms = (performance.now() - start).toFixed(1);
+       statusCell.textContent = resp.status;
+       timeCell.textContent = ms + " ms";
+     } catch(e) {
+       statusCell.textContent = "ERR";
+       timeCell.textContent = "-";
+     }
+   }
+   
+   function sendDeleteImage(baseUrl, inputId, linkId) {
+       if (!baseUrl) baseUrl = '/';
+       var imageId = document.getElementById(inputId).value;
+       if (!imageId) return;
+   
+       var url = baseUrl + '?image_id=' + encodeURIComponent(imageId);
+   
+       fetch(url, { method: 'DELETE' })
+           .then(response => response.text())
+           .then(data => console.log('Response:', data))
+           .catch(err => console.error('Error:', err));
+   
+       // update the "Open" link
+       document.getElementById(linkId).href = url;
+   }
+   
+   function sendDeleteImage(baseUrl) {
+       var imageId = document.getElementById('delete-db-image-id').value;
+       if (!imageId) return;
+   
+       var url = baseUrl + '?image_id=' + encodeURIComponent(imageId);
+   
+       fetch(url, { method: 'DELETE' })
+           .then(response => response.text())
+           .then(data => console.log('Response:', data))
+           .catch(err => console.error('Error:', err));
+   
+       // update the "Open" link
+       document.getElementById('delete-db-image-link').href = url;
+   }
+   </script>
+   </body>
+   </html>
+==================== HTTP RESPONSE END ======================
+
+==================== HTTP RESPONSE START ====================
+🕒 Timestamp: 2025-10-22 16:40:17
+📡 Status: 204 
+📋 Headers:
+   Content-Length: 0
+📝 Body:
+   (empty)
+==================== HTTP RESPONSE END ======================
+
+==================== HTTP RESPONSE START ====================
+🕒 Timestamp: 2025-10-22 16:40:24
+📡 Status: 201 OK
+📋 Headers:
+   Content-Length: 709
+   Content-Type: text/html
+   Location: www/default/
+📝 Body:
+   ------geckoformboundary6b287374da6e84d2eefb91e0a2f019b
+   Content-Disposition: form-data; name="file"; filename="Gargantua_and_Pantagruel.txt"
+   Content-Type: text/plain
+   
+   "I would rather be a beggar and wander freely than a rich man who is always in fear. 
+   For riches bring cares, and cares bring sorrow, and sorrow takes away the delight of 
+   living. True happiness lies not in abundance of gold or in pomp and glory, but in the 
+   freedom to live according to one's own mind, in learning, in friendship, in laughter, 
+   and in the pursuit of wisdom. Let us not spend our days counting coins when we might 
+   be counting the stars or the joys of the soul."
+   ------geckoformboundary6b287374da6e84d2eefb91e0a2f019b--
+==================== HTTP RESPONSE END ======================
+
+==================== HTTP RESPONSE START ====================
+🕒 Timestamp: 2025-10-22 16:56:26
+📡 Status: 200 OK
+📋 Headers:
+   Content-Length: 17391
+   Content-Type: text/html
+📝 Body:
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+   <meta charset="UTF-8">
+   <title>Server Request Tester</title>
+   <style>
+   body { font-family: monospace; background: #111; color: #eee; padding: 20px; }
+   h1 { color: #8be9fd; }
+   section {
+     background: #1a1a1a;
+     border-radius: 8px;
+     padding: 12px;
+     margin: 10px 0;
+     box-shadow: 0 0 8px #000;
+   }
+   table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+   td, th { padding: 6px; border-top: 1px solid #333; }
+   th { text-align: left; color: #999; font-weight: normal; }
+   .method { display: inline-block; width: 60px; font-weight: bold; color: #8be9fd; }
+   .status { width: 90px; }
+   .time { width: 80px; }
+   button, a {
+     background: #333;
+     color: #eee;
+     padding: 4px 10px;
+     border-radius: 6px;
+     border: none;
+     cursor: pointer;
+     text-decoration: none;
+   }
+   button:hover, a:hover { background: #444; }
+   input, textarea { background: #222; color: #eee; border: 1px solid #555; border-radius: 6px; padding: 4px; width: 100%; margin-top: 4px; }
+   details { margin-bottom: 10px; }
+   small { color: #777; display: block; margin-top: 6px; }
+   </style>
+   </head>
+   <body>
+   <h1>Server Request Tester by Location</h1>
+   <p>Organized Swagger-style tester for all endpoints.</p>
+   
+   <!-- Default Location -->
+   <details open>
+     <summary>Default</summary>
+     <section>
+       <table>
+         <tr><th>Method</th><th>Status</th><th>Time</th><th>Action</th></tr>
+   
+         <tr>
+           <td><span class="method">GET</span> /</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/')">Test</button>
+             <a href="/" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <tr>
+           <td><span class="method">GET</span> /index.html</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/index.html')">Test</button>
+             <a href="/index.html" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <tr>
+           <td><span class="method">GET</span> /missing.html</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/missing.html')">Test</button>
+             <a href="/missing.html" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <tr>
+           <td><span class="method">GET</span> /secret.txt</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/secret.txt')">TO BE DONE</button>
+             <a href="/secret.txt" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- PUT /image.jpg -->
+         <tr>
+           <td><span class="method">PUT</span> /image.jpg</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <input type="file" id="put-image">
+             <button onclick="sendPutFile('/image.jpg', 'put-image')">Test</button>
+             <a href="/image.jpg" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- GET /image.jpg -->
+         <tr>
+           <td><span class="method">GET</span> /image.jpg</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/image.jpg')">Test</button>
+             <a href="/image.jpg" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- PUT /file.txt -->
+         <tr>
+           <td><span class="method">PUT</span> /file.txt</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <input type="file" id="put-txt">
+             <button onclick="sendPutFile('/file.txt', 'put-txt')">Test</button>
+             <a href="/file.txt" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- GET /file.txt -->
+         <tr>
+           <td><span class="method">GET</span> /file.txt</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/file.txt')">Test</button>
+             <a href="/file.txt" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- PUT /file.pdf -->
+         <tr>
+           <td><span class="method">PUT</span> /file.pdf</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <input type="file" id="put-pdf">
+             <button onclick="sendPutFile('/file.pdf', 'put-pdf')">Test</button>
+             <a href="/file.pdf" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+   
+   
+         <!-- GET /file.pdf -->
+         <tr>
+           <td><span class="method">GET</span> /file.pdf</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/file.pdf')">Test</button>
+             <a href="/file.pdf" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- DELETE default -->
+         <tr>
+             <td><span class="method">DELETE</span> /?image_id=</td>
+             <td class="status">–</td>
+             <td class="time">–</td>
+             <td>
+                 <input type="number" id="delete-image-id" placeholder="ID" style="width:60px">
+                 <button onclick="sendDeleteImage('/', 'delete-image-id', 'delete-image-link')">Test</button>
+                 <a href="/" id="delete-image-link" target="_blank">Open</a>
+             </td>
+         </tr>
+   
+         <!-- GET /hello.py -->
+         <tr>
+           <td><span class="method">GET</span> /hello.py</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/hello.py')">Test</button>
+             <a href="/hello.py" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- POST /file.txt -->
+         <tr>
+           <td><span class="method">POST</span> /file.txt</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <input type="file" id="post-file-txt">
+             <button onclick="sendFile('/file.txt', 'post-file-txt', 'POST')">Test</button>
+             <a href="/file.txt" target="_blank">Open</a>
+           </td>
+         </tr>
+         
+       </table>
+     </section>
+   </details>
+   
+   <!-- Database Location -->
+   <details>
+     <summary>Database</summary>
+     <section>
+       <table>
+         <tr><th>Method</th><th>Status</th><th>Time</th><th>Action</th></tr>
+   
+         <tr>
+           <td><span class="method">GET</span> /database/</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/database/')">Test</button>
+             <a href="/database/" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <tr>
+           <td><span class="method">GET</span> /database/index.html</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/database/index.html')">Test</button>
+             <a href="/database/index.html" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <tr>
+           <td><span class="method">GET</span> /database/missing.html</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/database/missing.html')">Test</button>
+             <a href="/database/missing.html" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <tr>
+           <td><span class="method">GET</span> /database/secret.txt</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/database/secret.txt')">Test</button>
+             <a href="/database/secret.txt" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- PUT /database/image.jpg -->
+         <tr>
+           <td><span class="method">PUT</span> /database/image.jpg</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <input type="file" id="put-db-image">
+             <button onclick="sendPutFile('/database/image.jpg', 'put-db-image')">Test</button>
+             <a href="/database/image.jpg" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- GET /database/image.jpg -->
+         <tr>
+           <td><span class="method">GET</span> /database/image.jpg</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/database/image.jpg')">Test</button>
+             <a href="/database/image.jpg" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- PUT /database/file.txt -->
+         <tr>
+           <td><span class="method">PUT</span> /database/file.txt</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <input type="file" id="put-db-txt">
+             <button onclick="sendPutFile('/database/file.txt', 'put-db-txt')">Test</button>
+             <a href="/database/file.txt" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- GET /database/file.txt -->
+         <tr>
+           <td><span class="method">GET</span> /database/file.txt</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/database/file.txt')">Test</button>
+             <a href="/database/file.txt" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- PUT /database/file.pdf -->
+         <tr>
+           <td><span class="method">PUT</span> /database/file.pdf</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <input type="file" id="put-db-pdf">
+             <button onclick="sendPutFile('/database/file.pdf', 'put-db-pdf')">Test</button>
+             <a href="/database/file.pdf" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- GET /database/file.pdf -->
+         <tr>
+           <td><span class="method">GET</span> /database/file.pdf</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/database/file.pdf')">Test</button>
+             <a href="/database/file.pdf" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- DELETE by database location -->
+         <tr>
+             <td><span class="method">DELETE</span> /database/?image_id=</td>
+             <td class="status">–</td>
+             <td class="time">–</td>
+             <td>
+                 <input type="number" id="delete-db-image-id" placeholder="ID" style="width:60px">
+                 <button onclick="sendDeleteImage('/database/', 'delete-db-image-id', 'delete-db-image-link')">Test</button>
+                 <a href="/database/" id="delete-db-image-link" target="_blank">Open</a>
+             </td>
+         </tr>
+   
+         <!-- GET /database/hello.py -->
+         <tr>
+           <td><span class="method">GET</span> /database/hello.py</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/database/hello.py')">Test</button>
+             <a href="/database/hello.py" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- POST /database/file.txt -->
+         <tr>
+           <td><span class="method">POST</span> /database/file.txt</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <input type="file" id="post-db-file-txt">
+             <button onclick="sendFile('/database/file.txt', 'post-db-file-txt', 'POST')">Test</button>
+             <a href="/database/file.txt" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+       </table>
+     </section>
+   </details>
+   
+   
+   <!-- CGI Scripts -->
+   <details>
+     <summary>CGI Scripts</summary>
+     <section>
+       <table>
+         <tr><th>Script</th><th>Method</th><th>Status</th><th>Time</th><th>Action</th></tr>
+         <tr>
+           <td>/cgi-bin/name.py</td>
+           <td><span class="method">GET</span></td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/cgi-bin/name.py?name=John')">Test</button>
+             <a href="/cgi-bin/name.py?name=John" target="_blank">Open</a>
+           </td>
+         </tr>
+         <tr>
+           <td>/cgi-bin/name.py</td>
+           <td><span class="method">POST</span></td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'POST', '/cgi-bin/name.py', 'John')">Test</button>
+             <a href="/cgi-bin/name.py" target="_blank">Open</a>
+           </td>
+         </tr>
+         <tr>
+           <td>/cgi-bin/hello.py</td>
+           <td><span class="method">GET</span></td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/cgi-bin/hello.py')">Test</button>
+             <a href="/cgi-bin/hello.py" target="_blank">Open</a>
+           </td>
+         </tr>
+       </table>
+     </section>
+   </details>
+   
+   
+   
+   <!-- HTTP Errors -->
+   <details>
+     <summary>HTTP Errors</summary>
+     <section>
+       <table>
+         <tr><th>Method</th><th>Status</th><th>Time</th><th>Action</th></tr>
+         <tr>
+           <td><span class="method">GET</span> /trigger-400</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this,'GET','/trigger-400')">Test</button>
+             <a href="/trigger-400" target="_blank">Open</a>
+           </td>
+         </tr>
+         <tr>
+           <td><span class="method">GET</span> /trigger-403</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this,'GET','/trigger-403')">Test</button>
+             <a href="/trigger-403" target="_blank">Open</a>
+           </td>
+         </tr>
+         <tr>
+           <td><span class="method">GET</span> /missing-resource</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this,'GET','/missing-resource')">Test</button>
+             <a href="/missing-resource" target="_blank">Open</a>
+           </td>
+         </tr>
+       </table>
+     </section>
+   </details>
+   
+   <hr>
+   <small>Generated at <script>document.write(new Date().toLocaleString())</script></small>
+   
+   <script>
+   async function testReq(btn, method, url, body=null) {
+     const row = btn.closest("tr");
+     const statusCell = row.querySelector(".status");
+     const timeCell = row.querySelector(".time");
+   
+     statusCell.textContent = "…";
+     timeCell.textContent = "…";
+   
+     const start = performance.now();
+     const options = { method };
+     if (body && method !== "GET" && method !== "DELETE") options.body = body;
+   
+     try {
+       const resp = await fetch(url, options);
+       const ms = (performance.now() - start).toFixed(1);
+       statusCell.textContent = resp.status;
+       timeCell.textContent = ms + " ms";
+     } catch(e) {
+       statusCell.textContent = "ERR";
+       timeCell.textContent = "-";
+     }
+   }
+   
+   async function sendFile(url, inputId, method='PUT') {
+     const fileInput = document.getElementById(inputId);
+     if (!fileInput.files.length) { alert('Select file'); return; }
+   
+     const file = fileInput.files[0];
+     const row = fileInput.closest("tr");
+     const statusCell = row.querySelector(".status");
+     const timeCell = row.querySelector(".time");
+     statusCell.textContent = "…";
+     timeCell.textContent = "…";
+     const start = performance.now();
+   
+     let options = { method };
+   
+     // Distinguish POST with FormData
+     if (method === 'POST') {
+       const formData = new FormData();
+       formData.append('file', file);
+       options.body = formData;
+     } else {
+       options.body = file;
+     }
+   
+     try {
+       const resp = await fetch(url, options);
+       const ms = (performance.now() - start).toFixed(1);
+       statusCell.textContent = resp.status;
+       timeCell.textContent = ms + " ms";
+     } catch(e) {
+       statusCell.textContent = "ERR";
+       timeCell.textContent = "-";
+     }
+   }
+   
+   
+   async function sendPutFile(url, inputId) {
+     const fileInput = document.getElementById(inputId);
+     if (!fileInput.files.length) { alert('Select file'); return; }
+   
+     const file = fileInput.files[0];
+     const row = fileInput.closest("tr");
+     const statusCell = row.querySelector(".status");
+     const timeCell = row.querySelector(".time");
+     statusCell.textContent = "…";
+     timeCell.textContent = "…";
+     const start = performance.now();
+   
+     try {
+       const resp = await fetch(url, { method:'PUT', body: file });
+       const ms = (performance.now() - start).toFixed(1);
+       statusCell.textContent = resp.status;
+       timeCell.textContent = ms + " ms";
+     } catch(e) {
+       statusCell.textContent = "ERR";
+       timeCell.textContent = "-";
+     }
+   }
+   
+   function sendDeleteImage(baseUrl, inputId, linkId) {
+       if (!baseUrl) baseUrl = '/';
+       var imageId = document.getElementById(inputId).value;
+       if (!imageId) return;
+   
+       var url = baseUrl + '?image_id=' + encodeURIComponent(imageId);
+   
+       fetch(url, { method: 'DELETE' })
+           .then(response => response.text())
+           .then(data => console.log('Response:', data))
+           .catch(err => console.error('Error:', err));
+   
+       // update the "Open" link
+       document.getElementById(linkId).href = url;
+   }
+   
+   function sendDeleteImage(baseUrl) {
+       var imageId = document.getElementById('delete-db-image-id').value;
+       if (!imageId) return;
+   
+       var url = baseUrl + '?image_id=' + encodeURIComponent(imageId);
+   
+       fetch(url, { method: 'DELETE' })
+           .then(response => response.text())
+           .then(data => console.log('Response:', data))
+           .catch(err => console.error('Error:', err));
+   
+       // update the "Open" link
+       document.getElementById('delete-db-image-link').href = url;
+   }
+   </script>
+   </body>
+   </html>
+==================== HTTP RESPONSE END ======================
+
+==================== HTTP RESPONSE START ====================
+🕒 Timestamp: 2025-10-22 16:56:27
+📡 Status: 204 
+📋 Headers:
+   Content-Length: 0
+📝 Body:
+   (empty)
+==================== HTTP RESPONSE END ======================
+
+==================== HTTP RESPONSE START ====================
+🕒 Timestamp: 2025-10-22 16:56:32
+📡 Status: 201 Created
+📋 Headers:
+   Content-Length: 1522
+   Content-Type: text/html
+   Location: www/default/
+📝 Body:
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>201 – File Updated!</title>
+   <style>
+       body {
+           margin: 0;
+           font-family: 'Courier New', Courier, monospace;
+           background: radial-gradient(circle at top, #0b0c10, #1f2833);
+           color: #66fcf1;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           height: 100vh;
+           text-align: center;
+       }
+   
+       h1 {
+           font-size: 6em;
+           margin: 0;
+           color: #45a29e;
+           animation: pulse 2s infinite;
+       }
+   
+       h2 {
+           font-size: 2em;
+           margin: 10px 0 20px 0;
+           color: #c5c6c7;
+       }
+   
+       p {
+           font-size: 1.2em;
+           max-width: 600px;
+       }
+   
+       a {
+           color: #f8c291;
+           text-decoration: none;
+           font-weight: bold;
+           margin-top: 20px;
+           display: inline-block;
+           border: 2px solid #f8c291;
+           padding: 10px 20px;
+           border-radius: 5px;
+           transition: 0.3s;
+       }
+   
+       a:hover {
+           background: #f8c291;
+           color: #1f2833;
+       }
+   
+       @keyframes pulse {
+           0%, 100% { transform: scale(1); }
+           50% { transform: scale(1.1); }
+       }
+   </style>
+   </head>
+   <body>
+       <h1>201</h1>
+       <h2>Success!</h2>
+       <p>
+           Your file has been successfully created and updated.  
+           Everything looks shiny, and you're good to go 🚀
+       </p>
+       <a href="/">Return Home</a>
+   </body>
+   </html>
+==================== HTTP RESPONSE END ======================
+
+==================== HTTP RESPONSE START ====================
+🕒 Timestamp: 2025-10-22 16:56:39
+📡 Status: 201 Created
+📋 Headers:
+   Content-Length: 1522
+   Content-Type: text/html
+   Location: www/default/
+📝 Body:
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>201 – File Updated!</title>
+   <style>
+       body {
+           margin: 0;
+           font-family: 'Courier New', Courier, monospace;
+           background: radial-gradient(circle at top, #0b0c10, #1f2833);
+           color: #66fcf1;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           height: 100vh;
+           text-align: center;
+       }
+   
+       h1 {
+           font-size: 6em;
+           margin: 0;
+           color: #45a29e;
+           animation: pulse 2s infinite;
+       }
+   
+       h2 {
+           font-size: 2em;
+           margin: 10px 0 20px 0;
+           color: #c5c6c7;
+       }
+   
+       p {
+           font-size: 1.2em;
+           max-width: 600px;
+       }
+   
+       a {
+           color: #f8c291;
+           text-decoration: none;
+           font-weight: bold;
+           margin-top: 20px;
+           display: inline-block;
+           border: 2px solid #f8c291;
+           padding: 10px 20px;
+           border-radius: 5px;
+           transition: 0.3s;
+       }
+   
+       a:hover {
+           background: #f8c291;
+           color: #1f2833;
+       }
+   
+       @keyframes pulse {
+           0%, 100% { transform: scale(1); }
+           50% { transform: scale(1.1); }
+       }
+   </style>
+   </head>
+   <body>
+       <h1>201</h1>
+       <h2>Success!</h2>
+       <p>
+           Your file has been successfully created and updated.  
+           Everything looks shiny, and you're good to go 🚀
+       </p>
+       <a href="/">Return Home</a>
+   </body>
+   </html>
+==================== HTTP RESPONSE END ======================
+
+==================== HTTP RESPONSE START ====================
+🕒 Timestamp: 2025-10-22 16:56:45
+📡 Status: 201 Created
+📋 Headers:
+   Content-Length: 1522
+   Content-Type: text/html
+   Location: www/default/
+📝 Body:
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>201 – File Updated!</title>
+   <style>
+       body {
+           margin: 0;
+           font-family: 'Courier New', Courier, monospace;
+           background: radial-gradient(circle at top, #0b0c10, #1f2833);
+           color: #66fcf1;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           height: 100vh;
+           text-align: center;
+       }
+   
+       h1 {
+           font-size: 6em;
+           margin: 0;
+           color: #45a29e;
+           animation: pulse 2s infinite;
+       }
+   
+       h2 {
+           font-size: 2em;
+           margin: 10px 0 20px 0;
+           color: #c5c6c7;
+       }
+   
+       p {
+           font-size: 1.2em;
+           max-width: 600px;
+       }
+   
+       a {
+           color: #f8c291;
+           text-decoration: none;
+           font-weight: bold;
+           margin-top: 20px;
+           display: inline-block;
+           border: 2px solid #f8c291;
+           padding: 10px 20px;
+           border-radius: 5px;
+           transition: 0.3s;
+       }
+   
+       a:hover {
+           background: #f8c291;
+           color: #1f2833;
+       }
+   
+       @keyframes pulse {
+           0%, 100% { transform: scale(1); }
+           50% { transform: scale(1.1); }
+       }
+   </style>
+   </head>
+   <body>
+       <h1>201</h1>
+       <h2>Success!</h2>
+       <p>
+           Your file has been successfully created and updated.  
+           Everything looks shiny, and you're good to go 🚀
+       </p>
+       <a href="/">Return Home</a>
+   </body>
+   </html>
+==================== HTTP RESPONSE END ======================
+
+==================== HTTP RESPONSE START ====================
+🕒 Timestamp: 2025-10-22 16:57:05
+📡 Status: 200 OK
+📋 Headers:
+   Content-Length: 17391
+   Content-Type: text/html
+📝 Body:
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+   <meta charset="UTF-8">
+   <title>Server Request Tester</title>
+   <style>
+   body { font-family: monospace; background: #111; color: #eee; padding: 20px; }
+   h1 { color: #8be9fd; }
+   section {
+     background: #1a1a1a;
+     border-radius: 8px;
+     padding: 12px;
+     margin: 10px 0;
+     box-shadow: 0 0 8px #000;
+   }
+   table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+   td, th { padding: 6px; border-top: 1px solid #333; }
+   th { text-align: left; color: #999; font-weight: normal; }
+   .method { display: inline-block; width: 60px; font-weight: bold; color: #8be9fd; }
+   .status { width: 90px; }
+   .time { width: 80px; }
+   button, a {
+     background: #333;
+     color: #eee;
+     padding: 4px 10px;
+     border-radius: 6px;
+     border: none;
+     cursor: pointer;
+     text-decoration: none;
+   }
+   button:hover, a:hover { background: #444; }
+   input, textarea { background: #222; color: #eee; border: 1px solid #555; border-radius: 6px; padding: 4px; width: 100%; margin-top: 4px; }
+   details { margin-bottom: 10px; }
+   small { color: #777; display: block; margin-top: 6px; }
+   </style>
+   </head>
+   <body>
+   <h1>Server Request Tester by Location</h1>
+   <p>Organized Swagger-style tester for all endpoints.</p>
+   
+   <!-- Default Location -->
+   <details open>
+     <summary>Default</summary>
+     <section>
+       <table>
+         <tr><th>Method</th><th>Status</th><th>Time</th><th>Action</th></tr>
+   
+         <tr>
+           <td><span class="method">GET</span> /</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/')">Test</button>
+             <a href="/" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <tr>
+           <td><span class="method">GET</span> /index.html</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/index.html')">Test</button>
+             <a href="/index.html" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <tr>
+           <td><span class="method">GET</span> /missing.html</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/missing.html')">Test</button>
+             <a href="/missing.html" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <tr>
+           <td><span class="method">GET</span> /secret.txt</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/secret.txt')">TO BE DONE</button>
+             <a href="/secret.txt" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- PUT /image.jpg -->
+         <tr>
+           <td><span class="method">PUT</span> /image.jpg</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <input type="file" id="put-image">
+             <button onclick="sendPutFile('/image.jpg', 'put-image')">Test</button>
+             <a href="/image.jpg" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- GET /image.jpg -->
+         <tr>
+           <td><span class="method">GET</span> /image.jpg</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/image.jpg')">Test</button>
+             <a href="/image.jpg" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- PUT /file.txt -->
+         <tr>
+           <td><span class="method">PUT</span> /file.txt</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <input type="file" id="put-txt">
+             <button onclick="sendPutFile('/file.txt', 'put-txt')">Test</button>
+             <a href="/file.txt" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- GET /file.txt -->
+         <tr>
+           <td><span class="method">GET</span> /file.txt</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/file.txt')">Test</button>
+             <a href="/file.txt" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- PUT /file.pdf -->
+         <tr>
+           <td><span class="method">PUT</span> /file.pdf</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <input type="file" id="put-pdf">
+             <button onclick="sendPutFile('/file.pdf', 'put-pdf')">Test</button>
+             <a href="/file.pdf" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+   
+   
+         <!-- GET /file.pdf -->
+         <tr>
+           <td><span class="method">GET</span> /file.pdf</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/file.pdf')">Test</button>
+             <a href="/file.pdf" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- DELETE default -->
+         <tr>
+             <td><span class="method">DELETE</span> /?image_id=</td>
+             <td class="status">–</td>
+             <td class="time">–</td>
+             <td>
+                 <input type="number" id="delete-image-id" placeholder="ID" style="width:60px">
+                 <button onclick="sendDeleteImage('/', 'delete-image-id', 'delete-image-link')">Test</button>
+                 <a href="/" id="delete-image-link" target="_blank">Open</a>
+             </td>
+         </tr>
+   
+         <!-- GET /hello.py -->
+         <tr>
+           <td><span class="method">GET</span> /hello.py</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/hello.py')">Test</button>
+             <a href="/hello.py" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- POST /file.txt -->
+         <tr>
+           <td><span class="method">POST</span> /file.txt</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <input type="file" id="post-file-txt">
+             <button onclick="sendFile('/file.txt', 'post-file-txt', 'POST')">Test</button>
+             <a href="/file.txt" target="_blank">Open</a>
+           </td>
+         </tr>
+         
+       </table>
+     </section>
+   </details>
+   
+   <!-- Database Location -->
+   <details>
+     <summary>Database</summary>
+     <section>
+       <table>
+         <tr><th>Method</th><th>Status</th><th>Time</th><th>Action</th></tr>
+   
+         <tr>
+           <td><span class="method">GET</span> /database/</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/database/')">Test</button>
+             <a href="/database/" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <tr>
+           <td><span class="method">GET</span> /database/index.html</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/database/index.html')">Test</button>
+             <a href="/database/index.html" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <tr>
+           <td><span class="method">GET</span> /database/missing.html</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/database/missing.html')">Test</button>
+             <a href="/database/missing.html" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <tr>
+           <td><span class="method">GET</span> /database/secret.txt</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/database/secret.txt')">Test</button>
+             <a href="/database/secret.txt" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- PUT /database/image.jpg -->
+         <tr>
+           <td><span class="method">PUT</span> /database/image.jpg</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <input type="file" id="put-db-image">
+             <button onclick="sendPutFile('/database/image.jpg', 'put-db-image')">Test</button>
+             <a href="/database/image.jpg" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- GET /database/image.jpg -->
+         <tr>
+           <td><span class="method">GET</span> /database/image.jpg</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/database/image.jpg')">Test</button>
+             <a href="/database/image.jpg" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- PUT /database/file.txt -->
+         <tr>
+           <td><span class="method">PUT</span> /database/file.txt</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <input type="file" id="put-db-txt">
+             <button onclick="sendPutFile('/database/file.txt', 'put-db-txt')">Test</button>
+             <a href="/database/file.txt" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- GET /database/file.txt -->
+         <tr>
+           <td><span class="method">GET</span> /database/file.txt</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/database/file.txt')">Test</button>
+             <a href="/database/file.txt" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- PUT /database/file.pdf -->
+         <tr>
+           <td><span class="method">PUT</span> /database/file.pdf</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <input type="file" id="put-db-pdf">
+             <button onclick="sendPutFile('/database/file.pdf', 'put-db-pdf')">Test</button>
+             <a href="/database/file.pdf" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- GET /database/file.pdf -->
+         <tr>
+           <td><span class="method">GET</span> /database/file.pdf</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/database/file.pdf')">Test</button>
+             <a href="/database/file.pdf" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- DELETE by database location -->
+         <tr>
+             <td><span class="method">DELETE</span> /database/?image_id=</td>
+             <td class="status">–</td>
+             <td class="time">–</td>
+             <td>
+                 <input type="number" id="delete-db-image-id" placeholder="ID" style="width:60px">
+                 <button onclick="sendDeleteImage('/database/', 'delete-db-image-id', 'delete-db-image-link')">Test</button>
+                 <a href="/database/" id="delete-db-image-link" target="_blank">Open</a>
+             </td>
+         </tr>
+   
+         <!-- GET /database/hello.py -->
+         <tr>
+           <td><span class="method">GET</span> /database/hello.py</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/database/hello.py')">Test</button>
+             <a href="/database/hello.py" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+         <!-- POST /database/file.txt -->
+         <tr>
+           <td><span class="method">POST</span> /database/file.txt</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <input type="file" id="post-db-file-txt">
+             <button onclick="sendFile('/database/file.txt', 'post-db-file-txt', 'POST')">Test</button>
+             <a href="/database/file.txt" target="_blank">Open</a>
+           </td>
+         </tr>
+   
+       </table>
+     </section>
+   </details>
+   
+   
+   <!-- CGI Scripts -->
+   <details>
+     <summary>CGI Scripts</summary>
+     <section>
+       <table>
+         <tr><th>Script</th><th>Method</th><th>Status</th><th>Time</th><th>Action</th></tr>
+         <tr>
+           <td>/cgi-bin/name.py</td>
+           <td><span class="method">GET</span></td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/cgi-bin/name.py?name=John')">Test</button>
+             <a href="/cgi-bin/name.py?name=John" target="_blank">Open</a>
+           </td>
+         </tr>
+         <tr>
+           <td>/cgi-bin/name.py</td>
+           <td><span class="method">POST</span></td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'POST', '/cgi-bin/name.py', 'John')">Test</button>
+             <a href="/cgi-bin/name.py" target="_blank">Open</a>
+           </td>
+         </tr>
+         <tr>
+           <td>/cgi-bin/hello.py</td>
+           <td><span class="method">GET</span></td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this, 'GET', '/cgi-bin/hello.py')">Test</button>
+             <a href="/cgi-bin/hello.py" target="_blank">Open</a>
+           </td>
+         </tr>
+       </table>
+     </section>
+   </details>
+   
+   
+   
+   <!-- HTTP Errors -->
+   <details>
+     <summary>HTTP Errors</summary>
+     <section>
+       <table>
+         <tr><th>Method</th><th>Status</th><th>Time</th><th>Action</th></tr>
+         <tr>
+           <td><span class="method">GET</span> /trigger-400</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this,'GET','/trigger-400')">Test</button>
+             <a href="/trigger-400" target="_blank">Open</a>
+           </td>
+         </tr>
+         <tr>
+           <td><span class="method">GET</span> /trigger-403</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this,'GET','/trigger-403')">Test</button>
+             <a href="/trigger-403" target="_blank">Open</a>
+           </td>
+         </tr>
+         <tr>
+           <td><span class="method">GET</span> /missing-resource</td>
+           <td class="status">–</td>
+           <td class="time">–</td>
+           <td>
+             <button onclick="testReq(this,'GET','/missing-resource')">Test</button>
+             <a href="/missing-resource" target="_blank">Open</a>
+           </td>
+         </tr>
+       </table>
+     </section>
+   </details>
+   
+   <hr>
+   <small>Generated at <script>document.write(new Date().toLocaleString())</script></small>
+   
+   <script>
+   async function testReq(btn, method, url, body=null) {
+     const row = btn.closest("tr");
+     const statusCell = row.querySelector(".status");
+     const timeCell = row.querySelector(".time");
+   
+     statusCell.textContent = "…";
+     timeCell.textContent = "…";
+   
+     const start = performance.now();
+     const options = { method };
+     if (body && method !== "GET" && method !== "DELETE") options.body = body;
+   
+     try {
+       const resp = await fetch(url, options);
+       const ms = (performance.now() - start).toFixed(1);
+       statusCell.textContent = resp.status;
+       timeCell.textContent = ms + " ms";
+     } catch(e) {
+       statusCell.textContent = "ERR";
+       timeCell.textContent = "-";
+     }
+   }
+   
+   async function sendFile(url, inputId, method='PUT') {
+     const fileInput = document.getElementById(inputId);
+     if (!fileInput.files.length) { alert('Select file'); return; }
+   
+     const file = fileInput.files[0];
+     const row = fileInput.closest("tr");
+     const statusCell = row.querySelector(".status");
+     const timeCell = row.querySelector(".time");
+     statusCell.textContent = "…";
+     timeCell.textContent = "…";
+     const start = performance.now();
+   
+     let options = { method };
+   
+     // Distinguish POST with FormData
+     if (method === 'POST') {
+       const formData = new FormData();
+       formData.append('file', file);
+       options.body = formData;
+     } else {
+       options.body = file;
+     }
+   
+     try {
+       const resp = await fetch(url, options);
+       const ms = (performance.now() - start).toFixed(1);
+       statusCell.textContent = resp.status;
+       timeCell.textContent = ms + " ms";
+     } catch(e) {
+       statusCell.textContent = "ERR";
+       timeCell.textContent = "-";
+     }
+   }
+   
+   
+   async function sendPutFile(url, inputId) {
+     const fileInput = document.getElementById(inputId);
+     if (!fileInput.files.length) { alert('Select file'); return; }
+   
+     const file = fileInput.files[0];
+     const row = fileInput.closest("tr");
+     const statusCell = row.querySelector(".status");
+     const timeCell = row.querySelector(".time");
+     statusCell.textContent = "…";
+     timeCell.textContent = "…";
+     const start = performance.now();
+   
+     try {
+       const resp = await fetch(url, { method:'PUT', body: file });
+       const ms = (performance.now() - start).toFixed(1);
+       statusCell.textContent = resp.status;
+       timeCell.textContent = ms + " ms";
+     } catch(e) {
+       statusCell.textContent = "ERR";
+       timeCell.textContent = "-";
+     }
+   }
+   
+   function sendDeleteImage(baseUrl, inputId, linkId) {
+       if (!baseUrl) baseUrl = '/';
+       var imageId = document.getElementById(inputId).value;
+       if (!imageId) return;
+   
+       var url = baseUrl + '?image_id=' + encodeURIComponent(imageId);
+   
+       fetch(url, { method: 'DELETE' })
+           .then(response => response.text())
+           .then(data => console.log('Response:', data))
+           .catch(err => console.error('Error:', err));
+   
+       // update the "Open" link
+       document.getElementById(linkId).href = url;
+   }
+   
+   function sendDeleteImage(baseUrl) {
+       var imageId = document.getElementById('delete-db-image-id').value;
+       if (!imageId) return;
+   
+       var url = baseUrl + '?image_id=' + encodeURIComponent(imageId);
+   
+       fetch(url, { method: 'DELETE' })
+           .then(response => response.text())
+           .then(data => console.log('Response:', data))
+           .catch(err => console.error('Error:', err));
+   
+       // update the "Open" link
+       document.getElementById('delete-db-image-link').href = url;
+   }
+   </script>
+   </body>
+   </html>
+==================== HTTP RESPONSE END ======================
+
+==================== HTTP RESPONSE START ====================
+🕒 Timestamp: 2025-10-22 16:57:06
+📡 Status: 204 
+📋 Headers:
+   Content-Length: 0
+📝 Body:
+   (empty)
+==================== HTTP RESPONSE END ======================
+
+==================== HTTP RESPONSE START ====================
+🕒 Timestamp: 2025-10-22 16:57:12
+📡 Status: 200 OK
+📋 Headers:
+   Content-Length: 1526
+   Content-Type: text/html
+   Location: www/default/
+📝 Body:
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>200 – File Deleted!</title>
+   <style>
+       body {
+           margin: 0;
+           font-family: 'Courier New', Courier, monospace;
+           background: radial-gradient(circle at top, #0b0c10, #1f2833);
+           color: #66fcf1;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           height: 100vh;
+           text-align: center;
+       }
+   
+       h1 {
+           font-size: 6em;
+           margin: 0;
+           color: #45a29e;
+           animation: pulse 2s infinite;
+       }
+   
+       h2 {
+           font-size: 2em;
+           margin: 10px 0 20px 0;
+           color: #c5c6c7;
+       }
+   
+       p {
+           font-size: 1.2em;
+           max-width: 600px;
+       }
+   
+       a {
+           color: #f8c291;
+           text-decoration: none;
+           font-weight: bold;
+           margin-top: 20px;
+           display: inline-block;
+           border: 2px solid #f8c291;
+           padding: 10px 20px;
+           border-radius: 5px;
+           transition: 0.3s;
+       }
+   
+       a:hover {
+           background: #f8c291;
+           color: #1f2833;
+       }
+   
+       @keyframes pulse {
+           0%, 100% { transform: scale(1); }
+           50% { transform: scale(1.1); }
+       }
+   </style>
+   </head>
+   <body>
+       <h1>200</h1>
+       <h2>Success!</h2>
+       <p>
+           Your file has been successfully deleted from the server.  
+           Everything looks clean, and you're good to go 🚀
+       </p>
+       <a href="/">Return Home</a>
+   </body>
+   </html>
+==================== HTTP RESPONSE END ======================
+
+==================== HTTP RESPONSE START ====================
+🕒 Timestamp: 2025-10-22 16:57:17
+📡 Status: 200 OK
+📋 Headers:
+   Content-Length: 1526
+   Content-Type: text/html
+   Location: www/default/
+📝 Body:
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>200 – File Deleted!</title>
+   <style>
+       body {
+           margin: 0;
+           font-family: 'Courier New', Courier, monospace;
+           background: radial-gradient(circle at top, #0b0c10, #1f2833);
+           color: #66fcf1;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           height: 100vh;
+           text-align: center;
+       }
+   
+       h1 {
+           font-size: 6em;
+           margin: 0;
+           color: #45a29e;
+           animation: pulse 2s infinite;
+       }
+   
+       h2 {
+           font-size: 2em;
+           margin: 10px 0 20px 0;
+           color: #c5c6c7;
+       }
+   
+       p {
+           font-size: 1.2em;
+           max-width: 600px;
+       }
+   
+       a {
+           color: #f8c291;
+           text-decoration: none;
+           font-weight: bold;
+           margin-top: 20px;
+           display: inline-block;
+           border: 2px solid #f8c291;
+           padding: 10px 20px;
+           border-radius: 5px;
+           transition: 0.3s;
+       }
+   
+       a:hover {
+           background: #f8c291;
+           color: #1f2833;
+       }
+   
+       @keyframes pulse {
+           0%, 100% { transform: scale(1); }
+           50% { transform: scale(1.1); }
+       }
+   </style>
+   </head>
+   <body>
+       <h1>200</h1>
+       <h2>Success!</h2>
+       <p>
+           Your file has been successfully deleted from the server.  
+           Everything looks clean, and you're good to go 🚀
+       </p>
+       <a href="/">Return Home</a>
+   </body>
+   </html>
+==================== HTTP RESPONSE END ======================
+

@@ -26,6 +26,7 @@ public:
     void handle();
     void build();
     void upload();
+    void build_found();
 };
 
 

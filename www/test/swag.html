@@ -186,7 +186,7 @@ small { color: #777; display: block; margin-top: 6px; }
         <td class="time">–</td>
         <td>
           <input type="file" id="post-file-txt">
-          <button onclick="sendPutFile('/file.txt', 'post-file-txt', 'POST')">Test</button>
+          <button onclick="sendFile('/file.txt', 'post-file-txt', 'POST')">Test</button>
           <a href="/file.txt" target="_blank">Open</a>
         </td>
       </tr>
@@ -469,8 +469,19 @@ async function sendFile(url, inputId, method='PUT') {
   timeCell.textContent = "…";
   const start = performance.now();
 
+  let options = { method };
+
+  // Distinguish POST with FormData
+  if (method === 'POST') {
+    const formData = new FormData();
+    formData.append('file', file);
+    options.body = formData;
+  } else {
+    options.body = file;
+  }
+
   try {
-    const resp = await fetch(url, { method, body: file });
+    const resp = await fetch(url, options);
     const ms = (performance.now() - start).toFixed(1);
     statusCell.textContent = resp.status;
     timeCell.textContent = ms + " ms";

@@ -16,7 +16,7 @@ public:
     bool deleteFile(int id);
     void destroyInstance();
     void deleteFile(int id, const std::string& directory);
-
+    bool hasFileName(const std::string& name);
 private:
     FileManager();
     ~FileManager();

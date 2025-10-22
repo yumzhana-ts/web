@@ -68,12 +68,12 @@ int FileManager::uploadFile(const std::string& filename)
 
 int FileManager::uploadFile(const std::string& directory, const std::string& filename, bool text, std::string& body)
 {
+    
     std::string filefullpath = directory + filename;
     if(text == false)
     {
         if (!saveBinaryFile(body, filefullpath))
             throw(std::logic_error(""));
-        
     }
     else
     {
@@ -149,6 +149,17 @@ std::string FileManager::getFile(int id) const
     }
     return "";
 }
+
+bool FileManager::hasFileName(const std::string& name)
+{
+    for (std::map<int, std::string>::const_iterator it = file.begin(); it != file.end(); ++it) {
+        if (it->second == name) {
+            return true;
+        }
+    }
+    return false;
+}
+
 
 void FileManager::printAllFiles() const 
 {

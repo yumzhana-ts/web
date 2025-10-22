@@ -43,10 +43,16 @@ PutResponse::~PutResponse(void)
 
 void PutResponse::handle()
 {
-    this->upload();
-    this->build();
+    std::string _page = removeSlashes(this->page);
+    if(FileManager::getInstance()->hasFileName(_page))
+    {
+        this->upload();
+        this->build();     
+    }
+    else
+        this->build_found();
     if(error == NONE)
-        this->raw_response = this->serialize();
+        this->raw_response = this->serialize();     
 }
 
 
@@ -63,6 +69,23 @@ void PutResponse::build()
     this->status_text = "Created";
     this->headers["Content-Type"] = "text/html";
     this->headers["Content-Length"] = len_stream.str();
+    this->headers["Location"] = this->directory;
+}
+
+void PutResponse::build_found() 
+{
+    full_path = "www/error/200.html";
+    std::ifstream html_file(full_path.c_str());
+    std::stringstream body_stream;
+    body_stream << html_file.rdbuf();
+    this->body = body_stream.str();
+    std::ostringstream len_stream;
+    len_stream << this->body.length();
+    this->status_code = 200;
+    this->status_text = "OK";
+    this->headers["Content-Type"] = "text/html";
+    this->headers["Content-Length"] = len_stream.str();
+    this->headers["Location"] = this->directory;
 }
 
 void PutResponse::upload()

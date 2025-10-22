@@ -57,6 +57,7 @@ class AResponse
         void handleSession();
         int getStatusCode(){return (status_code);}
         int getSessionId(){return (session_id);}
+        void printResponse() const;
 };
 
 #include "DataSetFactory/RequestDataSet.class.hpp"

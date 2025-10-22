@@ -51,7 +51,8 @@ bool isEmptyLine(const std::string &line);
 std::string buildFullPath(const std::string& pagePath);
 in_addr_t ipStringToHostIP(const std::string &ip_str);
 std::string removeDoubleSlashes(const std::string& input);
-bool is_regular_file(const char* path);
+std::string removeSlashes(const std::string& input);
+
 
 #define DBG 0
 #define RESET_COLOR "\033[0m"
