@@ -92,6 +92,10 @@ bool LocationDecorator::isCgi(const std::string& path)
 				Logger::debug("script is there!");
 				return (true);
 			}
+		else if (path.find(".bla") != std::string::npos)
+			{
+				return (true);
+			}
 	}
 	return(false);
 }
@@ -101,6 +105,7 @@ void LocationDecorator::setLocations()
 	response->page = page;
 	response->directory = directory;
 	response->full_path = full_path;
+	response->location = location;
 	if(response->request.method == "PUT")
 		response->page = put_page;
     Logger::info("📌 [Location decorator] Location:" + location + " | Directory: " + directory + " | Page: " + page);
@@ -118,7 +123,6 @@ void LocationDecorator::handleDefaultLocation(const ServerConfigDataSet &config)
 		page = config.indexes[0];
 		if(config.indexes.size() > 1)
 		{
-			Logger::debug("serving indexes");
 			this->indexes = config.indexes;
 			this->page_index = 0;
 		}
@@ -139,6 +143,12 @@ void LocationDecorator::handleCGILocationsRules(const ServerConfigDataSet &confi
 		LocationCgiConfigDataSet* loc = dynamic_cast<LocationCgiConfigDataSet*>(it->second);
 		if (loc)
 		{
+			location = it->first;
+			if (page.empty() || page == "/")
+			{
+				response->setError(INTERNALERROR);
+				return;
+			}
 			directory = loc->cgi_root;
 			bool matched = false;
 			if	(loc->client_max_body_size != 0)
@@ -161,73 +171,90 @@ void LocationDecorator::handleCGILocationsRules(const ServerConfigDataSet &confi
     }
 }
 
-void LocationDecorator::handleCustomLocations(const ServerConfigDataSet &config)
+std::map<std::string, ADataSet*>::const_iterator
+LocationDecorator::findBestMatchIter(const std::map<std::string, ADataSet*>& locationDataSets, const std::string& requestPath)
 {
-    for (std::map<std::string, ADataSet *>::const_iterator it = config.locationDataSets.begin();
-         it != config.locationDataSets.end(); ++it)
+    std::map<std::string, ADataSet*>::const_iterator bestIt = locationDataSets.end();
+    size_t bestLength = 0;
+
+    std::string path = requestPath;
+    if (path.empty() || path[path.size() - 1] != '/') {
+        path += '/';
+    }
+
+    for (std::map<std::string, ADataSet*>::const_iterator it = locationDataSets.begin();
+         it != locationDataSets.end(); ++it)
     {
-		std::string dir = it->first + "/";
-		std::string path = response->request.path;
-		if(path == "/")
-			path = path + "/";
-		Logger::debug("🔍 [Compare] path: \"" + path + "\"");
-		Logger::debug("🔍 [Compare] dir:  \"" + dir + "\"");
-        //if (dir.compare(0, path.size(), path) == 0) 
-		if (path.compare(0, dir.size(), dir) == 0) 
-		{
-			Logger::debug("✅ [Compare] path starts with dir ✅");
-            if (LocationConfigDataSet* loc = dynamic_cast<LocationConfigDataSet*>(it->second))
+        std::string dir = it->first;
+        if (dir.empty())
+			continue;
+        if (dir[dir.size() - 1] != '/')
+            dir += '/';
+
+        if (path.compare(0, dir.size(), dir) == 0)
+        {
+            if (dir.size() > bestLength)
             {
-                directory = loc->root;
-				if	(loc->client_max_body_size != 0)
-					response->request.client_max_body_size = loc->client_max_body_size;
-				if (path == "//")
-				{
-					if (response->request.method == "GET")
-					{
-						page = config.indexes[0];
-						if(config.indexes.size() > 1)
-						{
-							this->indexes = config.indexes;
-							this->page_index = 0;
-						}
-					}
-				}
-                else
-					page = response->request.path.substr(it->first.size());
-                location = it->first;
-                applyLocationRules(loc);
-                checkAllowedMethods(loc);
+                bestLength = dir.size();
+                bestIt = it;
             }
-            return;
         }
     }
-    handleDefaultLocation(config);
+    return bestIt;
 }
 
-
-
-/*void LocationDecorator::handleCustomLocations(const ServerConfigDataSet &config)
+void LocationDecorator::handleCustomLocations(const ServerConfigDataSet &config)
 {
-    for (std::map<std::string, ADataSet *>::const_iterator it = config.locationDataSets.begin(); it != config.locationDataSets.end(); ++it)
-    {
-		std::string dir = it->first + "/";
-        if (response->request.path.compare(0, dir.size(), dir) == 0) 
-		{
-            if (LocationConfigDataSet* loc = dynamic_cast<LocationConfigDataSet*>(it->second)) 
-			{
-				directory = loc->root;
-				page = response->request.path.substr(it->first.size());
-                location = it->first;
-                applyLocationRules(loc);
-                checkAllowedMethods(loc);
-            }
-            return;
-        }
-    }
-    handleDefaultLocation(config);
-}*/
+	std::map<std::string, ADataSet*>::const_iterator it = findBestMatchIter(config.locationDataSets, response->request.path);
 
+	if (it != config.locationDataSets.end())
+	{
+		//Logger::debug("🔍 [Compare] path: \"" + path + "\"");
+		//Logger::debug("🔍 [Compare] dir:  \"" + dir + "\"");
+		//Logger::debug("✅ [Compare] path starts with dir ✅");
+		if (LocationConfigDataSet* loc = dynamic_cast<LocationConfigDataSet*>(it->second))
+		{
+			std::string path = response->request.path;
+			if (path.empty() || path[path.size() - 1] != '/')
+        		path += '/';
+			directory = loc->root;
+			if	(loc->client_max_body_size != 0)
+				response->request.client_max_body_size = loc->client_max_body_size;
+			if (path == "//")
+			{
+				if (response->request.method == "GET")
+				{
+					page = config.indexes[0];
+					if(config.indexes.size() > 1)
+					{
+						this->indexes = config.indexes;
+						this->page_index = 0;
+					}
+				}
+			}
+			else
+			{
+				page = response->request.path.substr(it->first.size());
+				//Logger::debug("page" + page);
+				/*if (page.empty())
+				{
+					page = config.indexes[0];
+					if(config.indexes.size() > 1)
+					{
+						this->indexes = config.indexes;
+						this->page_index = 0;
+					}
+				}*/
+			}
+				
+			location = it->first;
+			applyLocationRules(loc);
+			checkAllowedMethods(loc);
+		}
+	}
+	else
+    	handleDefaultLocation(config);
+}
 
 
 void LocationDecorator::applyLocationRules(const LocationConfigDataSet *dataset)
@@ -238,7 +265,7 @@ void LocationDecorator::applyLocationRules(const LocationConfigDataSet *dataset)
 		page = dataset->return_info.second;
 		return;
 	}
-	else if (response->request.method == "GET" && (page == "/"))
+	else if (response->request.method == "GET" && (page.empty() || page == "/"))
 	{
 		if (dataset->autoindex == "on")
 		{
@@ -260,38 +287,6 @@ void LocationDecorator::applyLocationRules(const LocationConfigDataSet *dataset)
 	}
 }
 
-/*void LocationDecorator::checkAllowedMethods(const ADataSet *dataset) 
-{
-    bool allowed = false;
-    const LocationConfigDataSet *config = dynamic_cast<const LocationConfigDataSet*>(dataset);
-    const LocationCgiConfigDataSet *cgi = dynamic_cast<const LocationCgiConfigDataSet*>(dataset);
-
-    const std::vector<std::string> *methods = NULL;
-
-    if (config)
-        methods = &config->allow_methods;
-    else if (cgi)
-        methods = &cgi->allow_methods;
-
-    if (methods == NULL || methods->empty())
-	{}
-        return;
-
-    for (size_t i = 0; i < methods->size(); i++)
-    {
-        if (response->request.method == (*methods)[i]) 
-        {
-            allowed = true;
-            break;
-        }
-    }
-
-    if (!allowed)
-        response->setError(METHODNOTALLOWED);
-}*/
-
-#include <iostream>
-
 void LocationDecorator::checkAllowedMethods(const ADataSet *dataset) 
 {
     bool allowed = false;
@@ -307,27 +302,18 @@ void LocationDecorator::checkAllowedMethods(const ADataSet *dataset)
 
     if (methods == NULL || methods->empty())
     {
-        //std::cout << "[DEBUG] No allowed methods configured for this location.\n";
+		Logger::debug(" ❌ [Location Decorator] Internal error");
+        response->setError(INTERNALERROR);
         return;
     }
-
-    //std::cout << "[DEBUG] Allowed methods for this location: ";
-    //for (size_t i = 0; i < methods->size(); i++)
-    //    std::cout << (*methods)[i] << " ";
-    //std::cout << "\n";
-
-    //std::cout << "[DEBUG] Request method: " << response->request.method << "\n";
-
     for (size_t i = 0; i < methods->size(); i++)
     {
         if (response->request.method == (*methods)[i]) 
         {
             allowed = true;
-            //std::cout << "[DEBUG] Request method is allowed.\n";
             break;
         }
     }
-
     if (!allowed)
     {
         Logger::debug(" ❌ [Location Decorator] Request method is NOT allowed. Setting error");
@@ -343,7 +329,7 @@ void LocationDecorator::finalizePage()
 	//Logger::debug("Page: " + page);
 	//if(full_path.empty())
 	full_path = directory + page;
-	//Logger::debug("full page" + full_path);
+	full_path = removeDoubleSlashes(full_path); 
 	std::ifstream file(full_path.c_str());
 	if (!file.is_open() && response->request.path != "/favicon.ico")
 	{

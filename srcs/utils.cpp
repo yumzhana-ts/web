@@ -82,10 +82,6 @@ bool saveBinaryFile(const std::string &data, const std::string &filename)
 #include <cstdlib>
 #include <string>
 
-#define PROJECT_ROOT "Desktop/Core/web"
-
-#include <cstdlib>
-#include <string>
 
 std::string buildFullPath(const std::string& pagePath) 
 {
@@ -123,4 +119,37 @@ in_addr_t ipStringToHostIP(const std::string &ip_str)
     if (ip_str == "localhost")
         return inet_addr("127.0.0.1");
     return inet_addr(ip_str.c_str()); 
+}
+
+std::string removeDoubleSlashes(const std::string& input) 
+{
+    std::string result;
+    bool lastWasSlash = false;
+
+    for (std::string::const_iterator it = input.begin(); it != input.end(); ++it) {
+        if (*it == '/') {
+            if (!lastWasSlash) {
+                result += *it;
+                lastWasSlash = true;
+            }
+            // else: skip repeated slash
+        } else {
+            result += *it;
+            lastWasSlash = false;
+        }
+    }
+
+    return result;
+}
+
+
+std::string removeSlashes(const std::string& input) 
+{
+    std::string result;
+    for (std::string::const_iterator it = input.begin(); it != input.end(); ++it) {
+        if (*it != '/') {
+            result += *it;
+        }
+    }
+    return result;
 }

@@ -52,7 +52,7 @@ public:
 	bool isCgi(const std::string& path);
 	void setLocations();
 	void locationPut();
-
+	std::map<std::string, ADataSet*>::const_iterator findBestMatchIter(const std::map<std::string, ADataSet*>& locationDataSets, const std::string& requestPath);
 };
 
 

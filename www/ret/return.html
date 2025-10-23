@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Reconstructing the Universe...</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Courier New', Courier, monospace;
+        background: radial-gradient(circle at top, #0b0c10, #1f2833);
+        color: #66fcf1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 50px;
+        min-height: 100vh;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    h1 {
+        font-size: 3em;
+        color: #45a29e;
+        margin-bottom: 20px;
+        animation: pulse 2s infinite;
+    }
+
+    h2 {
+        font-size: 2em;
+        color: #c5c6c7;
+        margin-bottom: 20px;
+    }
+
+    p {
+        color: #f8c291;
+        font-size: 1.2em;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    @keyframes pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+    }
+
+    .star {
+        position: absolute;
+        background: #66fcf1;
+        border-radius: 50%;
+        opacity: 0.8;
+        animation: twinkle linear infinite;
+    }
+
+    @keyframes twinkle {
+        0% { opacity: 0.2; transform: translateY(0) scale(1); }
+        50% { opacity: 1; transform: translateY(-10px) scale(1.2); }
+        100% { opacity: 0.2; transform: translateY(0) scale(1); }
+    }
+
+    .shooting-star {
+        position: absolute;
+        width: 2px;
+        height: 100px;
+        background: linear-gradient(45deg, #66fcf1, transparent);
+        opacity: 0.8;
+        transform: rotate(45deg);
+        animation: shoot linear forwards;
+    }
+
+    @keyframes shoot {
+        0% { transform: translateX(0) translateY(0) rotate(45deg); opacity: 1; }
+        100% { transform: translateX(100vw) translateY(100vh) rotate(45deg); opacity: 0; }
+    }
+</style>
+</head>
+<body>
+    <h1>System Recalibrating...</h1>
+    <h2>The Website is Under Reconstruction</h2>
+    <p>
+        Marvin mutters: "Typical. Just when I was getting bored of nothingness, they decided to rebuild the universe. Don't worry though — progress is inevitable, unlike enthusiasm."
+    </p>
+
+    <script>
+        // Generate random twinkling stars
+        const starCount = 50;
+        for (let i = 0; i < starCount; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            const size = Math.random() * 3 + 1;
+            star.style.width = size + 'px';
+            star.style.height = size + 'px';
+            star.style.top = Math.random() * window.innerHeight + 'px';
+            star.style.left = Math.random() * window.innerWidth + 'px';
+            star.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            document.body.appendChild(star);
+        }
+
+        // Generate occasional shooting stars
+        function createShootingStar() {
+            const shootingStar = document.createElement('div');
+            shootingStar.className = 'shooting-star';
+            shootingStar.style.top = Math.random() * window.innerHeight / 2 + 'px';
+            shootingStar.style.left = Math.random() * window.innerWidth / 2 + 'px';
+            shootingStar.style.animationDuration = (Math.random() * 1 + 0.5) + 's';
+            document.body.appendChild(shootingStar);
+            setTimeout(() => shootingStar.remove(), 1500); // remove after animation
+        }
+
+        setInterval(() => {
+            if (Math.random() < 0.3) { // 30% chance each interval
+                createShootingStar();
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

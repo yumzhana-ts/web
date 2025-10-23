@@ -53,10 +53,12 @@ class AResponse
         void setError(Errors err){this->error = err;}
         std::string page;
         std::string directory;
+        std::string location;
         void setSession(const int& id);
         void handleSession();
         int getStatusCode(){return (status_code);}
         int getSessionId(){return (session_id);}
+        void printResponse() const;
 };
 
 #include "DataSetFactory/RequestDataSet.class.hpp"

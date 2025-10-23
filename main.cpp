@@ -15,19 +15,8 @@
 #include "lib.hpp"
 
 
-//TODO: handle validation schema + {}
-//TODO: hostname
-//TODO: still dont know how cgi is tested
-
-//TODO: PUT + locationhandler: logic for saving and checking directory
-//TODO: POST + script: cgi runner
-//TODO: POST + 
-
-
-//TODO: put has to be passed to location check
-//TODO: make cleint max  body size manadatory
 //TODO: fix config verification
-//CGI to take interpereter from config
+//TODO: CGI to take interpereter from config
 
 int main(int argc, char **argv) 
 {

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
 <title>Server Request Tester</title>
 <style>
 body { font-family: monospace; background: #111; color: #eee; padding: 20px; }
@@ -14,11 +14,22 @@ section {
   box-shadow: 0 0 8px #000;
 }
 table { width: 100%; border-collapse: collapse; margin-top: 8px; }
-td, th { padding: 6px; border-top: 1px solid #333; }
-th { text-align: left; color: #999; font-weight: normal; }
+td, th {
+  padding: 6px;
+  border-top: 1px solid #333;
+  vertical-align: top;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+th {
+  text-align: left;
+  color: #999;
+  font-weight: normal;
+}
 .method { display: inline-block; width: 60px; font-weight: bold; color: #8be9fd; }
 .status { width: 90px; }
 .time { width: 80px; }
+.headers { max-width: 300px; font-size: 0.9em; color: #bbb; background: #222; border-radius: 4px; padding: 6px; }
 button, a {
   background: #333;
   color: #eee;
@@ -29,26 +40,40 @@ button, a {
   text-decoration: none;
 }
 button:hover, a:hover { background: #444; }
-input, textarea { background: #222; color: #eee; border: 1px solid #555; border-radius: 6px; padding: 4px; width: 100%; margin-top: 4px; }
+input, textarea {
+  background: #222;
+  color: #eee;
+  border: 1px solid #555;
+  border-radius: 6px;
+  padding: 4px;
+  width: 100%;
+  margin-top: 4px;
+}
+td > button, td > a {
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
 details { margin-bottom: 10px; }
 small { color: #777; display: block; margin-top: 6px; }
 </style>
 </head>
 <body>
 <h1>Server Request Tester by Location</h1>
-<p>Organized Swagger-style tester for all endpoints.</p>
+<p>Organized Swagger-style tester for all endpoints, showing response headers.</p>
 
-<!-- Default Location -->
 <details open>
   <summary>Default</summary>
   <section>
     <table>
-      <tr><th>Method</th><th>Status</th><th>Time</th><th>Action</th></tr>
+      <tr><th>Method</th><th>Status</th><th>Time</th><th>Headers</th><th>Action</th></tr>
 
       <tr>
         <td><span class="method">GET</span> /</td>
         <td class="status">–</td>
         <td class="time">–</td>
+        <td class="headers"></td>
         <td>
           <button onclick="testReq(this, 'GET', '/')">Test</button>
           <a href="/" target="_blank">Open</a>
@@ -59,6 +84,7 @@ small { color: #777; display: block; margin-top: 6px; }
         <td><span class="method">GET</span> /index.html</td>
         <td class="status">–</td>
         <td class="time">–</td>
+        <td class="headers"></td>
         <td>
           <button onclick="testReq(this, 'GET', '/index.html')">Test</button>
           <a href="/index.html" target="_blank">Open</a>
@@ -69,19 +95,10 @@ small { color: #777; display: block; margin-top: 6px; }
         <td><span class="method">GET</span> /missing.html</td>
         <td class="status">–</td>
         <td class="time">–</td>
+        <td class="headers"></td>
         <td>
           <button onclick="testReq(this, 'GET', '/missing.html')">Test</button>
           <a href="/missing.html" target="_blank">Open</a>
-        </td>
-      </tr>
-
-      <tr>
-        <td><span class="method">GET</span> /secret.txt</td>
-        <td class="status">–</td>
-        <td class="time">–</td>
-        <td>
-          <button onclick="testReq(this, 'GET', '/secret.txt')">TO BE DONE</button>
-          <a href="/secret.txt" target="_blank">Open</a>
         </td>
       </tr>
 
@@ -90,8 +107,9 @@ small { color: #777; display: block; margin-top: 6px; }
         <td><span class="method">PUT</span> /image.jpg</td>
         <td class="status">–</td>
         <td class="time">–</td>
+        <td class="headers"></td>
         <td>
-          <input type="file" id="put-image">
+          <input type="file" id="put-image" />
           <button onclick="sendPutFile('/image.jpg', 'put-image')">Test</button>
           <a href="/image.jpg" target="_blank">Open</a>
         </td>
@@ -102,6 +120,7 @@ small { color: #777; display: block; margin-top: 6px; }
         <td><span class="method">GET</span> /image.jpg</td>
         <td class="status">–</td>
         <td class="time">–</td>
+        <td class="headers"></td>
         <td>
           <button onclick="testReq(this, 'GET', '/image.jpg')">Test</button>
           <a href="/image.jpg" target="_blank">Open</a>
@@ -113,8 +132,9 @@ small { color: #777; display: block; margin-top: 6px; }
         <td><span class="method">PUT</span> /file.txt</td>
         <td class="status">–</td>
         <td class="time">–</td>
+        <td class="headers"></td>
         <td>
-          <input type="file" id="put-txt">
+          <input type="file" id="put-txt" />
           <button onclick="sendPutFile('/file.txt', 'put-txt')">Test</button>
           <a href="/file.txt" target="_blank">Open</a>
         </td>
@@ -125,6 +145,7 @@ small { color: #777; display: block; margin-top: 6px; }
         <td><span class="method">GET</span> /file.txt</td>
         <td class="status">–</td>
         <td class="time">–</td>
+        <td class="headers"></td>
         <td>
           <button onclick="testReq(this, 'GET', '/file.txt')">Test</button>
           <a href="/file.txt" target="_blank">Open</a>
@@ -136,36 +157,60 @@ small { color: #777; display: block; margin-top: 6px; }
         <td><span class="method">PUT</span> /file.pdf</td>
         <td class="status">–</td>
         <td class="time">–</td>
+        <td class="headers"></td>
         <td>
-          <input type="file" id="put-pdf">
+          <input type="file" id="put-pdf" />
           <button onclick="sendPutFile('/file.pdf', 'put-pdf')">Test</button>
           <a href="/file.pdf" target="_blank">Open</a>
         </td>
       </tr>
-
-
 
       <!-- GET /file.pdf -->
       <tr>
         <td><span class="method">GET</span> /file.pdf</td>
         <td class="status">–</td>
         <td class="time">–</td>
+        <td class="headers"></td>
         <td>
           <button onclick="testReq(this, 'GET', '/file.pdf')">Test</button>
           <a href="/file.pdf" target="_blank">Open</a>
         </td>
       </tr>
 
-      <!-- DELETE default -->
+      <!-- DELETE / (no params) -->
       <tr>
-          <td><span class="method">DELETE</span> /?image_id=</td>
-          <td class="status">–</td>
-          <td class="time">–</td>
-          <td>
-              <input type="number" id="delete-image-id" placeholder="ID" style="width:60px">
-              <button onclick="sendDeleteImage('/', 'delete-image-id', 'delete-image-link')">Test</button>
-              <a href="/" id="delete-image-link" target="_blank">Open</a>
-          </td>
+        <td><span class="method">DELETE</span> /</td>
+        <td class="status">–</td>
+        <td class="time">–</td>
+        <td class="headers"></td>
+        <td>
+          <button onclick="sendDelete('/')">Test</button>
+          <a href="/" target="_blank">Open</a>
+        </td>
+      </tr>
+
+      <!-- DELETE /?name= (empty param) -->
+      <tr>
+        <td><span class="method">DELETE</span> /?name=</td>
+        <td class="status">–</td>
+        <td class="time">–</td>
+        <td class="headers"></td>
+        <td>
+          <button onclick="sendDelete('/?name=')">Test</button>
+          <a href="/?name=" target="_blank">Open</a>
+        </td>
+      </tr>
+
+      <!-- DELETE /?name=image.jpg -->
+      <tr>
+        <td><span class="method">DELETE</span> /?name=image.jpg</td>
+        <td class="status">–</td>
+        <td class="time">–</td>
+        <td class="headers"></td>
+        <td>
+          <button onclick="sendDelete('/?name=image.jpg')">Test</button>
+          <a href="/?name=image.jpg" target="_blank">Open</a>
+        </td>
       </tr>
 
       <!-- GET /hello.py -->
@@ -173,6 +218,7 @@ small { color: #777; display: block; margin-top: 6px; }
         <td><span class="method">GET</span> /hello.py</td>
         <td class="status">–</td>
         <td class="time">–</td>
+        <td class="headers"></td>
         <td>
           <button onclick="testReq(this, 'GET', '/hello.py')">Test</button>
           <a href="/hello.py" target="_blank">Open</a>
@@ -184,13 +230,14 @@ small { color: #777; display: block; margin-top: 6px; }
         <td><span class="method">POST</span> /file.txt</td>
         <td class="status">–</td>
         <td class="time">–</td>
+        <td class="headers"></td>
         <td>
-          <input type="file" id="post-file-txt">
-          <button onclick="sendPutFile('/file.txt', 'post-file-txt', 'POST')">Test</button>
+          <input type="file" id="post-file-txt" />
+          <button onclick="sendFile('/file.txt', 'post-file-txt', 'POST')">Test</button>
           <a href="/file.txt" target="_blank">Open</a>
         </td>
       </tr>
-      
+
     </table>
   </section>
 </details>
@@ -200,12 +247,13 @@ small { color: #777; display: block; margin-top: 6px; }
   <summary>Database</summary>
   <section>
     <table>
-      <tr><th>Method</th><th>Status</th><th>Time</th><th>Action</th></tr>
+      <tr><th>Method</th><th>Status</th><th>Time</th><th>Headers</th><th>Action</th></tr>
 
       <tr>
         <td><span class="method">GET</span> /database/</td>
         <td class="status">–</td>
         <td class="time">–</td>
+        <td class="headers">–</td>
         <td>
           <button onclick="testReq(this, 'GET', '/database/')">Test</button>
           <a href="/database/" target="_blank">Open</a>
@@ -216,6 +264,7 @@ small { color: #777; display: block; margin-top: 6px; }
         <td><span class="method">GET</span> /database/index.html</td>
         <td class="status">–</td>
         <td class="time">–</td>
+        <td class="headers">–</td>
         <td>
           <button onclick="testReq(this, 'GET', '/database/index.html')">Test</button>
           <a href="/database/index.html" target="_blank">Open</a>
@@ -226,6 +275,7 @@ small { color: #777; display: block; margin-top: 6px; }
         <td><span class="method">GET</span> /database/missing.html</td>
         <td class="status">–</td>
         <td class="time">–</td>
+        <td class="headers">–</td>
         <td>
           <button onclick="testReq(this, 'GET', '/database/missing.html')">Test</button>
           <a href="/database/missing.html" target="_blank">Open</a>
@@ -236,6 +286,7 @@ small { color: #777; display: block; margin-top: 6px; }
         <td><span class="method">GET</span> /database/secret.txt</td>
         <td class="status">–</td>
         <td class="time">–</td>
+        <td class="headers">–</td>
         <td>
           <button onclick="testReq(this, 'GET', '/database/secret.txt')">Test</button>
           <a href="/database/secret.txt" target="_blank">Open</a>
@@ -247,6 +298,7 @@ small { color: #777; display: block; margin-top: 6px; }
         <td><span class="method">PUT</span> /database/image.jpg</td>
         <td class="status">–</td>
         <td class="time">–</td>
+        <td class="headers">–</td>
         <td>
           <input type="file" id="put-db-image">
           <button onclick="sendPutFile('/database/image.jpg', 'put-db-image')">Test</button>
@@ -259,6 +311,7 @@ small { color: #777; display: block; margin-top: 6px; }
         <td><span class="method">GET</span> /database/image.jpg</td>
         <td class="status">–</td>
         <td class="time">–</td>
+        <td class="headers">–</td>
         <td>
           <button onclick="testReq(this, 'GET', '/database/image.jpg')">Test</button>
           <a href="/database/image.jpg" target="_blank">Open</a>
@@ -270,6 +323,7 @@ small { color: #777; display: block; margin-top: 6px; }
         <td><span class="method">PUT</span> /database/file.txt</td>
         <td class="status">–</td>
         <td class="time">–</td>
+        <td class="headers">–</td>
         <td>
           <input type="file" id="put-db-txt">
           <button onclick="sendPutFile('/database/file.txt', 'put-db-txt')">Test</button>
@@ -282,6 +336,7 @@ small { color: #777; display: block; margin-top: 6px; }
         <td><span class="method">GET</span> /database/file.txt</td>
         <td class="status">–</td>
         <td class="time">–</td>
+        <td class="headers">–</td>
         <td>
           <button onclick="testReq(this, 'GET', '/database/file.txt')">Test</button>
           <a href="/database/file.txt" target="_blank">Open</a>
@@ -293,6 +348,7 @@ small { color: #777; display: block; margin-top: 6px; }
         <td><span class="method">PUT</span> /database/file.pdf</td>
         <td class="status">–</td>
         <td class="time">–</td>
+        <td class="headers">–</td>
         <td>
           <input type="file" id="put-db-pdf">
           <button onclick="sendPutFile('/database/file.pdf', 'put-db-pdf')">Test</button>
@@ -305,32 +361,10 @@ small { color: #777; display: block; margin-top: 6px; }
         <td><span class="method">GET</span> /database/file.pdf</td>
         <td class="status">–</td>
         <td class="time">–</td>
+        <td class="headers">–</td>
         <td>
           <button onclick="testReq(this, 'GET', '/database/file.pdf')">Test</button>
           <a href="/database/file.pdf" target="_blank">Open</a>
-        </td>
-      </tr>
-
-      <!-- DELETE by database location -->
-      <tr>
-          <td><span class="method">DELETE</span> /database/?image_id=</td>
-          <td class="status">–</td>
-          <td class="time">–</td>
-          <td>
-              <input type="number" id="delete-db-image-id" placeholder="ID" style="width:60px">
-              <button onclick="sendDeleteImage('/database/', 'delete-db-image-id', 'delete-db-image-link')">Test</button>
-              <a href="/database/" id="delete-db-image-link" target="_blank">Open</a>
-          </td>
-      </tr>
-
-      <!-- GET /database/hello.py -->
-      <tr>
-        <td><span class="method">GET</span> /database/hello.py</td>
-        <td class="status">–</td>
-        <td class="time">–</td>
-        <td>
-          <button onclick="testReq(this, 'GET', '/database/hello.py')">Test</button>
-          <a href="/database/hello.py" target="_blank">Open</a>
         </td>
       </tr>
 
@@ -339,6 +373,7 @@ small { color: #777; display: block; margin-top: 6px; }
         <td><span class="method">POST</span> /database/file.txt</td>
         <td class="status">–</td>
         <td class="time">–</td>
+        <td class="headers">–</td>
         <td>
           <input type="file" id="post-db-file-txt">
           <button onclick="sendFile('/database/file.txt', 'post-db-file-txt', 'POST')">Test</button>
@@ -356,12 +391,13 @@ small { color: #777; display: block; margin-top: 6px; }
   <summary>CGI Scripts</summary>
   <section>
     <table>
-      <tr><th>Script</th><th>Method</th><th>Status</th><th>Time</th><th>Action</th></tr>
+      <tr><th>Script</th><th>Method</th><th>Status</th><th>Time</th><th>Headers</th><th>Action</th></tr>
       <tr>
         <td>/cgi-bin/name.py</td>
         <td><span class="method">GET</span></td>
         <td class="status">–</td>
         <td class="time">–</td>
+        <td class="headers">–</td>
         <td>
           <button onclick="testReq(this, 'GET', '/cgi-bin/name.py?name=John')">Test</button>
           <a href="/cgi-bin/name.py?name=John" target="_blank">Open</a>
@@ -372,8 +408,10 @@ small { color: #777; display: block; margin-top: 6px; }
         <td><span class="method">POST</span></td>
         <td class="status">–</td>
         <td class="time">–</td>
-        <td>
-          <button onclick="testReq(this, 'POST', '/cgi-bin/name.py', 'John')">Test</button>
+        <td class="headers">–</td>
+        <td style="display: flex; gap: 6px; align-items: center;">
+          <input type="text" value="John" id="input-name-py" style="width: 100px;" />
+          <button onclick="testReq(this, 'POST', '/cgi-bin/name.py', document.getElementById('input-name-py').value)">Test</button>
           <a href="/cgi-bin/name.py" target="_blank">Open</a>
         </td>
       </tr>
@@ -382,6 +420,7 @@ small { color: #777; display: block; margin-top: 6px; }
         <td><span class="method">GET</span></td>
         <td class="status">–</td>
         <td class="time">–</td>
+        <td class="headers">–</td>
         <td>
           <button onclick="testReq(this, 'GET', '/cgi-bin/hello.py')">Test</button>
           <a href="/cgi-bin/hello.py" target="_blank">Open</a>
@@ -393,57 +432,164 @@ small { color: #777; display: block; margin-top: 6px; }
 
 
 
-<!-- HTTP Errors -->
+<!-- Location Config Tests -->
 <details>
-  <summary>HTTP Errors</summary>
+  <summary>Location Config Tests</summary>
   <section>
     <table>
-      <tr><th>Method</th><th>Status</th><th>Time</th><th>Action</th></tr>
+      <tr><th>Method</th><th>Status</th><th>Time</th><th>Headers</th><th>Action</th></tr>
+
+      <!-- GET /autoindex -->
       <tr>
-        <td><span class="method">GET</span> /trigger-400</td>
+        <td><span class="method">GET</span> /autoindex</td>
         <td class="status">–</td>
         <td class="time">–</td>
+        <td class="headers">–</td>
         <td>
-          <button onclick="testReq(this,'GET','/trigger-400')">Test</button>
-          <a href="/trigger-400" target="_blank">Open</a>
+          <button onclick="testReq(this, 'GET', '/autoindex')">Test</button>
+          <a href="/autoindex" target="_blank">Open</a>
         </td>
       </tr>
+
+      <!-- GET /ret -->
       <tr>
-        <td><span class="method">GET</span> /trigger-403</td>
+        <td><span class="method">GET</span> /ret</td>
         <td class="status">–</td>
         <td class="time">–</td>
+        <td class="headers">–</td>
         <td>
-          <button onclick="testReq(this,'GET','/trigger-403')">Test</button>
-          <a href="/trigger-403" target="_blank">Open</a>
+          <button onclick="testReq(this, 'GET', '/ret')">Test</button>
+          <a href="/ret" target="_blank">Open</a>
         </td>
       </tr>
+
+      <!-- POST /ret -->
       <tr>
-        <td><span class="method">GET</span> /missing-resource</td>
+        <td><span class="method">POST</span> /ret</td>
         <td class="status">–</td>
         <td class="time">–</td>
+        <td class="headers">–</td>
         <td>
-          <button onclick="testReq(this,'GET','/missing-resource')">Test</button>
-          <a href="/missing-resource" target="_blank">Open</a>
+          <textarea id="post-ret-body" placeholder="Request body"></textarea>
+          <button onclick="testReq(this, 'POST', '/ret', document.getElementById('post-ret-body').value)">Test</button>
         </td>
       </tr>
+
+      <!-- PUT /ret -->
+      <tr>
+        <td><span class="method">PUT</span> /ret</td>
+        <td class="status">–</td>
+        <td class="time">–</td>
+        <td class="headers">–</td>
+        <td>
+          <textarea id="put-ret-body" placeholder="Request body"></textarea>
+          <button onclick="testReq(this, 'PUT', '/ret', document.getElementById('put-ret-body').value)">Test</button>
+        </td>
+      </tr>
+
+      <!-- GET /test -->
+      <tr>
+        <td><span class="method">GET</span> /test</td>
+        <td class="status">–</td>
+        <td class="time">–</td>
+        <td class="headers">–</td>
+        <td>
+          <button onclick="testReq(this, 'GET', '/test')">Test</button>
+          <a href="/test" target="_blank">Open</a>
+        </td>
+      </tr>
+
+      <!-- POST /test -->
+      <tr>
+        <td><span class="method">POST</span> /test</td>
+        <td class="status">–</td>
+        <td class="time">–</td>
+        <td class="headers">–</td>
+        <td>
+          <textarea id="post-test-body" placeholder="Request body"></textarea>
+          <button onclick="testReq(this, 'POST', '/test', document.getElementById('post-test-body').value)">Test</button>
+        </td>
+      </tr>
+
+      <!-- PUT /test -->
+      <tr>
+        <td><span class="method">PUT</span> /test</td>
+        <td class="status">–</td>
+        <td class="time">–</td>
+        <td class="headers">–</td>
+        <td>
+          <textarea id="put-test-body" placeholder="Request body"></textarea>
+          <button onclick="testReq(this, 'PUT', '/test', document.getElementById('put-test-body').value)">Test</button>
+        </td>
+      </tr>
+
+      <!-- GET /database -->
+      <tr>
+        <td><span class="method">GET</span> /database</td>
+        <td class="status">–</td>
+        <td class="time">–</td>
+        <td class="headers">–</td>
+        <td>
+          <button onclick="testReq(this, 'GET', '/database')">Test</button>
+          <a href="/database" target="_blank">Open</a>
+        </td>
+      </tr>
+
+      <!-- PATCH /database -->
+      <tr>
+        <td><span class="method">PATCH</span> /database</td>
+        <td class="status">–</td>
+        <td class="time">–</td>
+        <td class="headers">–</td>
+        <td>
+          <textarea id="patch-db-body" placeholder="Patch body"></textarea>
+          <button onclick="testReq(this, 'PATCH', '/database', document.getElementById('patch-db-body').value)">Test</button>
+        </td>
+      </tr>
+
     </table>
   </section>
 </details>
+
 
 <hr>
 <small>Generated at <script>document.write(new Date().toLocaleString())</script></small>
 
 <script>
-async function testReq(btn, method, url, body=null) {
+// Helper: Show headers nicely inside the row
+function formatHeaders(headers) {
+  let result = '';
+  for (const [key, value] of headers.entries()) {
+    result += `${key}: ${value}\n`;
+  }
+  return result.trim();
+}
+
+// Main request tester
+async function testReq(btn, method, url, body = null) {
   const row = btn.closest("tr");
   const statusCell = row.querySelector(".status");
   const timeCell = row.querySelector(".time");
+
+  // Create or select a cell for headers (if not exists, create it)
+  let headersCell = row.querySelector(".headers");
+  if (!headersCell) {
+    headersCell = document.createElement("td");
+    headersCell.className = "headers";
+    headersCell.style.whiteSpace = "pre-wrap";
+    headersCell.style.fontSize = "0.8em";
+    headersCell.style.color = "#ccc";
+    row.appendChild(headersCell);
+  }
+  headersCell.textContent = ""; // clear previous
 
   statusCell.textContent = "…";
   timeCell.textContent = "…";
 
   const start = performance.now();
   const options = { method };
+
+  // Add body for applicable methods
   if (body && method !== "GET" && method !== "DELETE") options.body = body;
 
   try {
@@ -451,89 +597,150 @@ async function testReq(btn, method, url, body=null) {
     const ms = (performance.now() - start).toFixed(1);
     statusCell.textContent = resp.status;
     timeCell.textContent = ms + " ms";
-  } catch(e) {
+
+    // Read and show headers
+    headersCell.textContent = formatHeaders(resp.headers);
+  } catch (e) {
     statusCell.textContent = "ERR";
     timeCell.textContent = "-";
+    headersCell.textContent = "";
   }
 }
 
-async function sendFile(url, inputId, method='PUT') {
+// Send file for POST or PUT (with distinction)
+async function sendFile(url, inputId, method = 'PUT') {
   const fileInput = document.getElementById(inputId);
-  if (!fileInput.files.length) { alert('Select file'); return; }
+  if (!fileInput.files.length) {
+    alert('Select file');
+    return;
+  }
 
   const file = fileInput.files[0];
   const row = fileInput.closest("tr");
   const statusCell = row.querySelector(".status");
   const timeCell = row.querySelector(".time");
+
+  let headersCell = row.querySelector(".headers");
+  if (!headersCell) {
+    headersCell = document.createElement("td");
+    headersCell.className = "headers";
+    headersCell.style.whiteSpace = "pre-wrap";
+    headersCell.style.fontSize = "0.8em";
+    headersCell.style.color = "#ccc";
+    row.appendChild(headersCell);
+  }
+  headersCell.textContent = "";
+
   statusCell.textContent = "…";
   timeCell.textContent = "…";
+
   const start = performance.now();
+  let options = { method };
+
+  if (method === 'POST') {
+    const formData = new FormData();
+    formData.append('file', file);
+    options.body = formData;
+  } else {
+    options.body = file;
+  }
 
   try {
-    const resp = await fetch(url, { method, body: file });
+    const resp = await fetch(url, options);
     const ms = (performance.now() - start).toFixed(1);
     statusCell.textContent = resp.status;
     timeCell.textContent = ms + " ms";
-  } catch(e) {
+
+    headersCell.textContent = formatHeaders(resp.headers);
+  } catch (e) {
     statusCell.textContent = "ERR";
     timeCell.textContent = "-";
+    headersCell.textContent = "";
   }
 }
 
-
+// PUT file helper
 async function sendPutFile(url, inputId) {
   const fileInput = document.getElementById(inputId);
-  if (!fileInput.files.length) { alert('Select file'); return; }
+  if (!fileInput.files.length) {
+    alert('Select file');
+    return;
+  }
 
   const file = fileInput.files[0];
   const row = fileInput.closest("tr");
   const statusCell = row.querySelector(".status");
   const timeCell = row.querySelector(".time");
+
+  let headersCell = row.querySelector(".headers");
+  if (!headersCell) {
+    headersCell = document.createElement("td");
+    headersCell.className = "headers";
+    headersCell.style.whiteSpace = "pre-wrap";
+    headersCell.style.fontSize = "0.8em";
+    headersCell.style.color = "#ccc";
+    row.appendChild(headersCell);
+  }
+  headersCell.textContent = "";
+
   statusCell.textContent = "…";
   timeCell.textContent = "…";
+
   const start = performance.now();
 
   try {
-    const resp = await fetch(url, { method:'PUT', body: file });
+    const resp = await fetch(url, { method: 'PUT', body: file });
     const ms = (performance.now() - start).toFixed(1);
     statusCell.textContent = resp.status;
     timeCell.textContent = ms + " ms";
-  } catch(e) {
+
+    headersCell.textContent = formatHeaders(resp.headers);
+  } catch (e) {
     statusCell.textContent = "ERR";
     timeCell.textContent = "-";
+    headersCell.textContent = "";
   }
 }
 
-function sendDeleteImage(baseUrl, inputId, linkId) {
-    if (!baseUrl) baseUrl = '/';
-    var imageId = document.getElementById(inputId).value;
-    if (!imageId) return;
+// DELETE helper
+async function sendDelete(url) {
+  // Find the button that called this
+  const btn = event.target;
+  const row = btn.closest("tr");
+  const statusCell = row.querySelector(".status");
+  const timeCell = row.querySelector(".time");
 
-    var url = baseUrl + '?image_id=' + encodeURIComponent(imageId);
+  let headersCell = row.querySelector(".headers");
+  if (!headersCell) {
+    headersCell = document.createElement("td");
+    headersCell.className = "headers";
+    headersCell.style.whiteSpace = "pre-wrap";
+    headersCell.style.fontSize = "0.8em";
+    headersCell.style.color = "#ccc";
+    row.appendChild(headersCell);
+  }
+  headersCell.textContent = "";
 
-    fetch(url, { method: 'DELETE' })
-        .then(response => response.text())
-        .then(data => console.log('Response:', data))
-        .catch(err => console.error('Error:', err));
+  statusCell.textContent = "…";
+  timeCell.textContent = "…";
 
-    // update the "Open" link
-    document.getElementById(linkId).href = url;
-}
+  const start = performance.now();
 
-function sendDeleteImage(baseUrl) {
-    var imageId = document.getElementById('delete-db-image-id').value;
-    if (!imageId) return;
+  try {
+    const resp = await fetch(url, { method: 'DELETE' });
+    const ms = (performance.now() - start).toFixed(1);
+    statusCell.textContent = resp.status;
+    timeCell.textContent = ms + " ms";
 
-    var url = baseUrl + '?image_id=' + encodeURIComponent(imageId);
-
-    fetch(url, { method: 'DELETE' })
-        .then(response => response.text())
-        .then(data => console.log('Response:', data))
-        .catch(err => console.error('Error:', err));
-
-    // update the "Open" link
-    document.getElementById('delete-db-image-link').href = url;
+    headersCell.textContent = formatHeaders(resp.headers);
+  } catch (e) {
+    statusCell.textContent = "ERR";
+    timeCell.textContent = "-";
+    headersCell.textContent = "";
+  }
 }
 </script>
+
+
 </body>
 </html>
