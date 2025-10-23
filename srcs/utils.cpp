@@ -82,10 +82,6 @@ bool saveBinaryFile(const std::string &data, const std::string &filename)
 #include <cstdlib>
 #include <string>
 
-#define PROJECT_ROOT "Desktop/Core/web"
-
-#include <cstdlib>
-#include <string>
 
 std::string buildFullPath(const std::string& pagePath) 
 {

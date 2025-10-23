@@ -70,5 +70,10 @@ void GetResponse::build()
     if(!this->status_code)
         this->status_code = 200;
     this->status_text = "OK";
-    this->headers["Content-Type"] = "text/html";
+    if(request.path.find(".jpg") != std::string::npos)
+        this->headers["Content-Type"] = "image/jpeg";
+    else if(request.path.find(".pdf") != std::string::npos)
+        this->headers["Content-Type"] = "application/pdf";
+    else
+        this->headers["Content-Type"] = "text/html";
 }
