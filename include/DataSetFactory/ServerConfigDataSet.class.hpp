@@ -23,9 +23,9 @@ class ServerConfigDataSet: public ADataSet, public IHandler
         ServerConfigDataSet(const std::string &text);
         static ServerConfigDataSet* instance;
         void validate();
+        bool run_cerberus();
         void map();
-        void parse();
-        bool validateLine(const std::vector<std::string>& token_line, const std::vector<std::string>& schema, bool &required, std::string &_name);        
+        void parse();      
     public:
         ~ServerConfigDataSet(void);
         static void destroyInstance();

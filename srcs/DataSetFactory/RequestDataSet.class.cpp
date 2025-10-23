@@ -17,9 +17,6 @@
 #include "FileManager.class.hpp"
 #include <limits>
 
-
-
-//TODO: connect max length
 /****************************************************/
 /*                    Constructor                   */
 /****************************************************/
@@ -51,7 +48,6 @@ RequestDataSet::~RequestDataSet(void)
 
 void RequestDataSet::parse()
 {
-    // Array of non-const member function pointers
     void (RequestDataSet::*steps[])() = 
     {
         &RequestDataSet::tokenizeAndExtractBody,
@@ -65,9 +61,7 @@ void RequestDataSet::parse()
         (this->*steps[i])();
         if (this->error != NONE) return;
     }
-
-    // Call the const function separately
-    this->printConfig(); // const, can be called normally
+    this->printConfig();
 }
 
 
@@ -79,8 +73,6 @@ void RequestDataSet::handle()
     } 
     catch (const std::exception& e) 
     {
-        //Logger::debug("Parse failed: " + std::string(e.what()));
-        //this->parse_error = e.what();
     }
     ChainBuilder *builder = new ChainBuilder(*this);
     this->setNext(builder);
@@ -91,26 +83,11 @@ void RequestDataSet::handle()
 
 void RequestDataSet::validate()
 {
-    if(token_data[0].empty())
+    if(token_data[0].empty() || token_data[0].size() != 3)
     {
         Logger::debug(" 🐾 [Request Dataset] empty tokens");
         error = BADREQUEST;
         return;
-    }
-    std::string key = token_data[0][0];
-    if (key == "GET" || key == "POST" || key == "DELETE" || key == "PUT")
-    {
-        std::string data;
-        std::string source_name;
-        if(key == "GET")
-            data = openFile("data/get_schema.txt");
-        else if(key == "POST")
-            data = openFile("data/post_schema.txt");
-        else if(key == "DELETE")
-            data = openFile("data/delete_schema.txt");
-        else if(key == "PUT")
-            data = openFile("data/put_schema.txt");
-        validateSchema(data);
     }
 }
 
@@ -174,9 +151,7 @@ bool RequestDataSet::validateContentLength()
                     Logger::debug(" 🐾 [Request Dataset][RFC][Content Length violation] Transfer-Encodign is used with Content-length");
                     return false;
                 }
-                    
             }
-                
         }  
     }
     if (!is_chunked)
@@ -184,12 +159,8 @@ bool RequestDataSet::validateContentLength()
         it = headers.find("Content-Length:");
         if (it != headers.end())
         {
-
-
             unsigned long first_val = 0;
             bool first = true;
-            //Logger::debug("content length: " + it->second[0]);
-            //if (atol(it->second[0].c_str()) > this->client_max_body_size)
             if (atol(it->second[0].c_str()) > std::numeric_limits<int>::max())
             {
                 Logger::debug(" 🐾 [Request Dataset][RFC][Content Length violation] More then max client body size");
@@ -456,33 +427,6 @@ void RequestDataSet::parseQuery()
         size_t eq = param.find('=');
         query_params[param.substr(0, eq)] = param.substr(eq + 1);
     }
-}
-
-bool RequestDataSet::validateLine(const std::vector<std::string>& token_line, 
-                                    const std::vector<std::string>& schema, 
-                                    bool &required, 
-                                    std::string &_name)
-{
-    if (token_line.empty() || schema.size() < 4)
-    {
-        Logger::debug(" 🐾 [Request Dataset] line avlidation failed");
-        error = BADREQUEST;
-        return false;
-    }
-        
-    _name    = schema[0];
-    size_t _min     = std::strtoul(schema[1].c_str(), NULL, 10);
-    size_t _max     = std::strtoul(schema[2].c_str(), NULL, 10);
-    required        = std::strtoul(schema[3].c_str(), NULL, 10);
-
-    std::string line_name = token_line[0];
-    if (line_name == _name) {
-        if (token_line.size() >= _min && token_line.size() <= _max)
-            return true;
-        else
-            return false;
-    }
-    return false;
 }
 
 void RequestDataSet::addKeyValuePairs(const std::string& str, std::map<std::string, std::string>& outMap)

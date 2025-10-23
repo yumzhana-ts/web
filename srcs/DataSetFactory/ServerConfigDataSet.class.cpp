@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "DataSetFactory/ServerConfigDataSet.class.hpp"
+#include "DataSetFactory/Cerberus.class.hpp"
 #include "Logger.class.hpp"
 #include "DataSetFactory/LocationCgiConfigDataSet.class.hpp"
 #include "DataSetFactory/LocationConfigDataSet.class.hpp"
@@ -25,7 +26,7 @@ ServerConfigDataSet* ServerConfigDataSet::instance = NULL;
 ServerConfigDataSet::ServerConfigDataSet(const std::string &text) 
 {
     this->buffer = text;
-    this->parse();
+    //this->parse();
     if (DBG){ std::cout << GREEN << "[ServerConfigDataSet] Default Constructor called" << RESET_COLOR << std::endl;}
 }
 
@@ -38,10 +39,8 @@ ServerConfigDataSet::~ServerConfigDataSet(void)
     if (DBG) {
         std::cout << GREEN << "[ServerConfigDataSet] Destructor called" << RESET_COLOR << std::endl;
     }
-
     ports.clear();
     error_pages.clear();
-
     for (std::map<std::string, ADataSet*>::iterator it = locationDataSets.begin();
          it != locationDataSets.end(); ++it)
     {
@@ -59,10 +58,21 @@ void ServerConfigDataSet::handle()
         this->nextHandler->handle();
 }
 
+bool ServerConfigDataSet::run_cerberus()
+{
+    Cerberus woof("data/config_schema.txt", this->buffer, Cerberus::NGINX);
+    if (woof.validate())
+    {
+        Logger::info("Config file validated successfully (schema v1.0)");
+        return(true);
+    }
+    Logger::info("Config validation unsuccessful (v1.0)");
+    return(false);
+}
+
 void ServerConfigDataSet::validate()
 {
-    std::string data = openFile("data/config_schema1.txt");
-    validateSchema(data);
+    Logger::info("validation");
 }
 
 void ServerConfigDataSet::map()
@@ -91,8 +101,6 @@ void ServerConfigDataSet::map()
             this->error_pages.insert(std::make_pair(atol(token_data[i][1].c_str()), token_data[i][2]));
         else if(token_data[i][0] == "client_max_body_size")
             this->client_max_body_size = atol(token_data[i][1].c_str());
-        /*else if(token_data[i][0] == "index")
-            this->index = token_data[i][1];*/
         else if(token_data[i][0] == "index")
         {
             for(size_t j = 1; j < token_data[i].size(); j++)
@@ -144,15 +152,24 @@ void ServerConfigDataSet::parse()
 {
     this->tokenize(buffer);
     this->printTokens();
-    this->validate();
-    this->map();
-    this->printConfig();
+
+    if (this->run_cerberus())
+    {
+        this->map();
+        this->printConfig();        
+        Logger::info("Config file validated and mapped successfully (schema v1.0)");
+    }
+    else
+    {
+        //Logger::error("Config validation unsuccessful (schema v1.0)");
+        throw std::logic_error("Config validation failed (schema v1.0)");
+    }
 }
 
 ServerConfigDataSet& ServerConfigDataSet::setConfig(const std::string &data)
 {
     if (!instance)
-        instance = new ServerConfigDataSet(data); // parse вызывается в конструкторе
+        instance = new ServerConfigDataSet(data);
     return *instance;
 }
 
@@ -161,82 +178,6 @@ ServerConfigDataSet& ServerConfigDataSet::getInstance()
     if (!instance)
         instance = new ServerConfigDataSet("config/default.conf");
     return *instance;
-}
-
-/*bool ServerConfigDataSet::validateLine(const std::vector<std::string>& token_line, 
-                            const std::vector<std::string>& schema, 
-                            bool &required, std::string &_name)
-{
-    _name = schema[0];
-    size_t _min =  atol(schema[1].c_str());
-    size_t _max =  atol(schema[2].c_str());
-    required = atol(schema[3].c_str());
-    if (_name == "location")
-    {
-        _name = _name + " " + schema[1];
-        _min =  atol(schema[2].c_str());
-        _max =  atol(schema[3].c_str());
-        required = atol(schema[4].c_str());
-    }
-    std::string line_name = token_line[0];
-    if (line_name == "location")
-        line_name = line_name + " " + token_line[1];
-    if (line_name == _name && (token_line.size() >= _min && token_line.size() <= _max))
-        return true;
-    return false;
-}*/
-
-bool ServerConfigDataSet::validateLine(const std::vector<std::string>& token_line, 
-                            const std::vector<std::string>& schema, 
-                            bool &required, std::string &_name)
-{
-    //std::cout << "\n🔧 [validateLine] Called with schema:";
-    if(token_line.empty() || token_line.size() < 2)
-        return (false);
-    if(schema.empty() || schema.size() != 3)
-        return (false);
-    /*for (size_t i = 0; i < schema.size(); i++)
-        std::cout << " [" << schema[i] << "]";
-    std::cout << "\n";*/
-
-    _name = schema[0];
-    size_t _min = atol(schema[1].c_str());
-    required = atol(schema[2].c_str());
-
-    // special case for location
-    if (_name == "location")
-    {
-        _name = _name + " " + schema[1];
-        _min = atol(schema[2].c_str());
-        required = atol(schema[3].c_str());
-    }
-
-    /*std::cout << "📘 Parsed schema -> name: " << _name 
-              << ", max: " << _max 
-              << ", required: " << std::boolalpha << required << "\n";
-
-    std::cout << "📗 token_line:";
-    for (size_t i = 0; i < token_line.size(); i++)
-        std::cout << " [" << token_line[i] << "]";
-    std::cout << "\n";*/
-
-    std::string line_name = token_line[0];
-    if (line_name == "location")
-        line_name = line_name + " " + token_line[1];
-
-    //std::cout << "🔹 line_name: " << line_name << "\n";
-
-    bool name_match = (line_name == _name);
-    bool size_match = token_line.size() >= _min;
-
-    /*std::cout << "   ➤ name_match: " << std::boolalpha << name_match 
-              << ", size_match: " << size_match 
-              << " (" << token_line.size() << " tokens)\n";*/
-
-    bool result = name_match && size_match;
-    //std::cout << (result ? "✅ Line VALID\n" : "❌ Line INVALID\n");
-
-    return result;
 }
 
 

@@ -36,7 +36,6 @@ class LocationConfigDataSet: public ADataSet, public IHandler
         void handle();
         void validate();
         void map();
-        bool validateLine(const std::vector<std::string>& token_line, const std::vector<std::string>& schema, bool &required, std::string &_name);
 };
 
 

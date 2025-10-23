@@ -6,7 +6,7 @@
 /*   By: ytsyrend <ytsyrend@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 18:41:01 by ytsyrend          #+#    #+#             */
-/*   Updated: 2025/10/01 21:39:56 by ytsyrend         ###   ########.fr       */
+/*   Updated: 2025/10/23 23:17:10 by ytsyrend         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ int main(int argc, char **argv)
         server.setupSignals();
         try
         {
-            //server.setupConfig("config/default.conf");
             server.setupConfig(argv[1]);
             server.setupSockets();
             server.run();

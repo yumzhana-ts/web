@@ -73,8 +73,10 @@ void EventDispatcher::setupConfig(const std::string& configFile)
 {
     try 
     {
+        ServerConfigDataSet& config = ServerConfigDataSet::getInstance();
         std::string data = openFile(configFile);
-        ServerConfigDataSet::setConfig(data);
+        config.setConfig(data);
+        config.parse();
         Logger::info("✅ [Serverconfig Dataset] Configuration loaded from " + configFile);
     } 
     catch (const std::exception& e) 
