@@ -36,7 +36,6 @@ Cerberus::Cerberus(const std::string &schemaFile, const std::string &inputFile, 
         sFile.close();
     }
 
-    // Load input based on mode
     if (mode == NGINX) parseNginxConfig(inputFile);
     else if (mode == HTTP) parseHttpRequest(inputFile);
 }

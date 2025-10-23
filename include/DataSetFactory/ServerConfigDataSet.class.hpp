@@ -21,14 +21,16 @@ class ServerConfigDataSet: public ADataSet, public IHandler
 {
     private:
         ServerConfigDataSet(const std::string &text);
-        static ServerConfigDataSet* instance;
         void validate();
-        bool run_cerberus();
+        bool run_cerberus(std::string config);
         void map();
-        void parse();      
+        //void parse();      
     public:
+        static ServerConfigDataSet* instance;
         ~ServerConfigDataSet(void);
+        void parse();
         static void destroyInstance();
+        std::string                 config_file;
         uint32_t                    host;
         in_addr_t                   new_host;
         std::vector<unsigned int>   ports;
@@ -42,7 +44,7 @@ class ServerConfigDataSet: public ADataSet, public IHandler
         std::map<int, std::string>  error_pages;
         std::map<std::string, ADataSet*> locationDataSets;
         void printConfig() const;
-        static ServerConfigDataSet& setConfig(const std::string &data);
+        static ServerConfigDataSet& setConfig(std::string& configFile);
         static ServerConfigDataSet& getInstance();
         void handleLocation(const std::string &location_name, size_t& i);
         void handle();

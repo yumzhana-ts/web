@@ -23,10 +23,13 @@ ServerConfigDataSet* ServerConfigDataSet::instance = NULL;
 /*                    Constructor                   */
 /****************************************************/
 
-ServerConfigDataSet::ServerConfigDataSet(const std::string &text) 
+ServerConfigDataSet::ServerConfigDataSet(const std::string &text): config_file(text), host(0),
+      new_host(0),
+      client_max_body_size(0),
+      max_uri_length(std::numeric_limits<int>::max()),
+      max_header_length(std::numeric_limits<int>::max())
 {
-    this->buffer = text;
-    //this->parse();
+    this->parse();
     if (DBG){ std::cout << GREEN << "[ServerConfigDataSet] Default Constructor called" << RESET_COLOR << std::endl;}
 }
 
@@ -58,15 +61,11 @@ void ServerConfigDataSet::handle()
         this->nextHandler->handle();
 }
 
-bool ServerConfigDataSet::run_cerberus()
+bool ServerConfigDataSet::run_cerberus(std::string config)
 {
-    Cerberus woof("data/config_schema.txt", this->buffer, Cerberus::NGINX);
+    Cerberus woof("data/config_schema.txt", config, Cerberus::NGINX);
     if (woof.validate())
-    {
-        Logger::info("Config file validated successfully (schema v1.0)");
         return(true);
-    }
-    Logger::info("Config validation unsuccessful (v1.0)");
     return(false);
 }
 
@@ -150,10 +149,11 @@ void ServerConfigDataSet::destroyInstance()
 
 void ServerConfigDataSet::parse()
 {
-    this->tokenize(buffer);
+    std::string data = openFile(this->config_file);
+    this->tokenize(data);
     this->printTokens();
 
-    if (this->run_cerberus())
+    if (this->run_cerberus(this->config_file))
     {
         this->map();
         this->printConfig();        
@@ -161,15 +161,14 @@ void ServerConfigDataSet::parse()
     }
     else
     {
-        //Logger::error("Config validation unsuccessful (schema v1.0)");
         throw std::logic_error("Config validation failed (schema v1.0)");
     }
 }
 
-ServerConfigDataSet& ServerConfigDataSet::setConfig(const std::string &data)
+ServerConfigDataSet& ServerConfigDataSet::setConfig(std::string& configFile)
 {
     if (!instance)
-        instance = new ServerConfigDataSet(data);
+        instance = new ServerConfigDataSet(configFile);
     return *instance;
 }
 

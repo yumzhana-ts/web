@@ -29,7 +29,7 @@ public:
 	void addClientToEpoll(int client_fd);
 	std::map<int, Socket*> getSockets(){return (this->sockets);}
 	void setupSockets();
-	void setupConfig(const std::string& configFile);
+	void setupConfig(std::string configFile);
 };
 
 void set_non_blocking(int fd);

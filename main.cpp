@@ -6,7 +6,7 @@
 /*   By: ytsyrend <ytsyrend@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 18:41:01 by ytsyrend          #+#    #+#             */
-/*   Updated: 2025/10/23 23:17:10 by ytsyrend         ###   ########.fr       */
+/*   Updated: 2025/10/24 01:07:42 by ytsyrend         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,8 @@ int main(int argc, char **argv)
         }
         catch(const std::exception &e)
         {
-            server.shutdown();
+            if(ServerConfigDataSet::instance != NULL)
+                server.shutdown();
             Logger::error(toString(e.what()));
             return (1);
         }

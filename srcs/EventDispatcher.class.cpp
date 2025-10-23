@@ -40,6 +40,8 @@ void EventDispatcher::shutdown()
     FileManager::getInstance()->destroyInstance();
 }
 
+
+
 void EventDispatcher::signalHandler(int signum)
 {
     Logger::info("⚠️ [Event Dispatcher] Signal received, shutting down...");
@@ -69,20 +71,17 @@ Socket* EventDispatcher::getSocket(int fd)
     return NULL;
 }
 
-void EventDispatcher::setupConfig(const std::string& configFile) 
+void EventDispatcher::setupConfig(std::string configFile) 
 {
     try 
     {
-        ServerConfigDataSet& config = ServerConfigDataSet::getInstance();
-        std::string data = openFile(configFile);
-        config.setConfig(data);
-        config.parse();
+        ServerConfigDataSet::setConfig(configFile);
         Logger::info("✅ [Serverconfig Dataset] Configuration loaded from " + configFile);
     } 
     catch (const std::exception& e) 
     {
         //Logger::error("Failed to load config: " + std::string(e.what()));
-        throw;
+
     }
 }
 
@@ -113,6 +112,8 @@ void EventDispatcher::setupSockets()
     if (epoll_fd == -1)
         throw std::runtime_error("[Event Dispatcher] Failed to create epoll instance");
     std::vector<unsigned int> socketPorts = ServerConfigDataSet::getInstance().ports;
+    if(socketPorts.empty())
+        throw std::runtime_error("[Event Dispatcher] Failed to create sockets.");
     for(size_t i = 0; i < socketPorts.size(); i++)
         this->setupSocket(socketPorts[i]);
 }
@@ -200,7 +201,7 @@ void EventDispatcher::handleClient(Client& client)
         if (it != clients.end())
         {
             if (epoll_ctl(epoll_fd, EPOLL_CTL_DEL, fd, NULL) == -1)
-                perror("epoll_ctl DEL");
+                throw std::runtime_error("epoll DEL");
             close(fd);
             delete it->second;
             clients.erase(it);
@@ -228,8 +229,8 @@ void EventDispatcher::run()
         int n = epoll_wait(epoll_fd, events, MAX_EVENTS, -1);
         if (n == -1) 
         {
-            if (errno == EINTR) continue; // interrupted by signal, retry
-            perror("epoll_wait");
+            if (errno == EINTR) 
+                continue; // interrupted by signal, retry
             Logger::error("epoll_wait() failed, errno=" + toString(errno));
             break;
         }
@@ -257,10 +258,8 @@ void EventDispatcher::run()
 
             if (ev.events & (EPOLLRDHUP | EPOLLHUP | EPOLLERR))
             {
-                //Logger::debug("[Event Dispatcher] Client fd " + toString(fd) + " disconnected or error");
-
                 if (epoll_ctl(epoll_fd, EPOLL_CTL_DEL, fd, NULL) == -1)
-                    perror("epoll_ctl DEL");
+                    throw std::runtime_error("epoll -1");
                 close(fd);
                 delete it->second;
                 clients.erase(it);
