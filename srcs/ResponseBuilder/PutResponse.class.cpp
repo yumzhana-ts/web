@@ -72,7 +72,7 @@ void PutResponse::build()
     this->status_text = "Created";
     this->headers["Content-Type"] = "text/html";
     this->headers["Content-Length"] = len_stream.str();
-    this->headers["Location"] = this->directory + this->page;
+    //this->headers["Location"] = this->location + this->page;
 }
 
 void PutResponse::build_found() 
@@ -88,7 +88,7 @@ void PutResponse::build_found()
     this->status_text = "OK";
     this->headers["Content-Type"] = "text/html";
     this->headers["Content-Length"] = len_stream.str();
-    this->headers["Location"] = this->directory + this->page;
+    //this->headers["Location"] = this->directory + this->page;
 }
 
 void PutResponse::upload()

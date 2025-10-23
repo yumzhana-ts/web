@@ -105,6 +105,7 @@ void LocationDecorator::setLocations()
 	response->page = page;
 	response->directory = directory;
 	response->full_path = full_path;
+	response->location = location;
 	if(response->request.method == "PUT")
 		response->page = put_page;
     Logger::info("📌 [Location decorator] Location:" + location + " | Directory: " + directory + " | Page: " + page);
@@ -142,6 +143,12 @@ void LocationDecorator::handleCGILocationsRules(const ServerConfigDataSet &confi
 		LocationCgiConfigDataSet* loc = dynamic_cast<LocationCgiConfigDataSet*>(it->second);
 		if (loc)
 		{
+			location = it->first;
+			if (page.empty() || page == "/")
+			{
+				response->setError(INTERNALERROR);
+				return;
+			}
 			directory = loc->cgi_root;
 			bool matched = false;
 			if	(loc->client_max_body_size != 0)

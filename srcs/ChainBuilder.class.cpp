@@ -79,7 +79,6 @@ void ChainBuilder::handleLocation()
         {
             this->handleCgi(&decorator);
         }
-            
     }
 }
 

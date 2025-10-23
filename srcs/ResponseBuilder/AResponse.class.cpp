@@ -21,7 +21,7 @@ AResponse::AResponse(RequestDataSet &req)
     : version(""), status_code(0), status_text(""), headers(), body(""), 
       session_id(0), newSession(false), folder(""), path(""), error(NONE), 
       session(NULL), serve_cookie(false), raw_response(""), full_path(""), 
-      request(req), page(""), directory("")
+      request(req), page(""), directory(""), location("")
 {
     error = NONE;
     raw_response = "";
@@ -54,7 +54,7 @@ std::string AResponse::serialize()
 	}
 	oss << "\r\n";
 	oss << body;
-    printResponse();
+    //printResponse();
 	return oss.str();
 }
 

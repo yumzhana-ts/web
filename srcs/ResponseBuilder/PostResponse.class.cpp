@@ -55,7 +55,7 @@ void PostResponse::build()
     this->status_code = 201;
     this->status_text = "OK";
     this->headers["Content-Type"] = "text/html";
-    this->headers["Location"] = this->directory;
+    //this->headers["Location"] = this->directory;
     std::ostringstream len_stream;
     len_stream << this->body.length();
     this->headers["Content-Length"] = len_stream.str();
