@@ -15,9 +15,6 @@
 #include "lib.hpp"
 
 
-//TODO: fix config verification
-//TODO: CGI to take interpereter from config
-
 int main(int argc, char **argv) 
 {
     if(argc == 2)

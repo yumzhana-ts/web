@@ -34,7 +34,6 @@ private:
     void parseHttpRequest(const std::string &requestFile);
 
 public:
-    // Constructor: load schema + input
     Cerberus(const std::string &schemaFile, const std::string &inputFile, Mode mode);
     ~Cerberus();
 
