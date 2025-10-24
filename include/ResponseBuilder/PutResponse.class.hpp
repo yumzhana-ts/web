@@ -11,9 +11,7 @@
 /* ************************************************************************** */
 
 #pragma once
-
-#include <iostream>
-#include <map>
+#include "lib.hpp"
 #include "DataSetFactory/RequestDataSet.class.hpp"
 #include "../ChainOfResponsibility.class.hpp"
 #include "AResponse.class.hpp"

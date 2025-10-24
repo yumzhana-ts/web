@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #pragma once
-#include <iostream>
+#include "lib.hpp"
 #include "ADataSet.class.hpp"
 #include "../ChainOfResponsibility.class.hpp"
 #include "ResponseBuilder/GetResponse.class.hpp"
@@ -25,7 +25,6 @@ class RequestDataSet: public ADataSet, public IHandler
         RequestDataSet(std::string text, Client& client, Socket& socket);
         RequestDataSet(){}
         virtual ~RequestDataSet(void);
-
         std::string method;
         std::string path;
         std::string query_string;
@@ -46,7 +45,6 @@ class RequestDataSet: public ADataSet, public IHandler
         Socket _socket;
         size_t recursion_count;
         uint32_t host_ip;
-        bool multiFinder();
         void tokenizeAndExtractBody();
         std::string extractBody(const std::string &buf);
         class Part {
@@ -68,27 +66,16 @@ class RequestDataSet: public ADataSet, public IHandler
         void handle();
         void validate();
         void map();
-        void tokenize_with_binary();
         void parseQuery();
-        bool validateLine(const std::vector<std::string>& token_line, const std::vector<std::string>& schema, bool &required, std::string &_name);
         void printConfig() const;
         void cookieFinder();
         void handleBodyData();
         void bodyHandle();
         void addKeyValuePairs(const std::string& str, std::map<std::string, std::string>& outMap);
-        void findPartHeaders(Part &part);
-        std::vector<std::string> saveLineandBound(const std::string &line);
         void debugPrint(size_t line_no, const std::string &line, const std::vector<std::string> &line_tokens);
-        std::string cutPart(const std::string &buf);
-        std::string cutPartStart(const std::string &buf);
-        std::string cutUntilBoundary(const std::string &buf);
-        void mapParts();
-        size_t findHeadersEnd(const std::string &buf);
-        size_t findBoundary(const std::string &buf);
         std::vector<std::string> saveLine(const std::string &line);
         void unsupportedRequest();
         std::vector<std::string> saveRequestLine(const std::string &line);
-        size_t getRequestLineLength(const std::vector<std::string> &tokens);
         void rfcFormat();
         bool parseHostLineToIP(const std::string &line);
         bool validateContentLength();

@@ -6,16 +6,12 @@
 /*   By: ytsyrend <ytsyrend@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 18:24:01 by ytsyrend          #+#    #+#             */
-/*   Updated: 2025/09/22 21:09:01 by ytsyrend         ###   ########.fr       */
+/*   Updated: 2025/10/23 23:00:50 by ytsyrend         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#include <iostream>
-#include <map>
-#include <string>
-#include <vector>
-#include <sstream>
+#include "lib.hpp"
 #include "./ErrorFactory/AError.class.hpp"
 
 class ADataSet
@@ -31,10 +27,7 @@ class ADataSet
         void printTokens();
         virtual void parse() = 0;
         virtual void map() = 0;
-        virtual bool validateLine(const std::vector<std::string>& token_line, const std::vector<std::string>& schema, bool &required, std::string &_name) = 0;
-        void validateSchema(const std::string &data);
         virtual void printConfig() const = 0;
-        void extractBody(const std::string &buf);
         virtual std::vector<std::string> saveLine(const std::string &line);
         Errors error;
 };

@@ -11,8 +11,7 @@
 /* ************************************************************************** */
 
 #pragma once
-
-#include <iostream>
+#include "lib.hpp"
 #include "ADataSet.class.hpp"
 #include "../ChainOfResponsibility.class.hpp"
 
@@ -33,7 +32,6 @@ class LocationCgiConfigDataSet: public ADataSet, public IHandler
         void validate();
         void map();
         void printConfig() const;
-        bool validateLine(const std::vector<std::string>& token_line, const std::vector<std::string>& schema, bool &required, std::string &_name);
 };
 
 

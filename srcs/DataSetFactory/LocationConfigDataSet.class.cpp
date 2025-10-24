@@ -63,28 +63,6 @@ void LocationConfigDataSet::parse()
     this->map();
 }
 
-bool LocationConfigDataSet::validateLine(const std::vector<std::string>& token_line, 
-                            const std::vector<std::string>& schema, 
-                            bool &required, std::string &_name)
-{
-    _name = schema[0];
-    size_t _min =  atol(schema[1].c_str());
-    size_t _max =  atol(schema[2].c_str());
-    required = atol(schema[3].c_str());
-    if (_name == "location")
-    {
-        _name = _name + " " + schema[1];
-        _min =  atol(schema[2].c_str());
-        _max =  atol(schema[3].c_str());
-        required = atol(schema[4].c_str());
-    }
-    std::string line_name = token_line[0];
-    if (line_name == "location")
-        line_name = line_name + " " + token_line[1];
-    if (line_name == _name && (token_line.size() >= _min && token_line.size() <= _max))
-        return true;
-    return false;
-}
 
 void LocationConfigDataSet::map()
 {
@@ -113,8 +91,6 @@ void LocationConfigDataSet::map()
             this->return_info.first = tokens[1];
             this->return_info.second = tokens[2];
         }
-        /*else if (tokens[0] == "return")
-            this->return_path = tokens[1];*/
         else if (tokens[0] == "alias")
             this->alias = tokens[1];
         else if(token_data[i][0] == "client_max_body_size")

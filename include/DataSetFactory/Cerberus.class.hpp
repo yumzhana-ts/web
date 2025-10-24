@@ -1,38 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ChainOfResponsibility.class.hpp                                 :+:      :+:    :+:   */
+/*   Cerberus.class.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ytsyrend <ytsyrend@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 18:24:01 by ytsyrend          #+#    #+#             */
-/*   Updated: 2025/08/19 13:08:35 by ytsyrend         ###   ########.fr       */
+/*   Updated: 2025/10/24 00:03:42 by ytsyrend         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#ifndef CERBERUS_HPP
+#define CERBERUS_HPP
+
 #include "lib.hpp"
-#include "ResponseBuilder/SessionData.class.hpp"
 
-
-class SessionManager {
+class Cerberus
+{
 public:
-    static SessionManager* getInstance();
+    enum Mode { NGINX, HTTP };
 
-    void addSession(SessionData* session);
-    SessionData* getSession(const int& id);
-    void destroyInstance();
-    void printSessions() const;
 private:
-    SessionManager();
-    ~SessionManager();
+    struct Rule
+    {
+        int minTokens;
+        bool required;
+    };
 
-    static SessionManager* instance;
-    std::vector<SessionData*> sessions;
+    std::map<std::string, Rule> _schema;
+    std::vector< std::vector<std::string> > _tokenData;
+
+    void parseNginxConfig(const std::string &configFile);
+    void parseHttpRequest(const std::string &requestFile);
+
+public:
+    Cerberus(const std::string &schemaFile, const std::string &inputFile, Mode mode);
+    ~Cerberus();
+
+    bool validate();
 };
 
-
 #define DBG 0
+// Define ANSI escape sequences for colors
 #define RESET_COLOR "\033[0m"
 #define BLACK "\033[0;30m"
 #define RED "\033[0;31m"
@@ -41,3 +50,4 @@ private:
 #define WHITE "\033[0;37m"
 #define BOLD_BLACK "\033[1;30m"
 #define BG_WHITE "\033[0;47m"
+#endif

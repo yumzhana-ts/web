@@ -10,12 +10,6 @@ void Socket::shutdown()
 	Logger::info("Shutdown server.\n");
 }
 
-/*void EventDispatcher::shutdown_epoll() 
-{
-	close(this->epoll_fd);
-	Logger::info("epoll function closed. Shutdown complete.\n");
-}*/
-
 Socket::Socket(int port) 
 : _server_fd(-1), _port(port), _addrlen(sizeof(_address))
 {
@@ -24,20 +18,12 @@ Socket::Socket(int port)
 
 Socket::~Socket()
 {
-    /*if (_server_fd != -1)
-    {
-        close(_server_fd);
-        _server_fd = -1;
-    }*/
+
 }
 
 bool Socket::setup()
 {
-	// man socket
-	// domain: AF_INET == IPV4
-	// type: AF_INET == two way connection
-	// protocol: we can leave as default
-	_server_fd = socket(AF_INET, SOCK_STREAM, 0); // returns a file descriptor that refers to that endpoint(just like open())
+	_server_fd = socket(AF_INET, SOCK_STREAM, 0);
 	if (_server_fd < 0)
 	{
 		throw std::runtime_error("Socket creation failed");
@@ -48,8 +34,6 @@ bool Socket::setup()
 		throw std::runtime_error("Setsockopt failed");
 	}
 	_address.sin_family = AF_INET;
-	//_address.sin_addr.s_addr = INADDR_ANY;
-	//_address.sin_addr.s_addr = htonl(ServerConfigDataSet::getInstance().host);
 	_address.sin_addr.s_addr = ServerConfigDataSet::getInstance().new_host;
 	if (_address.sin_addr.s_addr == INADDR_NONE)
 		throw std::runtime_error("Invalid ip address");
@@ -90,11 +74,3 @@ void Socket::setResponse(std::string res)
 	this->res = res;
 }
 
-/*void Socket::closeServerSocket() 
-{
-	if (this->_server_fd != -1) {
-		close(this->_server_fd);
-		this->_server_fd = -1;
-		std::cout << "Server socket closed safely.\n";
-	}
-}*/

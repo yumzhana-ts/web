@@ -11,8 +11,7 @@
 /* ************************************************************************** */
 
 #pragma once
-
-#include <iostream>
+#include "lib.hpp"
 #include "ADataSet.class.hpp"
 #include "../ChainOfResponsibility.class.hpp"
 
@@ -36,7 +35,6 @@ class LocationConfigDataSet: public ADataSet, public IHandler
         void handle();
         void validate();
         void map();
-        bool validateLine(const std::vector<std::string>& token_line, const std::vector<std::string>& schema, bool &required, std::string &_name);
 };
 
 
