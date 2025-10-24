@@ -11,9 +11,7 @@
 /* ************************************************************************** */
 
 #pragma once
-
-#include <iostream>
-#include <vector>
+#include "lib.hpp"
 #include "ChainOfResponsibility.class.hpp"
 #include "ResponseBuilder/SendResponseHandler.class.hpp"
 #include "ResponseBuilder/DeleteResponse.class.hpp"

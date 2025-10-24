@@ -1,6 +1,5 @@
 #pragma once
-
-
+#include "lib.hpp"
 #include "ResponseBuilder/LocationDecorator.class.hpp"
 #include "ResponseBuilder/CgiHandler.class.hpp"
 

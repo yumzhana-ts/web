@@ -11,12 +11,7 @@
 /* ************************************************************************** */
 
 #pragma once
-#include <iostream>
-#include <map>
-#include <string>
-#include <vector>
-#include <sstream>
-#include <sstream>
+#include "lib.hpp"
 #include "./ErrorFactory/AError.class.hpp"
 #include "SessionData.class.hpp"
 #include "./Sessions.class.hpp"

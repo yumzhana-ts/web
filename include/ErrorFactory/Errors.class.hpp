@@ -1,5 +1,16 @@
-#include <iostream>
-#include <map>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   AError.class.hpp                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ytsyrend <ytsyrend@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/05 18:24:01 by ytsyrend          #+#    #+#             */
+/*   Updated: 2025/08/22 22:29:41 by ytsyrend         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "lib.hpp"
 #include "DataSetFactory/RequestDataSet.class.hpp"
 #include "../ChainOfResponsibility.class.hpp"
 #include "../ResponseBuilder/AResponse.class.hpp"

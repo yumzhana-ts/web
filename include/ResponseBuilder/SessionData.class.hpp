@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #pragma once
-
+#include "lib.hpp"
 #include "../ChainOfResponsibility.class.hpp"
 
 class SessionData: public IHandler

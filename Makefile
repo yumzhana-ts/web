@@ -25,7 +25,36 @@ SRC_DIRS 	= 	srcs srcs/DataSetFactory srcs/ResponseBuilder srcs/ErrorFactory
 
 MAIN 		= 	main.cpp
 TEST 		= 	$(SRC_DIRS)/tests.cpp
-COMMON_SRCS =	$(foreach dir,$(SRC_DIRS),$(wildcard $(dir)/*.cpp))
+COMMON_SRCS = \
+	srcs/ChainOfResponsibility.class.cpp \
+	srcs/DataSetFactory/ADataSet.class.cpp \
+	srcs/DataSetFactory/Cerberus.class.cpp \
+	srcs/DataSetFactory/LocationCgiConfigDataSet.class.cpp \
+	srcs/DataSetFactory/LocationConfigDataSet.class.cpp \
+	srcs/DataSetFactory/RequestDataSet.class.cpp \
+	srcs/DataSetFactory/ServerConfigDataSet.class.cpp \
+	srcs/ErrorFactory/AError.class.cpp \
+	srcs/ErrorFactory/ErrorFactory.class.cpp \
+	srcs/ErrorFactory/Errros.class.cpp \
+	srcs/FileManager.class.cpp \
+	srcs/Logger.class.cpp \
+	srcs/ResponseBuilder/DeleteResponse.class.cpp \
+	srcs/ResponseBuilder/PostResponse.class.cpp \
+	srcs/ResponseBuilder/PutResponse.class.cpp \
+	srcs/ResponseBuilder/SendResponseHandler.class.cpp \
+	srcs/ResponseBuilder/SessionData.class.cpp \
+	srcs/ResponseBuilder/LocationDecorator.cpp \
+	srcs/ResponseBuilder/AResponse.class.cpp \
+	srcs/ResponseBuilder/CGIEnvBuilder.class.cpp \
+	srcs/ResponseBuilder/CgiHandler.class.cpp \
+	srcs/ResponseBuilder/GetResponse.class.cpp \
+	srcs/Sessions.class.cpp \
+	srcs/Socket.class.cpp \
+	srcs/ChainBuilder.class.cpp \
+	srcs/Client.class.cpp \
+	srcs/utils.cpp \
+	srcs/EventDispatcher.class.cpp
+
 
 # Source and Object Files
 SRCS 		= 	$(COMMON_SRCS) $(MAIN)

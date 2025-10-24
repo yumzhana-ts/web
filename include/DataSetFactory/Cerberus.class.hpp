@@ -13,9 +13,7 @@
 #ifndef CERBERUS_HPP
 #define CERBERUS_HPP
 
-#include <string>
-#include <vector>
-#include <map>
+#include "lib.hpp"
 
 class Cerberus
 {

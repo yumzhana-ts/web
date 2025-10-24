@@ -1,6 +1,3 @@
-#include <fstream>
-#include <sstream>
-#include <iostream>
 #include "lib.hpp"
 
 std::string openFile(const std::string &filename)
@@ -65,8 +62,6 @@ std::string trimQuotes(const std::string &s)
     return s;
 }
 
-#include <fstream>
-#include <string>
 
 bool saveBinaryFile(const std::string &data, const std::string &filename) 
 {
@@ -78,9 +73,6 @@ bool saveBinaryFile(const std::string &data, const std::string &filename)
     out.close();
     return true;
 }
-
-#include <cstdlib>
-#include <string>
 
 
 std::string buildFullPath(const std::string& pagePath) 

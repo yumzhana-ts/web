@@ -11,11 +11,7 @@
 /* ************************************************************************** */
 
 #pragma once
-#include <iostream>
-#include <map>
-#include <string>
-#include <vector>
-#include <sstream>
+#include "lib.hpp"
 #include "./ErrorFactory/AError.class.hpp"
 
 class ADataSet

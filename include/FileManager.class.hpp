@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ChainOfResponsibility.class.hpp                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ytsyrend <ytsyrend@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/05 18:24:01 by ytsyrend          #+#    #+#             */
+/*   Updated: 2025/08/19 13:08:35 by ytsyrend         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #pragma once
 #include "lib.hpp"
 #include "ResponseBuilder/SessionData.class.hpp"

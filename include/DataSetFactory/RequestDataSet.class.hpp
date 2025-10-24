@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #pragma once
-#include <iostream>
+#include "lib.hpp"
 #include "ADataSet.class.hpp"
 #include "../ChainOfResponsibility.class.hpp"
 #include "ResponseBuilder/GetResponse.class.hpp"

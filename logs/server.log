@@ -1,56 +1,56 @@
-
 ==================== PARSING START ====================
 Line 0: [server] [{] 
 Line 1: [listen] [8083] 
-Line 2: [host] [127.0.0.1] 
-Line 3: [server_name] [test] 
-Line 4: [error_page] [400] [error/400.html] 
-Line 5: [error_page] [403] [error/403.html] 
-Line 6: [error_page] [414] [error/414.html] 
-Line 7: [error_page] [404] [error/404.html] 
-Line 8: [error_page] [405] [error/405.html] 
-Line 9: [error_page] [413] [error/413.html] 
-Line 10: [error_page] [500] [error/500.html] 
-Line 11: [error_page] [502] [error/502.html] 
-Line 12: [error_page] [504] [error/504.html] 
-Line 13: [error_page] [505] [error/505.html] 
-Line 14: [client_max_body_size] [10000000] 
-Line 15: [root] [www/default/] 
-Line 16: [index] [in.html] [index.html] 
-Line 17: [location] [/cgi-bin] [{] 
-Line 18: [root] [www/scripts/] 
-Line 19: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
-Line 20: [allow_methods] [GET] [POST] [PUT] 
-Line 21: [cgi_ext] [.php] [.py] [.sh] [.bla] 
-Line 22: [}] 
-Line 23: 
-Line 24: [location] [/autoindex] [{] 
-Line 25: [root] [www/autoindex/] 
-Line 26: [autoindex] [on] 
-Line 27: [allow_methods] [GET] [POST] [PUT] 
-Line 28: [index] [index.html] 
-Line 29: [}] 
-Line 30: [location] [/ret] [{] 
-Line 31: [root] [www/ret/] 
-Line 32: [autoindex] [on] 
-Line 33: [allow_methods] [GET] 
-Line 34: [index] [index.html] 
-Line 35: [return] [301] [return.html] 
-Line 36: [}] 
-Line 37: [location] [/test] [{] 
-Line 38: [root] [www/test/] 
-Line 39: [autoindex] [off] 
-Line 40: [allow_methods] [GET] [POST] [PUT] 
-Line 41: [index] [swag.html] 
-Line 42: [client_max_body_size] [1] 
-Line 43: [}] 
-Line 44: [location] [/database] [{] 
-Line 45: [root] [www/database/] 
-Line 46: [autoindex] [on] 
-Line 47: [allow_methods] [GET] [POST] [PUT] 
-Line 48: [index] [index.html] [return.html] 
-Line 49: [}] 
+Line 2: [listen] [8082] 
+Line 3: [host] [127.0.0.1] 
+Line 4: [server_name] [test] 
+Line 5: [error_page] [400] [error/400.html] 
+Line 6: [error_page] [403] [error/403.html] 
+Line 7: [error_page] [414] [error/414.html] 
+Line 8: [error_page] [404] [error/404.html] 
+Line 9: [error_page] [405] [error/405.html] 
+Line 10: [error_page] [413] [error/413.html] 
+Line 11: [error_page] [500] [error/500.html] 
+Line 12: [error_page] [502] [error/502.html] 
+Line 13: [error_page] [504] [error/504.html] 
+Line 14: [error_page] [505] [error/505.html] 
+Line 15: [client_max_body_size] [10000000] 
+Line 16: [root] [www/default/] 
+Line 17: [index] [in.html] [index.html] 
+Line 18: [location] [/cgi-bin] [{] 
+Line 19: [root] [www/scripts/] 
+Line 20: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 21: [allow_methods] [GET] [POST] [PUT] 
+Line 22: [cgi_ext] [.php] [.py] [.sh] [.bla] 
+Line 23: [}] 
+Line 24: 
+Line 25: [location] [/autoindex] [{] 
+Line 26: [root] [www/autoindex/] 
+Line 27: [autoindex] [on] 
+Line 28: [allow_methods] [GET] [POST] [PUT] 
+Line 29: [index] [index.html] 
+Line 30: [}] 
+Line 31: [location] [/ret] [{] 
+Line 32: [root] [www/ret/] 
+Line 33: [autoindex] [on] 
+Line 34: [allow_methods] [GET] 
+Line 35: [index] [index.html] 
+Line 36: [return] [301] [return.html] 
+Line 37: [}] 
+Line 38: [location] [/test] [{] 
+Line 39: [root] [www/test/] 
+Line 40: [autoindex] [off] 
+Line 41: [allow_methods] [GET] [POST] [PUT] 
+Line 42: [index] [swag.html] 
+Line 43: [client_max_body_size] [1] 
+Line 44: [}] 
+Line 45: [location] [/database] [{] 
+Line 46: [root] [www/database/] 
+Line 47: [autoindex] [on] 
+Line 48: [allow_methods] [GET] [POST] [PUT] 
+Line 49: [index] [index.html] [return.html] 
 Line 50: [}] 
+Line 51: [}] 
 ==================== PARSING END ======================
 
 ==================== PARSING START ====================
@@ -92,7 +92,7 @@ Line 3: [index] [index.html] [return.html]
 
 ==================== SERVER CONFIG START ====================
 🌍 host: 127.0.0.1 (localhost)
-🔌 ports: 8083
+🔌 ports: 8083, 8082
 📂 root: www/default/
 🏷️ server_name: test
 ⚠️ error_pages: 
@@ -166,267 +166,88 @@ Line 3: [index] [index.html] [return.html]
 ==================== SERVER CONFIG END ======================
 
 ==================== PARSING START ====================
-Line 0: [GET] [/test/] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:144.0)] [Gecko/20100101] [Firefox/144.0] 
-Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
-Line 4: [Accept-Language:] [en-US,en;q=0.5] 
-Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
-Line 6: [Connection:] [keep-alive] 
-Line 7: [Cookie:] [session_id=18973] 
-Line 8: [Upgrade-Insecure-Requests:] [1] 
-Line 9: [Sec-Fetch-Dest:] [document] 
-Line 10: [Sec-Fetch-Mode:] [navigate] 
-Line 11: [Sec-Fetch-Site:] [none] 
-Line 12: [Sec-Fetch-User:] [?1] 
-Line 13: [Priority:] [u=0,] [i] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [POST] [/cgi-bin/name.py] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:144.0)] [Gecko/20100101] [Firefox/144.0] 
-Line 3: [Accept:] [*/*] 
-Line 4: [Accept-Language:] [en-US,en;q=0.5] 
-Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
-Line 6: [Referer:] [http://localhost:8083/test/] 
-Line 7: [Content-Type:] [text/plain;charset=UTF-8] 
-Line 8: [Content-Length:] [4] 
-Line 9: [Origin:] [http://localhost:8083] 
-Line 10: [Connection:] [keep-alive] 
-Line 11: [Cookie:] [session_id=18973] 
-Line 12: [Sec-Fetch-Dest:] [empty] 
-Line 13: [Sec-Fetch-Mode:] [cors] 
-Line 14: [Sec-Fetch-Site:] [same-origin] 
-Line 15: [Priority:] [u=0] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/cgi-bin/hello.py] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:144.0)] [Gecko/20100101] [Firefox/144.0] 
-Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
-Line 4: [Accept-Language:] [en-US,en;q=0.5] 
-Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
-Line 6: [Connection:] [keep-alive] 
-Line 7: [Referer:] [http://localhost:8083/test/] 
-Line 8: [Cookie:] [session_id=18973] 
-Line 9: [Upgrade-Insecure-Requests:] [1] 
-Line 10: [Sec-Fetch-Dest:] [document] 
-Line 11: [Sec-Fetch-Mode:] [navigate] 
-Line 12: [Sec-Fetch-Site:] [same-origin] 
-Line 13: [Sec-Fetch-User:] [?1] 
-Line 14: [Priority:] [u=0,] [i] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/autoindex] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:144.0)] [Gecko/20100101] [Firefox/144.0] 
-Line 3: [Accept:] [*/*] 
-Line 4: [Accept-Language:] [en-US,en;q=0.5] 
-Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
-Line 6: [Referer:] [http://localhost:8083/test/] 
-Line 7: [Connection:] [keep-alive] 
-Line 8: [Cookie:] [session_id=18973] 
-Line 9: [Sec-Fetch-Dest:] [empty] 
-Line 10: [Sec-Fetch-Mode:] [cors] 
-Line 11: [Sec-Fetch-Site:] [same-origin] 
-Line 12: [Priority:] [u=0] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/ret] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:144.0)] [Gecko/20100101] [Firefox/144.0] 
-Line 3: [Accept:] [*/*] 
-Line 4: [Accept-Language:] [en-US,en;q=0.5] 
-Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
-Line 6: [Referer:] [http://localhost:8083/test/] 
-Line 7: [Connection:] [keep-alive] 
-Line 8: [Cookie:] [session_id=18973] 
-Line 9: [Sec-Fetch-Dest:] [empty] 
-Line 10: [Sec-Fetch-Mode:] [cors] 
-Line 11: [Sec-Fetch-Site:] [same-origin] 
-Line 12: [Priority:] [u=0] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [POST] [/ret] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:144.0)] [Gecko/20100101] [Firefox/144.0] 
-Line 3: [Accept:] [*/*] 
-Line 4: [Accept-Language:] [en-US,en;q=0.5] 
-Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
-Line 6: [Referer:] [http://localhost:8083/test/] 
-Line 7: [Content-Type:] [text/plain;charset=UTF-8] 
-Line 8: [Content-Length:] [6] 
-Line 9: [Origin:] [http://localhost:8083] 
-Line 10: [Connection:] [keep-alive] 
-Line 11: [Cookie:] [session_id=18973] 
-Line 12: [Sec-Fetch-Dest:] [empty] 
-Line 13: [Sec-Fetch-Mode:] [cors] 
-Line 14: [Sec-Fetch-Site:] [same-origin] 
-Line 15: [Priority:] [u=0] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [PUT] [/ret] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:144.0)] [Gecko/20100101] [Firefox/144.0] 
-Line 3: [Accept:] [*/*] 
-Line 4: [Accept-Language:] [en-US,en;q=0.5] 
-Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
-Line 6: [Referer:] [http://localhost:8083/test/] 
-Line 7: [Content-Type:] [text/plain;charset=UTF-8] 
-Line 8: [Content-Length:] [8] 
-Line 9: [Origin:] [http://localhost:8083] 
-Line 10: [Connection:] [keep-alive] 
-Line 11: [Cookie:] [session_id=18973] 
-Line 12: [Sec-Fetch-Dest:] [empty] 
-Line 13: [Sec-Fetch-Mode:] [cors] 
-Line 14: [Sec-Fetch-Site:] [same-origin] 
-Line 15: [Priority:] [u=0] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/test] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:144.0)] [Gecko/20100101] [Firefox/144.0] 
-Line 3: [Accept:] [*/*] 
-Line 4: [Accept-Language:] [en-US,en;q=0.5] 
-Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
-Line 6: [Referer:] [http://localhost:8083/test/] 
-Line 7: [Connection:] [keep-alive] 
-Line 8: [Cookie:] [session_id=18973] 
-Line 9: [Sec-Fetch-Dest:] [empty] 
-Line 10: [Sec-Fetch-Mode:] [cors] 
-Line 11: [Sec-Fetch-Site:] [same-origin] 
-Line 12: [Priority:] [u=0] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [POST] [/test] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:144.0)] [Gecko/20100101] [Firefox/144.0] 
-Line 3: [Accept:] [*/*] 
-Line 4: [Accept-Language:] [en-US,en;q=0.5] 
-Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
-Line 6: [Referer:] [http://localhost:8083/test/] 
-Line 7: [Content-Type:] [text/plain;charset=UTF-8] 
-Line 8: [Content-Length:] [9] 
-Line 9: [Origin:] [http://localhost:8083] 
-Line 10: [Connection:] [keep-alive] 
-Line 11: [Cookie:] [session_id=18973] 
-Line 12: [Sec-Fetch-Dest:] [empty] 
-Line 13: [Sec-Fetch-Mode:] [cors] 
-Line 14: [Sec-Fetch-Site:] [same-origin] 
-Line 15: [Priority:] [u=0] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [PUT] [/test] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:144.0)] [Gecko/20100101] [Firefox/144.0] 
-Line 3: [Accept:] [*/*] 
-Line 4: [Accept-Language:] [en-US,en;q=0.5] 
-Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
-Line 6: [Referer:] [http://localhost:8083/test/] 
-Line 7: [Content-Type:] [text/plain;charset=UTF-8] 
-Line 8: [Content-Length:] [9] 
-Line 9: [Origin:] [http://localhost:8083] 
-Line 10: [Connection:] [keep-alive] 
-Line 11: [Cookie:] [session_id=18973] 
-Line 12: [Sec-Fetch-Dest:] [empty] 
-Line 13: [Sec-Fetch-Mode:] [cors] 
-Line 14: [Sec-Fetch-Site:] [same-origin] 
-Line 15: [Priority:] [u=0] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/database] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:144.0)] [Gecko/20100101] [Firefox/144.0] 
-Line 3: [Accept:] [*/*] 
-Line 4: [Accept-Language:] [en-US,en;q=0.5] 
-Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
-Line 6: [Referer:] [http://localhost:8083/test/] 
-Line 7: [Connection:] [keep-alive] 
-Line 8: [Cookie:] [session_id=18973] 
-Line 9: [Sec-Fetch-Dest:] [empty] 
-Line 10: [Sec-Fetch-Mode:] [cors] 
-Line 11: [Sec-Fetch-Site:] [same-origin] 
-Line 12: [Priority:] [u=0] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [PATCH] [/database] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:144.0)] [Gecko/20100101] [Firefox/144.0] 
-Line 3: [Accept:] [*/*] 
-Line 4: [Accept-Language:] [en-US,en;q=0.5] 
-Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
-Line 6: [Referer:] [http://localhost:8083/test/] 
-Line 7: [Content-Type:] [text/plain;charset=UTF-8] 
-Line 8: [Content-Length:] [12] 
-Line 9: [Origin:] [http://localhost:8083] 
-Line 10: [Connection:] [keep-alive] 
-Line 11: [Cookie:] [session_id=18973] 
-Line 12: [Sec-Fetch-Dest:] [empty] 
-Line 13: [Sec-Fetch-Mode:] [cors] 
-Line 14: [Sec-Fetch-Site:] [same-origin] 
-Line 15: [Priority:] [u=0] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
 Line 0: [server] [{] 
 Line 1: [listen] [8083] 
-Line 2: [host] [127.0.0.1] 
-Line 3: [server_name] [test] 
-Line 4: [error_page] [400] [error/400.html] 
-Line 5: [error_page] [403] [error/403.html] 
-Line 6: [error_page] [414] [error/414.html] 
-Line 7: [error_page] [404] [error/404.html] 
-Line 8: [error_page] [405] [error/405.html] 
-Line 9: [error_page] [413] [error/413.html] 
-Line 10: [error_page] [500] [error/500.html] 
-Line 11: [error_page] [502] [error/502.html] 
-Line 12: [error_page] [504] [error/504.html] 
-Line 13: [error_page] [505] [error/505.html] 
-Line 14: [client_max_body_size] [10000] 
-Line 15: [max_uri_length] [10] 
-Line 16: [max_header_length] [10] 
-Line 17: [root] [www/default/] 
-Line 18: [index] [index.html] 
-Line 19: [location] [/cgi-bin] [{] 
-Line 20: [root] [www/scripts/] 
-Line 21: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
-Line 22: [allow_methods] [GET] [POST] [PUT] 
-Line 23: [cgi_ext] [.php] [.py] [.sh] 
-Line 24: [}] 
-Line 25: 
-Line 26: [location] [/database] [{] 
-Line 27: [root] [www/database/] 
-Line 28: [autoindex] [on] 
-Line 29: [allow_methods] [GET] [POST] [PUT] 
-Line 30: [index] [index.html] [return.html] 
-Line 31: [client_max_body_size] [100000] 
-Line 32: [}] 
-Line 33: [location] [/test] [{] 
-Line 34: [root] [www/test/] 
-Line 35: [autoindex] [off] 
-Line 36: [allow_methods] [GET] 
-Line 37: [index] [swag.html] 
-Line 38: [client_max_body_size] [100000] 
-Line 39: [}] 
-Line 40: [}] 
+Line 2: [listen] [8082] 
+Line 3: [host] [127.0.0.1] 
+Line 4: [server_name] [test] 
+Line 5: [error_page] [400] [error/400.html] 
+Line 6: [error_page] [403] [error/403.html] 
+Line 7: [error_page] [414] [error/414.html] 
+Line 8: [error_page] [404] [error/404.html] 
+Line 9: [error_page] [405] [error/405.html] 
+Line 10: [error_page] [413] [error/413.html] 
+Line 11: [error_page] [500] [error/500.html] 
+Line 12: [error_page] [502] [error/502.html] 
+Line 13: [error_page] [504] [error/504.html] 
+Line 14: [error_page] [505] [error/505.html] 
+Line 15: [client_max_body_size] [10000000] 
+Line 16: [root] [www/default/] 
+Line 17: [index] [in.html] [index.html] 
+Line 18: [location] [/cgi-bin] [{] 
+Line 19: [root] [www/scripts/] 
+Line 20: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 21: [allow_methods] [GET] [POST] [PUT] 
+Line 22: [cgi_ext] [.php] [.py] [.sh] [.bla] 
+Line 23: [}] 
+Line 24: 
+Line 25: [location] [/autoindex] [{] 
+Line 26: [root] [www/autoindex/] 
+Line 27: [autoindex] [on] 
+Line 28: [allow_methods] [GET] [POST] [PUT] 
+Line 29: [index] [index.html] 
+Line 30: [}] 
+Line 31: [location] [/ret] [{] 
+Line 32: [root] [www/ret/] 
+Line 33: [autoindex] [on] 
+Line 34: [allow_methods] [GET] 
+Line 35: [index] [index.html] 
+Line 36: [return] [301] [return.html] 
+Line 37: [}] 
+Line 38: [location] [/test] [{] 
+Line 39: [root] [www/test/] 
+Line 40: [autoindex] [off] 
+Line 41: [allow_methods] [GET] [POST] [PUT] 
+Line 42: [index] [swag.html] 
+Line 43: [client_max_body_size] [1] 
+Line 44: [}] 
+Line 45: [location] [/database] [{] 
+Line 46: [root] [www/database/] 
+Line 47: [autoindex] [on] 
+Line 48: [allow_methods] [GET] [POST] [PUT] 
+Line 49: [index] [index.html] [return.html] 
+Line 50: [}] 
+Line 51: [}] 
 ==================== PARSING END ======================
 
 ==================== PARSING START ====================
 Line 0: [root] [www/scripts/] 
 Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
 Line 2: [allow_methods] [GET] [POST] [PUT] 
-Line 3: [cgi_ext] [.php] [.py] [.sh] 
+Line 3: [cgi_ext] [.php] [.py] [.sh] [.bla] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/autoindex/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [PUT] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/ret/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] 
+Line 3: [index] [index.html] 
+Line 4: [return] [301] [return.html] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/test/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] [POST] [PUT] 
+Line 3: [index] [swag.html] 
+Line 4: [client_max_body_size] [1] 
 ==================== PARSING END ======================
 
 ==================== PARSING START ====================
@@ -434,20 +255,11 @@ Line 0: [root] [www/database/]
 Line 1: [autoindex] [on] 
 Line 2: [allow_methods] [GET] [POST] [PUT] 
 Line 3: [index] [index.html] [return.html] 
-Line 4: [client_max_body_size] [100000] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [root] [www/test/] 
-Line 1: [autoindex] [off] 
-Line 2: [allow_methods] [GET] 
-Line 3: [index] [swag.html] 
-Line 4: [client_max_body_size] [100000] 
 ==================== PARSING END ======================
 
 ==================== SERVER CONFIG START ====================
 🌍 host: 127.0.0.1 (localhost)
-🔌 ports: 8083
+🔌 ports: 8083, 8082
 📂 root: www/default/
 🏷️ server_name: test
 ⚠️ error_pages: 
@@ -461,257 +273,28 @@ Line 4: [client_max_body_size] [100000]
    [502] -> error/502.html
    [504] -> error/504.html
    [505] -> error/505.html
-📦 client_max_body_size: 10000
-📦 max uri: 10
-📑 indexes: index.html
+📦 client_max_body_size: 10000000
+📦 max uri: 2147483647
+📑 indexes: in.html, index.html
 📍 locations: 
+   [/autoindex]
+==================== LOCATION CONFIG START ====================
+📂 root: www/autoindex/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [PUT] 
+📦 client_max_body_size: (not set)
+📑 indexes: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
    [/cgi-bin]
 ==================== CGI CONFIG START ====================
 📂 cgi_root: www/scripts/
 ➡️ cgi_path: [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
-📜 cgi_ext: [.php] [.py] [.sh] 
-🧩 allow_methods: [GET] [POST] [PUT] 
-📦 client_max_body_size: (not set)
-==================== CGI CONFIG END ======================
-
-   [/database]
-==================== LOCATION CONFIG START ====================
-📂 root: www/database/
-📄 autoindex: on
-✅ allow_methods: [GET] [POST] [PUT] 
-📦 client_max_body_size: 100000
-📑 indexes: index.html, return.html
-🔀 return: (not set)
-📌 alias: (not set)
-==================== LOCATION CONFIG END ======================
-
-   [/test]
-==================== LOCATION CONFIG START ====================
-📂 root: www/test/
-📄 autoindex: off
-✅ allow_methods: [GET] 
-📦 client_max_body_size: 100000
-📑 indexes: swag.html
-🔀 return: (not set)
-📌 alias: (not set)
-==================== LOCATION CONFIG END ======================
-
-==================== SERVER CONFIG END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/] [HTTP/0.1] 
-Line 1: [Host:127.0.0.1] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: 
-Line 1: [Host:127.0.0.1] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/] [HTTP/1.1] 
-Line 1: [Host] [:127.0.0.1] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/] [HTTP/1.1] 
-Line 1: [Host:127.0.0.1] 
-Line 2: [Accept-Language] [:hyeyoo] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/] [HTTP/1.1] 
-Line 1: [Host:127.0.0.1] 
-Line 2: [:empty_name] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/] [HTTP/1.1] 
-Line 1: [Host:127.0.0.1] 
-Line 2: [Content-Length:] [-1] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/] [HTTP/1.1] 
-Line 1: [Host:127.0.0.1] 
-Line 2: [Content-Length:] [100000000000000000000000] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/] [HTTP/1.1] 
-Line 1: [Host:127.0.0.1] 
-Line 2: [Content-Length:] [NOTDIGIT] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/] [HTTP/1.1] 
-Line 1: [Host:127.0.0.1] 
-Line 2: [Content-Length:] [10000] 
-Line 3: [Transfer-Encoding:] [chunked] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/] [HTTP/1.1] 
-Line 1: [Host:127.0.0.1] 
-Line 2: [Content-Length:] [1] 
-Line 3: [Content-Length:] [0] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [server] [{] 
-Line 1: [listen] [8083] 
-Line 2: [host] [127.0.0.1] 
-Line 3: [server_name] [test] 
-Line 4: [error_page] [400] [error/400.html] 
-Line 5: [error_page] [403] [error/403.html] 
-Line 6: [error_page] [414] [error/414.html] 
-Line 7: [error_page] [404] [error/404.html] 
-Line 8: [error_page] [405] [error/405.html] 
-Line 9: [error_page] [413] [error/413.html] 
-Line 10: [error_page] [500] [error/500.html] 
-Line 11: [error_page] [502] [error/502.html] 
-Line 12: [error_page] [504] [error/504.html] 
-Line 13: [error_page] [505] [error/505.html] 
-Line 14: [client_max_body_size] [10000] 
-Line 15: [max_uri_length] [100] 
-Line 16: [max_header_length] [100] 
-Line 17: [root] [www/default/] 
-Line 18: [index] [inde.html] [index.html] 
-Line 19: [location] [/] [{] 
-Line 20: [root] [www/default/] 
-Line 21: [allow_methods] [GET] 
-Line 22: [index] [index.html] [return.html] 
-Line 23: [}] 
-Line 24: [location] [/cgi-bin] [{] 
-Line 25: [root] [www/YoupiBanane/] 
-Line 26: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
-Line 27: [allow_methods] [GET] [POST] [PUT] 
-Line 28: [cgi_ext] [.php] [.py] [.sh] [.bla] 
-Line 29: [client_max_body_size] [10000000000] 
-Line 30: [}] 
-Line 31: 
-Line 32: [location] [/database] [{] 
-Line 33: [root] [www/database/] 
-Line 34: [autoindex] [on] 
-Line 35: [allow_methods] [GET] [POST] [PUT] 
-Line 36: [index] [index.html] [return.html] 
-Line 37: [client_max_body_size] [100000] 
-Line 38: [}] 
-Line 39: [location] [/test] [{] 
-Line 40: [root] [www/test/] 
-Line 41: [autoindex] [off] 
-Line 42: [allow_methods] [GET] 
-Line 43: [index] [swag.html] 
-Line 44: [client_max_body_size] [100000] 
-Line 45: [}] 
-Line 46: [location] [/directory] [{] 
-Line 47: [root] [www/YoupiBanane/] 
-Line 48: [autoindex] [on] 
-Line 49: [allow_methods] [GET] [POST] 
-Line 50: [client_max_body_size] [10000000000] 
-Line 51: [index] [youpi.bad_extension] 
-Line 52: [}] 
-Line 53: [location] [/put_test] [{] 
-Line 54: [root] [www/put_test/] 
-Line 55: [autoindex] [off] 
-Line 56: [allow_methods] [PUT] 
-Line 57: [client_max_body_size] [1] 
-Line 58: [}] 
-Line 59: [location] [/directory/Yeah] [{] 
-Line 60: [root] [www/YoupiBanane/Yeah] 
-Line 61: [index] [error/404.html] 
-Line 62: [}] 
-Line 63: [}] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [root] [www/default/] 
-Line 1: [allow_methods] [GET] 
-Line 2: [index] [index.html] [return.html] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [root] [www/YoupiBanane/] 
-Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
-Line 2: [allow_methods] [GET] [POST] [PUT] 
-Line 3: [cgi_ext] [.php] [.py] [.sh] [.bla] 
-Line 4: [client_max_body_size] [10000000000] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [root] [www/database/] 
-Line 1: [autoindex] [on] 
-Line 2: [allow_methods] [GET] [POST] [PUT] 
-Line 3: [index] [index.html] [return.html] 
-Line 4: [client_max_body_size] [100000] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [root] [www/test/] 
-Line 1: [autoindex] [off] 
-Line 2: [allow_methods] [GET] 
-Line 3: [index] [swag.html] 
-Line 4: [client_max_body_size] [100000] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [root] [www/YoupiBanane/] 
-Line 1: [autoindex] [on] 
-Line 2: [allow_methods] [GET] [POST] 
-Line 3: [client_max_body_size] [10000000000] 
-Line 4: [index] [youpi.bad_extension] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [root] [www/put_test/] 
-Line 1: [autoindex] [off] 
-Line 2: [allow_methods] [PUT] 
-Line 3: [client_max_body_size] [1] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [root] [www/YoupiBanane/Yeah] 
-Line 1: [index] [error/404.html] 
-==================== PARSING END ======================
-
-==================== SERVER CONFIG START ====================
-🌍 host: 127.0.0.1 (localhost)
-🔌 ports: 8083
-📂 root: www/default/
-🏷️ server_name: test
-⚠️ error_pages: 
-   [400] -> error/400.html
-   [403] -> error/403.html
-   [404] -> error/404.html
-   [405] -> error/405.html
-   [413] -> error/413.html
-   [414] -> error/414.html
-   [500] -> error/500.html
-   [502] -> error/502.html
-   [504] -> error/504.html
-   [505] -> error/505.html
-📦 client_max_body_size: 10000
-📦 max uri: 100
-📑 indexes: inde.html, index.html
-📍 locations: 
-   [/]
-==================== LOCATION CONFIG START ====================
-📂 root: www/default/
-📄 autoindex: (not set)
-✅ allow_methods: [GET] 
-📦 client_max_body_size: (not set)
-📑 indexes: index.html, return.html
-🔀 return: (not set)
-📌 alias: (not set)
-==================== LOCATION CONFIG END ======================
-
-   [/cgi-bin]
-==================== CGI CONFIG START ====================
-📂 cgi_root: www/YoupiBanane/
-➡️ cgi_path: [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
 📜 cgi_ext: [.php] [.py] [.sh] [.bla] 
 🧩 allow_methods: [GET] [POST] [PUT] 
-📦 client_max_body_size: 1410065408
+📦 client_max_body_size: (not set)
 ==================== CGI CONFIG END ======================
 
    [/database]
@@ -719,41 +302,19 @@ Line 1: [index] [error/404.html]
 📂 root: www/database/
 📄 autoindex: on
 ✅ allow_methods: [GET] [POST] [PUT] 
-📦 client_max_body_size: 100000
+📦 client_max_body_size: (not set)
 📑 indexes: index.html, return.html
 🔀 return: (not set)
 📌 alias: (not set)
 ==================== LOCATION CONFIG END ======================
 
-   [/directory]
+   [/ret]
 ==================== LOCATION CONFIG START ====================
-📂 root: www/YoupiBanane/
+📂 root: www/ret/
 📄 autoindex: on
-✅ allow_methods: [GET] [POST] 
-📦 client_max_body_size: 1410065408
-📑 indexes: youpi.bad_extension
-🔀 return: (not set)
-📌 alias: (not set)
-==================== LOCATION CONFIG END ======================
-
-   [/directory/Yeah]
-==================== LOCATION CONFIG START ====================
-📂 root: www/YoupiBanane/Yeah
-📄 autoindex: (not set)
-✅ allow_methods: (none)
+✅ allow_methods: [GET] 
 📦 client_max_body_size: (not set)
-📑 indexes: error/404.html
-🔀 return: (not set)
-📌 alias: (not set)
-==================== LOCATION CONFIG END ======================
-
-   [/put_test]
-==================== LOCATION CONFIG START ====================
-📂 root: www/put_test/
-📄 autoindex: off
-✅ allow_methods: [PUT] 
-📦 client_max_body_size: 1
-📑 indexes: (not set)
+📑 indexes: index.html
 🔀 return: (not set)
 📌 alias: (not set)
 ==================== LOCATION CONFIG END ======================
@@ -762,314 +323,8 @@ Line 1: [index] [error/404.html]
 ==================== LOCATION CONFIG START ====================
 📂 root: www/test/
 📄 autoindex: off
-✅ allow_methods: [GET] 
-📦 client_max_body_size: 100000
-📑 indexes: swag.html
-🔀 return: (not set)
-📌 alias: (not set)
-==================== LOCATION CONFIG END ======================
-
-==================== SERVER CONFIG END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Go-http-client/1.1] 
-Line 3: [Accept-Encoding:] [gzip] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [POST] [/] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Go-http-client/1.1] 
-Line 3: [Transfer-Encoding:] [chunked] 
-Line 4: [Content-Type:] [test/file] 
-Line 5: [Accept-Encoding:] [gzip] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [HEAD] [/] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Go-http-client/1.1] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/directory] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Go-http-client/1.1] 
-Line 3: [Accept-Encoding:] [gzip] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/directory/youpi.bad_extension] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Go-http-client/1.1] 
-Line 3: [Accept-Encoding:] [gzip] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/directory/youpi.bla] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Go-http-client/1.1] 
-Line 3: [Accept-Encoding:] [gzip] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/directory/oulalala] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Go-http-client/1.1] 
-Line 3: [Accept-Encoding:] [gzip] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/directory/nop] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Go-http-client/1.1] 
-Line 3: [Accept-Encoding:] [gzip] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/directory/nop/] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Go-http-client/1.1] 
-Line 3: [Accept-Encoding:] [gzip] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/directory/nop/other.pouic] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Go-http-client/1.1] 
-Line 3: [Accept-Encoding:] [gzip] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/directory/nop/other.pouac] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Go-http-client/1.1] 
-Line 3: [Accept-Encoding:] [gzip] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/directory/Yeah] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Go-http-client/1.1] 
-Line 3: [Accept-Encoding:] [gzip] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/directory/Yeah/not_happy.bad_extension] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Go-http-client/1.1] 
-Line 3: [Accept-Encoding:] [gzip] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [server] [{] 
-Line 1: [listen] [8083] 
-Line 2: [host] [127.0.0.1] 
-Line 3: [server_name] [test] 
-Line 4: [error_page] [400] [error/400.html] 
-Line 5: [error_page] [403] [error/403.html] 
-Line 6: [error_page] [414] [error/414.html] 
-Line 7: [error_page] [404] [error/404.html] 
-Line 8: [error_page] [405] [error/405.html] 
-Line 9: [error_page] [413] [error/413.html] 
-Line 10: [error_page] [500] [error/500.html] 
-Line 11: [error_page] [502] [error/502.html] 
-Line 12: [error_page] [504] [error/504.html] 
-Line 13: [error_page] [505] [error/505.html] 
-Line 14: [client_max_body_size] [10000] 
-Line 15: [max_uri_length] [100] 
-Line 16: [max_header_length] [100] 
-Line 17: [root] [www/default/] 
-Line 18: [index] [inde.html] [index.html] 
-Line 19: [location] [/] [{] 
-Line 20: [root] [www/default/] 
-Line 21: [allow_methods] [GET] 
-Line 22: [index] [index.html] [return.html] 
-Line 23: [}] 
-Line 24: [location] [/cgi-bin] [{] 
-Line 25: [root] [www/YoupiBanane/] 
-Line 26: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
-Line 27: [allow_methods] [GET] [POST] [PUT] 
-Line 28: [cgi_ext] [.php] [.py] [.sh] [.bla] 
-Line 29: [client_max_body_size] [10000000000] 
-Line 30: [}] 
-Line 31: 
-Line 32: [location] [/database] [{] 
-Line 33: [root] [www/database/] 
-Line 34: [autoindex] [on] 
-Line 35: [allow_methods] [GET] [POST] [PUT] 
-Line 36: [index] [index.html] [return.html] 
-Line 37: [client_max_body_size] [100000] 
-Line 38: [}] 
-Line 39: [location] [/test] [{] 
-Line 40: [root] [www/test/] 
-Line 41: [autoindex] [off] 
-Line 42: [allow_methods] [GET] 
-Line 43: [index] [swag.html] 
-Line 44: [client_max_body_size] [100000] 
-Line 45: [}] 
-Line 46: [location] [/directory] [{] 
-Line 47: [root] [www/YoupiBanane/] 
-Line 48: [autoindex] [on] 
-Line 49: [allow_methods] [GET] [POST] 
-Line 50: [client_max_body_size] [10000000000] 
-Line 51: [index] [youpi.bad_extension] 
-Line 52: [}] 
-Line 53: [location] [/put_test] [{] 
-Line 54: [root] [www/put_test/] 
-Line 55: [autoindex] [off] 
-Line 56: [allow_methods] [PUT] 
-Line 57: [client_max_body_size] [1] 
-Line 58: [}] 
-Line 59: [location] [/directory/Yeah] [{] 
-Line 60: [root] [www/YoupiBanane/Yeah] 
-Line 61: [index] [error/404.html] 
-Line 62: [}] 
-Line 63: [}] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [root] [www/default/] 
-Line 1: [allow_methods] [GET] 
-Line 2: [index] [index.html] [return.html] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [root] [www/YoupiBanane/] 
-Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
-Line 2: [allow_methods] [GET] [POST] [PUT] 
-Line 3: [cgi_ext] [.php] [.py] [.sh] [.bla] 
-Line 4: [client_max_body_size] [10000000000] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [root] [www/database/] 
-Line 1: [autoindex] [on] 
-Line 2: [allow_methods] [GET] [POST] [PUT] 
-Line 3: [index] [index.html] [return.html] 
-Line 4: [client_max_body_size] [100000] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [root] [www/test/] 
-Line 1: [autoindex] [off] 
-Line 2: [allow_methods] [GET] 
-Line 3: [index] [swag.html] 
-Line 4: [client_max_body_size] [100000] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [root] [www/YoupiBanane/] 
-Line 1: [autoindex] [on] 
-Line 2: [allow_methods] [GET] [POST] 
-Line 3: [client_max_body_size] [10000000000] 
-Line 4: [index] [youpi.bad_extension] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [root] [www/put_test/] 
-Line 1: [autoindex] [off] 
-Line 2: [allow_methods] [PUT] 
-Line 3: [client_max_body_size] [1] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [root] [www/YoupiBanane/Yeah] 
-Line 1: [index] [error/404.html] 
-==================== PARSING END ======================
-
-==================== SERVER CONFIG START ====================
-🌍 host: 127.0.0.1 (localhost)
-🔌 ports: 8083
-📂 root: www/default/
-🏷️ server_name: test
-⚠️ error_pages: 
-   [400] -> error/400.html
-   [403] -> error/403.html
-   [404] -> error/404.html
-   [405] -> error/405.html
-   [413] -> error/413.html
-   [414] -> error/414.html
-   [500] -> error/500.html
-   [502] -> error/502.html
-   [504] -> error/504.html
-   [505] -> error/505.html
-📦 client_max_body_size: 10000
-📦 max uri: 100
-📑 indexes: inde.html, index.html
-📍 locations: 
-   [/]
-==================== LOCATION CONFIG START ====================
-📂 root: www/default/
-📄 autoindex: (not set)
-✅ allow_methods: [GET] 
-📦 client_max_body_size: (not set)
-📑 indexes: index.html, return.html
-🔀 return: (not set)
-📌 alias: (not set)
-==================== LOCATION CONFIG END ======================
-
-   [/cgi-bin]
-==================== CGI CONFIG START ====================
-📂 cgi_root: www/YoupiBanane/
-➡️ cgi_path: [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
-📜 cgi_ext: [.php] [.py] [.sh] [.bla] 
-🧩 allow_methods: [GET] [POST] [PUT] 
-📦 client_max_body_size: 1410065408
-==================== CGI CONFIG END ======================
-
-   [/database]
-==================== LOCATION CONFIG START ====================
-📂 root: www/database/
-📄 autoindex: on
 ✅ allow_methods: [GET] [POST] [PUT] 
-📦 client_max_body_size: 100000
-📑 indexes: index.html, return.html
-🔀 return: (not set)
-📌 alias: (not set)
-==================== LOCATION CONFIG END ======================
-
-   [/directory]
-==================== LOCATION CONFIG START ====================
-📂 root: www/YoupiBanane/
-📄 autoindex: on
-✅ allow_methods: [GET] [POST] 
-📦 client_max_body_size: 1410065408
-📑 indexes: youpi.bad_extension
-🔀 return: (not set)
-📌 alias: (not set)
-==================== LOCATION CONFIG END ======================
-
-   [/directory/Yeah]
-==================== LOCATION CONFIG START ====================
-📂 root: www/YoupiBanane/Yeah
-📄 autoindex: (not set)
-✅ allow_methods: (none)
-📦 client_max_body_size: (not set)
-📑 indexes: error/404.html
-🔀 return: (not set)
-📌 alias: (not set)
-==================== LOCATION CONFIG END ======================
-
-   [/put_test]
-==================== LOCATION CONFIG START ====================
-📂 root: www/put_test/
-📄 autoindex: off
-✅ allow_methods: [PUT] 
 📦 client_max_body_size: 1
-📑 indexes: (not set)
-🔀 return: (not set)
-📌 alias: (not set)
-==================== LOCATION CONFIG END ======================
-
-   [/test]
-==================== LOCATION CONFIG START ====================
-📂 root: www/test/
-📄 autoindex: off
-✅ allow_methods: [GET] 
-📦 client_max_body_size: 100000
 📑 indexes: swag.html
 🔀 return: (not set)
 📌 alias: (not set)
@@ -1078,146 +333,101 @@ Line 1: [index] [error/404.html]
 ==================== SERVER CONFIG END ======================
 
 ==================== PARSING START ====================
+Line 0: [GET] [/cgi-bin/hello.py] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8082] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:144.0)] [Gecko/20100101] [Firefox/144.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [session_id=18973] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/favicon.ico] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8082] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:144.0)] [Gecko/20100101] [Firefox/144.0] 
+Line 3: [Accept:] [image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Referer:] [http://localhost:8082/cgi-bin/hello.py] 
+Line 8: [Cookie:] [session_id=18973] 
+Line 9: [Sec-Fetch-Dest:] [image] 
+Line 10: [Sec-Fetch-Mode:] [no-cors] 
+Line 11: [Sec-Fetch-Site:] [same-origin] 
+Line 12: [Priority:] [u=6] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/test/] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8082] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:144.0)] [Gecko/20100101] [Firefox/144.0] 
+Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Cookie:] [session_id=18973] 
+Line 8: [Upgrade-Insecure-Requests:] [1] 
+Line 9: [Sec-Fetch-Dest:] [document] 
+Line 10: [Sec-Fetch-Mode:] [navigate] 
+Line 11: [Sec-Fetch-Site:] [none] 
+Line 12: [Sec-Fetch-User:] [?1] 
+Line 13: [Priority:] [u=0,] [i] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [GET] [/favicon.ico] [HTTP/1.1] 
+Line 1: [Host:] [localhost:8082] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:144.0)] [Gecko/20100101] [Firefox/144.0] 
+Line 3: [Accept:] [image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Connection:] [keep-alive] 
+Line 7: [Referer:] [http://localhost:8082/test/] 
+Line 8: [Cookie:] [session_id=18973] 
+Line 9: [Sec-Fetch-Dest:] [image] 
+Line 10: [Sec-Fetch-Mode:] [no-cors] 
+Line 11: [Sec-Fetch-Site:] [same-origin] 
+Line 12: [Priority:] [u=6] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
 Line 0: [GET] [/] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Go-http-client/1.1] 
-Line 3: [Accept-Encoding:] [gzip] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [POST] [/] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Go-http-client/1.1] 
-Line 3: [Transfer-Encoding:] [chunked] 
-Line 4: [Content-Type:] [test/file] 
-Line 5: [Accept-Encoding:] [gzip] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [HEAD] [/] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Go-http-client/1.1] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/directory] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Go-http-client/1.1] 
-Line 3: [Accept-Encoding:] [gzip] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/directory/youpi.bad_extension] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Go-http-client/1.1] 
-Line 3: [Accept-Encoding:] [gzip] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/directory/youpi.bla] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Go-http-client/1.1] 
-Line 3: [Accept-Encoding:] [gzip] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/directory/oulalala] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Go-http-client/1.1] 
-Line 3: [Accept-Encoding:] [gzip] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/directory/nop] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Go-http-client/1.1] 
-Line 3: [Accept-Encoding:] [gzip] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/directory/nop/] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Go-http-client/1.1] 
-Line 3: [Accept-Encoding:] [gzip] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/directory/nop/other.pouic] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Go-http-client/1.1] 
-Line 3: [Accept-Encoding:] [gzip] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/directory/nop/other.pouac] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Go-http-client/1.1] 
-Line 3: [Accept-Encoding:] [gzip] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/directory/Yeah] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Go-http-client/1.1] 
-Line 3: [Accept-Encoding:] [gzip] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/directory/Yeah/not_happy.bad_extension] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Go-http-client/1.1] 
-Line 3: [Accept-Encoding:] [gzip] 
+Line 1: [Host:] [localhost:8082] 
+Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:144.0)] [Gecko/20100101] [Firefox/144.0] 
+Line 3: [Accept:] [*/*] 
+Line 4: [Accept-Language:] [en-US,en;q=0.5] 
+Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
+Line 6: [Referer:] [http://localhost:8082/test/] 
+Line 7: [Connection:] [keep-alive] 
+Line 8: [Cookie:] [session_id=18973] 
+Line 9: [Sec-Fetch-Dest:] [empty] 
+Line 10: [Sec-Fetch-Mode:] [cors] 
+Line 11: [Sec-Fetch-Site:] [same-origin] 
+Line 12: [Priority:] [u=0] 
 ==================== PARSING END ======================
 
 ==================== PARSING START ====================
 Line 0: [GET] [/] [HTTP/1.1] 
 Line 1: [Host:] [localhost:8083] 
 Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:144.0)] [Gecko/20100101] [Firefox/144.0] 
-Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
+Line 3: [Accept:] [*/*] 
 Line 4: [Accept-Language:] [en-US,en;q=0.5] 
 Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
-Line 6: [Connection:] [keep-alive] 
-Line 7: [Cookie:] [session_id=18973] 
-Line 8: [Upgrade-Insecure-Requests:] [1] 
-Line 9: [Sec-Fetch-Dest:] [document] 
-Line 10: [Sec-Fetch-Mode:] [navigate] 
-Line 11: [Sec-Fetch-Site:] [none] 
-Line 12: [Sec-Fetch-User:] [?1] 
-Line 13: [Priority:] [u=0,] [i] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/Yeah/not_happy.bad_extension] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:144.0)] [Gecko/20100101] [Firefox/144.0] 
-Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
-Line 4: [Accept-Language:] [en-US,en;q=0.5] 
-Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
-Line 6: [Connection:] [keep-alive] 
-Line 7: [Cookie:] [session_id=18973] 
-Line 8: [Upgrade-Insecure-Requests:] [1] 
-Line 9: [Sec-Fetch-Dest:] [document] 
-Line 10: [Sec-Fetch-Mode:] [navigate] 
-Line 11: [Sec-Fetch-Site:] [none] 
-Line 12: [Sec-Fetch-User:] [?1] 
-Line 13: [Priority:] [u=0,] [i] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/directory/Yeah/not_happy.bad_extension] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Linux] [x86_64;] [rv:144.0)] [Gecko/20100101] [Firefox/144.0] 
-Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
-Line 4: [Accept-Language:] [en-US,en;q=0.5] 
-Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
-Line 6: [Connection:] [keep-alive] 
-Line 7: [Cookie:] [session_id=18973] 
-Line 8: [Upgrade-Insecure-Requests:] [1] 
-Line 9: [Sec-Fetch-Dest:] [document] 
-Line 10: [Sec-Fetch-Mode:] [navigate] 
-Line 11: [Sec-Fetch-Site:] [none] 
-Line 12: [Sec-Fetch-User:] [?1] 
-Line 13: [Priority:] [u=0,] [i] 
+Line 6: [Referer:] [http://localhost:8083/test/] 
+Line 7: [Connection:] [keep-alive] 
+Line 8: [Cookie:] [session_id=18973] 
+Line 9: [Sec-Fetch-Dest:] [empty] 
+Line 10: [Sec-Fetch-Mode:] [cors] 
+Line 11: [Sec-Fetch-Site:] [same-origin] 
+Line 12: [Priority:] [u=0] 
 ==================== PARSING END ======================
 
 ==================== PARSING START ====================
@@ -1437,768 +647,164 @@ Line 2: [allow_methods] [GET] [POST]
 ==================== SERVER CONFIG END ======================
 
 ==================== PARSING START ====================
-Line 0: [GET] [/] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Go-http-client/1.1] 
-Line 3: [Accept-Encoding:] [gzip] 
+Line 0: [server] [{] 
+Line 1: [host] [127.0.0.1] 
+Line 2: [server_name] [test] 
+Line 3: [error_page] [400] [error/400.html] 
+Line 4: [error_page] [403] [error/403.html] 
+Line 5: [error_page] [414] [error/414.html] 
+Line 6: [error_page] [404] [error/404.html] 
+Line 7: [error_page] [405] [error/405.html] 
+Line 8: [error_page] [413] [error/413.html] 
+Line 9: [error_page] [500] [error/500.html] 
+Line 10: [error_page] [502] [error/502.html] 
+Line 11: [error_page] [504] [error/504.html] 
+Line 12: [error_page] [505] [error/505.html] 
+Line 13: [client_max_body_size] [10000000] 
+Line 14: [root] [www/default/] 
+Line 15: [index] [in.html] [index.html] 
+Line 16: [location] [/cgi-bin] [{] 
+Line 17: [root] [www/scripts/] 
+Line 18: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 19: [allow_methods] [GET] [POST] [PUT] 
+Line 20: [cgi_ext] [.php] [.py] [.sh] [.bla] 
+Line 21: [}] 
+Line 22: 
+Line 23: [location] [/autoindex] [{] 
+Line 24: [root] [www/autoindex/] 
+Line 25: [autoindex] [on] 
+Line 26: [allow_methods] [GET] [POST] [PUT] 
+Line 27: [index] [index.html] 
+Line 28: [}] 
+Line 29: [location] [/ret] [{] 
+Line 30: [root] [www/ret/] 
+Line 31: [autoindex] [on] 
+Line 32: [allow_methods] [GET] 
+Line 33: [index] [index.html] 
+Line 34: [return] [301] [return.html] 
+Line 35: [}] 
+Line 36: [location] [/test] [{] 
+Line 37: [root] [www/test/] 
+Line 38: [autoindex] [off] 
+Line 39: [allow_methods] [GET] [POST] [PUT] 
+Line 40: [index] [swag.html] 
+Line 41: [client_max_body_size] [1] 
+Line 42: [}] 
+Line 43: [location] [/database] [{] 
+Line 44: [root] [www/database/] 
+Line 45: [autoindex] [on] 
+Line 46: [allow_methods] [GET] [POST] [PUT] 
+Line 47: [index] [index.html] [return.html] 
+Line 48: [}] 
+Line 49: [}] 
 ==================== PARSING END ======================
 
 ==================== PARSING START ====================
-Line 0: [POST] [/] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Go-http-client/1.1] 
-Line 3: [Transfer-Encoding:] [chunked] 
-Line 4: [Content-Type:] [test/file] 
-Line 5: [Accept-Encoding:] [gzip] 
+Line 0: [server] [{] 
+Line 1: [host] [127.0.0.1] 
+Line 2: [server_name] [test] 
+Line 3: [error_page] [400] [error/400.html] 
+Line 4: [error_page] [403] [error/403.html] 
+Line 5: [error_page] [414] [error/414.html] 
+Line 6: [error_page] [404] [error/404.html] 
+Line 7: [error_page] [405] [error/405.html] 
+Line 8: [error_page] [413] [error/413.html] 
+Line 9: [error_page] [500] [error/500.html] 
+Line 10: [error_page] [502] [error/502.html] 
+Line 11: [error_page] [504] [error/504.html] 
+Line 12: [error_page] [505] [error/505.html] 
+Line 13: [client_max_body_size] [10000000] 
+Line 14: [root] [www/default/] 
+Line 15: [index] [in.html] [index.html] 
+Line 16: [location] [/cgi-bin] [{] 
+Line 17: [root] [www/scripts/] 
+Line 18: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 19: [allow_methods] [GET] [POST] [PUT] 
+Line 20: [cgi_ext] [.php] [.py] [.sh] [.bla] 
+Line 21: [}] 
+Line 22: 
+Line 23: [location] [/autoindex] [{] 
+Line 24: [root] [www/autoindex/] 
+Line 25: [autoindex] [on] 
+Line 26: [allow_methods] [GET] [POST] [PUT] 
+Line 27: [index] [index.html] 
+Line 28: [}] 
+Line 29: [location] [/ret] [{] 
+Line 30: [root] [www/ret/] 
+Line 31: [autoindex] [on] 
+Line 32: [allow_methods] [GET] 
+Line 33: [index] [index.html] 
+Line 34: [return] [301] [return.html] 
+Line 35: [}] 
+Line 36: [location] [/test] [{] 
+Line 37: [root] [www/test/] 
+Line 38: [autoindex] [off] 
+Line 39: [allow_methods] [GET] [POST] [PUT] 
+Line 40: [index] [swag.html] 
+Line 41: [client_max_body_size] [1] 
+Line 42: [}] 
+Line 43: [location] [/database] [{] 
+Line 44: [root] [www/database/] 
+Line 45: [autoindex] [on] 
+Line 46: [allow_methods] [GET] [POST] [PUT] 
+Line 47: [index] [index.html] [return.html] 
+Line 48: [}] 
+Line 49: [}] 
 ==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [HEAD] [/] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Go-http-client/1.1] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/directory] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Go-http-client/1.1] 
-Line 3: [Accept-Encoding:] [gzip] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/directory/youpi.bad_extension] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Go-http-client/1.1] 
-Line 3: [Accept-Encoding:] [gzip] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/directory/youpi.bla] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Go-http-client/1.1] 
-Line 3: [Accept-Encoding:] [gzip] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/directory/oulalala] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Go-http-client/1.1] 
-Line 3: [Accept-Encoding:] [gzip] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/directory/nop] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Go-http-client/1.1] 
-Line 3: [Accept-Encoding:] [gzip] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/directory/nop/] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Go-http-client/1.1] 
-Line 3: [Accept-Encoding:] [gzip] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/directory/nop/other.pouic] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Go-http-client/1.1] 
-Line 3: [Accept-Encoding:] [gzip] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/directory/nop/other.pouac] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Go-http-client/1.1] 
-Line 3: [Accept-Encoding:] [gzip] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/directory/Yeah] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Go-http-client/1.1] 
-Line 3: [Accept-Encoding:] [gzip] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/directory/Yeah/not_happy.bad_extension] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Go-http-client/1.1] 
-Line 3: [Accept-Encoding:] [gzip] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [POST] [/directory/youpi.bla] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Go-http-client/1.1] 
-Line 3: [Transfer-Encoding:] [chunked] 
-Line 4: [Content-Type:] [test/file] 
-Line 5: [Accept-Encoding:] [gzip] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [config/default.conf] 
-==================== PARSING END ======================
-
-==================== SERVER CONFIG START ====================
-🌍 host: (unsupported)
-🔌 ports: (none)
-📂 root: (not set)
-🏷️ server_name: (not set)
-⚠️ error_pages: (none)
-📦 client_max_body_size: 0
-📦 max uri: 2147483647
-📑 indexes: (not set)
-📍 locations: (none)
-==================== SERVER CONFIG END ======================
-
-==================== PARSING START ====================
-Line 0: [config/default.conf] 
-==================== PARSING END ======================
-
-==================== SERVER CONFIG START ====================
-🌍 host: (unsupported)
-🔌 ports: (none)
-📂 root: (not set)
-🏷️ server_name: (not set)
-⚠️ error_pages: (none)
-📦 client_max_body_size: 0
-📦 max uri: 2147483647
-📑 indexes: (not set)
-📍 locations: (none)
-==================== SERVER CONFIG END ======================
-
-==================== PARSING START ====================
-Line 0: [config/default.conf] 
-==================== PARSING END ======================
-
-==================== SERVER CONFIG START ====================
-🌍 host: (unsupported)
-🔌 ports: (none)
-📂 root: (not set)
-🏷️ server_name: (not set)
-⚠️ error_pages: (none)
-📦 client_max_body_size: 0
-📦 max uri: 2147483647
-📑 indexes: (not set)
-📍 locations: (none)
-==================== SERVER CONFIG END ======================
-
-==================== PARSING START ====================
-Line 0: [config/default.conf] 
-==================== PARSING END ======================
-
-==================== SERVER CONFIG START ====================
-🌍 host: (unsupported)
-🔌 ports: (none)
-📂 root: (not set)
-🏷️ server_name: (not set)
-⚠️ error_pages: (none)
-📦 client_max_body_size: 0
-📦 max uri: 2147483647
-📑 indexes: (not set)
-📍 locations: (none)
-==================== SERVER CONFIG END ======================
-
-==================== PARSING START ====================
-Line 0: [config/default.conf] 
-==================== PARSING END ======================
-
-==================== SERVER CONFIG START ====================
-🌍 host: (unsupported)
-🔌 ports: (none)
-📂 root: (not set)
-🏷️ server_name: (not set)
-⚠️ error_pages: (none)
-📦 client_max_body_size: 0
-📦 max uri: 2147483647
-📑 indexes: (not set)
-📍 locations: (none)
-==================== SERVER CONFIG END ======================
-
-==================== PARSING START ====================
-Line 0: [config/default.conf] 
-==================== PARSING END ======================
-
-==================== SERVER CONFIG START ====================
-🌍 host: (unsupported)
-🔌 ports: (none)
-📂 root: (not set)
-🏷️ server_name: (not set)
-⚠️ error_pages: (none)
-📦 client_max_body_size: 0
-📦 max uri: 2147483647
-📑 indexes: (not set)
-📍 locations: (none)
-==================== SERVER CONFIG END ======================
-
-==================== PARSING START ====================
-Line 0: [config/default.conf] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [config/default.conf] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [config/default.conf] 
-==================== PARSING END ======================
-
-==================== SERVER CONFIG START ====================
-🌍 host: (unsupported)
-🔌 ports: (none)
-📂 root: (not set)
-🏷️ server_name: (not set)
-⚠️ error_pages: (none)
-📦 client_max_body_size: 0
-📦 max uri: 2147483647
-📑 indexes: (not set)
-📍 locations: (none)
-==================== SERVER CONFIG END ======================
-
-==================== PARSING START ====================
-Line 0: [config/default.conf] 
-==================== PARSING END ======================
-
-==================== SERVER CONFIG START ====================
-🌍 host: (unsupported)
-🔌 ports: (none)
-📂 root: (not set)
-🏷️ server_name: (not set)
-⚠️ error_pages: (none)
-📦 client_max_body_size: 0
-📦 max uri: 2147483647
-📑 indexes: (not set)
-📍 locations: (none)
-==================== SERVER CONFIG END ======================
-
-==================== PARSING START ====================
-Line 0: [config/default.conf] 
-==================== PARSING END ======================
-
-==================== SERVER CONFIG START ====================
-🌍 host: (unsupported)
-🔌 ports: (none)
-📂 root: (not set)
-🏷️ server_name: (not set)
-⚠️ error_pages: (none)
-📦 client_max_body_size: 0
-📦 max uri: 2147483647
-📑 indexes: (not set)
-📍 locations: (none)
-==================== SERVER CONFIG END ======================
-
-==================== PARSING START ====================
-Line 0: [config/default.conf] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [config/default.conf] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [config/default.conf] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [config/default.conf] 
-==================== PARSING END ======================
-
-==================== SERVER CONFIG START ====================
-🌍 host: (unsupported)
-🔌 ports: (none)
-📂 root: (not set)
-🏷️ server_name: (not set)
-⚠️ error_pages: (none)
-📦 client_max_body_size: 0
-📦 max uri: 2147483647
-📑 indexes: (not set)
-📍 locations: (none)
-==================== SERVER CONFIG END ======================
-
-==================== PARSING START ====================
-Line 0: [config/default.conf] 
-==================== PARSING END ======================
-
-==================== SERVER CONFIG START ====================
-🌍 host: (unsupported)
-🔌 ports: (none)
-📂 root: (not set)
-🏷️ server_name: (not set)
-⚠️ error_pages: (none)
-📦 client_max_body_size: 0
-📦 max uri: 2147483647
-📑 indexes: (not set)
-📍 locations: (none)
-==================== SERVER CONFIG END ======================
-
-==================== PARSING START ====================
-Line 0: [config/default.conf] 
-==================== PARSING END ======================
-
-==================== SERVER CONFIG START ====================
-🌍 host: (unsupported)
-🔌 ports: (none)
-📂 root: (not set)
-🏷️ server_name: (not set)
-⚠️ error_pages: (none)
-📦 client_max_body_size: 0
-📦 max uri: 2147483647
-📑 indexes: (not set)
-📍 locations: (none)
-==================== SERVER CONFIG END ======================
-
-==================== PARSING START ====================
-Line 0: [config/default.conf] 
-==================== PARSING END ======================
-
-==================== SERVER CONFIG START ====================
-🌍 host: (unsupported)
-🔌 ports: (none)
-📂 root: (not set)
-🏷️ server_name: (not set)
-⚠️ error_pages: (none)
-📦 client_max_body_size: 0
-📦 max uri: 2147483647
-📑 indexes: (not set)
-📍 locations: (none)
-==================== SERVER CONFIG END ======================
-
-==================== PARSING START ====================
-Line 0: [config/default.conf] 
-==================== PARSING END ======================
-
-==================== SERVER CONFIG START ====================
-🌍 host: (unsupported)
-🔌 ports: (none)
-📂 root: (not set)
-🏷️ server_name: (not set)
-⚠️ error_pages: (none)
-📦 client_max_body_size: 0
-📦 max uri: 2147483647
-📑 indexes: (not set)
-📍 locations: (none)
-==================== SERVER CONFIG END ======================
-
-==================== PARSING START ====================
-Line 0: [config/default.conf] 
-==================== PARSING END ======================
-
-==================== SERVER CONFIG START ====================
-🌍 host: (unsupported)
-🔌 ports: (none)
-📂 root: (not set)
-🏷️ server_name: (not set)
-⚠️ error_pages: (none)
-📦 client_max_body_size: 0
-📦 max uri: 2147483647
-📑 indexes: (not set)
-📍 locations: (none)
-==================== SERVER CONFIG END ======================
 
 ==================== PARSING START ====================
 Line 0: [server] [{] 
 Line 1: [listen] [8083] 
-Line 2: [host] [127.0.0.1] 
-Line 3: [server_name] [test] 
-Line 4: [error_page] [400] [error/400.html] 
-Line 5: [error_page] [403] [error/403.html] 
-Line 6: [error_page] [414] [error/414.html] 
-Line 7: [error_page] [404] [error/404.html] 
-Line 8: [error_page] [405] [error/405.html] 
-Line 9: [error_page] [413] [error/413.html] 
-Line 10: [error_page] [500] [error/500.html] 
-Line 11: [error_page] [502] [error/502.html] 
-Line 12: [error_page] [504] [error/504.html] 
-Line 13: [error_page] [505] [error/505.html] 
-Line 14: [client_max_body_size] [10000000] 
-Line 15: [root] [www/default/] 
-Line 16: [index] [in.html] [index.html] 
-Line 17: [location] [/cgi-bin] [{] 
-Line 18: [root] [www/scripts/] 
-Line 19: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
-Line 20: [allow_methods] [GET] [POST] [PUT] 
-Line 21: [cgi_ext] [.php] [.py] [.sh] [.bla] 
-Line 22: [}] 
-Line 23: 
-Line 24: [location] [/autoindex] [{] 
-Line 25: [root] [www/autoindex/] 
-Line 26: [autoindex] [on] 
-Line 27: [allow_methods] [GET] [POST] [PUT] 
-Line 28: [index] [index.html] 
-Line 29: [}] 
-Line 30: [location] [/ret] [{] 
-Line 31: [root] [www/ret/] 
-Line 32: [autoindex] [on] 
-Line 33: [allow_methods] [GET] 
-Line 34: [index] [index.html] 
-Line 35: [return] [301] [return.html] 
-Line 36: [}] 
-Line 37: [location] [/test] [{] 
-Line 38: [root] [www/test/] 
-Line 39: [autoindex] [off] 
-Line 40: [allow_methods] [GET] [POST] [PUT] 
-Line 41: [index] [swag.html] 
-Line 42: [client_max_body_size] [1] 
-Line 43: [}] 
-Line 44: [location] [/database] [{] 
-Line 45: [root] [www/database/] 
-Line 46: [autoindex] [on] 
-Line 47: [allow_methods] [GET] [POST] [PUT] 
-Line 48: [index] [index.html] [return.html] 
-Line 49: [}] 
+Line 2: [listen] [8082] 
+Line 3: [host] [127.0.0.1] 
+Line 4: [server_name] [test] 
+Line 5: [error_page] [400] [error/400.html] 
+Line 6: [error_page] [403] [error/403.html] 
+Line 7: [error_page] [414] [error/414.html] 
+Line 8: [error_page] [404] [error/404.html] 
+Line 9: [error_page] [405] [error/405.html] 
+Line 10: [error_page] [413] [error/413.html] 
+Line 11: [error_page] [500] [error/500.html] 
+Line 12: [error_page] [502] [error/502.html] 
+Line 13: [error_page] [504] [error/504.html] 
+Line 14: [error_page] [505] [error/505.html] 
+Line 15: [client_max_body_size] [10000000] 
+Line 16: [root] [www/default/] 
+Line 17: [index] [in.html] [index.html] 
+Line 18: [location] [/cgi-bin] [{] 
+Line 19: [root] [www/scripts/] 
+Line 20: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 21: [allow_methods] [GET] [POST] [PUT] 
+Line 22: [cgi_ext] [.php] [.py] [.sh] [.bla] 
+Line 23: [}] 
+Line 24: 
+Line 25: [location] [/autoindex] [{] 
+Line 26: [root] [www/autoindex/] 
+Line 27: [autoindex] [on] 
+Line 28: [allow_methods] [GET] [POST] [PUT] 
+Line 29: [index] [index.html] 
+Line 30: [}] 
+Line 31: [location] [/ret] [{] 
+Line 32: [root] [www/ret/] 
+Line 33: [autoindex] [on] 
+Line 34: [allow_methods] [GET] 
+Line 35: [index] [index.html] 
+Line 36: [return] [301] [return.html] 
+Line 37: [}] 
+Line 38: [location] [/test] [{] 
+Line 39: [root] [www/test/] 
+Line 40: [autoindex] [off] 
+Line 41: [allow_methods] [GET] [POST] [PUT] 
+Line 42: [index] [swag.html] 
+Line 43: [client_max_body_size] [1] 
+Line 44: [}] 
+Line 45: [location] [/database] [{] 
+Line 46: [root] [www/database/] 
+Line 47: [autoindex] [on] 
+Line 48: [allow_methods] [GET] [POST] [PUT] 
+Line 49: [index] [index.html] [return.html] 
 Line 50: [}] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [config/default.conf] 
-==================== PARSING END ======================
-
-==================== SERVER CONFIG START ====================
-🌍 host: (unsupported)
-🔌 ports: (none)
-📂 root: (not set)
-🏷️ server_name: (not set)
-⚠️ error_pages: (none)
-📦 client_max_body_size: 0
-📦 max uri: 2147483647
-📑 indexes: (not set)
-📍 locations: (none)
-==================== SERVER CONFIG END ======================
-
-==================== PARSING START ====================
-Line 0: [server] [{] 
-Line 1: [listen] [8083] 
-Line 2: [host] [127.0.0.1] 
-Line 3: [server_name] [test] 
-Line 4: [error_page] [400] [error/400.html] 
-Line 5: [error_page] [403] [error/403.html] 
-Line 6: [error_page] [414] [error/414.html] 
-Line 7: [error_page] [404] [error/404.html] 
-Line 8: [error_page] [405] [error/405.html] 
-Line 9: [error_page] [413] [error/413.html] 
-Line 10: [error_page] [500] [error/500.html] 
-Line 11: [error_page] [502] [error/502.html] 
-Line 12: [error_page] [504] [error/504.html] 
-Line 13: [error_page] [505] [error/505.html] 
-Line 14: [client_max_body_size] [10000000] 
-Line 15: [root] [www/default/] 
-Line 16: [index] [in.html] [index.html] 
-Line 17: [location] [/cgi-bin] [{] 
-Line 18: [root] [www/scripts/] 
-Line 19: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
-Line 20: [allow_methods] [GET] [POST] [PUT] 
-Line 21: [cgi_ext] [.php] [.py] [.sh] [.bla] 
-Line 22: [}] 
-Line 23: 
-Line 24: [location] [/autoindex] [{] 
-Line 25: [root] [www/autoindex/] 
-Line 26: [autoindex] [on] 
-Line 27: [allow_methods] [GET] [POST] [PUT] 
-Line 28: [index] [index.html] 
-Line 29: [}] 
-Line 30: [location] [/ret] [{] 
-Line 31: [root] [www/ret/] 
-Line 32: [autoindex] [on] 
-Line 33: [allow_methods] [GET] 
-Line 34: [index] [index.html] 
-Line 35: [return] [301] [return.html] 
-Line 36: [}] 
-Line 37: [location] [/test] [{] 
-Line 38: [root] [www/test/] 
-Line 39: [autoindex] [off] 
-Line 40: [allow_methods] [GET] [POST] [PUT] 
-Line 41: [index] [swag.html] 
-Line 42: [client_max_body_size] [1] 
-Line 43: [}] 
-Line 44: [location] [/database] [{] 
-Line 45: [root] [www/database/] 
-Line 46: [autoindex] [on] 
-Line 47: [allow_methods] [GET] [POST] [PUT] 
-Line 48: [index] [index.html] [return.html] 
-Line 49: [}] 
-Line 50: [}] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [config/default.conf] 
-==================== PARSING END ======================
-
-==================== SERVER CONFIG START ====================
-🌍 host: (unsupported)
-🔌 ports: (none)
-📂 root: (not set)
-🏷️ server_name: (not set)
-⚠️ error_pages: (none)
-📦 client_max_body_size: 0
-📦 max uri: 2147483647
-📑 indexes: (not set)
-📍 locations: (none)
-==================== SERVER CONFIG END ======================
-
-==================== PARSING START ====================
-Line 0: [server] [{] 
-Line 1: [listen] [8083] 
-Line 2: [host] [127.0.0.1] 
-Line 3: [server_name] [test] 
-Line 4: [error_page] [400] [error/400.html] 
-Line 5: [error_page] [403] [error/403.html] 
-Line 6: [error_page] [414] [error/414.html] 
-Line 7: [error_page] [404] [error/404.html] 
-Line 8: [error_page] [405] [error/405.html] 
-Line 9: [error_page] [413] [error/413.html] 
-Line 10: [error_page] [500] [error/500.html] 
-Line 11: [error_page] [502] [error/502.html] 
-Line 12: [error_page] [504] [error/504.html] 
-Line 13: [error_page] [505] [error/505.html] 
-Line 14: [client_max_body_size] [10000000] 
-Line 15: [root] [www/default/] 
-Line 16: [index] [in.html] [index.html] 
-Line 17: [location] [/cgi-bin] [{] 
-Line 18: [root] [www/scripts/] 
-Line 19: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
-Line 20: [allow_methods] [GET] [POST] [PUT] 
-Line 21: [cgi_ext] [.php] [.py] [.sh] [.bla] 
-Line 22: [}] 
-Line 23: 
-Line 24: [location] [/autoindex] [{] 
-Line 25: [root] [www/autoindex/] 
-Line 26: [autoindex] [on] 
-Line 27: [allow_methods] [GET] [POST] [PUT] 
-Line 28: [index] [index.html] 
-Line 29: [}] 
-Line 30: [location] [/ret] [{] 
-Line 31: [root] [www/ret/] 
-Line 32: [autoindex] [on] 
-Line 33: [allow_methods] [GET] 
-Line 34: [index] [index.html] 
-Line 35: [return] [301] [return.html] 
-Line 36: [}] 
-Line 37: [location] [/test] [{] 
-Line 38: [root] [www/test/] 
-Line 39: [autoindex] [off] 
-Line 40: [allow_methods] [GET] [POST] [PUT] 
-Line 41: [index] [swag.html] 
-Line 42: [client_max_body_size] [1] 
-Line 43: [}] 
-Line 44: [location] [/database] [{] 
-Line 45: [root] [www/database/] 
-Line 46: [autoindex] [on] 
-Line 47: [allow_methods] [GET] [POST] [PUT] 
-Line 48: [index] [index.html] [return.html] 
-Line 49: [}] 
-Line 50: [}] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [config/default.conf] 
-==================== PARSING END ======================
-
-==================== SERVER CONFIG START ====================
-🌍 host: (unsupported)
-🔌 ports: (none)
-📂 root: (not set)
-🏷️ server_name: (not set)
-⚠️ error_pages: (none)
-📦 client_max_body_size: 0
-📦 max uri: 2147483647
-📑 indexes: (not set)
-📍 locations: (none)
-==================== SERVER CONFIG END ======================
-
-==================== PARSING START ====================
-Line 0: [server] [{] 
-Line 1: [listen] [8083] 
-Line 2: [host] [127.0.0.1] 
-Line 3: [server_name] [test] 
-Line 4: [error_page] [400] [error/400.html] 
-Line 5: [error_page] [403] [error/403.html] 
-Line 6: [error_page] [414] [error/414.html] 
-Line 7: [error_page] [404] [error/404.html] 
-Line 8: [error_page] [405] [error/405.html] 
-Line 9: [error_page] [413] [error/413.html] 
-Line 10: [error_page] [500] [error/500.html] 
-Line 11: [error_page] [502] [error/502.html] 
-Line 12: [error_page] [504] [error/504.html] 
-Line 13: [error_page] [505] [error/505.html] 
-Line 14: [client_max_body_size] [10000000] 
-Line 15: [root] [www/default/] 
-Line 16: [index] [in.html] [index.html] 
-Line 17: [location] [/cgi-bin] [{] 
-Line 18: [root] [www/scripts/] 
-Line 19: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
-Line 20: [allow_methods] [GET] [POST] [PUT] 
-Line 21: [cgi_ext] [.php] [.py] [.sh] [.bla] 
-Line 22: [}] 
-Line 23: 
-Line 24: [location] [/autoindex] [{] 
-Line 25: [root] [www/autoindex/] 
-Line 26: [autoindex] [on] 
-Line 27: [allow_methods] [GET] [POST] [PUT] 
-Line 28: [index] [index.html] 
-Line 29: [}] 
-Line 30: [location] [/ret] [{] 
-Line 31: [root] [www/ret/] 
-Line 32: [autoindex] [on] 
-Line 33: [allow_methods] [GET] 
-Line 34: [index] [index.html] 
-Line 35: [return] [301] [return.html] 
-Line 36: [}] 
-Line 37: [location] [/test] [{] 
-Line 38: [root] [www/test/] 
-Line 39: [autoindex] [off] 
-Line 40: [allow_methods] [GET] [POST] [PUT] 
-Line 41: [index] [swag.html] 
-Line 42: [client_max_body_size] [1] 
-Line 43: [}] 
-Line 44: [location] [/database] [{] 
-Line 45: [root] [www/database/] 
-Line 46: [autoindex] [on] 
-Line 47: [allow_methods] [GET] [POST] [PUT] 
-Line 48: [index] [index.html] [return.html] 
-Line 49: [}] 
-Line 50: [}] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [config/default.conf] 
-==================== PARSING END ======================
-
-==================== SERVER CONFIG START ====================
-🌍 host: (unsupported)
-🔌 ports: (none)
-📂 root: (not set)
-🏷️ server_name: (not set)
-⚠️ error_pages: (none)
-📦 client_max_body_size: 0
-📦 max uri: 2147483647
-📑 indexes: (not set)
-📍 locations: (none)
-==================== SERVER CONFIG END ======================
-
-==================== PARSING START ====================
-Line 0: [server] [{] 
-Line 1: [listen] [8083] 
-Line 2: [host] [127.0.0.1] 
-Line 3: [server_name] [test] 
-Line 4: [error_page] [400] [error/400.html] 
-Line 5: [error_page] [403] [error/403.html] 
-Line 6: [error_page] [414] [error/414.html] 
-Line 7: [error_page] [404] [error/404.html] 
-Line 8: [error_page] [405] [error/405.html] 
-Line 9: [error_page] [413] [error/413.html] 
-Line 10: [error_page] [500] [error/500.html] 
-Line 11: [error_page] [502] [error/502.html] 
-Line 12: [error_page] [504] [error/504.html] 
-Line 13: [error_page] [505] [error/505.html] 
-Line 14: [client_max_body_size] [10000000] 
-Line 15: [root] [www/default/] 
-Line 16: [index] [in.html] [index.html] 
-Line 17: [location] [/cgi-bin] [{] 
-Line 18: [root] [www/scripts/] 
-Line 19: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
-Line 20: [allow_methods] [GET] [POST] [PUT] 
-Line 21: [cgi_ext] [.php] [.py] [.sh] [.bla] 
-Line 22: [}] 
-Line 23: 
-Line 24: [location] [/autoindex] [{] 
-Line 25: [root] [www/autoindex/] 
-Line 26: [autoindex] [on] 
-Line 27: [allow_methods] [GET] [POST] [PUT] 
-Line 28: [index] [index.html] 
-Line 29: [}] 
-Line 30: [location] [/ret] [{] 
-Line 31: [root] [www/ret/] 
-Line 32: [autoindex] [on] 
-Line 33: [allow_methods] [GET] 
-Line 34: [index] [index.html] 
-Line 35: [return] [301] [return.html] 
-Line 36: [}] 
-Line 37: [location] [/test] [{] 
-Line 38: [root] [www/test/] 
-Line 39: [autoindex] [off] 
-Line 40: [allow_methods] [GET] [POST] [PUT] 
-Line 41: [index] [swag.html] 
-Line 42: [client_max_body_size] [1] 
-Line 43: [}] 
-Line 44: [location] [/database] [{] 
-Line 45: [root] [www/database/] 
-Line 46: [autoindex] [on] 
-Line 47: [allow_methods] [GET] [POST] [PUT] 
-Line 48: [index] [index.html] [return.html] 
-Line 49: [}] 
-Line 50: [}] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [config/default.conf] 
-==================== PARSING END ======================
-
-==================== SERVER CONFIG START ====================
-🌍 host: (unsupported)
-🔌 ports: (none)
-📂 root: (not set)
-🏷️ server_name: (not set)
-⚠️ error_pages: (none)
-📦 client_max_body_size: 0
-📦 max uri: 2147483647
-📑 indexes: (not set)
-📍 locations: (none)
-==================== SERVER CONFIG END ======================
-
-==================== PARSING START ====================
-Line 0: [server] [{] 
-Line 1: [listen] [8083] 
-Line 2: [host] [127.0.0.1] 
-Line 3: [server_name] [test] 
-Line 4: [error_page] [400] [error/400.html] 
-Line 5: [error_page] [403] [error/403.html] 
-Line 6: [error_page] [414] [error/414.html] 
-Line 7: [error_page] [404] [error/404.html] 
-Line 8: [error_page] [405] [error/405.html] 
-Line 9: [error_page] [413] [error/413.html] 
-Line 10: [error_page] [500] [error/500.html] 
-Line 11: [error_page] [502] [error/502.html] 
-Line 12: [error_page] [504] [error/504.html] 
-Line 13: [error_page] [505] [error/505.html] 
-Line 14: [client_max_body_size] [10000000] 
-Line 15: [root] [www/default/] 
-Line 16: [index] [in.html] [index.html] 
-Line 17: [location] [/cgi-bin] [{] 
-Line 18: [root] [www/scripts/] 
-Line 19: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
-Line 20: [allow_methods] [GET] [POST] [PUT] 
-Line 21: [cgi_ext] [.php] [.py] [.sh] [.bla] 
-Line 22: [}] 
-Line 23: 
-Line 24: [location] [/autoindex] [{] 
-Line 25: [root] [www/autoindex/] 
-Line 26: [autoindex] [on] 
-Line 27: [allow_methods] [GET] [POST] [PUT] 
-Line 28: [index] [index.html] 
-Line 29: [}] 
-Line 30: [location] [/ret] [{] 
-Line 31: [root] [www/ret/] 
-Line 32: [autoindex] [on] 
-Line 33: [allow_methods] [GET] 
-Line 34: [index] [index.html] 
-Line 35: [return] [301] [return.html] 
-Line 36: [}] 
-Line 37: [location] [/test] [{] 
-Line 38: [root] [www/test/] 
-Line 39: [autoindex] [off] 
-Line 40: [allow_methods] [GET] [POST] [PUT] 
-Line 41: [index] [swag.html] 
-Line 42: [client_max_body_size] [1] 
-Line 43: [}] 
-Line 44: [location] [/database] [{] 
-Line 45: [root] [www/database/] 
-Line 46: [autoindex] [on] 
-Line 47: [allow_methods] [GET] [POST] [PUT] 
-Line 48: [index] [index.html] [return.html] 
-Line 49: [}] 
-Line 50: [}] 
+Line 51: [}] 
 ==================== PARSING END ======================
 
 ==================== PARSING START ====================
@@ -2240,7 +846,7 @@ Line 3: [index] [index.html] [return.html]
 
 ==================== SERVER CONFIG START ====================
 🌍 host: 127.0.0.1 (localhost)
-🔌 ports: 8083
+🔌 ports: 8083, 8082
 📂 root: www/default/
 🏷️ server_name: test
 ⚠️ error_pages: 
@@ -2316,55 +922,56 @@ Line 3: [index] [index.html] [return.html]
 ==================== PARSING START ====================
 Line 0: [server] [{] 
 Line 1: [listen] [8083] 
-Line 2: [host] [127.0.0.1] 
-Line 3: [server_name] [test] 
-Line 4: [error_page] [400] [error/400.html] 
-Line 5: [error_page] [403] [error/403.html] 
-Line 6: [error_page] [414] [error/414.html] 
-Line 7: [error_page] [404] [error/404.html] 
-Line 8: [error_page] [405] [error/405.html] 
-Line 9: [error_page] [413] [error/413.html] 
-Line 10: [error_page] [500] [error/500.html] 
-Line 11: [error_page] [502] [error/502.html] 
-Line 12: [error_page] [504] [error/504.html] 
-Line 13: [error_page] [505] [error/505.html] 
-Line 14: [client_max_body_size] [10000000] 
-Line 15: [root] [www/default/] 
-Line 16: [index] [in.html] [index.html] 
-Line 17: [location] [/cgi-bin] [{] 
-Line 18: [root] [www/scripts/] 
-Line 19: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
-Line 20: [allow_methods] [GET] [POST] [PUT] 
-Line 21: [cgi_ext] [.php] [.py] [.sh] [.bla] 
-Line 22: [}] 
-Line 23: 
-Line 24: [location] [/autoindex] [{] 
-Line 25: [root] [www/autoindex/] 
-Line 26: [autoindex] [on] 
-Line 27: [allow_methods] [GET] [POST] [PUT] 
-Line 28: [index] [index.html] 
-Line 29: [}] 
-Line 30: [location] [/ret] [{] 
-Line 31: [root] [www/ret/] 
-Line 32: [autoindex] [on] 
-Line 33: [allow_methods] [GET] 
-Line 34: [index] [index.html] 
-Line 35: [return] [301] [return.html] 
-Line 36: [}] 
-Line 37: [location] [/test] [{] 
-Line 38: [root] [www/test/] 
-Line 39: [autoindex] [off] 
-Line 40: [allow_methods] [GET] [POST] [PUT] 
-Line 41: [index] [swag.html] 
-Line 42: [client_max_body_size] [1] 
-Line 43: [}] 
-Line 44: [location] [/database] [{] 
-Line 45: [root] [www/database/] 
-Line 46: [autoindex] [on] 
-Line 47: [allow_methods] [GET] [POST] [PUT] 
-Line 48: [index] [index.html] [return.html] 
-Line 49: [}] 
+Line 2: [listen] [8082] 
+Line 3: [host] [127.0.0.1] 
+Line 4: [server_name] [test] 
+Line 5: [error_page] [400] [error/400.html] 
+Line 6: [error_page] [403] [error/403.html] 
+Line 7: [error_page] [414] [error/414.html] 
+Line 8: [error_page] [404] [error/404.html] 
+Line 9: [error_page] [405] [error/405.html] 
+Line 10: [error_page] [413] [error/413.html] 
+Line 11: [error_page] [500] [error/500.html] 
+Line 12: [error_page] [502] [error/502.html] 
+Line 13: [error_page] [504] [error/504.html] 
+Line 14: [error_page] [505] [error/505.html] 
+Line 15: [client_max_body_size] [10000000] 
+Line 16: [root] [www/default/] 
+Line 17: [index] [in.html] [index.html] 
+Line 18: [location] [/cgi-bin] [{] 
+Line 19: [root] [www/scripts/] 
+Line 20: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 21: [allow_methods] [GET] [POST] [PUT] 
+Line 22: [cgi_ext] [.php] [.py] [.sh] [.bla] 
+Line 23: [}] 
+Line 24: 
+Line 25: [location] [/autoindex] [{] 
+Line 26: [root] [www/autoindex/] 
+Line 27: [autoindex] [on] 
+Line 28: [allow_methods] [GET] [POST] [PUT] 
+Line 29: [index] [index.html] 
+Line 30: [}] 
+Line 31: [location] [/ret] [{] 
+Line 32: [root] [www/ret/] 
+Line 33: [autoindex] [on] 
+Line 34: [allow_methods] [GET] 
+Line 35: [index] [index.html] 
+Line 36: [return] [301] [return.html] 
+Line 37: [}] 
+Line 38: [location] [/test] [{] 
+Line 39: [root] [www/test/] 
+Line 40: [autoindex] [off] 
+Line 41: [allow_methods] [GET] [POST] [PUT] 
+Line 42: [index] [swag.html] 
+Line 43: [client_max_body_size] [1] 
+Line 44: [}] 
+Line 45: [location] [/database] [{] 
+Line 46: [root] [www/database/] 
+Line 47: [autoindex] [on] 
+Line 48: [allow_methods] [GET] [POST] [PUT] 
+Line 49: [index] [index.html] [return.html] 
 Line 50: [}] 
+Line 51: [}] 
 ==================== PARSING END ======================
 
 ==================== PARSING START ====================
@@ -2406,7 +1013,7 @@ Line 3: [index] [index.html] [return.html]
 
 ==================== SERVER CONFIG START ====================
 🌍 host: 127.0.0.1 (localhost)
-🔌 ports: 8083
+🔌 ports: 8083, 8082
 📂 root: www/default/
 🏷️ server_name: test
 ⚠️ error_pages: 
@@ -2482,55 +1089,56 @@ Line 3: [index] [index.html] [return.html]
 ==================== PARSING START ====================
 Line 0: [server] [{] 
 Line 1: [listen] [8083] 
-Line 2: [host] [127.0.0.1] 
-Line 3: [server_name] [test] 
-Line 4: [error_page] [400] [error/400.html] 
-Line 5: [error_page] [403] [error/403.html] 
-Line 6: [error_page] [414] [error/414.html] 
-Line 7: [error_page] [404] [error/404.html] 
-Line 8: [error_page] [405] [error/405.html] 
-Line 9: [error_page] [413] [error/413.html] 
-Line 10: [error_page] [500] [error/500.html] 
-Line 11: [error_page] [502] [error/502.html] 
-Line 12: [error_page] [504] [error/504.html] 
-Line 13: [error_page] [505] [error/505.html] 
-Line 14: [client_max_body_size] [10000000] 
-Line 15: [root] [www/default/] 
-Line 16: [index] [in.html] [index.html] 
-Line 17: [location] [/cgi-bin] [{] 
-Line 18: [root] [www/scripts/] 
-Line 19: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
-Line 20: [allow_methods] [GET] [POST] [PUT] 
-Line 21: [cgi_ext] [.php] [.py] [.sh] [.bla] 
-Line 22: [}] 
-Line 23: 
-Line 24: [location] [/autoindex] [{] 
-Line 25: [root] [www/autoindex/] 
-Line 26: [autoindex] [on] 
-Line 27: [allow_methods] [GET] [POST] [PUT] 
-Line 28: [index] [index.html] 
-Line 29: [}] 
-Line 30: [location] [/ret] [{] 
-Line 31: [root] [www/ret/] 
-Line 32: [autoindex] [on] 
-Line 33: [allow_methods] [GET] 
-Line 34: [index] [index.html] 
-Line 35: [return] [301] [return.html] 
-Line 36: [}] 
-Line 37: [location] [/test] [{] 
-Line 38: [root] [www/test/] 
-Line 39: [autoindex] [off] 
-Line 40: [allow_methods] [GET] [POST] [PUT] 
-Line 41: [index] [swag.html] 
-Line 42: [client_max_body_size] [1] 
-Line 43: [}] 
-Line 44: [location] [/database] [{] 
-Line 45: [root] [www/database/] 
-Line 46: [autoindex] [on] 
-Line 47: [allow_methods] [GET] [POST] [PUT] 
-Line 48: [index] [index.html] [return.html] 
-Line 49: [}] 
+Line 2: [listen] [8082] 
+Line 3: [host] [127.0.0.1] 
+Line 4: [server_name] [test] 
+Line 5: [error_page] [400] [error/400.html] 
+Line 6: [error_page] [403] [error/403.html] 
+Line 7: [error_page] [414] [error/414.html] 
+Line 8: [error_page] [404] [error/404.html] 
+Line 9: [error_page] [405] [error/405.html] 
+Line 10: [error_page] [413] [error/413.html] 
+Line 11: [error_page] [500] [error/500.html] 
+Line 12: [error_page] [502] [error/502.html] 
+Line 13: [error_page] [504] [error/504.html] 
+Line 14: [error_page] [505] [error/505.html] 
+Line 15: [client_max_body_size] [10000000] 
+Line 16: [root] [www/default/] 
+Line 17: [index] [in.html] [index.html] 
+Line 18: [location] [/cgi-bin] [{] 
+Line 19: [root] [www/scripts/] 
+Line 20: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 21: [allow_methods] [GET] [POST] [PUT] 
+Line 22: [cgi_ext] [.php] [.py] [.sh] [.bla] 
+Line 23: [}] 
+Line 24: 
+Line 25: [location] [/autoindex] [{] 
+Line 26: [root] [www/autoindex/] 
+Line 27: [autoindex] [on] 
+Line 28: [allow_methods] [GET] [POST] [PUT] 
+Line 29: [index] [index.html] 
+Line 30: [}] 
+Line 31: [location] [/ret] [{] 
+Line 32: [root] [www/ret/] 
+Line 33: [autoindex] [on] 
+Line 34: [allow_methods] [GET] 
+Line 35: [index] [index.html] 
+Line 36: [return] [301] [return.html] 
+Line 37: [}] 
+Line 38: [location] [/test] [{] 
+Line 39: [root] [www/test/] 
+Line 40: [autoindex] [off] 
+Line 41: [allow_methods] [GET] [POST] [PUT] 
+Line 42: [index] [swag.html] 
+Line 43: [client_max_body_size] [1] 
+Line 44: [}] 
+Line 45: [location] [/database] [{] 
+Line 46: [root] [www/database/] 
+Line 47: [autoindex] [on] 
+Line 48: [allow_methods] [GET] [POST] [PUT] 
+Line 49: [index] [index.html] [return.html] 
 Line 50: [}] 
+Line 51: [}] 
 ==================== PARSING END ======================
 
 ==================== PARSING START ====================
@@ -2572,756 +1180,7 @@ Line 3: [index] [index.html] [return.html]
 
 ==================== SERVER CONFIG START ====================
 🌍 host: 127.0.0.1 (localhost)
-🔌 ports: 8083
-📂 root: www/default/
-🏷️ server_name: test
-⚠️ error_pages: 
-   [400] -> error/400.html
-   [403] -> error/403.html
-   [404] -> error/404.html
-   [405] -> error/405.html
-   [413] -> error/413.html
-   [414] -> error/414.html
-   [500] -> error/500.html
-   [502] -> error/502.html
-   [504] -> error/504.html
-   [505] -> error/505.html
-📦 client_max_body_size: 10000000
-📦 max uri: 2147483647
-📑 indexes: in.html, index.html
-📍 locations: 
-   [/autoindex]
-==================== LOCATION CONFIG START ====================
-📂 root: www/autoindex/
-📄 autoindex: on
-✅ allow_methods: [GET] [POST] [PUT] 
-📦 client_max_body_size: (not set)
-📑 indexes: index.html
-🔀 return: (not set)
-📌 alias: (not set)
-==================== LOCATION CONFIG END ======================
-
-   [/cgi-bin]
-==================== CGI CONFIG START ====================
-📂 cgi_root: www/scripts/
-➡️ cgi_path: [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
-📜 cgi_ext: [.php] [.py] [.sh] [.bla] 
-🧩 allow_methods: [GET] [POST] [PUT] 
-📦 client_max_body_size: (not set)
-==================== CGI CONFIG END ======================
-
-   [/database]
-==================== LOCATION CONFIG START ====================
-📂 root: www/database/
-📄 autoindex: on
-✅ allow_methods: [GET] [POST] [PUT] 
-📦 client_max_body_size: (not set)
-📑 indexes: index.html, return.html
-🔀 return: (not set)
-📌 alias: (not set)
-==================== LOCATION CONFIG END ======================
-
-   [/ret]
-==================== LOCATION CONFIG START ====================
-📂 root: www/ret/
-📄 autoindex: on
-✅ allow_methods: [GET] 
-📦 client_max_body_size: (not set)
-📑 indexes: index.html
-🔀 return: (not set)
-📌 alias: (not set)
-==================== LOCATION CONFIG END ======================
-
-   [/test]
-==================== LOCATION CONFIG START ====================
-📂 root: www/test/
-📄 autoindex: off
-✅ allow_methods: [GET] [POST] [PUT] 
-📦 client_max_body_size: 1
-📑 indexes: swag.html
-🔀 return: (not set)
-📌 alias: (not set)
-==================== LOCATION CONFIG END ======================
-
-==================== SERVER CONFIG END ======================
-
-==================== PARSING START ====================
-Line 0: [server] [{] 
-Line 1: [host] [127.0.0.1] 
-Line 2: [server_name] [test] 
-Line 3: [error_page] [400] [error/400.html] 
-Line 4: [error_page] [403] [error/403.html] 
-Line 5: [error_page] [414] [error/414.html] 
-Line 6: [error_page] [404] [error/404.html] 
-Line 7: [error_page] [405] [error/405.html] 
-Line 8: [error_page] [413] [error/413.html] 
-Line 9: [error_page] [500] [error/500.html] 
-Line 10: [error_page] [502] [error/502.html] 
-Line 11: [error_page] [504] [error/504.html] 
-Line 12: [error_page] [505] [error/505.html] 
-Line 13: [client_max_body_size] [10000000] 
-Line 14: [root] [www/default/] 
-Line 15: [index] [in.html] [index.html] 
-Line 16: [location] [/cgi-bin] [{] 
-Line 17: [root] [www/scripts/] 
-Line 18: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
-Line 19: [allow_methods] [GET] [POST] [PUT] 
-Line 20: [cgi_ext] [.php] [.py] [.sh] [.bla] 
-Line 21: [}] 
-Line 22: 
-Line 23: [location] [/autoindex] [{] 
-Line 24: [root] [www/autoindex/] 
-Line 25: [autoindex] [on] 
-Line 26: [allow_methods] [GET] [POST] [PUT] 
-Line 27: [index] [index.html] 
-Line 28: [}] 
-Line 29: [location] [/ret] [{] 
-Line 30: [root] [www/ret/] 
-Line 31: [autoindex] [on] 
-Line 32: [allow_methods] [GET] 
-Line 33: [index] [index.html] 
-Line 34: [return] [301] [return.html] 
-Line 35: [}] 
-Line 36: [location] [/test] [{] 
-Line 37: [root] [www/test/] 
-Line 38: [autoindex] [off] 
-Line 39: [allow_methods] [GET] [POST] [PUT] 
-Line 40: [index] [swag.html] 
-Line 41: [client_max_body_size] [1] 
-Line 42: [}] 
-Line 43: [location] [/database] [{] 
-Line 44: [root] [www/database/] 
-Line 45: [autoindex] [on] 
-Line 46: [allow_methods] [GET] [POST] [PUT] 
-Line 47: [index] [index.html] [return.html] 
-Line 48: [}] 
-Line 49: [}] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [server] [{] 
-Line 1: [host] [127.0.0.1] 
-Line 2: [server_name] [test] 
-Line 3: [error_page] [400] [error/400.html] 
-Line 4: [error_page] [403] [error/403.html] 
-Line 5: [error_page] [414] [error/414.html] 
-Line 6: [error_page] [404] [error/404.html] 
-Line 7: [error_page] [405] [error/405.html] 
-Line 8: [error_page] [413] [error/413.html] 
-Line 9: [error_page] [500] [error/500.html] 
-Line 10: [error_page] [502] [error/502.html] 
-Line 11: [error_page] [504] [error/504.html] 
-Line 12: [error_page] [505] [error/505.html] 
-Line 13: [client_max_body_size] [10000000] 
-Line 14: [root] [www/default/] 
-Line 15: [index] [in.html] [index.html] 
-Line 16: [location] [/cgi-bin] [{] 
-Line 17: [root] [www/scripts/] 
-Line 18: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
-Line 19: [allow_methods] [GET] [POST] [PUT] 
-Line 20: [cgi_ext] [.php] [.py] [.sh] [.bla] 
-Line 21: [}] 
-Line 22: 
-Line 23: [location] [/autoindex] [{] 
-Line 24: [root] [www/autoindex/] 
-Line 25: [autoindex] [on] 
-Line 26: [allow_methods] [GET] [POST] [PUT] 
-Line 27: [index] [index.html] 
-Line 28: [}] 
-Line 29: [location] [/ret] [{] 
-Line 30: [root] [www/ret/] 
-Line 31: [autoindex] [on] 
-Line 32: [allow_methods] [GET] 
-Line 33: [index] [index.html] 
-Line 34: [return] [301] [return.html] 
-Line 35: [}] 
-Line 36: [location] [/test] [{] 
-Line 37: [root] [www/test/] 
-Line 38: [autoindex] [off] 
-Line 39: [allow_methods] [GET] [POST] [PUT] 
-Line 40: [index] [swag.html] 
-Line 41: [client_max_body_size] [1] 
-Line 42: [}] 
-Line 43: [location] [/database] [{] 
-Line 44: [root] [www/database/] 
-Line 45: [autoindex] [on] 
-Line 46: [allow_methods] [GET] [POST] [PUT] 
-Line 47: [index] [index.html] [return.html] 
-Line 48: [}] 
-Line 49: [}] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [server] [{] 
-Line 1: [host] [127.0.0.1] 
-Line 2: [server_name] [test] 
-Line 3: [error_page] [400] [error/400.html] 
-Line 4: [error_page] [403] [error/403.html] 
-Line 5: [error_page] [414] [error/414.html] 
-Line 6: [error_page] [404] [error/404.html] 
-Line 7: [error_page] [405] [error/405.html] 
-Line 8: [error_page] [413] [error/413.html] 
-Line 9: [error_page] [500] [error/500.html] 
-Line 10: [error_page] [502] [error/502.html] 
-Line 11: [error_page] [504] [error/504.html] 
-Line 12: [error_page] [505] [error/505.html] 
-Line 13: [client_max_body_size] [10000000] 
-Line 14: [root] [www/default/] 
-Line 15: [index] [in.html] [index.html] 
-Line 16: [location] [/cgi-bin] [{] 
-Line 17: [root] [www/scripts/] 
-Line 18: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
-Line 19: [allow_methods] [GET] [POST] [PUT] 
-Line 20: [cgi_ext] [.php] [.py] [.sh] [.bla] 
-Line 21: [}] 
-Line 22: 
-Line 23: [location] [/autoindex] [{] 
-Line 24: [root] [www/autoindex/] 
-Line 25: [autoindex] [on] 
-Line 26: [allow_methods] [GET] [POST] [PUT] 
-Line 27: [index] [index.html] 
-Line 28: [}] 
-Line 29: [location] [/ret] [{] 
-Line 30: [root] [www/ret/] 
-Line 31: [autoindex] [on] 
-Line 32: [allow_methods] [GET] 
-Line 33: [index] [index.html] 
-Line 34: [return] [301] [return.html] 
-Line 35: [}] 
-Line 36: [location] [/test] [{] 
-Line 37: [root] [www/test/] 
-Line 38: [autoindex] [off] 
-Line 39: [allow_methods] [GET] [POST] [PUT] 
-Line 40: [index] [swag.html] 
-Line 41: [client_max_body_size] [1] 
-Line 42: [}] 
-Line 43: [location] [/database] [{] 
-Line 44: [root] [www/database/] 
-Line 45: [autoindex] [on] 
-Line 46: [allow_methods] [GET] [POST] [PUT] 
-Line 47: [index] [index.html] [return.html] 
-Line 48: [}] 
-Line 49: [}] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [server] [{] 
-Line 1: [host] [127.0.0.1] 
-Line 2: [server_name] [test] 
-Line 3: [error_page] [400] [error/400.html] 
-Line 4: [error_page] [403] [error/403.html] 
-Line 5: [error_page] [414] [error/414.html] 
-Line 6: [error_page] [404] [error/404.html] 
-Line 7: [error_page] [405] [error/405.html] 
-Line 8: [error_page] [413] [error/413.html] 
-Line 9: [error_page] [500] [error/500.html] 
-Line 10: [error_page] [502] [error/502.html] 
-Line 11: [error_page] [504] [error/504.html] 
-Line 12: [error_page] [505] [error/505.html] 
-Line 13: [client_max_body_size] [10000000] 
-Line 14: [root] [www/default/] 
-Line 15: [index] [in.html] [index.html] 
-Line 16: [location] [/cgi-bin] [{] 
-Line 17: [root] [www/scripts/] 
-Line 18: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
-Line 19: [allow_methods] [GET] [POST] [PUT] 
-Line 20: [cgi_ext] [.php] [.py] [.sh] [.bla] 
-Line 21: [}] 
-Line 22: 
-Line 23: [location] [/autoindex] [{] 
-Line 24: [root] [www/autoindex/] 
-Line 25: [autoindex] [on] 
-Line 26: [allow_methods] [GET] [POST] [PUT] 
-Line 27: [index] [index.html] 
-Line 28: [}] 
-Line 29: [location] [/ret] [{] 
-Line 30: [root] [www/ret/] 
-Line 31: [autoindex] [on] 
-Line 32: [allow_methods] [GET] 
-Line 33: [index] [index.html] 
-Line 34: [return] [301] [return.html] 
-Line 35: [}] 
-Line 36: [location] [/test] [{] 
-Line 37: [root] [www/test/] 
-Line 38: [autoindex] [off] 
-Line 39: [allow_methods] [GET] [POST] [PUT] 
-Line 40: [index] [swag.html] 
-Line 41: [client_max_body_size] [1] 
-Line 42: [}] 
-Line 43: [location] [/database] [{] 
-Line 44: [root] [www/database/] 
-Line 45: [autoindex] [on] 
-Line 46: [allow_methods] [GET] [POST] [PUT] 
-Line 47: [index] [index.html] [return.html] 
-Line 48: [}] 
-Line 49: [}] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [server] [{] 
-Line 1: [host] [127.0.0.1] 
-Line 2: [server_name] [test] 
-Line 3: [error_page] [400] [error/400.html] 
-Line 4: [error_page] [403] [error/403.html] 
-Line 5: [error_page] [414] [error/414.html] 
-Line 6: [error_page] [404] [error/404.html] 
-Line 7: [error_page] [405] [error/405.html] 
-Line 8: [error_page] [413] [error/413.html] 
-Line 9: [error_page] [500] [error/500.html] 
-Line 10: [error_page] [502] [error/502.html] 
-Line 11: [error_page] [504] [error/504.html] 
-Line 12: [error_page] [505] [error/505.html] 
-Line 13: [client_max_body_size] [10000000] 
-Line 14: [root] [www/default/] 
-Line 15: [index] [in.html] [index.html] 
-Line 16: [location] [/cgi-bin] [{] 
-Line 17: [root] [www/scripts/] 
-Line 18: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
-Line 19: [allow_methods] [GET] [POST] [PUT] 
-Line 20: [cgi_ext] [.php] [.py] [.sh] [.bla] 
-Line 21: [}] 
-Line 22: 
-Line 23: [location] [/autoindex] [{] 
-Line 24: [root] [www/autoindex/] 
-Line 25: [autoindex] [on] 
-Line 26: [allow_methods] [GET] [POST] [PUT] 
-Line 27: [index] [index.html] 
-Line 28: [}] 
-Line 29: [location] [/ret] [{] 
-Line 30: [root] [www/ret/] 
-Line 31: [autoindex] [on] 
-Line 32: [allow_methods] [GET] 
-Line 33: [index] [index.html] 
-Line 34: [return] [301] [return.html] 
-Line 35: [}] 
-Line 36: [location] [/test] [{] 
-Line 37: [root] [www/test/] 
-Line 38: [autoindex] [off] 
-Line 39: [allow_methods] [GET] [POST] [PUT] 
-Line 40: [index] [swag.html] 
-Line 41: [client_max_body_size] [1] 
-Line 42: [}] 
-Line 43: [location] [/database] [{] 
-Line 44: [root] [www/database/] 
-Line 45: [autoindex] [on] 
-Line 46: [allow_methods] [GET] [POST] [PUT] 
-Line 47: [index] [index.html] [return.html] 
-Line 48: [}] 
-Line 49: [}] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [server] [{] 
-Line 1: [host] [127.0.0.1] 
-Line 2: [server_name] [test] 
-Line 3: [error_page] [400] [error/400.html] 
-Line 4: [error_page] [403] [error/403.html] 
-Line 5: [error_page] [414] [error/414.html] 
-Line 6: [error_page] [404] [error/404.html] 
-Line 7: [error_page] [405] [error/405.html] 
-Line 8: [error_page] [413] [error/413.html] 
-Line 9: [error_page] [500] [error/500.html] 
-Line 10: [error_page] [502] [error/502.html] 
-Line 11: [error_page] [504] [error/504.html] 
-Line 12: [error_page] [505] [error/505.html] 
-Line 13: [client_max_body_size] [10000000] 
-Line 14: [root] [www/default/] 
-Line 15: [index] [in.html] [index.html] 
-Line 16: [location] [/cgi-bin] [{] 
-Line 17: [root] [www/scripts/] 
-Line 18: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
-Line 19: [allow_methods] [GET] [POST] [PUT] 
-Line 20: [cgi_ext] [.php] [.py] [.sh] [.bla] 
-Line 21: [}] 
-Line 22: 
-Line 23: [location] [/autoindex] [{] 
-Line 24: [root] [www/autoindex/] 
-Line 25: [autoindex] [on] 
-Line 26: [allow_methods] [GET] [POST] [PUT] 
-Line 27: [index] [index.html] 
-Line 28: [}] 
-Line 29: [location] [/ret] [{] 
-Line 30: [root] [www/ret/] 
-Line 31: [autoindex] [on] 
-Line 32: [allow_methods] [GET] 
-Line 33: [index] [index.html] 
-Line 34: [return] [301] [return.html] 
-Line 35: [}] 
-Line 36: [location] [/test] [{] 
-Line 37: [root] [www/test/] 
-Line 38: [autoindex] [off] 
-Line 39: [allow_methods] [GET] [POST] [PUT] 
-Line 40: [index] [swag.html] 
-Line 41: [client_max_body_size] [1] 
-Line 42: [}] 
-Line 43: [location] [/database] [{] 
-Line 44: [root] [www/database/] 
-Line 45: [autoindex] [on] 
-Line 46: [allow_methods] [GET] [POST] [PUT] 
-Line 47: [index] [index.html] [return.html] 
-Line 48: [}] 
-Line 49: [}] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [server] [{] 
-Line 1: [host] [127.0.0.1] 
-Line 2: [server_name] [test] 
-Line 3: [error_page] [400] [error/400.html] 
-Line 4: [error_page] [403] [error/403.html] 
-Line 5: [error_page] [414] [error/414.html] 
-Line 6: [error_page] [404] [error/404.html] 
-Line 7: [error_page] [405] [error/405.html] 
-Line 8: [error_page] [413] [error/413.html] 
-Line 9: [error_page] [500] [error/500.html] 
-Line 10: [error_page] [502] [error/502.html] 
-Line 11: [error_page] [504] [error/504.html] 
-Line 12: [error_page] [505] [error/505.html] 
-Line 13: [client_max_body_size] [10000000] 
-Line 14: [root] [www/default/] 
-Line 15: [index] [in.html] [index.html] 
-Line 16: [location] [/cgi-bin] [{] 
-Line 17: [root] [www/scripts/] 
-Line 18: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
-Line 19: [allow_methods] [GET] [POST] [PUT] 
-Line 20: [cgi_ext] [.php] [.py] [.sh] [.bla] 
-Line 21: [}] 
-Line 22: 
-Line 23: [location] [/autoindex] [{] 
-Line 24: [root] [www/autoindex/] 
-Line 25: [autoindex] [on] 
-Line 26: [allow_methods] [GET] [POST] [PUT] 
-Line 27: [index] [index.html] 
-Line 28: [}] 
-Line 29: [location] [/ret] [{] 
-Line 30: [root] [www/ret/] 
-Line 31: [autoindex] [on] 
-Line 32: [allow_methods] [GET] 
-Line 33: [index] [index.html] 
-Line 34: [return] [301] [return.html] 
-Line 35: [}] 
-Line 36: [location] [/test] [{] 
-Line 37: [root] [www/test/] 
-Line 38: [autoindex] [off] 
-Line 39: [allow_methods] [GET] [POST] [PUT] 
-Line 40: [index] [swag.html] 
-Line 41: [client_max_body_size] [1] 
-Line 42: [}] 
-Line 43: [location] [/database] [{] 
-Line 44: [root] [www/database/] 
-Line 45: [autoindex] [on] 
-Line 46: [allow_methods] [GET] [POST] [PUT] 
-Line 47: [index] [index.html] [return.html] 
-Line 48: [}] 
-Line 49: [}] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [server] [{] 
-Line 1: [host] [127.0.0.1] 
-Line 2: [server_name] [test] 
-Line 3: [error_page] [400] [error/400.html] 
-Line 4: [error_page] [403] [error/403.html] 
-Line 5: [error_page] [414] [error/414.html] 
-Line 6: [error_page] [404] [error/404.html] 
-Line 7: [error_page] [405] [error/405.html] 
-Line 8: [error_page] [413] [error/413.html] 
-Line 9: [error_page] [500] [error/500.html] 
-Line 10: [error_page] [502] [error/502.html] 
-Line 11: [error_page] [504] [error/504.html] 
-Line 12: [error_page] [505] [error/505.html] 
-Line 13: [client_max_body_size] [10000000] 
-Line 14: [root] [www/default/] 
-Line 15: [index] [in.html] [index.html] 
-Line 16: [location] [/cgi-bin] [{] 
-Line 17: [root] [www/scripts/] 
-Line 18: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
-Line 19: [allow_methods] [GET] [POST] [PUT] 
-Line 20: [cgi_ext] [.php] [.py] [.sh] [.bla] 
-Line 21: [}] 
-Line 22: 
-Line 23: [location] [/autoindex] [{] 
-Line 24: [root] [www/autoindex/] 
-Line 25: [autoindex] [on] 
-Line 26: [allow_methods] [GET] [POST] [PUT] 
-Line 27: [index] [index.html] 
-Line 28: [}] 
-Line 29: [location] [/ret] [{] 
-Line 30: [root] [www/ret/] 
-Line 31: [autoindex] [on] 
-Line 32: [allow_methods] [GET] 
-Line 33: [index] [index.html] 
-Line 34: [return] [301] [return.html] 
-Line 35: [}] 
-Line 36: [location] [/test] [{] 
-Line 37: [root] [www/test/] 
-Line 38: [autoindex] [off] 
-Line 39: [allow_methods] [GET] [POST] [PUT] 
-Line 40: [index] [swag.html] 
-Line 41: [client_max_body_size] [1] 
-Line 42: [}] 
-Line 43: [location] [/database] [{] 
-Line 44: [root] [www/database/] 
-Line 45: [autoindex] [on] 
-Line 46: [allow_methods] [GET] [POST] [PUT] 
-Line 47: [index] [index.html] [return.html] 
-Line 48: [}] 
-Line 49: [}] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [server] [{] 
-Line 1: [host] [127.0.0.1] 
-Line 2: [server_name] [test] 
-Line 3: [error_page] [400] [error/400.html] 
-Line 4: [error_page] [403] [error/403.html] 
-Line 5: [error_page] [414] [error/414.html] 
-Line 6: [error_page] [404] [error/404.html] 
-Line 7: [error_page] [405] [error/405.html] 
-Line 8: [error_page] [413] [error/413.html] 
-Line 9: [error_page] [500] [error/500.html] 
-Line 10: [error_page] [502] [error/502.html] 
-Line 11: [error_page] [504] [error/504.html] 
-Line 12: [error_page] [505] [error/505.html] 
-Line 13: [client_max_body_size] [10000000] 
-Line 14: [root] [www/default/] 
-Line 15: [index] [in.html] [index.html] 
-Line 16: [location] [/cgi-bin] [{] 
-Line 17: [root] [www/scripts/] 
-Line 18: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
-Line 19: [allow_methods] [GET] [POST] [PUT] 
-Line 20: [cgi_ext] [.php] [.py] [.sh] [.bla] 
-Line 21: [}] 
-Line 22: 
-Line 23: [location] [/autoindex] [{] 
-Line 24: [root] [www/autoindex/] 
-Line 25: [autoindex] [on] 
-Line 26: [allow_methods] [GET] [POST] [PUT] 
-Line 27: [index] [index.html] 
-Line 28: [}] 
-Line 29: [location] [/ret] [{] 
-Line 30: [root] [www/ret/] 
-Line 31: [autoindex] [on] 
-Line 32: [allow_methods] [GET] 
-Line 33: [index] [index.html] 
-Line 34: [return] [301] [return.html] 
-Line 35: [}] 
-Line 36: [location] [/test] [{] 
-Line 37: [root] [www/test/] 
-Line 38: [autoindex] [off] 
-Line 39: [allow_methods] [GET] [POST] [PUT] 
-Line 40: [index] [swag.html] 
-Line 41: [client_max_body_size] [1] 
-Line 42: [}] 
-Line 43: [location] [/database] [{] 
-Line 44: [root] [www/database/] 
-Line 45: [autoindex] [on] 
-Line 46: [allow_methods] [GET] [POST] [PUT] 
-Line 47: [index] [index.html] [return.html] 
-Line 48: [}] 
-Line 49: [}] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [server] [{] 
-Line 1: [host] [127.0.0.1] 
-Line 2: [server_name] [test] 
-Line 3: [error_page] [400] [error/400.html] 
-Line 4: [error_page] [403] [error/403.html] 
-Line 5: [error_page] [414] [error/414.html] 
-Line 6: [error_page] [404] [error/404.html] 
-Line 7: [error_page] [405] [error/405.html] 
-Line 8: [error_page] [413] [error/413.html] 
-Line 9: [error_page] [500] [error/500.html] 
-Line 10: [error_page] [502] [error/502.html] 
-Line 11: [error_page] [504] [error/504.html] 
-Line 12: [error_page] [505] [error/505.html] 
-Line 13: [client_max_body_size] [10000000] 
-Line 14: [root] [www/default/] 
-Line 15: [index] [in.html] [index.html] 
-Line 16: [location] [/cgi-bin] [{] 
-Line 17: [root] [www/scripts/] 
-Line 18: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
-Line 19: [allow_methods] [GET] [POST] [PUT] 
-Line 20: [cgi_ext] [.php] [.py] [.sh] [.bla] 
-Line 21: [}] 
-Line 22: 
-Line 23: [location] [/autoindex] [{] 
-Line 24: [root] [www/autoindex/] 
-Line 25: [autoindex] [on] 
-Line 26: [allow_methods] [GET] [POST] [PUT] 
-Line 27: [index] [index.html] 
-Line 28: [}] 
-Line 29: [location] [/ret] [{] 
-Line 30: [root] [www/ret/] 
-Line 31: [autoindex] [on] 
-Line 32: [allow_methods] [GET] 
-Line 33: [index] [index.html] 
-Line 34: [return] [301] [return.html] 
-Line 35: [}] 
-Line 36: [location] [/test] [{] 
-Line 37: [root] [www/test/] 
-Line 38: [autoindex] [off] 
-Line 39: [allow_methods] [GET] [POST] [PUT] 
-Line 40: [index] [swag.html] 
-Line 41: [client_max_body_size] [1] 
-Line 42: [}] 
-Line 43: [location] [/database] [{] 
-Line 44: [root] [www/database/] 
-Line 45: [autoindex] [on] 
-Line 46: [allow_methods] [GET] [POST] [PUT] 
-Line 47: [index] [index.html] [return.html] 
-Line 48: [}] 
-Line 49: [}] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [server] [{] 
-Line 1: [host] [127.0.0.1] 
-Line 2: [server_name] [test] 
-Line 3: [error_page] [400] [error/400.html] 
-Line 4: [error_page] [403] [error/403.html] 
-Line 5: [error_page] [414] [error/414.html] 
-Line 6: [error_page] [404] [error/404.html] 
-Line 7: [error_page] [405] [error/405.html] 
-Line 8: [error_page] [413] [error/413.html] 
-Line 9: [error_page] [500] [error/500.html] 
-Line 10: [error_page] [502] [error/502.html] 
-Line 11: [error_page] [504] [error/504.html] 
-Line 12: [error_page] [505] [error/505.html] 
-Line 13: [client_max_body_size] [10000000] 
-Line 14: [root] [www/default/] 
-Line 15: [index] [in.html] [index.html] 
-Line 16: [location] [/cgi-bin] [{] 
-Line 17: [root] [www/scripts/] 
-Line 18: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
-Line 19: [allow_methods] [GET] [POST] [PUT] 
-Line 20: [cgi_ext] [.php] [.py] [.sh] [.bla] 
-Line 21: [}] 
-Line 22: 
-Line 23: [location] [/autoindex] [{] 
-Line 24: [root] [www/autoindex/] 
-Line 25: [autoindex] [on] 
-Line 26: [allow_methods] [GET] [POST] [PUT] 
-Line 27: [index] [index.html] 
-Line 28: [}] 
-Line 29: [location] [/ret] [{] 
-Line 30: [root] [www/ret/] 
-Line 31: [autoindex] [on] 
-Line 32: [allow_methods] [GET] 
-Line 33: [index] [index.html] 
-Line 34: [return] [301] [return.html] 
-Line 35: [}] 
-Line 36: [location] [/test] [{] 
-Line 37: [root] [www/test/] 
-Line 38: [autoindex] [off] 
-Line 39: [allow_methods] [GET] [POST] [PUT] 
-Line 40: [index] [swag.html] 
-Line 41: [client_max_body_size] [1] 
-Line 42: [}] 
-Line 43: [location] [/database] [{] 
-Line 44: [root] [www/database/] 
-Line 45: [autoindex] [on] 
-Line 46: [allow_methods] [GET] [POST] [PUT] 
-Line 47: [index] [index.html] [return.html] 
-Line 48: [}] 
-Line 49: [}] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [server] [{] 
-Line 1: [listen] [8083] 
-Line 2: [host] [127.0.0.1] 
-Line 3: [server_name] [test] 
-Line 4: [error_page] [400] [error/400.html] 
-Line 5: [error_page] [403] [error/403.html] 
-Line 6: [error_page] [414] [error/414.html] 
-Line 7: [error_page] [404] [error/404.html] 
-Line 8: [error_page] [405] [error/405.html] 
-Line 9: [error_page] [413] [error/413.html] 
-Line 10: [error_page] [500] [error/500.html] 
-Line 11: [error_page] [502] [error/502.html] 
-Line 12: [error_page] [504] [error/504.html] 
-Line 13: [error_page] [505] [error/505.html] 
-Line 14: [client_max_body_size] [10000000] 
-Line 15: [root] [www/default/] 
-Line 16: [index] [in.html] [index.html] 
-Line 17: [location] [/cgi-bin] [{] 
-Line 18: [root] [www/scripts/] 
-Line 19: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
-Line 20: [allow_methods] [GET] [POST] [PUT] 
-Line 21: [cgi_ext] [.php] [.py] [.sh] [.bla] 
-Line 22: [}] 
-Line 23: 
-Line 24: [location] [/autoindex] [{] 
-Line 25: [root] [www/autoindex/] 
-Line 26: [autoindex] [on] 
-Line 27: [allow_methods] [GET] [POST] [PUT] 
-Line 28: [index] [index.html] 
-Line 29: [}] 
-Line 30: [location] [/ret] [{] 
-Line 31: [root] [www/ret/] 
-Line 32: [autoindex] [on] 
-Line 33: [allow_methods] [GET] 
-Line 34: [index] [index.html] 
-Line 35: [return] [301] [return.html] 
-Line 36: [}] 
-Line 37: [location] [/test] [{] 
-Line 38: [root] [www/test/] 
-Line 39: [autoindex] [off] 
-Line 40: [allow_methods] [GET] [POST] [PUT] 
-Line 41: [index] [swag.html] 
-Line 42: [client_max_body_size] [1] 
-Line 43: [}] 
-Line 44: [location] [/database] [{] 
-Line 45: [root] [www/database/] 
-Line 46: [autoindex] [on] 
-Line 47: [allow_methods] [GET] [POST] [PUT] 
-Line 48: [index] [index.html] [return.html] 
-Line 49: [}] 
-Line 50: [}] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [root] [www/scripts/] 
-Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
-Line 2: [allow_methods] [GET] [POST] [PUT] 
-Line 3: [cgi_ext] [.php] [.py] [.sh] [.bla] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [root] [www/autoindex/] 
-Line 1: [autoindex] [on] 
-Line 2: [allow_methods] [GET] [POST] [PUT] 
-Line 3: [index] [index.html] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [root] [www/ret/] 
-Line 1: [autoindex] [on] 
-Line 2: [allow_methods] [GET] 
-Line 3: [index] [index.html] 
-Line 4: [return] [301] [return.html] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [root] [www/test/] 
-Line 1: [autoindex] [off] 
-Line 2: [allow_methods] [GET] [POST] [PUT] 
-Line 3: [index] [swag.html] 
-Line 4: [client_max_body_size] [1] 
-==================== PARSING END ======================
-
-==================== PARSING START ====================
-Line 0: [root] [www/database/] 
-Line 1: [autoindex] [on] 
-Line 2: [allow_methods] [GET] [POST] [PUT] 
-Line 3: [index] [index.html] [return.html] 
-==================== PARSING END ======================
-
-==================== SERVER CONFIG START ====================
-🌍 host: 127.0.0.1 (localhost)
-🔌 ports: 8083
+🔌 ports: 8083, 8082
 📂 root: www/default/
 🏷️ server_name: test
 ⚠️ error_pages: 
@@ -3397,55 +1256,56 @@ Line 3: [index] [index.html] [return.html]
 ==================== PARSING START ====================
 Line 0: [server] [{] 
 Line 1: [listen] [8083] 
-Line 2: [host] [127.0.0.1] 
-Line 3: [server_name] [test] 
-Line 4: [error_page] [400] [error/400.html] 
-Line 5: [error_page] [403] [error/403.html] 
-Line 6: [error_page] [414] [error/414.html] 
-Line 7: [error_page] [404] [error/404.html] 
-Line 8: [error_page] [405] [error/405.html] 
-Line 9: [error_page] [413] [error/413.html] 
-Line 10: [error_page] [500] [error/500.html] 
-Line 11: [error_page] [502] [error/502.html] 
-Line 12: [error_page] [504] [error/504.html] 
-Line 13: [error_page] [505] [error/505.html] 
-Line 14: [client_max_body_size] [10000000] 
-Line 15: [root] [www/default/] 
-Line 16: [index] [in.html] [index.html] 
-Line 17: [location] [/cgi-bin] [{] 
-Line 18: [root] [www/scripts/] 
-Line 19: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
-Line 20: [allow_methods] [GET] [POST] [PUT] 
-Line 21: [cgi_ext] [.php] [.py] [.sh] [.bla] 
-Line 22: [}] 
-Line 23: 
-Line 24: [location] [/autoindex] [{] 
-Line 25: [root] [www/autoindex/] 
-Line 26: [autoindex] [on] 
-Line 27: [allow_methods] [GET] [POST] [PUT] 
-Line 28: [index] [index.html] 
-Line 29: [}] 
-Line 30: [location] [/ret] [{] 
-Line 31: [root] [www/ret/] 
-Line 32: [autoindex] [on] 
-Line 33: [allow_methods] [GET] 
-Line 34: [index] [index.html] 
-Line 35: [return] [301] [return.html] 
-Line 36: [}] 
-Line 37: [location] [/test] [{] 
-Line 38: [root] [www/test/] 
-Line 39: [autoindex] [off] 
-Line 40: [allow_methods] [GET] [POST] [PUT] 
-Line 41: [index] [swag.html] 
-Line 42: [client_max_body_size] [1] 
-Line 43: [}] 
-Line 44: [location] [/database] [{] 
-Line 45: [root] [www/database/] 
-Line 46: [autoindex] [on] 
-Line 47: [allow_methods] [GET] [POST] [PUT] 
-Line 48: [index] [index.html] [return.html] 
-Line 49: [}] 
+Line 2: [listen] [8082] 
+Line 3: [host] [127.0.0.1] 
+Line 4: [server_name] [test] 
+Line 5: [error_page] [400] [error/400.html] 
+Line 6: [error_page] [403] [error/403.html] 
+Line 7: [error_page] [414] [error/414.html] 
+Line 8: [error_page] [404] [error/404.html] 
+Line 9: [error_page] [405] [error/405.html] 
+Line 10: [error_page] [413] [error/413.html] 
+Line 11: [error_page] [500] [error/500.html] 
+Line 12: [error_page] [502] [error/502.html] 
+Line 13: [error_page] [504] [error/504.html] 
+Line 14: [error_page] [505] [error/505.html] 
+Line 15: [client_max_body_size] [10000000] 
+Line 16: [root] [www/default/] 
+Line 17: [index] [in.html] [index.html] 
+Line 18: [location] [/cgi-bin] [{] 
+Line 19: [root] [www/scripts/] 
+Line 20: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 21: [allow_methods] [GET] [POST] [PUT] 
+Line 22: [cgi_ext] [.php] [.py] [.sh] [.bla] 
+Line 23: [}] 
+Line 24: 
+Line 25: [location] [/autoindex] [{] 
+Line 26: [root] [www/autoindex/] 
+Line 27: [autoindex] [on] 
+Line 28: [allow_methods] [GET] [POST] [PUT] 
+Line 29: [index] [index.html] 
+Line 30: [}] 
+Line 31: [location] [/ret] [{] 
+Line 32: [root] [www/ret/] 
+Line 33: [autoindex] [on] 
+Line 34: [allow_methods] [GET] 
+Line 35: [index] [index.html] 
+Line 36: [return] [301] [return.html] 
+Line 37: [}] 
+Line 38: [location] [/test] [{] 
+Line 39: [root] [www/test/] 
+Line 40: [autoindex] [off] 
+Line 41: [allow_methods] [GET] [POST] [PUT] 
+Line 42: [index] [swag.html] 
+Line 43: [client_max_body_size] [1] 
+Line 44: [}] 
+Line 45: [location] [/database] [{] 
+Line 46: [root] [www/database/] 
+Line 47: [autoindex] [on] 
+Line 48: [allow_methods] [GET] [POST] [PUT] 
+Line 49: [index] [index.html] [return.html] 
 Line 50: [}] 
+Line 51: [}] 
 ==================== PARSING END ======================
 
 ==================== PARSING START ====================
@@ -3487,7 +1347,7 @@ Line 3: [index] [index.html] [return.html]
 
 ==================== SERVER CONFIG START ====================
 🌍 host: 127.0.0.1 (localhost)
-🔌 ports: 8083
+🔌 ports: 8083, 8082
 📂 root: www/default/
 🏷️ server_name: test
 ⚠️ error_pages: 
@@ -3559,75 +1419,60 @@ Line 3: [index] [index.html] [return.html]
 ==================== LOCATION CONFIG END ======================
 
 ==================== SERVER CONFIG END ======================
-
-==================== PARSING START ====================
-Line 0: [GET] [/] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Ubuntu;] [Linux] [x86_64;] [rv:144.0)] [Gecko/20100101] [Firefox/144.0] 
-Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
-Line 4: [Accept-Language:] [en-US,en;q=0.5] 
-Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
-Line 6: [Connection:] [keep-alive] 
-Line 7: [Upgrade-Insecure-Requests:] [1] 
-Line 8: [Sec-Fetch-Dest:] [document] 
-Line 9: [Sec-Fetch-Mode:] [navigate] 
-Line 10: [Sec-Fetch-Site:] [none] 
-Line 11: [Sec-Fetch-User:] [?1] 
-Line 12: [Priority:] [u=0,] [i] 
-==================== PARSING END ======================
 
 ==================== PARSING START ====================
 Line 0: [server] [{] 
 Line 1: [listen] [8083] 
-Line 2: [host] [127.0.0.1] 
-Line 3: [server_name] [test] 
-Line 4: [error_page] [400] [error/400.html] 
-Line 5: [error_page] [403] [error/403.html] 
-Line 6: [error_page] [414] [error/414.html] 
-Line 7: [error_page] [404] [error/404.html] 
-Line 8: [error_page] [405] [error/405.html] 
-Line 9: [error_page] [413] [error/413.html] 
-Line 10: [error_page] [500] [error/500.html] 
-Line 11: [error_page] [502] [error/502.html] 
-Line 12: [error_page] [504] [error/504.html] 
-Line 13: [error_page] [505] [error/505.html] 
-Line 14: [client_max_body_size] [10000000] 
-Line 15: [root] [www/default/] 
-Line 16: [index] [in.html] [index.html] 
-Line 17: [location] [/cgi-bin] [{] 
-Line 18: [root] [www/scripts/] 
-Line 19: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
-Line 20: [allow_methods] [GET] [POST] [PUT] 
-Line 21: [cgi_ext] [.php] [.py] [.sh] [.bla] 
-Line 22: [}] 
-Line 23: 
-Line 24: [location] [/autoindex] [{] 
-Line 25: [root] [www/autoindex/] 
-Line 26: [autoindex] [on] 
-Line 27: [allow_methods] [GET] [POST] [PUT] 
-Line 28: [index] [index.html] 
-Line 29: [}] 
-Line 30: [location] [/ret] [{] 
-Line 31: [root] [www/ret/] 
-Line 32: [autoindex] [on] 
-Line 33: [allow_methods] [GET] 
-Line 34: [index] [index.html] 
-Line 35: [return] [301] [return.html] 
-Line 36: [}] 
-Line 37: [location] [/test] [{] 
-Line 38: [root] [www/test/] 
-Line 39: [autoindex] [off] 
-Line 40: [allow_methods] [GET] [POST] [PUT] 
-Line 41: [index] [swag.html] 
-Line 42: [client_max_body_size] [1] 
-Line 43: [}] 
-Line 44: [location] [/database] [{] 
-Line 45: [root] [www/database/] 
-Line 46: [autoindex] [on] 
-Line 47: [allow_methods] [GET] [POST] [PUT] 
-Line 48: [index] [index.html] [return.html] 
-Line 49: [}] 
+Line 2: [listen] [8082] 
+Line 3: [host] [127.0.0.1] 
+Line 4: [server_name] [test] 
+Line 5: [error_page] [400] [error/400.html] 
+Line 6: [error_page] [403] [error/403.html] 
+Line 7: [error_page] [414] [error/414.html] 
+Line 8: [error_page] [404] [error/404.html] 
+Line 9: [error_page] [405] [error/405.html] 
+Line 10: [error_page] [413] [error/413.html] 
+Line 11: [error_page] [500] [error/500.html] 
+Line 12: [error_page] [502] [error/502.html] 
+Line 13: [error_page] [504] [error/504.html] 
+Line 14: [error_page] [505] [error/505.html] 
+Line 15: [client_max_body_size] [10000000] 
+Line 16: [root] [www/default/] 
+Line 17: [index] [in.html] [index.html] 
+Line 18: [location] [/cgi-bin] [{] 
+Line 19: [root] [www/scripts/] 
+Line 20: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 21: [allow_methods] [GET] [POST] [PUT] 
+Line 22: [cgi_ext] [.php] [.py] [.sh] [.bla] 
+Line 23: [}] 
+Line 24: 
+Line 25: [location] [/autoindex] [{] 
+Line 26: [root] [www/autoindex/] 
+Line 27: [autoindex] [on] 
+Line 28: [allow_methods] [GET] [POST] [PUT] 
+Line 29: [index] [index.html] 
+Line 30: [}] 
+Line 31: [location] [/ret] [{] 
+Line 32: [root] [www/ret/] 
+Line 33: [autoindex] [on] 
+Line 34: [allow_methods] [GET] 
+Line 35: [index] [index.html] 
+Line 36: [return] [301] [return.html] 
+Line 37: [}] 
+Line 38: [location] [/test] [{] 
+Line 39: [root] [www/test/] 
+Line 40: [autoindex] [off] 
+Line 41: [allow_methods] [GET] [POST] [PUT] 
+Line 42: [index] [swag.html] 
+Line 43: [client_max_body_size] [1] 
+Line 44: [}] 
+Line 45: [location] [/database] [{] 
+Line 46: [root] [www/database/] 
+Line 47: [autoindex] [on] 
+Line 48: [allow_methods] [GET] [POST] [PUT] 
+Line 49: [index] [index.html] [return.html] 
 Line 50: [}] 
+Line 51: [}] 
 ==================== PARSING END ======================
 
 ==================== PARSING START ====================
@@ -3669,7 +1514,7 @@ Line 3: [index] [index.html] [return.html]
 
 ==================== SERVER CONFIG START ====================
 🌍 host: 127.0.0.1 (localhost)
-🔌 ports: 8083
+🔌 ports: 8083, 8082
 📂 root: www/default/
 🏷️ server_name: test
 ⚠️ error_pages: 
@@ -3743,52 +1588,503 @@ Line 3: [index] [index.html] [return.html]
 ==================== SERVER CONFIG END ======================
 
 ==================== PARSING START ====================
-Line 0: [GET] [/cgi-bin/script.php] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Ubuntu;] [Linux] [x86_64;] [rv:144.0)] [Gecko/20100101] [Firefox/144.0] 
-Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
-Line 4: [Accept-Language:] [en-US,en;q=0.5] 
-Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
-Line 6: [Connection:] [keep-alive] 
-Line 7: [Upgrade-Insecure-Requests:] [1] 
-Line 8: [Sec-Fetch-Dest:] [document] 
-Line 9: [Sec-Fetch-Mode:] [navigate] 
-Line 10: [Sec-Fetch-Site:] [none] 
-Line 11: [Sec-Fetch-User:] [?1] 
-Line 12: [Priority:] [u=0,] [i] 
+Line 0: [server] [{] 
+Line 1: [listen] [8083] 
+Line 2: [listen] [8082] 
+Line 3: [host] [127.0.0.1] 
+Line 4: [server_name] [test] 
+Line 5: [error_page] [400] [error/400.html] 
+Line 6: [error_page] [403] [error/403.html] 
+Line 7: [error_page] [414] [error/414.html] 
+Line 8: [error_page] [404] [error/404.html] 
+Line 9: [error_page] [405] [error/405.html] 
+Line 10: [error_page] [413] [error/413.html] 
+Line 11: [error_page] [500] [error/500.html] 
+Line 12: [error_page] [502] [error/502.html] 
+Line 13: [error_page] [504] [error/504.html] 
+Line 14: [error_page] [505] [error/505.html] 
+Line 15: [client_max_body_size] [10000000] 
+Line 16: [root] [www/default/] 
+Line 17: [index] [in.html] [index.html] 
+Line 18: [location] [/cgi-bin] [{] 
+Line 19: [root] [www/scripts/] 
+Line 20: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 21: [allow_methods] [GET] [POST] [PUT] 
+Line 22: [cgi_ext] [.php] [.py] [.sh] [.bla] 
+Line 23: [}] 
+Line 24: 
+Line 25: [location] [/autoindex] [{] 
+Line 26: [root] [www/autoindex/] 
+Line 27: [autoindex] [on] 
+Line 28: [allow_methods] [GET] [POST] [PUT] 
+Line 29: [index] [index.html] 
+Line 30: [}] 
+Line 31: [location] [/ret] [{] 
+Line 32: [root] [www/ret/] 
+Line 33: [autoindex] [on] 
+Line 34: [allow_methods] [GET] 
+Line 35: [index] [index.html] 
+Line 36: [return] [301] [return.html] 
+Line 37: [}] 
+Line 38: [location] [/test] [{] 
+Line 39: [root] [www/test/] 
+Line 40: [autoindex] [off] 
+Line 41: [allow_methods] [GET] [POST] [PUT] 
+Line 42: [index] [swag.html] 
+Line 43: [client_max_body_size] [1] 
+Line 44: [}] 
+Line 45: [location] [/database] [{] 
+Line 46: [root] [www/database/] 
+Line 47: [autoindex] [on] 
+Line 48: [allow_methods] [GET] [POST] [PUT] 
+Line 49: [index] [index.html] [return.html] 
+Line 50: [}] 
+Line 51: [}] 
 ==================== PARSING END ======================
 
 ==================== PARSING START ====================
-Line 0: [GET] [/cgi-bin/files.php] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Ubuntu;] [Linux] [x86_64;] [rv:144.0)] [Gecko/20100101] [Firefox/144.0] 
-Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
-Line 4: [Accept-Language:] [en-US,en;q=0.5] 
-Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
-Line 6: [Connection:] [keep-alive] 
-Line 7: [Cookie:] [session_id=18973] 
-Line 8: [Upgrade-Insecure-Requests:] [1] 
-Line 9: [Sec-Fetch-Dest:] [document] 
-Line 10: [Sec-Fetch-Mode:] [navigate] 
-Line 11: [Sec-Fetch-Site:] [none] 
-Line 12: [Sec-Fetch-User:] [?1] 
-Line 13: [Priority:] [u=0,] [i] 
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [allow_methods] [GET] [POST] [PUT] 
+Line 3: [cgi_ext] [.php] [.py] [.sh] [.bla] 
 ==================== PARSING END ======================
 
 ==================== PARSING START ====================
-Line 0: [GET] [/cgi-bin/files.sh] [HTTP/1.1] 
-Line 1: [Host:] [localhost:8083] 
-Line 2: [User-Agent:] [Mozilla/5.0] [(X11;] [Ubuntu;] [Linux] [x86_64;] [rv:144.0)] [Gecko/20100101] [Firefox/144.0] 
-Line 3: [Accept:] [text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8] 
-Line 4: [Accept-Language:] [en-US,en;q=0.5] 
-Line 5: [Accept-Encoding:] [gzip,] [deflate,] [br,] [zstd] 
-Line 6: [Connection:] [keep-alive] 
-Line 7: [Cookie:] [session_id=18973] 
-Line 8: [Upgrade-Insecure-Requests:] [1] 
-Line 9: [Sec-Fetch-Dest:] [document] 
-Line 10: [Sec-Fetch-Mode:] [navigate] 
-Line 11: [Sec-Fetch-Site:] [none] 
-Line 12: [Sec-Fetch-User:] [?1] 
-Line 13: [Priority:] [u=0,] [i] 
+Line 0: [root] [www/autoindex/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [PUT] 
+Line 3: [index] [index.html] 
 ==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/ret/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] 
+Line 3: [index] [index.html] 
+Line 4: [return] [301] [return.html] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/test/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] [POST] [PUT] 
+Line 3: [index] [swag.html] 
+Line 4: [client_max_body_size] [1] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [PUT] 
+Line 3: [index] [index.html] [return.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083, 8082
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 10000000
+📦 max uri: 2147483647
+📑 indexes: in.html, index.html
+📍 locations: 
+   [/autoindex]
+==================== LOCATION CONFIG START ====================
+📂 root: www/autoindex/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [PUT] 
+📦 client_max_body_size: (not set)
+📑 indexes: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/cgi-bin]
+==================== CGI CONFIG START ====================
+📂 cgi_root: www/scripts/
+➡️ cgi_path: [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+📜 cgi_ext: [.php] [.py] [.sh] [.bla] 
+🧩 allow_methods: [GET] [POST] [PUT] 
+📦 client_max_body_size: (not set)
+==================== CGI CONFIG END ======================
+
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [PUT] 
+📦 client_max_body_size: (not set)
+📑 indexes: index.html, return.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/ret]
+==================== LOCATION CONFIG START ====================
+📂 root: www/ret/
+📄 autoindex: on
+✅ allow_methods: [GET] 
+📦 client_max_body_size: (not set)
+📑 indexes: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/test]
+==================== LOCATION CONFIG START ====================
+📂 root: www/test/
+📄 autoindex: off
+✅ allow_methods: [GET] [POST] [PUT] 
+📦 client_max_body_size: 1
+📑 indexes: swag.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [server] [{] 
+Line 1: [listen] [8083] 
+Line 2: [listen] [8082] 
+Line 3: [host] [127.0.0.1] 
+Line 4: [server_name] [test] 
+Line 5: [error_page] [400] [error/400.html] 
+Line 6: [error_page] [403] [error/403.html] 
+Line 7: [error_page] [414] [error/414.html] 
+Line 8: [error_page] [404] [error/404.html] 
+Line 9: [error_page] [405] [error/405.html] 
+Line 10: [error_page] [413] [error/413.html] 
+Line 11: [error_page] [500] [error/500.html] 
+Line 12: [error_page] [502] [error/502.html] 
+Line 13: [error_page] [504] [error/504.html] 
+Line 14: [error_page] [505] [error/505.html] 
+Line 15: [client_max_body_size] [10000000] 
+Line 16: [root] [www/default/] 
+Line 17: [index] [in.html] [index.html] 
+Line 18: [location] [/cgi-bin] [{] 
+Line 19: [root] [www/scripts/] 
+Line 20: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 21: [allow_methods] [GET] [POST] [PUT] 
+Line 22: [cgi_ext] [.php] [.py] [.sh] [.bla] 
+Line 23: [}] 
+Line 24: 
+Line 25: [location] [/autoindex] [{] 
+Line 26: [root] [www/autoindex/] 
+Line 27: [autoindex] [on] 
+Line 28: [allow_methods] [GET] [POST] [PUT] 
+Line 29: [index] [index.html] 
+Line 30: [}] 
+Line 31: [location] [/ret] [{] 
+Line 32: [root] [www/ret/] 
+Line 33: [autoindex] [on] 
+Line 34: [allow_methods] [GET] 
+Line 35: [index] [index.html] 
+Line 36: [return] [301] [return.html] 
+Line 37: [}] 
+Line 38: [location] [/test] [{] 
+Line 39: [root] [www/test/] 
+Line 40: [autoindex] [off] 
+Line 41: [allow_methods] [GET] [POST] [PUT] 
+Line 42: [index] [swag.html] 
+Line 43: [client_max_body_size] [1] 
+Line 44: [}] 
+Line 45: [location] [/database] [{] 
+Line 46: [root] [www/database/] 
+Line 47: [autoindex] [on] 
+Line 48: [allow_methods] [GET] [POST] [PUT] 
+Line 49: [index] [index.html] [return.html] 
+Line 50: [}] 
+Line 51: [}] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [allow_methods] [GET] [POST] [PUT] 
+Line 3: [cgi_ext] [.php] [.py] [.sh] [.bla] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/autoindex/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [PUT] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/ret/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] 
+Line 3: [index] [index.html] 
+Line 4: [return] [301] [return.html] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/test/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] [POST] [PUT] 
+Line 3: [index] [swag.html] 
+Line 4: [client_max_body_size] [1] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [PUT] 
+Line 3: [index] [index.html] [return.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083, 8082
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 10000000
+📦 max uri: 2147483647
+📑 indexes: in.html, index.html
+📍 locations: 
+   [/autoindex]
+==================== LOCATION CONFIG START ====================
+📂 root: www/autoindex/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [PUT] 
+📦 client_max_body_size: (not set)
+📑 indexes: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/cgi-bin]
+==================== CGI CONFIG START ====================
+📂 cgi_root: www/scripts/
+➡️ cgi_path: [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+📜 cgi_ext: [.php] [.py] [.sh] [.bla] 
+🧩 allow_methods: [GET] [POST] [PUT] 
+📦 client_max_body_size: (not set)
+==================== CGI CONFIG END ======================
+
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [PUT] 
+📦 client_max_body_size: (not set)
+📑 indexes: index.html, return.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/ret]
+==================== LOCATION CONFIG START ====================
+📂 root: www/ret/
+📄 autoindex: on
+✅ allow_methods: [GET] 
+📦 client_max_body_size: (not set)
+📑 indexes: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/test]
+==================== LOCATION CONFIG START ====================
+📂 root: www/test/
+📄 autoindex: off
+✅ allow_methods: [GET] [POST] [PUT] 
+📦 client_max_body_size: 1
+📑 indexes: swag.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
+
+==================== PARSING START ====================
+Line 0: [server] [{] 
+Line 1: [listen] [8083] 
+Line 2: [listen] [8082] 
+Line 3: [host] [127.0.0.1] 
+Line 4: [server_name] [test] 
+Line 5: [error_page] [400] [error/400.html] 
+Line 6: [error_page] [403] [error/403.html] 
+Line 7: [error_page] [414] [error/414.html] 
+Line 8: [error_page] [404] [error/404.html] 
+Line 9: [error_page] [405] [error/405.html] 
+Line 10: [error_page] [413] [error/413.html] 
+Line 11: [error_page] [500] [error/500.html] 
+Line 12: [error_page] [502] [error/502.html] 
+Line 13: [error_page] [504] [error/504.html] 
+Line 14: [error_page] [505] [error/505.html] 
+Line 15: [client_max_body_size] [10000000] 
+Line 16: [root] [www/default/] 
+Line 17: [index] [in.html] [index.html] 
+Line 18: [location] [/cgi-bin] [{] 
+Line 19: [root] [www/scripts/] 
+Line 20: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 21: [allow_methods] [GET] [POST] [PUT] 
+Line 22: [cgi_ext] [.php] [.py] [.sh] [.bla] 
+Line 23: [}] 
+Line 24: 
+Line 25: [location] [/autoindex] [{] 
+Line 26: [root] [www/autoindex/] 
+Line 27: [autoindex] [on] 
+Line 28: [allow_methods] [GET] [POST] [PUT] 
+Line 29: [index] [index.html] 
+Line 30: [}] 
+Line 31: [location] [/ret] [{] 
+Line 32: [root] [www/ret/] 
+Line 33: [autoindex] [on] 
+Line 34: [allow_methods] [GET] 
+Line 35: [index] [index.html] 
+Line 36: [return] [301] [return.html] 
+Line 37: [}] 
+Line 38: [location] [/test] [{] 
+Line 39: [root] [www/test/] 
+Line 40: [autoindex] [off] 
+Line 41: [allow_methods] [GET] [POST] [PUT] 
+Line 42: [index] [swag.html] 
+Line 43: [client_max_body_size] [1] 
+Line 44: [}] 
+Line 45: [location] [/database] [{] 
+Line 46: [root] [www/database/] 
+Line 47: [autoindex] [on] 
+Line 48: [allow_methods] [GET] [POST] [PUT] 
+Line 49: [index] [index.html] [return.html] 
+Line 50: [}] 
+Line 51: [}] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/scripts/] 
+Line 1: [cgi_path] [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+Line 2: [allow_methods] [GET] [POST] [PUT] 
+Line 3: [cgi_ext] [.php] [.py] [.sh] [.bla] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/autoindex/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [PUT] 
+Line 3: [index] [index.html] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/ret/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] 
+Line 3: [index] [index.html] 
+Line 4: [return] [301] [return.html] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/test/] 
+Line 1: [autoindex] [off] 
+Line 2: [allow_methods] [GET] [POST] [PUT] 
+Line 3: [index] [swag.html] 
+Line 4: [client_max_body_size] [1] 
+==================== PARSING END ======================
+
+==================== PARSING START ====================
+Line 0: [root] [www/database/] 
+Line 1: [autoindex] [on] 
+Line 2: [allow_methods] [GET] [POST] [PUT] 
+Line 3: [index] [index.html] [return.html] 
+==================== PARSING END ======================
+
+==================== SERVER CONFIG START ====================
+🌍 host: 127.0.0.1 (localhost)
+🔌 ports: 8083, 8082
+📂 root: www/default/
+🏷️ server_name: test
+⚠️ error_pages: 
+   [400] -> error/400.html
+   [403] -> error/403.html
+   [404] -> error/404.html
+   [405] -> error/405.html
+   [413] -> error/413.html
+   [414] -> error/414.html
+   [500] -> error/500.html
+   [502] -> error/502.html
+   [504] -> error/504.html
+   [505] -> error/505.html
+📦 client_max_body_size: 10000000
+📦 max uri: 2147483647
+📑 indexes: in.html, index.html
+📍 locations: 
+   [/autoindex]
+==================== LOCATION CONFIG START ====================
+📂 root: www/autoindex/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [PUT] 
+📦 client_max_body_size: (not set)
+📑 indexes: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/cgi-bin]
+==================== CGI CONFIG START ====================
+📂 cgi_root: www/scripts/
+➡️ cgi_path: [/usr/bin/python3] [/bin/bash] [/usr/bin/php-cgi] 
+📜 cgi_ext: [.php] [.py] [.sh] [.bla] 
+🧩 allow_methods: [GET] [POST] [PUT] 
+📦 client_max_body_size: (not set)
+==================== CGI CONFIG END ======================
+
+   [/database]
+==================== LOCATION CONFIG START ====================
+📂 root: www/database/
+📄 autoindex: on
+✅ allow_methods: [GET] [POST] [PUT] 
+📦 client_max_body_size: (not set)
+📑 indexes: index.html, return.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/ret]
+==================== LOCATION CONFIG START ====================
+📂 root: www/ret/
+📄 autoindex: on
+✅ allow_methods: [GET] 
+📦 client_max_body_size: (not set)
+📑 indexes: index.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+   [/test]
+==================== LOCATION CONFIG START ====================
+📂 root: www/test/
+📄 autoindex: off
+✅ allow_methods: [GET] [POST] [PUT] 
+📦 client_max_body_size: 1
+📑 indexes: swag.html
+🔀 return: (not set)
+📌 alias: (not set)
+==================== LOCATION CONFIG END ======================
+
+==================== SERVER CONFIG END ======================
 
